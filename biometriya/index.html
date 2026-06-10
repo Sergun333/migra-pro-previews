@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Биометрия для иностранцев в Москве — Migra-Pro</title>
+  <meta name="description" content="Биометрия (ЕБС), SIM-карта, банковская карта и пакет документов для иностранца в одном офисе. Москва, 20–30 минут, 5990 ₽.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --mp-primary: #2154b2;
+      --mp-primary-dark: #1a4694;
+      --mp-primary-light: #eaf1f6;
+      --mp-accent: #ff4747;
+      --mp-accent-hover: #e23b3b;
+      --mp-link: #50b3ff;
+      --mp-text: #1a1b1d;
+      --mp-muted: #5c5c5c;
+      --mp-border: #dde3e8;
+      --mp-bg: #f6f8fa;
+      --mp-white: #fff;
+      --mp-success: #2e8b57;
+      --mp-radius: 12px;
+      --mp-shadow: 0 4px 24px rgba(33, 84, 178, 0.08);
+      --mp-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --mp-max: 1120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--mp-font);
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--mp-text);
+      background: var(--mp-white);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--mp-white);
+      border-bottom: 1px solid var(--mp-border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .site-header__logo {
+      font-weight: 700;
+      color: var(--mp-primary);
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .site-header__nav { display: none; font-size: 0.9rem; gap: 20px; }
+    @media (min-width: 768px) {
+      .site-header__nav { display: flex; }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn--primary {
+      background: var(--mp-accent);
+      color: var(--mp-white);
+    }
+    .btn--primary:hover { background: var(--mp-accent-hover); }
+    .btn--secondary {
+      background: transparent;
+      color: var(--mp-primary);
+      border: 2px solid var(--mp-primary);
+    }
+    .btn--ghost {
+      background: var(--mp-primary-light);
+      color: var(--mp-primary);
+    }
+    .btn--block { width: 100%; }
+
+    .sticky-call {
+      display: flex;
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      z-index: 200;
+      box-shadow: var(--mp-shadow);
+    }
+    @media (min-width: 768px) {
+      .sticky-call { display: none; }
+    }
+
+    .section {
+      padding: 48px 20px;
+    }
+    .section--alt { background: var(--mp-bg); }
+    .section--cta {
+      background: linear-gradient(135deg, var(--mp-primary) 0%, var(--mp-primary-dark) 100%);
+      color: var(--mp-white);
+      text-align: center;
+    }
+    .container {
+      max-width: var(--mp-max);
+      margin: 0 auto;
+    }
+    h1, h2, h3 { line-height: 1.25; color: var(--mp-primary); }
+    h1 { font-size: clamp(1.5rem, 5vw, 2.25rem); margin: 0 0 16px; }
+    h2 { font-size: clamp(1.35rem, 4vw, 1.75rem); margin: 0 0 24px; text-align: center; }
+    h3 { font-size: 1.1rem; margin: 0 0 8px; }
+    .lead { font-size: 1.1rem; color: var(--mp-muted); margin: 0 0 20px; }
+    .badge {
+      display: inline-block;
+      background: var(--mp-primary-light);
+      color: var(--mp-primary);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .geo { font-size: 0.95rem; color: var(--mp-muted); margin-bottom: 24px; }
+
+    /* Hero */
+    .hero {
+      padding: 40px 20px 56px;
+      background: linear-gradient(180deg, var(--mp-primary-light) 0%, var(--mp-white) 70%);
+    }
+    .hero__grid {
+      display: grid;
+      gap: 32px;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .hero__grid { grid-template-columns: 1fr 1fr; }
+    }
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+    .hero__visual {
+      aspect-ratio: 4/3;
+      background: var(--mp-border);
+      border-radius: var(--mp-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mp-muted);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Cards grid */
+    .cards {
+      display: grid;
+      gap: 20px;
+    }
+    @media (min-width: 640px) {
+      .cards--3 { grid-template-columns: repeat(3, 1fr); }
+      .cards--2 { grid-template-columns: repeat(2, 1fr); }
+      .cards--4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .cards--4 { grid-template-columns: repeat(4, 1fr); }
+    }
+    .card {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius);
+      padding: 24px;
+      box-shadow: var(--mp-shadow);
+    }
+    .card__icon {
+      width: 48px;
+      height: 48px;
+      background: var(--mp-primary-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+    .card--highlight {
+      border-color: var(--mp-primary);
+      background: var(--mp-primary-light);
+    }
+    .card--recommended {
+      border: 2px solid var(--mp-accent);
+      position: relative;
+    }
+    .card--recommended::before {
+      content: "Рекомендуем";
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: var(--mp-accent);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .price { font-size: 2rem; font-weight: 800; color: var(--mp-primary); }
+    .price-list { list-style: none; padding: 0; margin: 16px 0; }
+    .price-list li { padding: 6px 0; padding-left: 24px; position: relative; }
+    .price-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--mp-success);
+      font-weight: bold;
+    }
+
+    /* Package groups */
+    .package-banner {
+      text-align: center;
+      background: var(--mp-primary);
+      color: white;
+      padding: 16px 24px;
+      border-radius: var(--mp-radius);
+      font-weight: 600;
+      margin-top: 32px;
+    }
+    .group-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--mp-muted);
+      margin: 32px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--mp-accent);
+    }
+    .group-title--anchor { color: var(--mp-primary); font-weight: 700; }
+
+    /* Steps */
+    .steps {
+      display: grid;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    .step {
+      text-align: center;
+      position: relative;
+    }
+    .step__num {
+      width: 40px;
+      height: 40px;
+      background: var(--mp-accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin: 0 auto 12px;
+    }
+
+    /* Comparison table */
+    .table-wrap { overflow-x: auto; margin-top: 16px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      min-width: 520px;
+    }
+    th, td {
+      border: 1px solid var(--mp-border);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--mp-bg); font-weight: 600; }
+    .col-us { background: var(--mp-primary-light); font-weight: 500; }
+
+    /* Trust */
+    .trust-stats {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .trust-stats strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--mp-primary);
+    }
+    .guarantee-box {
+      border: 2px solid var(--mp-success);
+      background: #f0faf4;
+      border-radius: var(--mp-radius);
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin: 24px 0;
+    }
+    .guarantee-box__icon { font-size: 2.5rem; flex-shrink: 0; }
+
+    /* FAQ */
+    .faq-item {
+      border: 1px solid var(--mp-border);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 16px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; font-size: 1.25rem; color: var(--mp-primary); }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item__body { padding: 0 20px 16px; color: var(--mp-muted); }
+
+    /* Forms */
+    .form-box {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius);
+      padding: 24px;
+      max-width: 400px;
+    }
+    .form-box label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; }
+    .form-box input, .form-box select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--mp-border);
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    .form-box .checkbox { display: flex; gap: 10px; align-items: flex-start; font-size: 0.85rem; font-weight: 400; }
+    .form-box .checkbox input { width: auto; margin: 4px 0 0; }
+
+    .contacts-grid {
+      display: grid;
+      gap: 32px;
+    }
+    @media (min-width: 768px) {
+      .contacts-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .map-placeholder {
+      min-height: 200px;
+      background: var(--mp-border);
+      border-radius: var(--mp-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mp-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #14213d;
+      color: #b8c6e0;
+      padding: 48px 20px 24px;
+      font-size: 0.9rem;
+    }
+    .site-footer a { color: #fff; }
+    .footer-grid {
+      display: grid;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .disclaimer {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      opacity: 0.85;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 24px;
+    }
+
+    @media print {
+      .sticky-call, .site-header { display: none; }
+    }
+
+    .article-card {
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .article-card span { font-size: 0.8rem; color: var(--mp-muted); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="site-header__logo" href="/">Migra-Pro</a>
+    <nav class="site-header__nav" aria-label="Главное меню">
+      <span>РВП</span><span>ВНЖ</span><span>Патент</span><span>Биометрия</span>
+    </nav>
+    <a class="btn btn--ghost" href="tel:+70000000000">Позвонить</a>
+  </header>
+
+  <a class="btn btn--primary sticky-call" href="#form-contacts">Позвонить</a>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="badge">Всё на месте за 20–30 минут</span>
+        <h1>Биометрия для иностранцев в Москве — 5 990 ₽ за 20 минут</h1>
+        <p class="lead">Биометрия (ЕБС), SIM-карта, банковская карта и документы для старта — в одном офисе за 20–30 минут.</p>
+        <p style="font-size:0.95rem;color:var(--mp-muted);margin-bottom:8px;">
+          Всё оформляем на месте. Биометрию проводит специалист банка-партнёра на нашем объекте.
+        </p>
+        <p class="geo">📍 Биометрия-ЕБС — Москва, м. Лесопарковая. Консультации — также в офисах Подольск и Одинцово.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#form-contacts">Записаться на биометрию</a>
+          <a class="btn btn--secondary" href="tel:+70000000000">Позвонить</a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <span>Фото офиса и процесса оформления</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Решение -->
+  <section class="section" id="solution">
+    <div class="container">
+      <h2>20 минут на месте, в нашем офисе. Всё включено — 5 990 ₽.</h2>
+      <div class="cards cards--3">
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">🏦</div>
+          <h3>Не нужно ехать в банк</h3>
+          <p>Специалист банка-партнёра проводит биометрию, оформляем SIM и банковскую карту в нашем офисе. Меньше визитов вместо поездок по инстанциям.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">⚖️</div>
+          <h3>Юрист рядом</h3>
+          <p>Понадобятся РВП, патент, ВНЖ или гражданство — миграционный юрист консультирует сразу.</p>
+        </article>
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">💰</div>
+          <h3>Фиксированная цена 5 990 ₽</h3>
+          <p>Без обязательной страховки и скрытых платежей. Что обещали — то и заплатите.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Что входит -->
+  <section class="section section--alt" id="package">
+    <div class="container">
+      <h2>Что входит в пакет за 5 990 ₽</h2>
+
+      <p class="group-title group-title--anchor">Группа 1 · Биометрия и связь</p>
+      <div class="cards cards--3">
+        <article class="card card--highlight">
+          <div class="card__icon">📷</div>
+          <h3>Регистрация в ЕБС</h3>
+          <p>Биометрия (фото и голос) в Единой биометрической системе. Обязательна для SIM с 2025 года.</p>
+        </article>
+        <article class="card card--highlight">
+          <div class="card__icon">📱</div>
+          <h3>SIM-карта</h3>
+          <p>Российский номер от оператора-партнёра. Для банков, Госуслуг, мессенджеров.</p>
+        </article>
+        <article class="card card--highlight">
+          <div class="card__icon">💳</div>
+          <h3>Банковская карта</h3>
+          <p>Оформление карты банка-партнёра — для зарплаты и оплат. <em>В исключительных случаях решение принимает банк.</em></p>
+        </article>
+      </div>
+
+      <p class="group-title">Группа 2 · Документы и госучёт</p>
+      <div class="cards cards--3">
+        <article class="card"><div class="card__icon">🪪</div><h3>СНИЛС</h3><p>Страховой номер для Госуслуг и трудоустройства.</p></article>
+        <article class="card"><div class="card__icon">📋</div><h3>ИНН</h3><p>Готов ~5 дней, привязывается к Госуслугам.</p></article>
+        <article class="card"><div class="card__icon">🏛️</div><h3>Госуслуги</h3><p>Подтверждённая учётная запись.</p></article>
+      </div>
+
+      <p class="group-title">Группа 3 · Сопровождение</p>
+      <div class="cards cards--2">
+        <article class="card"><div class="card__icon">✉️</div><h3>Российская почта</h3><p>Электронная почта для регистраций.</p></article>
+        <article class="card"><div class="card__icon">📄</div><h3>Нотариальный перевод</h3><p>Готов за 2–3 дня.</p></article>
+      </div>
+
+      <p class="group-title">Группа 4 · Экспертиза</p>
+      <div class="cards">
+        <article class="card" style="max-width:400px;margin:0 auto;">
+          <div class="card__icon">💬</div>
+          <h3>Консультация</h3>
+          <p>Что делать дальше: патент, РВП, постановка на учёт.</p>
+        </article>
+      </div>
+
+      <div class="package-banner">Все 9 компонентов — в одной цене 5 990 ₽. Доплачивать ничего не нужно.</div>
+    </div>
+  </section>
+
+  <!-- Процесс -->
+  <section class="section" id="process">
+    <div class="container">
+      <h2>Как мы работаем</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">1</div>
+          <h3>Запись</h3>
+          <p>Форма или звонок. Менеджер согласует время и подскажет адрес.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">2</div>
+          <h3>Визит 1 — ЕБС, SIM, карта</h3>
+          <p>Паспорт и миграционная карта. Предоплата, квитанция, согласие на ПД. За 20–30 мин: биометрия, SIM, банковская карта. Запуск перевода, СНИЛС, ИНН, Госуслуг.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">3</div>
+          <h3>Визит 2 — документы</h3>
+          <p>Когда готов нотариальный перевод и есть регистрация — завершаем оформление и выдаём пакет документов.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">4</div>
+          <h3>Готово</h3>
+          <p>SIM, банковская карта, ЕБС, СНИЛС, Госуслуги. Перевод 2–3 дня, ИНН ~5 дней.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Сравнение -->
+  <section class="section section--alt" id="compare">
+    <div class="container">
+      <h2>Сравните: самостоятельно или через Migra-Pro</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Самостоятельно</th>
+              <th class="col-us">Через Migra-Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Время</td><td>1–2 недели</td><td class="col-us">В день визита: биометрия, SIM, карта, СНИЛС, Госуслуги</td></tr>
+            <tr><td>Визиты</td><td>Много</td><td class="col-us"><strong>1–2</strong> (по готовности документов)</td></tr>
+            <tr><td>Риск ошибок</td><td>Высокий</td><td class="col-us">Минимальный</td></tr>
+            <tr><td>Язык</td><td>Барьер</td><td class="col-us">Снят — юрист помогает</td></tr>
+            <tr><td>Цена</td><td>Разрозненные сборы</td><td class="col-us"><strong>5 990 ₽ всё включено</strong></td></tr>
+            <tr><td>Скрытые платежи</td><td>Возможны</td><td class="col-us">Нет</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Доказательства -->
+  <section class="section" id="trust">
+    <div class="container">
+      <h2>Почему нам доверяют</h2>
+      <div class="trust-stats">
+        <div><strong>1</strong><span>визит — всё на месте</span></div>
+        <div><strong>9</strong><span>услуг в одном пакете</span></div>
+        <div><strong>20</strong><span>минут на оформление</span></div>
+      </div>
+      <p style="text-align:center;color:var(--mp-muted);">Биометрию, SIM, карту и документы — в одном офисе, без беготни по инстанциям.</p>
+
+      <div class="guarantee-box">
+        <span class="guarantee-box__icon" aria-hidden="true">🛡️</span>
+        <div>
+          <h3 style="margin-top:0;">100% возврат за 7 рабочих дней</h3>
+          <p style="margin:0;">Если не удалось завершить по нашей вине. Полные условия — на странице
+            <a href="/garantiya-vozvrata">«Гарантия возврата»</a>.</p>
+        </div>
+      </div>
+
+      <div class="hero__visual" style="margin-top:24px;">
+        <span>Отзывы клиентов — скоро истории клиентов</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Прайс -->
+  <section class="section section--alt" id="pricing">
+    <div class="container">
+      <h2>Цена и условия</h2>
+      <div class="cards cards--2">
+        <article class="card card--recommended">
+          <h3>Базовый</h3>
+          <p class="price">5 990 ₽</p>
+          <ul class="price-list">
+            <li>Все 9 компонентов пакета</li>
+            <li>20–30 минут в нашем офисе</li>
+            <li>Без скрытых платежей</li>
+          </ul>
+          <a class="btn btn--primary btn--block" href="#form-contacts">Записаться за 5 990 ₽</a>
+        </article>
+        <article class="card">
+          <h3>Биометрия + старт РВП / патента</h3>
+          <p class="price">9 990 ₽</p>
+          <ul class="price-list">
+            <li>Всё из «Базового»</li>
+            <li>Сопровождение <a href="https://migra-pro.com/rvp">РВП</a> или патента (+ дактилоскопия МВД отдельно)</li>
+            <li>Консультация юриста 30 мин</li>
+          </ul>
+          <a class="btn btn--secondary btn--block" href="#form-contacts">Записаться за 9 990 ₽</a>
+        </article>
+      </div>
+      <p style="text-align:center;margin-top:24px;color:var(--mp-muted);">
+        При оформлении <a href="https://migra-pro.com/rvp">РВП</a> через Migra-Pro — скидка 5% на услугу.
+      </p>
+      <div class="form-box" style="margin:32px auto 0;">
+        <p style="margin:0 0 12px;font-weight:600;">Быстрая запись</p>
+        <label>Имя</label><input type="text" placeholder="Ваше имя">
+        <label>Телефон</label><input type="tel" placeholder="+7">
+        <label class="checkbox"><input type="checkbox"> Согласен на обработку ПД и политику конфиденциальности</label>
+        <button type="button" class="btn btn--primary btn--block">Записаться</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B -->
+  <section class="section" id="b2b">
+    <div class="container" style="max-width:720px;">
+      <h2>Регулярно привлекаете иностранных сотрудников?</h2>
+      <p class="lead" style="text-align:center;">Корпоративный пакет — индивидуальные условия от 5 сотрудников.</p>
+      <ul class="price-list" style="max-width:480px;margin:0 auto 24px;">
+        <li>Снимем оформление с HR</li>
+        <li>Выезд от 10 человек — по ситуации</li>
+        <li>Готовый пакет для МВД</li>
+      </ul>
+      <p style="text-align:center;font-size:0.9rem;">Ответ в течение 1 рабочего дня</p>
+      <div class="form-box" style="margin:24px auto;">
+        <label>Имя контакта</label><input type="text">
+        <label>Компания</label><input type="text">
+        <label>Телефон</label><input type="tel">
+        <label>Email</label><input type="email">
+        <label>Кол-во сотрудников</label><select><option>5–9</option><option>10+</option></select>
+        <button type="button" class="btn btn--secondary btn--block">Получить корпоративное предложение</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Связанные материалы -->
+  <section class="section section--alt" id="articles">
+    <div class="container">
+      <h2>Полезное по теме</h2>
+      <div class="cards cards--4">
+        <article class="card article-card"><span>Скоро</span><h3>Биометрия для SIM-карты</h3></article>
+        <article class="card article-card"><span>Скоро</span><h3>Биометрия в России</h3></article>
+        <article class="card article-card"><span>Скоро</span><h3>Что такое ЕБС</h3></article>
+        <article class="card article-card"><span>Скоро</span><h3>Миграционный учёт</h3></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container" style="max-width:720px;">
+      <h2>Частые вопросы</h2>
+      <details class="faq-item"><summary>Какие документы взять с собой?</summary><div class="faq-item__body">Загранпаспорт и миграционная карта. При наличии патента или РВП — возьмите их.</div></details>
+      <details class="faq-item"><summary>Ошибки в документах или другой язык?</summary><div class="faq-item__body">Нотариальный перевод в пакете. Ошибки в исходниках исправляете в выдающем органе до визита.</div></details>
+      <details class="faq-item"><summary>Где пройти биометрию?</summary><div class="faq-item__body">Биометрию-ЕБС принимаем в Москве, у м. Лесопарковая. Из Подольска и Одинцово — запись через менеджера.</div></details>
+      <details class="faq-item"><summary>Безопасность данных?</summary><div class="faq-item__body">Биометрию проводит специалист банка-партнёра; данные — в ЕБС, по 152-ФЗ.</div></details>
+      <details class="faq-item"><summary>Граждане Беларуси?</summary><div class="faq-item__body">На границе биометрия не обязательна, но SIM с 2025 без ЕБС не оформить — пакет полезен.</div></details>
+      <details class="faq-item"><summary>Уже есть СНИЛС и Госуслуги?</summary><div class="faq-item__body">Сокращённый пакет — с менеджером, индивидуальный расчёт.</div></details>
+      <details class="faq-item"><summary>Только для патента?</summary><div class="faq-item__body">Дактилоскопия МВД — отдельно, в пакет не входит. Поможем при <a href="https://migra-pro.com/rvp">РВП</a>/патенте. Здесь — ЕБС для SIM и банка.</div></details>
+      <details class="faq-item"><summary>Оплата?</summary><div class="faq-item__body">Полная предоплата: карта, перевод или наличные в офисе.</div></details>
+      <details class="faq-item"><summary>Возврат?</summary><div class="faq-item__body">100% за 7 раб. дней по нашей вине. Отказ из-за документов клиента — без возврата.</div></details>
+      <details class="faq-item"><summary>Скидки семье / группе?</summary><div class="faq-item__body">От 5 человек — корпоративные условия. 2–4 — с менеджером.</div></details>
+    </div>
+  </section>
+
+  <!-- Финальный CTA -->
+  <section class="section section--cta" id="cta-final">
+    <div class="container">
+      <h2 style="color:#fff;">Готовы пройти биометрию?</h2>
+      <p style="opacity:0.9;margin-bottom:24px;">5 990 ₽ — фиксированная цена. 20 минут — и всё готово.</p>
+      <a class="btn btn--primary" href="#form-contacts" style="margin-bottom:16px;">Записаться на биометрию</a>
+      <p style="font-size:0.95rem;"><a href="/ai-lawyer" style="color:#fff;">Спросить ИИ-юриста «Ника» →</a></p>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="section section--alt" id="contacts">
+    <div class="container">
+      <h2>Контакты</h2>
+      <div class="contacts-grid">
+        <div>
+          <p><strong>Биометрия (Москва, м. Лесопарковая):</strong> уточняется</p>
+          <p><strong>Консультации — Подольск:</strong> уточняется</p>
+          <p><strong>Консультации — Одинцово:</strong> уточняется</p>
+          <p><strong>Часы:</strong> уточняется</p>
+          <p><strong>Телефон:</strong> уточняется</p>
+          <p>
+            <a class="btn btn--ghost" href="#">MAX</a>
+            <a class="btn btn--ghost" href="#">WhatsApp</a>
+            <a class="btn btn--ghost" href="#">Telegram</a>
+          </p>
+          <div class="map-placeholder">Карта — 2 офиса</div>
+        </div>
+        <div class="form-box" id="form-contacts">
+          <p style="margin:0 0 12px;font-weight:600;">Записаться на биометрию</p>
+          <label>Имя</label><input type="text">
+          <label>Телефон</label><input type="tel">
+          <label class="checkbox"><input type="checkbox"> Согласен на обработку ПД</label>
+          <button type="button" class="btn btn--primary btn--block">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color:#fff;">Услуги</strong>
+        <ul style="list-style:none;padding:0;margin:12px 0 0;">
+          <li><a href="https://migra-pro.com/rvp">РВП</a></li>
+          <li><a href="#">ВНЖ</a></li>
+          <li><a href="#">Гражданство РФ</a></li>
+          <li><a href="#">Патент</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong style="color:#fff;">Компания</strong>
+        <ul style="list-style:none;padding:0;margin:12px 0 0;">
+          <li>О компании</li>
+          <li>Политика конфиденциальности</li>
+          <li>Согласие на ПД</li>
+        </ul>
+      </div>
+      <div>
+        <strong style="color:#fff;">Контакты</strong>
+        <p style="margin:12px 0 0;">уточняется</p>
+      </div>
+    </div>
+    <div class="container disclaimer">
+      <p>Регистрация в ЕБС обязательна для SIM иностранных граждан (ФЗ «О связи» № 126-ФЗ, ред. № 441-ФЗ с 01.01.2025).
+        Биометрию-ЕБС проводит специалист банка-партнёра; данные — по 152-ФЗ, серверы в РФ. Дактилоскопия для патента/РВП в пакет не входит.</p>
+      <p>© 2026 Migra-Pro</p>
+    </div>
+  </footer>
+
+</body>
+</html>
