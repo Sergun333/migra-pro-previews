@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Migra-Pro — главная (превью концепции)</title>
+  <title>Концепт главной — Migra-Pro</title>
   <meta name="description" content="Концепт редизайна главной migra-pro.com: навигатор путей для граждан и работодателей.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,31 +42,150 @@
     a { color: var(--mp-primary); }
     img { max-width: 100%; display: block; }
     .wrap { width: min(100% - 40px, var(--mp-max)); margin-inline: auto; }
+    .design-note {
+      background: #fff8e6;
+      border-bottom: 1px solid #e8d59a;
+      color: #6b5500;
+      font-size: 0.85rem;
+      padding: 10px 16px;
+      text-align: center;
+    }
+    .design-note strong { font-weight: 700; }
 
+    /* ——— Двухэтажная шапка (паттерн живого сайта, логика IA) ——— */
     .site-header {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
+      position: sticky; top: 0; z-index: 100;
+      background: var(--mp-white);
+      box-shadow: 0 4px 18px rgba(20, 33, 61, 0.08);
+    }
+    .header-top {
       border-bottom: 1px solid var(--mp-border);
+      background: var(--mp-white);
     }
-    .site-header__inner {
+    .header-top__inner {
       display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; padding: 12px 0; min-height: 64px;
+      gap: 16px; padding: 12px 0; flex-wrap: wrap;
     }
-    .logo {
-      font-weight: 800; font-size: 1.2rem; color: var(--mp-primary);
-      text-decoration: none; letter-spacing: -0.02em;
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none; color: inherit; min-width: 0;
     }
-    .nav { display: none; gap: 18px; font-size: 0.92rem; font-weight: 500; }
-    .nav a { color: var(--mp-text); text-decoration: none; }
-    .nav a:hover { color: var(--mp-primary); }
-    @media (min-width: 900px) { .nav { display: flex; } }
-    .header-cta { display: flex; gap: 10px; align-items: center; }
-    .header-phone {
-      display: none; color: var(--mp-text); text-decoration: none;
-      font-weight: 600; font-size: 0.95rem;
+    .brand__mark {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(145deg, var(--mp-primary), #3a7bd5);
+      color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 0.85rem;
     }
-    @media (min-width: 700px) { .header-phone { display: inline; } }
+    .brand__name {
+      font-weight: 800; font-size: 1.15rem; color: var(--mp-primary);
+      letter-spacing: -0.02em; line-height: 1.1;
+    }
+    .brand__sub {
+      display: block; font-size: 0.72rem; color: var(--mp-muted); margin-top: 2px;
+    }
+    .header-messengers .ico {
+      width: 18px; height: 18px; fill: currentColor;
+    }
+    .header-meta {
+      display: none; align-items: center; gap: 18px;
+      font-size: 0.88rem; color: var(--mp-muted);
+    }
+    @media (min-width: 960px) { .header-meta { display: flex; } }
+    .header-rating {
+      display: flex; flex-direction: column; gap: 2px;
+      font-size: 0.72rem; line-height: 1.25;
+    }
+    .header-rating__stars { color: #f5a623; letter-spacing: 1px; font-size: 0.85rem; }
+    .header-messengers { display: flex; gap: 8px; }
+    .header-messengers a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center; text-decoration: none;
+    }
+    .header-messengers a:hover { background: #d9e7f5; }
+    .header-phone-block { text-align: right; line-height: 1.25; }
+    .header-phone-block a {
+      color: var(--mp-text); font-weight: 800; text-decoration: none;
+      font-size: 1.05rem; letter-spacing: -0.02em;
+    }
+    .header-phone-block span { display: block; font-size: 0.75rem; color: var(--mp-muted); }
+    .header-top__cta { flex-shrink: 0; }
+
+    .header-nav-wrap {
+      background: var(--mp-white);
+      padding: 0 0 10px;
+    }
+    .header-nav {
+      display: flex; align-items: center; gap: 4px 6px;
+      flex-wrap: wrap;
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 0 0 18px 18px;
+      padding: 8px 12px;
+      box-shadow: var(--mp-shadow);
+    }
+    .nav-item { position: relative; }
+    .nav-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 12px; border-radius: 10px;
+      color: var(--mp-text); text-decoration: none;
+      font-size: 0.92rem; font-weight: 600;
+      border: 0; background: transparent; cursor: pointer;
+      font-family: inherit;
+    }
+    .nav-link:hover, .nav-item:focus-within > .nav-link {
+      background: var(--mp-primary-light); color: var(--mp-primary);
+    }
+    .nav-link .chev {
+      width: 10px; height: 10px; opacity: 0.7;
+      transition: transform 0.15s ease;
+    }
+    .nav-item:focus-within > .nav-link .chev,
+    .nav-item:hover > .nav-link .chev { transform: rotate(180deg); }
+
+    .dropdown {
+      display: none;
+      position: absolute; top: calc(100% - 2px); left: 0;
+      min-width: 420px; max-width: min(520px, 92vw);
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 14px;
+      box-shadow: var(--mp-shadow-lg);
+      padding: 14px;
+      z-index: 120;
+    }
+    .nav-item:hover > .dropdown,
+    .nav-item:focus-within > .dropdown { display: block; }
+    .dropdown--tools { min-width: 260px; }
+    .dropdown__grid {
+      display: grid; gap: 8px 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .dropdown--tools .dropdown__grid { grid-template-columns: 1fr; }
+    .dropdown a {
+      display: block; padding: 8px 10px; border-radius: 8px;
+      text-decoration: none; color: var(--mp-text);
+      font-size: 0.9rem; font-weight: 500; line-height: 1.35;
+    }
+    .dropdown a:hover { background: var(--mp-primary-light); color: var(--mp-primary); }
+    .dropdown__all {
+      grid-column: 1 / -1;
+      font-weight: 700 !important;
+      color: var(--mp-primary) !important;
+      border-bottom: 1px solid var(--mp-border);
+      margin-bottom: 4px; padding-bottom: 12px !important;
+    }
+    .dropdown__label {
+      grid-column: 1 / -1;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.04em; color: var(--mp-muted);
+      padding: 8px 10px 2px;
+    }
+    .nav-mobile-note {
+      display: block; width: 100%;
+      font-size: 0.78rem; color: var(--mp-muted);
+      padding: 4px 8px 2px;
+    }
+    @media (min-width: 900px) { .nav-mobile-note { display: none; } }
 
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
@@ -75,6 +194,7 @@
       border: 2px solid transparent; cursor: pointer; transition: 0.15s ease;
       font-family: inherit;
     }
+    .btn--sm { padding: 10px 16px; font-size: 0.88rem; }
     .btn--primary { background: var(--mp-accent); color: #fff; }
     .btn--primary:hover { background: var(--mp-accent-hover); }
     .btn--secondary {
@@ -333,19 +453,89 @@
   </style>
 </head>
 <body>
+  <div class="design-note">
+    <strong>Концепт редизайна главной</strong> · двухэтажная шапка по паттерну живого сайта · дроп «Услуги» только B2C · «Работодателям» отдельным пунктом
+  </div>
+
   <header class="site-header">
-    <div class="wrap site-header__inner">
-      <a class="logo" href="#">Migra-Pro</a>
-      <nav class="nav" aria-label="Основное меню">
-        <a href="https://migra-pro.com/uslugi">Услуги</a>
-        <a href="#biz">Работодателям</a>
-        <a href="#tools">Инструменты</a>
-        <a href="#knowledge">База знаний</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-      <div class="header-cta">
-        <a class="header-phone" href="tel:+74958590051">+7 (495) 859-00-51</a>
-        <a class="btn btn--primary" href="#cta">Онлайн-консультация</a>
+    <div class="header-top">
+      <div class="wrap header-top__inner">
+        <a class="brand" href="#">
+          <span class="brand__mark" aria-hidden="true">МП</span>
+          <span>
+            <span class="brand__name">МИГРАПРО</span>
+            <span class="brand__sub">Российское миграционное агентство</span>
+          </span>
+        </a>
+        <div class="header-meta">
+          <div class="header-rating" aria-label="Рейтинг на основе Яндекс">
+            <span class="header-rating__stars">★★★★★</span>
+            <span>Наш рейтинг на основе Яндекс</span>
+          </div>
+          <div class="header-messengers" aria-label="Мессенджеры">
+            <a href="#" title="WhatsApp" aria-label="WhatsApp">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-1.2 4.4L21 21l-5.2-1.1A8.5 8.5 0 1 1 21 11.5z"/><path d="M8.5 9.5c.3 1.7 2.4 4.2 4.1 4.8l1.2-.7c.2-.1.5 0 .6.2l.9 1.5c.1.2.1.5-.1.6-1.3.8-3.7.7-6.3-2-2.5-2.6-2.4-4.9-1.5-6.1.1-.2.4-.3.6-.2l1.5.8c.2.1.3.4.2.6l-.6 1.1z"/></svg>
+            </a>
+            <a href="#" title="Telegram" aria-label="Telegram">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M22 3 2.5 11.2c-.7.3-.7.8-.1 1l4.8 1.5 1.9 5.8c.2.7.6.8 1.1.5l2.7-2.3 4.8 3.5c.6.3 1 .1 1.1-.5L22.8 4c.2-.8-.3-1.2-.8-1z"/><path d="m9.3 14.1 9.2-7.2"/></svg>
+            </a>
+          </div>
+          <div class="header-phone-block">
+            <a href="tel:+74958590051">+7 (495) 859-00-51</a>
+            <span>Пн–Пт: 09:00–18:00</span>
+          </div>
+        </div>
+        <div class="header-top__cta">
+          <a class="btn btn--primary btn--sm" href="#cta">Онлайн-консультация</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-wrap">
+      <div class="wrap">
+        <nav class="header-nav" aria-label="Основное меню">
+          <span class="nav-mobile-note">На узком экране пункты переносятся; дропы открываются по наведению/фокусу на desktop.</span>
+
+          <div class="nav-item">
+            <button class="nav-link" type="button" aria-expanded="false" aria-haspopup="true">
+              Услуги
+              <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+            <div class="dropdown" role="menu">
+              <div class="dropdown__grid">
+                <a class="dropdown__all" href="https://migra-pro.com/uslugi">Все услуги →</a>
+                <span class="dropdown__label">Иностранным гражданам</span>
+                <a href="https://migra-pro.com/rvp">РВП</a>
+                <a href="https://migra-pro.com/vnj">ВНЖ</a>
+                <a href="https://migra-pro.com/uslugi">Гражданство РФ</a>
+                <span class="dropdown__label">Документы (пакеты)</span>
+                <a href="https://migra-pro.com/uslugi">Пакет на квоту</a>
+                <a href="https://migra-pro.com/uslugi">Пакет на РВП</a>
+                <a href="https://migra-pro.com/uslugi">Пакет на ВНЖ</a>
+                <a href="https://migra-pro.com/uslugi">Пакет на гражданство</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="nav-link" href="#biz">Работодателям</a>
+
+          <div class="nav-item">
+            <button class="nav-link" type="button" aria-haspopup="true">
+              Инструменты
+              <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+            <div class="dropdown dropdown--tools" role="menu">
+              <div class="dropdown__grid">
+                <a href="#cta">Онлайн-консультация</a>
+                <a href="#tools">ИИ-юрист</a>
+                <a href="#tools">Квиз</a>
+              </div>
+            </div>
+          </div>
+
+          <a class="nav-link" href="#knowledge">База знаний</a>
+          <a class="nav-link" href="#contacts">Контакты</a>
+        </nav>
       </div>
     </div>
   </header>
@@ -572,4 +762,3 @@
   </footer>
 </body>
 </html>
-
