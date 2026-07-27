@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Migra-Pro — главная (превью концепции)</title>
+  <meta name="description" content="Концепт редизайна главной migra-pro.com: навигатор путей для граждан и работодателей.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --mp-primary: #2154b2;
+      --mp-primary-dark: #1a4694;
+      --mp-primary-light: #eaf1f6;
+      --mp-accent: #ff4747;
+      --mp-accent-hover: #e23b3b;
+      --mp-link: #50b3ff;
+      --mp-text: #1a1b1d;
+      --mp-muted: #5c6570;
+      --mp-border: #dde3e8;
+      --mp-bg: #f6f8fa;
+      --mp-white: #fff;
+      --mp-radius: 16px;
+      --mp-radius-sm: 12px;
+      --mp-shadow: 0 2px 10px rgba(20, 33, 61, 0.06), 0 8px 24px rgba(33, 84, 178, 0.08);
+      --mp-shadow-lg: 0 16px 48px rgba(20, 33, 61, 0.16);
+      --mp-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --mp-max: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--mp-font);
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--mp-text);
+      background: var(--mp-white);
+    }
+    a { color: var(--mp-primary); }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(100% - 40px, var(--mp-max)); margin-inline: auto; }
+    .design-note {
+      background: #fff8e6;
+      border-bottom: 1px solid #e8d59a;
+      color: #6b5500;
+      font-size: 0.85rem;
+      padding: 10px 16px;
+      text-align: center;
+    }
+    .design-note strong { font-weight: 700; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--mp-border);
+    }
+    .site-header__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 12px 0; min-height: 64px;
+    }
+    .logo {
+      font-weight: 800; font-size: 1.2rem; color: var(--mp-primary);
+      text-decoration: none; letter-spacing: -0.02em;
+    }
+    .nav { display: none; gap: 18px; font-size: 0.92rem; font-weight: 500; }
+    .nav a { color: var(--mp-text); text-decoration: none; }
+    .nav a:hover { color: var(--mp-primary); }
+    @media (min-width: 900px) { .nav { display: flex; } }
+    .header-cta { display: flex; gap: 10px; align-items: center; }
+    .header-phone {
+      display: none; color: var(--mp-text); text-decoration: none;
+      font-weight: 600; font-size: 0.95rem;
+    }
+    @media (min-width: 700px) { .header-phone { display: inline; } }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 12px 20px; border-radius: 999px;
+      font-weight: 700; font-size: 0.95rem; text-decoration: none;
+      border: 2px solid transparent; cursor: pointer; transition: 0.15s ease;
+      font-family: inherit;
+    }
+    .btn--primary { background: var(--mp-accent); color: #fff; }
+    .btn--primary:hover { background: var(--mp-accent-hover); }
+    .btn--secondary {
+      background: transparent; color: var(--mp-primary);
+      border-color: var(--mp-primary);
+    }
+    .btn--secondary:hover { background: var(--mp-primary-light); }
+    .btn--ghost {
+      background: rgba(255,255,255,0.14); color: #fff;
+      border-color: rgba(255,255,255,0.35);
+    }
+    .btn--ghost:hover { background: rgba(255,255,255,0.22); }
+    .btn--light { background: #fff; color: var(--mp-primary); }
+    .btn--light:hover { background: var(--mp-primary-light); }
+    .btn--block { width: 100%; }
+
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(80,179,255,0.28), transparent 60%),
+        linear-gradient(135deg, #163a7a 0%, var(--mp-primary) 48%, #2a6fd1 100%);
+      color: #fff;
+      padding: 48px 0 56px;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: auto -20% -40% 40%;
+      height: 280px;
+      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .hero__eyebrow {
+      display: inline-block; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      opacity: 0.85; margin-bottom: 12px;
+    }
+    .hero h1 {
+      margin: 0 0 12px; font-size: clamp(1.7rem, 4vw, 2.45rem);
+      line-height: 1.15; letter-spacing: -0.03em; max-width: 18ch;
+    }
+    .hero__lead {
+      margin: 0 0 28px; font-size: 1.05rem; opacity: 0.92;
+      max-width: 46ch;
+    }
+    .path-grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .path-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+    .path-card {
+      background: rgba(255,255,255,0.98);
+      color: var(--mp-text);
+      border-radius: var(--mp-radius);
+      padding: 24px;
+      box-shadow: var(--mp-shadow-lg);
+      display: flex; flex-direction: column; gap: 12px;
+      min-height: 100%;
+    }
+    .path-card__tag {
+      font-size: 0.78rem; font-weight: 700; color: var(--mp-primary);
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .path-card h2 {
+      margin: 0; font-size: 1.35rem; line-height: 1.25; letter-spacing: -0.02em;
+    }
+    .path-card p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .path-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+
+    .section { padding: 56px 0; }
+    .section--alt { background: var(--mp-bg); }
+    .section--tint { background: var(--mp-primary-light); }
+    .section__head { margin-bottom: 28px; max-width: 40rem; }
+    .section__head h2 {
+      margin: 0 0 8px; font-size: clamp(1.4rem, 3vw, 1.85rem);
+      letter-spacing: -0.02em;
+    }
+    .section__head p { margin: 0; color: var(--mp-muted); }
+
+    .tools {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) {
+      .tools { grid-template-columns: repeat(3, 1fr); }
+    }
+    .tool {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      text-decoration: none; color: inherit;
+      box-shadow: var(--mp-shadow);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      display: flex; flex-direction: column; gap: 10px;
+      min-height: 160px;
+    }
+    .tool:hover { transform: translateY(-2px); border-color: #b9c9e0; }
+    .tool__ico {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center;
+    }
+    .tool strong { font-size: 1.05rem; }
+    .tool span { color: var(--mp-muted); font-size: 0.95rem; }
+    .tool em {
+      margin-top: auto; font-style: normal; font-weight: 700;
+      color: var(--mp-primary); font-size: 0.9rem;
+    }
+
+    .services {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .services { grid-template-columns: repeat(3, 1fr); }
+    }
+    .service {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .service:hover { border-color: var(--mp-primary); }
+    .service h3 { margin: 0; font-size: 1.2rem; }
+    .service p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .service__more { font-weight: 700; color: var(--mp-primary); }
+
+    .trust {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .trust { grid-template-columns: 1.2fr 1fr 1fr; }
+    }
+    .trust-stat, .trust-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+    }
+    .trust-stat strong {
+      display: block; font-size: 2rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; margin-bottom: 6px;
+    }
+    .trust-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .trust-card p { margin: 0; color: var(--mp-muted); font-size: 0.95rem; }
+
+    .knowledge {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .knowledge { grid-template-columns: repeat(3, 1fr); }
+    }
+    .know-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+    }
+    .know-card__visual {
+      height: 120px;
+      background:
+        linear-gradient(135deg, rgba(33,84,178,0.9), rgba(26,70,148,0.85)),
+        repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,255,255,0.05) 8px, rgba(255,255,255,0.05) 16px);
+    }
+    .know-card__visual--2 {
+      background: linear-gradient(135deg, #265f91, #2154b2);
+    }
+    .know-card__visual--3 {
+      background: linear-gradient(135deg, #1a4694, #3a7bd5);
+    }
+    .know-card__body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .know-card__body strong { font-size: 1.02rem; line-height: 1.35; }
+    .know-card__body span { color: var(--mp-muted); font-size: 0.92rem; }
+
+    .gos {
+      display: grid; gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .gos { grid-template-columns: repeat(4, 1fr); }
+    }
+    .gos a {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-decoration: none;
+      color: var(--mp-text);
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      min-height: 74px;
+      display: flex; align-items: center;
+    }
+    .gos a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+
+    .cta-band {
+      background: linear-gradient(135deg, var(--mp-primary-dark), var(--mp-primary));
+      color: #fff;
+      border-radius: var(--mp-radius);
+      padding: 36px 28px;
+      display: grid; gap: 20px;
+      align-items: center;
+    }
+    @media (min-width: 800px) {
+      .cta-band { grid-template-columns: 1.4fr auto; padding: 40px 44px; }
+    }
+    .cta-band h2 { margin: 0 0 8px; font-size: 1.55rem; letter-spacing: -0.02em; }
+    .cta-band p { margin: 0; opacity: 0.92; max-width: 38ch; }
+
+    .contacts {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .contacts { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .office, .phone-block {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+    }
+    .office h3, .phone-block h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .office p, .phone-block p { margin: 0; color: var(--mp-muted); }
+    .phone-block a {
+      display: inline-block; margin-top: 8px;
+      font-size: 1.35rem; font-weight: 800;
+      color: var(--mp-primary); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--mp-border);
+      padding: 28px 0 40px;
+      color: var(--mp-muted);
+      font-size: 0.9rem;
+    }
+    .site-footer__row {
+      display: flex; flex-wrap: wrap; gap: 12px 24px;
+      justify-content: space-between; align-items: center;
+    }
+    .site-footer a { color: var(--mp-muted); text-decoration: none; }
+    .site-footer a:hover { color: var(--mp-primary); }
+
+    .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+</head>
+<body>
+    <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="#">Migra-Pro</a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="#uslugi">Услуги</a>
+        <a href="#biz">Работодателям</a>
+        <a href="#tools">Инструменты</a>
+        <a href="#knowledge">База знаний</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header-cta">
+        <a class="header-phone" href="tel:+74958590051">+7 (495) 859-00-51</a>
+        <a class="btn btn--primary" href="#cta">Онлайн-консультация</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero__eyebrow">Москва и Московская область</div>
+        <h1>Миграционные юристы Migra-Pro</h1>
+        <p class="hero__lead">
+          Помогаем иностранным гражданам оформить статус в РФ и компаниям — легально оформить сотрудников.
+          Сначала выберите свой путь.
+        </p>
+        <div class="path-grid">
+          <article class="path-card">
+            <div class="path-card__tag">Путь A · для граждан</div>
+            <h2>Оформляю статус себе или семье</h2>
+            <p>РВП, ВНЖ, гражданство — сопровождение юриста и онлайн-консультация, если не знаете, с чего начать.</p>
+            <div class="path-card__actions">
+              <a class="btn btn--primary" href="#cta">Онлайн-консультация</a>
+              <a class="btn btn--secondary" href="#uslugi">Смотреть услуги</a>
+            </div>
+          </article>
+          <article class="path-card" id="biz">
+            <div class="path-card__tag">Путь B · для бизнеса</div>
+            <h2>Оформляю сотрудников компании</h2>
+            <p>ВКС и легализация иностранных сотрудников — отдельный контур для HR и собственников.</p>
+            <div class="path-card__actions">
+              <a class="btn btn--primary" href="#biz-note">Работодателям</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="tools">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>С чего начать прямо сейчас</h2>
+          <p>Три инструмента входа — без смешения с продажей одной услуги на всю главную.</p>
+        </div>
+        <div class="tools">
+          <a class="tool" href="#cta">
+            <div class="tool__ico" aria-hidden="true">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h2a2 2 0 0 1 2 1.72c.13.96.35 1.9.67 2.8a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.84.54 2.8.67A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <strong>Онлайн-консультация</strong>
+            <span>Разбор ситуации с миграционным юристом. Основной продуктовый вход.</span>
+            <em>Записаться →</em>
+          </a>
+          <a class="tool" href="#">
+            <div class="tool__ico" aria-hidden="true">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <strong>ИИ-юрист</strong>
+            <span>Быстрые ориентиры по статусу и документам — низкий порог входа.</span>
+            <em>Открыть чат →</em>
+          </a>
+          <a class="tool" href="#">
+            <div class="tool__ico" aria-hidden="true">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <strong>Квиз</strong>
+            <span>Короткий тест: какой статус вам подходит и что делать дальше.</span>
+            <em>Пройти квиз →</em>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="uslugi">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Услуги для иностранных граждан</h2>
+          <p>Каждая услуга — отдельная страница. Здесь только выбор направления.</p>
+        </div>
+        <div class="services">
+          <a class="service" href="#">
+            <h3>РВП</h3>
+            <p>Разрешение на временное проживание в Москве и области — сопровождение под ключ.</p>
+            <span class="service__more">Подробнее →</span>
+          </a>
+          <a class="service" href="#">
+            <h3>ВНЖ</h3>
+            <p>Вид на жительство: подготовка, подача и контроль этапов с юристом.</p>
+            <span class="service__more">Подробнее →</span>
+          </a>
+          <a class="service" href="#">
+            <h3>Гражданство РФ</h3>
+            <p>Путь к паспорту с опорой на ваше основание и актуальные правила.</p>
+            <span class="service__more">Подробнее →</span>
+          </a>
+        </div>
+        <p id="biz-note" style="margin:28px 0 0;color:var(--mp-muted);font-size:0.95rem;">
+          Нужны услуги для компании (ВКС, легализация сотрудников)?
+          <a href="#biz" style="font-weight:700;">Перейти в раздел для работодателей</a>
+          — в продакшене это будет страница <code>/rabotodatelyam</code>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Почему нам доверяют</h2>
+          <p>Короткий блок доказательств — без энциклопедии и без юридических обещаний «100% результат».</p>
+        </div>
+        <div class="trust">
+          <div class="trust-stat">
+            <strong>2 офиса</strong>
+            Подольск и Одинцово — очная поддержка после онлайн-консультации.
+          </div>
+          <article class="trust-card">
+            <h3>Кейсы сопровождения</h3>
+            <p>Реальные истории оформления статусов — на отдельной странице кейсов.</p>
+          </article>
+          <article class="trust-card">
+            <h3>Отзывы клиентов</h3>
+            <p>Видео и текстовые отзывы — отдельный trust-раздел, не вся главная.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="knowledge">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>База знаний</h2>
+          <p>Для тех, кто хочет разобраться сам — затем один понятный следующий шаг.</p>
+        </div>
+        <div class="knowledge">
+          <a class="know-card" href="#">
+            <div class="know-card__visual" aria-hidden="true"></div>
+            <div class="know-card__body">
+              <strong>Как получить РВП: пошаговый гид</strong>
+              <span>Основания, документы, типичные ошибки</span>
+            </div>
+          </a>
+          <a class="know-card" href="#">
+            <div class="know-card__visual know-card__visual--2" aria-hidden="true"></div>
+            <div class="know-card__body">
+              <strong>ВНЖ после РВП: что важно не пропустить</strong>
+              <span>Сроки, уведомления, подготовка пакета</span>
+            </div>
+          </a>
+          <a class="know-card" href="#">
+            <div class="know-card__visual know-card__visual--3" aria-hidden="true"></div>
+            <div class="know-card__body">
+              <strong>Гражданство РФ: с чего начать в 2026</strong>
+              <span>Интент «разобраться» → консультация при необходимости</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Государственные сервисы</h2>
+          <p>Полезные проверки — компактно, не в первом экране.</p>
+        </div>
+        <div class="gos">
+          <a href="#">Готовность РВП</a>
+          <a href="#">Готовность ВНЖ</a>
+          <a href="#">Проверка патента</a>
+          <a href="#">Запись в Сахарово</a>
+          <a href="#">Запрет на въезд</a>
+          <a href="#">ИНН</a>
+          <a href="#">ФССП</a>
+          <a href="#">Исполнительные производства</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cta">
+      <div class="wrap">
+        <div class="cta-band">
+          <div>
+            <h2>Не знаете, с чего начать?</h2>
+            <p>Онлайн-консультация миграционного юриста — основной вход, если ситуация неочевидна. Условия и цена уточняются на странице записи.</p>
+          </div>
+          <a class="btn btn--light" href="#">Записаться на консультацию</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contacts">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Контакты</h2>
+          <p>Один блок — без тройного дубля адресов.</p>
+        </div>
+        <div class="contacts">
+          <div class="phone-block">
+            <h3>Телефон</h3>
+            <p>Пн–Пт, 09:00–18:00</p>
+            <a href="tel:+74958590051">+7 (495) 859-00-51</a>
+          </div>
+          <div class="office">
+            <h3>Офис в Подольске</h3>
+            <p>ул. Профсоюзная, 4<br>Московская область</p>
+          </div>
+          <div class="office">
+            <h3>Офис в Одинцово</h3>
+            <p>п. Новоивановское,<br>ул. Калинина, 8</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__row">
+      <div>© Migra-Pro · концепт главной (редизайн)</div>
+      <div>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
