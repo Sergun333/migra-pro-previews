@@ -124,6 +124,14 @@
       box-shadow: var(--mp-shadow);
     }
     .nav-item { position: relative; }
+    .nav-item--split {
+      display: inline-flex; align-items: stretch;
+      border-radius: 10px;
+    }
+    .nav-item--split:hover,
+    .nav-item--split.is-open {
+      background: var(--mp-primary-light);
+    }
     .nav-link {
       display: inline-flex; align-items: center; gap: 6px;
       padding: 10px 12px; border-radius: 10px;
@@ -132,15 +140,24 @@
       border: 0; background: transparent; cursor: pointer;
       font-family: inherit;
     }
-    .nav-link:hover, .nav-item:focus-within > .nav-link {
-      background: var(--mp-primary-light); color: var(--mp-primary);
+    .nav-link:hover { color: var(--mp-primary); }
+    .nav-item--split .nav-link--label {
+      border-radius: 10px 0 0 10px; padding-right: 6px;
     }
-    .nav-link .chev {
-      width: 10px; height: 10px; opacity: 0.7;
+    .nav-item--split .nav-link--label:hover,
+    .nav-item--split.is-open .nav-link--label { color: var(--mp-primary); }
+    .nav-chev {
+      border-radius: 0 10px 10px 0; padding: 10px 12px 10px 4px;
+      color: var(--mp-text);
+    }
+    .nav-chev:hover,
+    .nav-item--split.is-open .nav-chev { color: var(--mp-primary); }
+    .nav-chev .chev {
+      width: 10px; height: 10px; opacity: 0.75;
       transition: transform 0.15s ease;
+      display: block;
     }
-    .nav-item:focus-within > .nav-link .chev,
-    .nav-item:hover > .nav-link .chev { transform: rotate(180deg); }
+    .nav-item--split.is-open .nav-chev .chev { transform: rotate(180deg); }
 
     .dropdown {
       display: none;
@@ -153,14 +170,12 @@
       padding: 14px;
       z-index: 120;
     }
-    .nav-item:hover > .dropdown,
-    .nav-item:focus-within > .dropdown { display: block; }
-    .dropdown--tools { min-width: 260px; }
+    .nav-item--split.is-open > .dropdown { display: block; }
+    .dropdown[hidden] { display: none !important; }
     .dropdown__grid {
       display: grid; gap: 8px 20px;
       grid-template-columns: 1fr 1fr;
     }
-    .dropdown--tools .dropdown__grid { grid-template-columns: 1fr; }
     .dropdown a {
       display: block; padding: 8px 10px; border-radius: 8px;
       text-decoration: none; color: var(--mp-text);
@@ -454,7 +469,7 @@
 </head>
 <body>
   <div class="design-note">
-    <strong>Концепт редизайна главной</strong> · L1: Услуги → #uslugi · Работодателям → /rnr · База знаний → /informaciya · Контакты → #contacts · без «Инструменты»
+    <strong>Концепт редизайна главной</strong> · «Услуги»: клик по тексту → #uslugi, стрелка → дроп B2C · Работодателям → /rnr · База → /informaciya · Контакты → #contacts
   </div>
 
   <header class="site-header">
@@ -494,7 +509,26 @@
     <div class="header-nav-wrap">
       <div class="wrap">
         <nav class="header-nav" aria-label="Основное меню">
-          <a class="nav-link" href="#uslugi">Услуги</a>
+          <div class="nav-item nav-item--split" data-dropdown>
+            <a class="nav-link nav-link--label" href="#uslugi">Услуги</a>
+            <button class="nav-link nav-chev" type="button" aria-expanded="false" aria-controls="dropdown-uslugi" aria-label="Открыть список услуг">
+              <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+            <div class="dropdown" id="dropdown-uslugi" role="menu" hidden>
+              <div class="dropdown__grid">
+                <a class="dropdown__all" href="https://migra-pro.com/uslugi">Все услуги →</a>
+                <span class="dropdown__label">Иностранным гражданам</span>
+                <a href="https://migra-pro.com/rvp">РВП</a>
+                <a href="https://migra-pro.com/vnj">ВНЖ</a>
+                <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a>
+                <span class="dropdown__label">Документы (пакеты)</span>
+                <a href="https://migra-pro.com/uslugi">Пакет на квоту</a>
+                <a href="https://migra-pro.com/uslugi">Пакет на РВП</a>
+                <a href="https://migra-pro.com/uslugi">Пакет на ВНЖ</a>
+                <a href="https://migra-pro.com/uslugi">Пакет на гражданство</a>
+              </div>
+            </div>
+          </div>
           <a class="nav-link" href="https://migra-pro.com/rnr">Работодателям</a>
           <a class="nav-link" href="https://migra-pro.com/informaciya">База знаний</a>
           <a class="nav-link" href="#contacts">Контакты</a>
@@ -723,5 +757,30 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var root = document.querySelector('[data-dropdown]');
+      if (!root) return;
+      var btn = root.querySelector('.nav-chev');
+      var panel = root.querySelector('.dropdown');
+      function setOpen(open) {
+        root.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) panel.removeAttribute('hidden');
+        else panel.setAttribute('hidden', '');
+      }
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setOpen(!root.classList.contains('is-open'));
+      });
+      document.addEventListener('click', function (e) {
+        if (!root.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+  </script>
 </body>
 </html>
