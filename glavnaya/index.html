@@ -288,6 +288,39 @@
       color: var(--mp-text); font-size: 0.95rem;
     }
 
+    /* ——— Виджеты отзывов ——— */
+    .widgets {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .widgets { grid-template-columns: 1fr 1fr; }
+    }
+    .widget {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 20px;
+    }
+    .widget__head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 14px;
+    }
+    .widget__head strong { font-size: 1.05rem; }
+    .widget__rate {
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      font-weight: 800; border-radius: 999px; padding: 4px 12px;
+    }
+    .widget__slot {
+      border: 2px dashed var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      min-height: 220px;
+      display: grid; place-content: center; text-align: center;
+      color: var(--mp-muted); font-size: 0.95rem; padding: 20px;
+      background: var(--mp-bg);
+    }
+    .widget__slot small { color: #98a2ad; }
+
     /* ——— FAQ ——— */
     .faq { display: grid; gap: 10px; max-width: 52rem; }
     .faq details {
@@ -626,6 +659,7 @@
           </div>
           <a class="nav-link" href="https://migra-pro.com/rnr">Работодателям</a>
           <a class="nav-link" href="https://migra-pro.com/informaciya">База знаний</a>
+          <a class="nav-link" href="#otzyvy">Отзывы</a>
           <a class="nav-link" href="#contacts">Контакты</a>
         </nav>
       </div>
@@ -654,7 +688,7 @@
           <article class="path-card" id="biz">
             <div class="path-card__tag">Путь B · для бизнеса</div>
             <h2>Оформляю сотрудников компании</h2>
-            <p>ВКС и легализация иностранных сотрудников. Оформление статуса ВКС — закрытый кейс, работаем с компаниями Москвы и области.</p>
+            <p>ВКС и легализация иностранных сотрудников. Более 10 лет в миграционном праве, работаем с компаниями Москвы и области.</p>
             <div class="path-card__actions">
               <a class="btn btn--primary" href="https://migra-pro.com/rnr">Работодателям</a>
             </div>
@@ -666,20 +700,20 @@
     <section class="stats-band">
       <div class="wrap stats-band__grid">
         <div class="stat">
-          <strong><span class="req">[REQ лет]</span> лет</strong>
+          <strong>Более 10 лет</strong>
           <span>помогаем с миграционными документами</span>
         </div>
         <div class="stat">
-          <strong><span class="req">[REQ N]</span>+</strong>
-          <span>оформленных дел по РВП, ВНЖ и гражданству</span>
+          <strong>6 000+</strong>
+          <span>оформлений по РВП, ВНЖ и гражданству</span>
         </div>
         <div class="stat">
           <strong>2 офиса</strong>
           <span>Подольск и Одинцово — без поездки в центр Москвы</span>
         </div>
         <div class="stat">
-          <strong><span class="req">[REQ рейтинг]</span></strong>
-          <span>средняя оценка, <span class="req">[REQ N]</span> отзывов на Яндекс.Картах</span>
+          <strong>4,8</strong>
+          <span>рейтинг на Яндекс.Картах и 2ГИС</span>
         </div>
       </div>
     </section>
@@ -741,7 +775,7 @@
           <a class="service" href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">
             <h3>Гражданство РФ</h3>
             <p>Путь к паспорту с опорой на ваше основание и актуальные правила.</p>
-            <strong>от <span class="req">[REQ ₽]</span></strong>
+            <strong>от 14 000 ₽</strong>
             <span class="service__more">Подробнее →</span>
           </a>
         </div>
@@ -766,8 +800,8 @@
           </article>
           <article class="step">
             <div class="step__num">2</div>
-            <h3>Договор</h3>
-            <p>Фиксируем состав работ и стоимость <span class="req">[REQ: цена фиксируется в договоре?]</span></p>
+            <h3>Договор с фиксированной ценой</h3>
+            <p>Стоимость фиксируется в договоре и не меняется по ходу работы.</p>
           </article>
           <article class="step">
             <div class="step__num">3</div>
@@ -776,12 +810,12 @@
           </article>
           <article class="step">
             <div class="step__num">4</div>
-            <h3>Подача и результат</h3>
-            <p><span class="req">[REQ: сопровождаем ли на подаче]</span> Ведём до получения статуса.</p>
+            <h3>Сопровождение до результата</h3>
+            <p>Консультационное сопровождение до получения статуса: подсказываем по каждому этапу.</p>
           </article>
         </div>
         <p class="terms-note">
-          Оплата: <span class="req">[REQ схема оплаты, например 50/50]</span> · Работаем с гражданами стран СНГ и дальнего зарубежья.
+          <strong>Оплата 50/50:</strong> половина при заключении договора, половина — по готовности пакета документов. Цена зафиксирована в договоре.
         </p>
       </div>
     </section>
@@ -794,9 +828,9 @@
         </div>
         <div class="trust">
           <div class="trust-stat">
-            <strong><span class="req">[REQ рейтинг]</span></strong>
-            <span class="req">[REQ N]</span> отзывов на Яндекс.Картах по двум офисам.
-            <div style="margin-top:12px;"><a href="https://migra-pro.com/reviews" style="font-weight:700;">Читать отзывы →</a></div>
+            <strong>4,8</strong>
+            Оценка клиентов на Яндекс.Картах и 2ГИС по двум офисам.
+            <div style="margin-top:12px;"><a href="#otzyvy" style="font-weight:700;">Читать отзывы →</a></div>
           </div>
           <article class="trust-card">
             <h3><span class="req">[REQ основание]</span> · <span class="req">[REQ срок]</span></h3>
@@ -806,6 +840,31 @@
             <h3>Юристы, а не консультанты</h3>
             <p><span class="req">[REQ имя ведущего юриста и опыт]</span> Очный приём в Подольске и Одинцово после онлайн-консультации.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="otzyvy">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Отзывы клиентов</h2>
+          <p>Оценки собраны на публичных площадках — их нельзя отредактировать на нашей стороне.</p>
+        </div>
+        <div class="widgets">
+          <div class="widget">
+            <div class="widget__head">
+              <strong>Яндекс.Карты</strong>
+              <span class="widget__rate">4,8</span>
+            </div>
+            <div class="widget__slot">Виджет отзывов Яндекс.Карт<br><small>подключается кодом организации при вёрстке</small></div>
+          </div>
+          <div class="widget">
+            <div class="widget__head">
+              <strong>2ГИС</strong>
+              <span class="widget__rate">4,8</span>
+            </div>
+            <div class="widget__slot">Виджет отзывов 2ГИС<br><small>подключается кодом филиала при вёрстке</small></div>
+          </div>
         </div>
       </div>
     </section>
@@ -870,7 +929,7 @@
         <div class="faq">
           <details>
             <summary>Сколько стоят ваши услуги?</summary>
-            <p>Сопровождение по РВП и ВНЖ — от 14 000 ₽; итоговая стоимость зависит от основания и состава работ. <span class="req">[REQ: фиксируется ли цена в договоре]</span> Точную сумму по вашей ситуации называем на консультации.</p>
+            <p>Сопровождение по РВП, ВНЖ и гражданству — от 14 000 ₽; итоговая сумма зависит от основания и состава работ. Цена фиксируется в договоре и не меняется по ходу дела. Оплата 50/50: половина при подписании, половина по готовности пакета документов.</p>
           </details>
           <details>
             <summary>Сколько времени занимает оформление?</summary>
@@ -878,7 +937,7 @@
           </details>
           <details>
             <summary>Что будет, если придёт отказ?</summary>
-            <p><span class="req">[REQ: условия при отказе — согласовать с юристом]</span> Мы готовим документы так, чтобы исключить отказ по формальным основаниям. ⚖️</p>
+            <p>Мы готовим документы так, чтобы исключить отказ по формальным основаниям, и ведём консультационное сопровождение до получения статуса. <span class="req">[REQ: условия при отказе — согласовать с юристом]</span> ⚖️</p>
           </details>
         </div>
       </div>
