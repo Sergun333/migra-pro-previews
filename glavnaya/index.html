@@ -226,6 +226,100 @@
     .btn--light:hover { background: var(--mp-primary-light); }
     .btn--block { width: 100%; }
 
+    /* ——— Полоса цифр доверия ——— */
+    .stats-band {
+      background: var(--mp-white);
+      border-bottom: 1px solid var(--mp-border);
+      padding: 22px 0;
+    }
+    .stats-band__grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .stats-band__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+    .stat strong {
+      font-size: 1.5rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .stat span { font-size: 0.88rem; color: var(--mp-muted); line-height: 1.3; }
+
+    /* маркер незаполненного факта (только в концепте) */
+    .req {
+      background: #fff3cd; color: #6b5500;
+      border-radius: 5px; padding: 0 5px;
+      font-weight: 700; white-space: nowrap;
+    }
+
+    /* ——— Как мы работаем ——— */
+    .steps {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+      counter-reset: step;
+    }
+    @media (min-width: 760px) {
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1040px) {
+      .steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    .step {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      position: relative;
+    }
+    .step__num {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--mp-primary); color: #fff;
+      display: grid; place-items: center;
+      font-weight: 800; font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .step h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .step p { margin: 0; color: var(--mp-muted); font-size: 0.93rem; }
+    .terms-note {
+      margin: 18px 0 0; padding: 16px 18px;
+      background: var(--mp-primary-light);
+      border-radius: var(--mp-radius-sm);
+      color: var(--mp-text); font-size: 0.95rem;
+    }
+
+    /* ——— FAQ ——— */
+    .faq { display: grid; gap: 10px; max-width: 52rem; }
+    .faq details {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 16px 20px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 700; font-size: 1rem;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+"; float: right; color: var(--mp-primary); font-size: 1.2rem; line-height: 1;
+    }
+    .faq details[open] summary::after { content: "–"; }
+    .faq p { margin: 12px 0 0; color: var(--mp-muted); font-size: 0.95rem; }
+
+    /* ——— Sticky CTA на мобильном ——— */
+    .mobile-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px; padding: 10px 12px;
+      background: rgba(255,255,255,0.97);
+      border-top: 1px solid var(--mp-border);
+      box-shadow: 0 -6px 20px rgba(20,33,61,0.1);
+    }
+    .mobile-bar .btn { padding: 12px 10px; font-size: 0.9rem; }
+    @media (min-width: 860px) { .mobile-bar { display: none; } }
+    @media (max-width: 859px) { body { padding-bottom: 74px; } }
+
     .hero {
       position: relative;
       background:
@@ -340,6 +434,7 @@
     .service:hover { border-color: var(--mp-primary); }
     .service h3 { margin: 0; font-size: 1.2rem; }
     .service p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .service > strong { font-size: 1.05rem; color: var(--mp-text); }
     .service__more { font-weight: 700; color: var(--mp-primary); }
 
     .trust {
@@ -469,7 +564,7 @@
 </head>
 <body>
   <div class="design-note">
-    <strong>Концепт редизайна главной</strong> · «Услуги»: клик по тексту → #uslugi, стрелка → дроп B2C · Работодателям → /rnr · База → /informaciya · Контакты → #contacts
+    <strong>Концепт редизайна главной</strong> · <span style="background:#fff3cd;padding:0 5px;border-radius:5px;font-weight:700;">[REQ …]</span> — факты, которых у нас нет: цифры, цены, отзывы, условия договора. Ждём данные от заказчика, не выдумываем.
   </div>
 
   <header class="site-header">
@@ -559,7 +654,7 @@
           <article class="path-card" id="biz">
             <div class="path-card__tag">Путь B · для бизнеса</div>
             <h2>Оформляю сотрудников компании</h2>
-            <p>ВКС и легализация иностранных сотрудников — отдельный контур для HR и собственников.</p>
+            <p>ВКС и легализация иностранных сотрудников. Оформление статуса ВКС — закрытый кейс, работаем с компаниями Москвы и области.</p>
             <div class="path-card__actions">
               <a class="btn btn--primary" href="https://migra-pro.com/rnr">Работодателям</a>
             </div>
@@ -568,11 +663,32 @@
       </div>
     </section>
 
+    <section class="stats-band">
+      <div class="wrap stats-band__grid">
+        <div class="stat">
+          <strong><span class="req">[REQ лет]</span> лет</strong>
+          <span>помогаем с миграционными документами</span>
+        </div>
+        <div class="stat">
+          <strong><span class="req">[REQ N]</span>+</strong>
+          <span>оформленных дел по РВП, ВНЖ и гражданству</span>
+        </div>
+        <div class="stat">
+          <strong>2 офиса</strong>
+          <span>Подольск и Одинцово — без поездки в центр Москвы</span>
+        </div>
+        <div class="stat">
+          <strong><span class="req">[REQ рейтинг]</span></strong>
+          <span>средняя оценка, <span class="req">[REQ N]</span> отзывов на Яндекс.Картах</span>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--alt" id="tools">
       <div class="wrap">
         <div class="section__head">
           <h2>С чего начать прямо сейчас</h2>
-          <p>Три инструмента входа — без смешения с продажей одной услуги на всю главную.</p>
+          <p>Выберите удобный способ разобраться в своей ситуации.</p>
         </div>
         <div class="tools">
           <a class="tool" href="#cta">
@@ -580,7 +696,7 @@
               <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h2a2 2 0 0 1 2 1.72c.13.96.35 1.9.67 2.8a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.84.54 2.8.67A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <strong>Онлайн-консультация</strong>
-            <span>Разбор ситуации с миграционным юристом. Основной продуктовый вход.</span>
+            <span>Юрист разберёт вашу ситуацию: какое основание подходит, какие документы нужны и в каком порядке действовать.</span>
             <em>Записаться →</em>
           </a>
           <a class="tool" href="#">
@@ -588,16 +704,16 @@
               <svg class="ico" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
             <strong>ИИ-юрист</strong>
-            <span>Быстрые ориентиры по статусу и документам — низкий порог входа.</span>
+            <span>Ответ на миграционный вопрос за минуту — бесплатно и в любое время суток.</span>
             <em>Открыть чат →</em>
           </a>
           <a class="tool" href="#">
             <div class="tool__ico" aria-hidden="true">
               <svg class="ico" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
             </div>
-            <strong>Квиз</strong>
-            <span>Короткий тест: какой статус вам подходит и что делать дальше.</span>
-            <em>Пройти квиз →</em>
+            <strong>Тест за 2 минуты</strong>
+            <span>Подберём подходящее вам основание и пришлём пошаговый план действий.</span>
+            <em>Пройти тест →</em>
           </a>
         </div>
       </div>
@@ -607,33 +723,65 @@
       <div class="wrap">
         <div class="section__head">
           <h2>Услуги для иностранных граждан</h2>
-          <p>Каждая услуга — отдельная страница. Здесь только выбор направления.</p>
+          <p>Выберите свой статус — расскажем, что входит в сопровождение и сколько это стоит.</p>
         </div>
         <div class="services">
           <a class="service" href="https://migra-pro.com/rvp">
             <h3>РВП</h3>
             <p>Разрешение на временное проживание в Москве и области — сопровождение под ключ.</p>
+            <strong>от 14 000 ₽</strong>
             <span class="service__more">Подробнее →</span>
           </a>
           <a class="service" href="https://migra-pro.com/vnj">
             <h3>ВНЖ</h3>
             <p>Вид на жительство: подготовка, подача и контроль этапов с юристом.</p>
+            <strong>от 14 000 ₽</strong>
             <span class="service__more">Подробнее →</span>
           </a>
-          <a class="service" href="https://migra-pro.com/uslugi">
+          <a class="service" href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">
             <h3>Гражданство РФ</h3>
             <p>Путь к паспорту с опорой на ваше основание и актуальные правила.</p>
+            <strong>от <span class="req">[REQ ₽]</span></strong>
             <span class="service__more">Подробнее →</span>
           </a>
         </div>
         <p style="margin:20px 0 0;">
           <a href="https://migra-pro.com/uslugi" style="font-weight:700;">Все услуги →</a>
-          <span style="color:var(--mp-muted);"> полный каталог на /uslugi (квота, РНР, обжалования и др.)</span>
+          <span style="color:var(--mp-muted);"> квота на РВП, разрешение на работу, обжалование запрета и депортации</span>
         </p>
-        <p id="biz-note" style="margin:28px 0 0;color:var(--mp-muted);font-size:0.95rem;">
-          Нужны услуги для компании (ВКС, легализация сотрудников)?
-          В продакшене кнопка «Работодателям» ведёт на <strong>/rnr</strong> (хаб B2B / основа направления «трудовая миграция»).
-          Блок «Организациям» с текущей /uslugi при редизайне уходит туда же.
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Как мы работаем</h2>
+          <p>Понятный порядок: вы всегда знаете, на каком этапе находитесь.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step__num">1</div>
+            <h3>Онлайн-консультация</h3>
+            <p>Разбираем ситуацию и определяем основание, по которому вам подходит подача.</p>
+          </article>
+          <article class="step">
+            <div class="step__num">2</div>
+            <h3>Договор</h3>
+            <p>Фиксируем состав работ и стоимость <span class="req">[REQ: цена фиксируется в договоре?]</span></p>
+          </article>
+          <article class="step">
+            <div class="step__num">3</div>
+            <h3>Документы</h3>
+            <p>Собираем и проверяем пакет, чтобы не получить отказ из-за формальной ошибки.</p>
+          </article>
+          <article class="step">
+            <div class="step__num">4</div>
+            <h3>Подача и результат</h3>
+            <p><span class="req">[REQ: сопровождаем ли на подаче]</span> Ведём до получения статуса.</p>
+          </article>
+        </div>
+        <p class="terms-note">
+          Оплата: <span class="req">[REQ схема оплаты, например 50/50]</span> · Работаем с гражданами стран СНГ и дальнего зарубежья.
         </p>
       </div>
     </section>
@@ -642,20 +790,21 @@
       <div class="wrap">
         <div class="section__head">
           <h2>Почему нам доверяют</h2>
-          <p>Короткий блок доказательств — без энциклопедии и без юридических обещаний «100% результат».</p>
+          <p>Конкретные дела и живые отзывы вместо обещаний «результат 100%».</p>
         </div>
         <div class="trust">
           <div class="trust-stat">
-            <strong>2 офиса</strong>
-            Подольск и Одинцово — очная поддержка после онлайн-консультации.
+            <strong><span class="req">[REQ рейтинг]</span></strong>
+            <span class="req">[REQ N]</span> отзывов на Яндекс.Картах по двум офисам.
+            <div style="margin-top:12px;"><a href="https://migra-pro.com/reviews" style="font-weight:700;">Читать отзывы →</a></div>
           </div>
           <article class="trust-card">
-            <h3>Кейсы сопровождения</h3>
-            <p>Реальные истории оформления статусов — на отдельной странице кейсов.</p>
+            <h3><span class="req">[REQ основание]</span> · <span class="req">[REQ срок]</span></h3>
+            <p><span class="req">[REQ кейс: ситуация клиента и результат]</span> Формат карточки: основание — срок — что получил клиент.</p>
           </article>
           <article class="trust-card">
-            <h3>Отзывы клиентов</h3>
-            <p>Видео и текстовые отзывы — отдельный trust-раздел, не вся главная.</p>
+            <h3>Юристы, а не консультанты</h3>
+            <p><span class="req">[REQ имя ведущего юриста и опыт]</span> Очный приём в Подольске и Одинцово после онлайн-консультации.</p>
           </article>
         </div>
       </div>
@@ -665,7 +814,7 @@
       <div class="wrap">
         <div class="section__head">
           <h2>База знаний</h2>
-          <p>Для тех, кто хочет разобраться сам — затем один понятный следующий шаг.</p>
+          <p>Разбираетесь самостоятельно? Собрали пошаговые материалы по статусам.</p>
         </div>
         <div class="knowledge">
           <a class="know-card" href="#">
@@ -686,7 +835,7 @@
             <div class="know-card__visual know-card__visual--3" aria-hidden="true"></div>
             <div class="know-card__body">
               <strong>Гражданство РФ: с чего начать в 2026</strong>
-              <span>Интент «разобраться» → консультация при необходимости</span>
+              <span>Основания, сроки и порядок подачи</span>
             </div>
           </a>
         </div>
@@ -697,7 +846,7 @@
       <div class="wrap">
         <div class="section__head">
           <h2>Государственные сервисы</h2>
-          <p>Полезные проверки — компактно, не в первом экране.</p>
+          <p>Быстрые проверки статуса документов и ограничений — прямые ссылки на официальные сервисы.</p>
         </div>
         <div class="gos">
           <a href="#">Готовность РВП</a>
@@ -712,14 +861,37 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Частые вопросы</h2>
+          <p>Три вопроса, которые задают чаще всего.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Сколько стоят ваши услуги?</summary>
+            <p>Сопровождение по РВП и ВНЖ — от 14 000 ₽; итоговая стоимость зависит от основания и состава работ. <span class="req">[REQ: фиксируется ли цена в договоре]</span> Точную сумму по вашей ситуации называем на консультации.</p>
+          </details>
+          <details>
+            <summary>Сколько времени занимает оформление?</summary>
+            <p><span class="req">[REQ сроки подготовки пакета]</span> Сроки рассмотрения устанавливает МВД; мы отвечаем за подготовку документов без ошибок и за контроль этапов. ⚖️</p>
+          </details>
+          <details>
+            <summary>Что будет, если придёт отказ?</summary>
+            <p><span class="req">[REQ: условия при отказе — согласовать с юристом]</span> Мы готовим документы так, чтобы исключить отказ по формальным основаниям. ⚖️</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="cta">
       <div class="wrap">
         <div class="cta-band">
           <div>
             <h2>Не знаете, с чего начать?</h2>
-            <p>Онлайн-консультация миграционного юриста — основной вход, если ситуация неочевидна. Условия и цена уточняются на странице записи.</p>
+            <p>На онлайн-консультации юрист определит ваше основание, назовёт сроки и список документов. Запись на ближайшее свободное время.</p>
           </div>
-          <a class="btn btn--light" href="#">Записаться на консультацию</a>
+          <a class="btn btn--light" href="https://migra-pro.com/online_consult">Записаться на консультацию</a>
         </div>
       </div>
     </section>
@@ -728,7 +900,7 @@
       <div class="wrap">
         <div class="section__head">
           <h2>Контакты</h2>
-          <p>Один блок — без тройного дубля адресов.</p>
+          <p>Два офиса в Московской области. Отвечаем в мессенджерах в рабочие часы.</p>
         </div>
         <div class="contacts">
           <div class="phone-block">
@@ -748,6 +920,11 @@
       </div>
     </section>
   </main>
+
+  <div class="mobile-bar">
+    <a class="btn btn--secondary" href="tel:+74958590051">Позвонить</a>
+    <a class="btn btn--primary" href="https://migra-pro.com/online_consult">Консультация</a>
+  </div>
 
   <footer class="site-footer">
     <div class="wrap site-footer__row">
