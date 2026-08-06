@@ -571,9 +571,15 @@
     .contacts {
       display: grid; gap: 16px;
       grid-template-columns: 1fr;
+      align-items: start;
     }
-    @media (min-width: 800px) {
-      .contacts { grid-template-columns: 1fr 1fr 1fr; }
+    @media (min-width: 900px) {
+      .contacts { grid-template-columns: 1.15fr 1fr; }
+    }
+    .contacts__cards { display: grid; gap: 16px; }
+    @media (min-width: 560px) and (max-width: 899px) {
+      .contacts__cards { grid-template-columns: 1fr 1fr; }
+      .contacts__cards .phone-block { grid-column: 1 / -1; }
     }
     .office, .phone-block {
       background: var(--mp-white);
@@ -583,25 +589,107 @@
     }
     .office h3, .phone-block h3 { margin: 0 0 8px; font-size: 1.05rem; }
     .office p, .phone-block p { margin: 0; color: var(--mp-muted); }
-    .phone-block a {
+    .phone-block a.phone-block__num {
       display: inline-block; margin-top: 8px;
       font-size: 1.35rem; font-weight: 800;
       color: var(--mp-primary); text-decoration: none;
       letter-spacing: -0.02em;
     }
+    .msgr-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .msgr-row a {
+      display: inline-flex; align-items: center; gap: 7px;
+      border: 1px solid var(--mp-border); border-radius: 10px;
+      padding: 8px 12px; font-size: 0.86rem; font-weight: 600;
+      color: var(--mp-text); text-decoration: none;
+    }
+    .msgr-row a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+    .msgr-row .ico { width: 16px; height: 16px; }
+    .office__hours { display: block; margin-top: 10px; font-size: 0.86rem; }
+    .office__link {
+      display: inline-block; margin-top: 12px;
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .office__link:hover { text-decoration: underline; }
+
+    .map-area {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      min-height: 380px;
+    }
+    .map-area__canvas {
+      flex: 1; min-height: 300px;
+      display: flex; align-items: center; justify-content: center;
+      padding: 28px; text-align: center;
+      background: repeating-linear-gradient(45deg, #eef2f6 0 14px, #e6edf4 14px 28px);
+      color: var(--mp-muted); font-size: 0.9rem; line-height: 1.5;
+    }
+    .map-area__canvas span { display: block; max-width: 22rem; }
+    .map-area__foot {
+      display: flex; flex-wrap: wrap; gap: 10px 20px;
+      padding: 14px 18px; border-top: 1px solid var(--mp-border);
+    }
+    .map-area__foot a {
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .map-area__foot a:hover { text-decoration: underline; }
 
     .site-footer {
-      border-top: 1px solid var(--mp-border);
-      padding: 28px 0 40px;
-      color: var(--mp-muted);
+      background: var(--mp-primary-dark);
+      color: rgba(255, 255, 255, 0.75);
       font-size: 0.9rem;
+      padding: 40px 0 32px;
+      margin-top: 8px;
     }
-    .site-footer__row {
-      display: flex; flex-wrap: wrap; gap: 12px 24px;
-      justify-content: space-between; align-items: center;
+    .site-footer a { color: rgba(255, 255, 255, 0.75); text-decoration: none; }
+    .site-footer a:hover { color: #fff; }
+    .site-footer a.btn--primary { color: #fff; }
+    .footer-cta {
+      display: grid; gap: 16px; align-items: center;
+      padding-bottom: 28px; margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
     }
-    .site-footer a { color: var(--mp-muted); text-decoration: none; }
-    .site-footer a:hover { color: var(--mp-primary); }
+    @media (min-width: 800px) {
+      .footer-cta { grid-template-columns: 1fr auto; }
+    }
+    .footer-cta strong { display: block; color: #fff; font-size: 1.15rem; margin-bottom: 4px; }
+    .footer-cta p { margin: 0; }
+    .footer-cols {
+      display: grid; gap: 26px 24px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 900px) {
+      .footer-cols { grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    }
+    .footer-cols h3 {
+      margin: 0 0 12px; font-size: 0.82rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; color: #fff;
+    }
+    .footer-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .footer-cols li { line-height: 1.4; }
+    .footer-phone {
+      display: inline-block; margin-bottom: 6px;
+      font-size: 1.15rem; font-weight: 800; color: #fff !important;
+      letter-spacing: -0.02em;
+    }
+    .footer-social { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .footer-social a {
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9px;
+      padding: 7px 11px; font-size: 0.84rem; font-weight: 600;
+    }
+    .footer-social a:hover { border-color: #fff; }
+    .footer-legal {
+      margin-top: 30px; padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      display: grid; gap: 10px;
+      font-size: 0.82rem; line-height: 1.5;
+    }
+    .footer-legal__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-footer .req { background: rgba(255, 243, 205, 0.9); color: #6b5500; }
 
     .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
   </style>
@@ -1005,18 +1093,37 @@
           <p>Два офиса в Московской области. Отвечаем в мессенджерах в рабочие часы.</p>
         </div>
         <div class="contacts">
-          <div class="phone-block">
-            <h3>Телефон</h3>
-            <p>Пн–Пт, 09:00–18:00</p>
-            <a href="tel:+74958590051">+7 (495) 859-00-51</a>
+          <div class="map-area">
+            <div class="map-area__canvas">
+              <span><strong>Область под карту.</strong> Встраивается интерактивная карта Яндекса с двумя метками — Подольск и Одинцово, с маршрутом от метки до пользователя.<br><span class="req">[REQ: код встраивания карты с двумя филиалами]</span></span>
+            </div>
+            <div class="map-area__foot">
+              <a href="#" rel="nofollow">Подольск на Яндекс.Картах →</a>
+              <a href="#" rel="nofollow">Одинцово на Яндекс.Картах →</a>
+            </div>
           </div>
-          <div class="office">
-            <h3>Офис в Подольске</h3>
-            <p>ул. Профсоюзная, 4<br>Московская область</p>
-          </div>
-          <div class="office">
-            <h3>Офис в Одинцово</h3>
-            <p>п. Новоивановское,<br>ул. Калинина, 8</p>
+          <div class="contacts__cards">
+            <div class="phone-block">
+              <h3>Телефон и мессенджеры</h3>
+              <p>Пн–Пт, 09:00–18:00</p>
+              <a class="phone-block__num" href="tel:+74958590051">+7 (495) 859-00-51</a>
+              <div class="msgr-row">
+                <a href="#" rel="nofollow"><svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-1.2 4.4L21 21l-5.2-1.1A8.5 8.5 0 1 1 21 11.5z"/><path d="M8.5 9.5c.3 1.7 2.4 4.2 4.1 4.8l1.2-.7c.2-.1.5 0 .6.2l.9 1.5c.1.2.1.5-.1.6-1.3.8-3.7.7-6.3-2-2.5-2.6-2.4-4.9-1.5-6.1.1-.2.4-.3.6-.2l1.5.8c.2.1.3.4.2.6l-.6 1.1z"/></svg>WhatsApp</a>
+                <a href="#" rel="nofollow"><svg class="ico" viewBox="0 0 24 24"><path d="M22 3 2.5 11.2c-.7.3-.7.8-.1 1l4.8 1.5 1.9 5.8c.2.7.6.8 1.1.5l2.7-2.3 4.8 3.5c.6.3 1 .1 1.1-.5L22.8 4c.2-.8-.3-1.2-.8-1z"/><path d="m9.3 14.1 9.2-7.2"/></svg>Telegram</a>
+              </div>
+            </div>
+            <div class="office">
+              <h3>Офис в Подольске</h3>
+              <p>ул. Профсоюзная, 4<br>Московская область</p>
+              <span class="office__hours"><span class="req">[REQ: часы работы офиса]</span></span>
+              <a class="office__link" href="#" rel="nofollow">Как добраться →</a>
+            </div>
+            <div class="office">
+              <h3>Офис в Одинцово</h3>
+              <p>п. Новоивановское,<br>ул. Калинина, 8</p>
+              <span class="office__hours"><span class="req">[REQ: часы работы офиса]</span></span>
+              <a class="office__link" href="#" rel="nofollow">Как добраться →</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1029,10 +1136,83 @@
   </div>
 
   <footer class="site-footer">
-    <div class="wrap site-footer__row">
-      <div>© Migra-Pro · концепт главной (редизайн)</div>
-      <div>
-        <a href="#">Политика конфиденциальности</a>
+    <div class="wrap">
+      <div class="footer-cta">
+        <div>
+          <strong>Не разобрались, какой статус вам подходит?</strong>
+          <p>Юрист определит основание и назовёт список документов для вашей ситуации.</p>
+        </div>
+        <a class="btn btn--primary" href="https://migra-pro.com/online_consult">Бесплатная консультация</a>
+      </div>
+
+      <div class="footer-cols">
+        <div>
+          <h3>Иностранным гражданам</h3>
+          <ul>
+            <li><a href="https://migra-pro.com/rvp">РВП</a></li>
+            <li><a href="https://migra-pro.com/vnj">ВНЖ</a></li>
+            <li><a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></li>
+            <li><a href="https://migra-pro.com/uslugi">Квота на РВП</a></li>
+            <li><a href="https://migra-pro.com/uslugi">Временное убежище</a></li>
+            <li><a href="https://migra-pro.com/cancellationofinter">Обжалование запрета на въезд</a></li>
+            <li><a href="https://migra-pro.com/cancellationofdeportation">Отмена депортации</a></li>
+            <li><a href="https://migra-pro.com/uslugi">Все услуги и цены</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Работодателям</h3>
+          <ul>
+            <li><a href="https://migra-pro.com/rnr">Оформление иностранных сотрудников</a></li>
+            <li><a href="https://migra-pro.com/rnr">Разрешение на работу</a></li>
+            <li><a href="https://migra-pro.com/rnr">Высококвалифицированные специалисты (ВКС)</a></li>
+            <li><a href="https://migra-pro.com/rnr">Кадровые уведомления в МВД</a></li>
+          </ul>
+          <h3 style="margin-top:22px;">Компания</h3>
+          <ul>
+            <li><a href="https://migra-pro.com/about">О нас</a></li>
+            <li><a href="https://migra-pro.com/informaciya">База знаний</a></li>
+            <li><a href="https://migra-pro.com/questions">Вопросы и ответы</a></li>
+            <li><a href="#otzyvy">Отзывы</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul>
+            <li><a class="footer-phone" href="tel:+74958590051">+7 (495) 859-00-51</a></li>
+            <li>Пн–Пт, 09:00–18:00</li>
+            <li>Подольск, ул. Профсоюзная, 4</li>
+            <li>Одинцово, п. Новоивановское, ул. Калинина, 8</li>
+            <li><a href="#contacts">Показать на карте →</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" rel="nofollow">WhatsApp</a>
+            <a href="#" rel="nofollow">Telegram</a>
+          </div>
+        </div>
+        <div>
+          <h3>Полезное</h3>
+          <ul>
+            <li><a href="#gos">Проверка готовности документов</a></li>
+            <li><a href="#gos">Проверка запрета на въезд</a></li>
+            <li><a href="#gos">Запись в Сахарово</a></li>
+            <li><a href="https://migra-pro.com/online_consult">Онлайн-консультация юриста</a></li>
+          </ul>
+          <h3 style="margin-top:22px;">Мы в соцсетях</h3>
+          <div class="footer-social">
+            <a href="#" rel="nofollow">ВКонтакте <span class="req">[REQ]</span></a>
+            <a href="#" rel="nofollow">YouTube <span class="req">[REQ]</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <div><span class="req">[REQ: юридическое название, ИНН, ОГРН]</span> · Оказываем юридические и консультационные услуги в сфере миграционного права. Решение по документам принимают государственные органы.</div>
+        <div class="footer-legal__links">
+          <a href="#"><span class="req">[REQ]</span> Политика конфиденциальности</a>
+          <a href="#"><span class="req">[REQ]</span> Согласие на обработку персональных данных</a>
+          <a href="https://migra-pro.com/uslugi">Карта сайта</a>
+        </div>
+        <div>© 2026 Migra-Pro · концепт главной (редизайн), не рабочая версия сайта</div>
       </div>
     </div>
   </footer>
