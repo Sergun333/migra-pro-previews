@@ -83,6 +83,8 @@
     .brand__sub {
       display: block; font-size: 0.72rem; color: var(--mp-muted); margin-top: 2px;
     }
+    .brand__img { height: 46px; width: auto; display: block; }
+    @media (max-width: 640px) { .brand__img { height: 36px; } }
     .header-messengers .ico {
       width: 18px; height: 18px; fill: currentColor;
     }
@@ -786,11 +788,7 @@
     <div class="header-top">
       <div class="wrap header-top__inner">
         <a class="brand" href="#">
-          <span class="brand__mark" aria-hidden="true">МП</span>
-          <span>
-            <span class="brand__name">МИГРА<em>ПРО</em></span>
-            <span class="brand__sub">Российское миграционное агентство</span>
-          </span>
+          <img class="brand__img" src="logo-migrapro.png" alt="МиграПро — российское миграционное агентство" width="316" height="74">
         </a>
         <div class="header-meta">
           <div class="header-rating" aria-label="Рейтинг на основе Яндекс">
