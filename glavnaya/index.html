@@ -558,7 +558,7 @@
       align-items: center;
     }
     @media (min-width: 800px) {
-      .cta-band { grid-template-columns: 1.4fr auto; padding: 40px 44px; }
+      .cta-band { grid-template-columns: 1.05fr 400px; gap: 32px; padding: 40px 44px; }
     }
     .cta-band h2 { margin: 0 0 8px; font-size: 1.55rem; letter-spacing: -0.02em; }
     .cta-band p { margin: 0; opacity: 0.92; max-width: 38ch; }
@@ -696,6 +696,83 @@
     .footer-legal__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
     .site-footer .req { background: rgba(255, 243, 205, 0.9); color: #6b5500; }
 
+    /* ——— Формы записи ——— */
+    .lead-form { display: grid; gap: 10px; }
+    .lead-form__row { display: grid; gap: 10px; }
+    @media (min-width: 560px) {
+      .lead-form__row { grid-template-columns: 1fr 1fr; }
+    }
+    .lead-form input[type="text"],
+    .lead-form input[type="tel"] {
+      width: 100%; box-sizing: border-box;
+      padding: 13px 14px; border-radius: 12px;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      font: inherit; font-size: 0.95rem; color: var(--mp-text);
+    }
+    .lead-form input::placeholder { color: #9aa4b0; }
+    .lead-form input:focus {
+      outline: none; border-color: var(--mp-primary);
+      box-shadow: 0 0 0 3px rgba(33, 84, 178, 0.15);
+    }
+    .lead-form .btn { width: 100%; }
+    .lead-form__agree {
+      display: flex; gap: 9px; align-items: flex-start;
+      font-size: 0.78rem; line-height: 1.4; color: var(--mp-muted);
+    }
+    .lead-form__agree input { margin-top: 2px; width: 16px; height: 16px; flex: none; }
+    .lead-form__agree a { color: inherit; text-decoration: underline; }
+    .lead-form__note { margin: 0; font-size: 0.8rem; color: var(--mp-muted); }
+    .lead-form__done {
+      display: none; padding: 16px; border-radius: 12px;
+      background: rgba(98, 197, 132, 0.14); border: 1px solid #62c584;
+      color: #1c6b3a; font-size: 0.92rem; line-height: 1.45;
+    }
+    .lead-form.is-sent .lead-form__done { display: block; }
+    .lead-form.is-sent .lead-form__row,
+    .lead-form.is-sent .lead-form__agree,
+    .lead-form.is-sent .lead-form__note,
+    .lead-form.is-sent .btn { display: none; }
+
+    /* форма внутри тёмной CTA-полосы */
+    .cta-band .lead-form__agree { color: rgba(255, 255, 255, 0.8); }
+    .cta-band .lead-form__note { color: rgba(255, 255, 255, 0.7); }
+    .cta-band .lead-form__agree a { color: #fff; }
+    .cta-form {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 16px; padding: 20px;
+    }
+
+    /* ——— Модальное окно ——— */
+    .modal {
+      position: fixed; inset: 0; z-index: 300;
+      display: none; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .modal.is-open { display: flex; }
+    .modal__overlay { position: absolute; inset: 0; background: rgba(12, 22, 40, 0.6); }
+    .modal__dialog {
+      position: relative; z-index: 1;
+      width: min(440px, 100%); max-height: 90vh; overflow-y: auto;
+      background: var(--mp-white); border-radius: 18px;
+      box-shadow: var(--mp-shadow-lg); padding: 28px 24px 24px;
+    }
+    .modal__close {
+      position: absolute; top: 12px; right: 12px;
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      cursor: pointer; font-size: 1.1rem; line-height: 1; color: var(--mp-muted);
+    }
+    .modal__close:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .modal__dialog h2 { margin: 0 0 8px; font-size: 1.3rem; letter-spacing: -0.02em; }
+    .modal__lead { margin: 0 0 18px; color: var(--mp-muted); font-size: 0.92rem; line-height: 1.5; }
+    .modal__alt {
+      margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--mp-border);
+      font-size: 0.85rem; color: var(--mp-muted); line-height: 1.5;
+    }
+    .modal__alt a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    body.is-locked { overflow: hidden; }
+
     .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
   </style>
 </head>
@@ -733,7 +810,7 @@
           </div>
         </div>
         <div class="header-top__cta">
-          <a class="btn btn--primary btn--sm" href="https://migra-pro.com/online_consult">Бесплатная консультация</a>
+          <a class="btn btn--primary btn--sm" href="#cta" data-modal-open data-modal-source="Шапка">Бесплатная консультация</a>
         </div>
       </div>
     </div>
@@ -781,7 +858,7 @@
             <h2>Оформляю статус себе или семье</h2>
             <p>РВП, ВНЖ, гражданство РФ. Проверим основание, соберём документы, подадим без ошибок. Не знаете, с чего начать — начните с консультации.</p>
             <div class="path-card__actions">
-              <a class="btn btn--primary" href="#cta">Бесплатная консультация</a>
+              <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Первый экран">Бесплатная консультация</a>
               <a class="btn btn--secondary" href="#uslugi">Смотреть услуги и цены</a>
             </div>
           </article>
@@ -825,7 +902,7 @@
           <p>Выберите удобный способ разобраться в своей ситуации.</p>
         </div>
         <div class="tools">
-          <a class="tool" href="#cta">
+          <a class="tool" href="#cta" data-modal-open data-modal-source="Плитка инструментов">
             <div class="tool__ico" aria-hidden="true">
               <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h2a2 2 0 0 1 2 1.72c.13.96.35 1.9.67 2.8a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.84.54 2.8.67A2 2 0 0 1 22 16.92z"/></svg>
             </div>
@@ -1084,9 +1161,23 @@
         <div class="cta-band">
           <div>
             <h2>Не знаете, с чего начать?</h2>
-            <p>На консультации юрист определит ваше основание, назовёт сроки и список документов. Запись на ближайшее свободное время.</p>
+            <p>На консультации юрист определит ваше основание, назовёт сроки и список документов. Оставьте имя и телефон — перезвоним в рабочее время и запишем на ближайшее свободное окно.</p>
           </div>
-          <a class="btn btn--light" href="https://migra-pro.com/online_consult">Записаться на консультацию</a>
+          <div class="cta-form">
+            <form class="lead-form" data-lead-form novalidate>
+              <div class="lead-form__row">
+                <input type="text" name="name" placeholder="Имя" autocomplete="given-name" required>
+                <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+              </div>
+              <button class="btn btn--light" type="submit">Записаться на консультацию</button>
+              <label class="lead-form__agree">
+                <input type="checkbox" name="agree" required>
+                <span>Согласен на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span>
+              </label>
+              <p class="lead-form__note">Перезваниваем Пн–Пт с 09:00 до 18:00. Первые 15 минут консультации — бесплатно.</p>
+              <div class="lead-form__done" role="status">Заявка отправлена. Юрист перезвонит в рабочее время по указанному номеру. <em>(в концепте форма ничего не отправляет)</em></div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -1146,7 +1237,7 @@
 
   <div class="mobile-bar">
     <a class="btn btn--secondary" href="tel:+74958590051">Позвонить</a>
-    <a class="btn btn--primary" href="https://migra-pro.com/online_consult">Консультация</a>
+    <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Мобильная панель">Консультация</a>
   </div>
 
   <footer class="site-footer">
@@ -1156,7 +1247,7 @@
           <strong>Не разобрались, какой статус вам подходит?</strong>
           <p>Юрист определит основание и назовёт список документов для вашей ситуации.</p>
         </div>
-        <a class="btn btn--primary" href="https://migra-pro.com/online_consult">Бесплатная консультация</a>
+        <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Подвал">Бесплатная консультация</a>
       </div>
 
       <div class="footer-cols">
@@ -1231,6 +1322,30 @@
       </div>
     </div>
   </footer>
+  <div class="modal" id="modal-consult" role="dialog" aria-modal="true" aria-labelledby="modal-consult-title" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__dialog">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">✕</button>
+      <h2 id="modal-consult-title">Бесплатная консультация юриста</h2>
+      <p class="modal__lead">Оставьте имя и телефон — перезвоним, уточним ситуацию и запишем на удобное время. Первые 15 минут — бесплатно.</p>
+      <form class="lead-form" data-lead-form novalidate>
+        <input type="hidden" name="source" value="">
+        <div class="lead-form__row" style="grid-template-columns:1fr;">
+          <input type="text" name="name" placeholder="Имя" autocomplete="given-name" required>
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        </div>
+        <button class="btn btn--primary" type="submit">Записаться на консультацию</button>
+        <label class="lead-form__agree">
+          <input type="checkbox" name="agree" required>
+          <span>Согласен на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span>
+        </label>
+        <p class="lead-form__note">Перезваниваем Пн–Пт с 09:00 до 18:00.</p>
+        <div class="lead-form__done" role="status">Заявка отправлена. Юрист перезвонит по указанному номеру. <em>(в концепте форма ничего не отправляет)</em></div>
+      </form>
+      <p class="modal__alt">Нужен ответ прямо сейчас — напишите в <a href="#" rel="nofollow">WhatsApp</a> или <a href="#" rel="nofollow">Telegram</a>. Подробнее об услуге — на странице <a href="https://migra-pro.com/online_consult">онлайн-консультации</a>.</p>
+    </div>
+  </div>
+
   <script>
     (function () {
       var root = document.querySelector('[data-dropdown]');
@@ -1272,6 +1387,62 @@
           var q = tab.getAttribute('data-map-query');
           frame.src = 'https://yandex.ru/map-widget/v1/?text=' + encodeURIComponent(q) + '&z=16';
           frame.title = 'Карта: ' + tab.textContent.trim();
+        });
+      });
+    })();
+
+    (function () {
+      var modal = document.getElementById('modal-consult');
+      if (!modal) return;
+      var sourceField = modal.querySelector('input[name="source"]');
+      var lastFocused = null;
+
+      function open(source) {
+        lastFocused = document.activeElement;
+        if (sourceField) sourceField.value = source || '';
+        modal.removeAttribute('hidden');
+        modal.classList.add('is-open');
+        document.body.classList.add('is-locked');
+        var first = modal.querySelector('input[name="name"]');
+        if (first) first.focus();
+      }
+      function close() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('hidden', '');
+        document.body.classList.remove('is-locked');
+        if (lastFocused) lastFocused.focus();
+      }
+
+      document.addEventListener('click', function (e) {
+        var opener = e.target.closest('[data-modal-open]');
+        if (opener) {
+          e.preventDefault();
+          open(opener.getAttribute('data-modal-source'));
+          return;
+        }
+        if (e.target.closest('[data-modal-close]')) {
+          e.preventDefault();
+          close();
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+      });
+    })();
+
+    (function () {
+      Array.prototype.forEach.call(document.querySelectorAll('[data-lead-form]'), function (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = form.querySelector('input[name="name"]');
+          var phone = form.querySelector('input[name="phone"]');
+          var agree = form.querySelector('input[name="agree"]');
+          var invalid = null;
+          if (!name.value.trim()) invalid = name;
+          else if (phone.value.replace(/\D/g, '').length < 10) invalid = phone;
+          else if (!agree.checked) invalid = agree;
+          if (invalid) { invalid.focus(); return; }
+          form.classList.add('is-sent');
         });
       });
     })();
