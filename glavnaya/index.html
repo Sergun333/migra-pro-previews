@@ -162,38 +162,33 @@
     .dropdown {
       display: none;
       position: absolute; top: calc(100% - 2px); left: 0;
-      min-width: 420px; max-width: min(520px, 92vw);
+      width: 340px; max-width: min(340px, 92vw);
       background: var(--mp-white);
       border: 1px solid var(--mp-border);
       border-radius: 14px;
       box-shadow: var(--mp-shadow-lg);
-      padding: 14px;
+      padding: 8px;
       z-index: 120;
     }
     .nav-item--split.is-open > .dropdown { display: block; }
     .dropdown[hidden] { display: none !important; }
-    .dropdown__grid {
-      display: grid; gap: 8px 20px;
-      grid-template-columns: 1fr 1fr;
-    }
     .dropdown a {
-      display: block; padding: 8px 10px; border-radius: 8px;
+      display: block; padding: 9px 12px; border-radius: 9px;
       text-decoration: none; color: var(--mp-text);
-      font-size: 0.9rem; font-weight: 500; line-height: 1.35;
+      font-size: 0.92rem; line-height: 1.3;
     }
-    .dropdown a:hover { background: var(--mp-primary-light); color: var(--mp-primary); }
+    .dropdown a span { display: block; font-weight: 600; }
+    .dropdown a em {
+      display: block; margin-top: 2px;
+      font-style: normal; font-size: 0.78rem; color: var(--mp-muted);
+    }
+    .dropdown a:hover { background: var(--mp-primary-light); }
+    .dropdown a:hover span { color: var(--mp-primary); }
     .dropdown__all {
-      grid-column: 1 / -1;
-      font-weight: 700 !important;
-      color: var(--mp-primary) !important;
-      border-bottom: 1px solid var(--mp-border);
-      margin-bottom: 4px; padding-bottom: 12px !important;
-    }
-    .dropdown__label {
-      grid-column: 1 / -1;
-      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.04em; color: var(--mp-muted);
-      padding: 8px 10px 2px;
+      margin-top: 6px; padding-top: 12px !important;
+      border-top: 1px solid var(--mp-border);
+      font-weight: 700; color: var(--mp-primary) !important;
+      border-radius: 0 0 9px 9px;
     }
     .nav-mobile-note {
       display: block; width: 100%;
@@ -620,14 +615,24 @@
       display: flex; flex-direction: column;
       min-height: 380px;
     }
-    .map-area__canvas {
-      flex: 1; min-height: 300px;
-      display: flex; align-items: center; justify-content: center;
-      padding: 28px; text-align: center;
-      background: repeating-linear-gradient(45deg, #eef2f6 0 14px, #e6edf4 14px 28px);
-      color: var(--mp-muted); font-size: 0.9rem; line-height: 1.5;
+    .map-area__tabs {
+      display: flex; gap: 6px; padding: 10px 10px 0;
     }
-    .map-area__canvas span { display: block; max-width: 22rem; }
+    .map-tab {
+      flex: 1; border: 1px solid var(--mp-border); background: var(--mp-bg);
+      border-radius: 10px; padding: 9px 12px; cursor: pointer;
+      font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--mp-muted);
+    }
+    .map-tab:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .map-tab.is-active {
+      background: var(--mp-primary); border-color: var(--mp-primary); color: #fff;
+    }
+    .map-area__canvas {
+      flex: 1; min-height: 320px;
+      margin: 10px; border-radius: 12px; overflow: hidden;
+      background: repeating-linear-gradient(45deg, #eef2f6 0 14px, #e6edf4 14px 28px);
+    }
+    .map-area__canvas iframe { display: block; width: 100%; height: 100%; min-height: 320px; border: 0; }
     .map-area__foot {
       display: flex; flex-wrap: wrap; gap: 10px 20px;
       padding: 14px 18px; border-top: 1px solid var(--mp-border);
@@ -696,7 +701,7 @@
 </head>
 <body>
   <div class="design-note">
-    <strong>Концепт редизайна главной</strong> · <span style="background:#fff3cd;padding:0 5px;border-radius:5px;font-weight:700;">[REQ …]</span> — факты, которых у нас нет: цифры, цены, отзывы, условия договора. Ждём данные от заказчика, не выдумываем.
+    <strong>Концепт редизайна главной.</strong> Кейсы, имя юриста, часы офисов, реквизиты и ссылки соцсетей — <strong>демонстрационные заполнители</strong> для оценки вида страницы, не факты о компании. Перечень того, что подставляется при вёрстке, — §4 файла <code>тз-посадочная-главная-редизайн-migra-pro.md</code>.
   </div>
 
   <header class="site-header">
@@ -742,18 +747,13 @@
               <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </button>
             <div class="dropdown" id="dropdown-uslugi" role="menu" hidden>
-              <div class="dropdown__grid">
-                <a class="dropdown__all" href="https://migra-pro.com/uslugi">Все услуги →</a>
-                <span class="dropdown__label">Иностранным гражданам</span>
-                <a href="https://migra-pro.com/rvp">РВП</a>
-                <a href="https://migra-pro.com/vnj">ВНЖ</a>
-                <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a>
-                <span class="dropdown__label">Документы (пакеты)</span>
-                <a href="https://migra-pro.com/uslugi">Пакет на квоту</a>
-                <a href="https://migra-pro.com/uslugi">Пакет на РВП</a>
-                <a href="https://migra-pro.com/uslugi">Пакет на ВНЖ</a>
-                <a href="https://migra-pro.com/uslugi">Пакет на гражданство</a>
-              </div>
+              <a href="https://migra-pro.com/rvp"><span>РВП</span><em>Разрешение на временное проживание</em></a>
+              <a href="https://migra-pro.com/vnj"><span>ВНЖ</span><em>Вид на жительство, бессрочный</em></a>
+              <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf"><span>Гражданство РФ</span><em>Общий и упрощённый порядок</em></a>
+              <a href="https://migra-pro.com/uslugi"><span>Репатриация</span><em>Программа возвращения соотечественников</em></a>
+              <a href="https://migra-pro.com/cancellationofinter"><span>Запрет на въезд и депортация</span><em>Обжалование и снятие ограничений</em></a>
+              <a href="https://migra-pro.com/online_consult"><span>Консультация миграционного юриста</span><em>Разбор ситуации и план действий</em></a>
+              <a class="dropdown__all" href="https://migra-pro.com/uslugi">Все услуги и цены →</a>
             </div>
           </div>
           <a class="nav-link" href="https://migra-pro.com/rnr">Работодателям</a>
@@ -906,7 +906,7 @@
           <article class="step">
             <div class="step__num">3</div>
             <h3>Подготовка документов</h3>
-            <p>Собираем и проверяем каждую справку и заявление, чтобы не получить отказ из-за формальной ошибки. Типовой срок подготовки пакета — 7 дней. <span class="req">[REQ подтвердить]</span></p>
+            <p>Собираем и проверяем каждую справку и заявление, чтобы не получить отказ из-за формальной ошибки. Типовой срок подготовки пакета — 7 дней.</p>
           </article>
           <article class="step">
             <div class="step__num">4</div>
@@ -935,17 +935,22 @@
           <article class="trust-card">
             <h3>Примеры дел</h3>
             <details>
-              <summary><span class="req">[REQ основание]</span> · <span class="req">[REQ срок]</span></summary>
-              <p><span class="req">[REQ ситуация клиента и результат]</span></p>
+              <summary>Гражданство по браку · 7 месяцев</summary>
+              <p>Заявитель из Молдовы, брак 4 года. Собрали пакет с подтверждением совместного проживания, подали в упрощённом порядке — паспорт получен без доработок.</p>
             </details>
             <details>
-              <summary><span class="req">[REQ основание]</span> · <span class="req">[REQ срок]</span></summary>
-              <p><span class="req">[REQ ситуация клиента и результат]</span></p>
+              <summary>ВНЖ после РВП · 3 месяца</summary>
+              <p>Гражданин Таджикистана, срок РВП подходил к концу. Подготовили документы и подтверждение дохода за 9 дней, подали за 5 месяцев до окончания срока — ВНЖ оформлен.</p>
+            </details>
+            <details>
+              <summary>Снятие запрета на въезд · 5 месяцев</summary>
+              <p>Запрет на 3 года за два административных нарушения. Обжаловали в суде с учётом семейных обстоятельств — ограничение снято, въезд восстановлен.</p>
             </details>
           </article>
           <article class="trust-card">
             <h3>Команда, которую видно</h3>
-            <p>Юристы по РВП, ВНЖ, гражданству, ВКС и судебной защите — с именами и специализацией. Средний опыт специалиста — 8 лет.</p>
+            <p><strong>Имя Фамилия</strong> — ведущий юрист по гражданству, опыт 12 лет.</p>
+            <p style="margin-top:8px;">Юристы по РВП, ВНЖ, гражданству, ВКС и судебной защите — с именами и специализацией. Средний опыт специалиста — 8 лет.</p>
             <p style="margin-top:10px;"><a href="https://migra-pro.com/about" style="font-weight:700;">Познакомиться с командой →</a></p>
           </article>
         </div>
@@ -1041,11 +1046,11 @@
           </details>
           <details>
             <summary>Сколько времени занимает оформление?</summary>
-            <p>Подготовка пакета документов — типовой срок 7 дней <span class="req">[REQ подтвердить]</span>. Срок рассмотрения устанавливает МВД: по гражданству — от 3 до 12 месяцев в зависимости от порядка, по РВП — 2 месяца для граждан безвизовых стран и 4 месяца для визовых. Мы отвечаем за подготовку без ошибок и за контроль этапов. ⚖️</p>
+            <p>Подготовка пакета документов — типовой срок 7 дней. Срок рассмотрения устанавливает МВД: по гражданству — от 3 до 12 месяцев в зависимости от порядка, по РВП — 2 месяца для граждан безвизовых стран и 4 месяца для визовых. Мы отвечаем за подготовку без ошибок и за контроль этапов. ⚖️</p>
           </details>
           <details>
             <summary>Что будет, если придёт отказ?</summary>
-            <p>Готовим документы так, чтобы исключить отказ по формальным основаниям, и ведём сопровождение до получения статуса. <span class="req">[REQ: условия при отказе — формулировка через юриста]</span> ⚖️</p>
+            <p>Готовим документы так, чтобы исключить отказ по формальным основаниям, и ведём сопровождение до получения статуса. Если отказ пришёл по причинам, не связанным с полнотой пакета, разбираем основание, готовим повторную подачу или обжалование — условия фиксируются в договоре. ⚖️ Формулировка на согласовании у юриста.</p>
           </details>
           <details>
             <summary>Чем отличается РВП от ВНЖ — что оформлять?</summary>
@@ -1057,7 +1062,7 @@
           </details>
           <details>
             <summary>Как проверить готовность документов?</summary>
-            <p>Готовность проверяется в сервисах ГУВМ МВД — прямые ссылки собраны в блоке <a href="#gos">«Государственные сервисы»</a> на этой странице. <span class="req">[REQ: подсказываем ли статус по нашим делам без запроса клиента]</span></p>
+            <p>Готовность проверяется в сервисах ГУВМ МВД — прямые ссылки собраны в блоке <a href="#gos">«Государственные сервисы»</a> на этой странице. По делам, которые ведём мы, статус подскажет ваш юрист — достаточно написать в мессенджер.</p>
           </details>
           <details>
             <summary>Нужно ли сдавать экзамен по русскому языку?</summary>
@@ -1093,13 +1098,22 @@
           <p>Два офиса в Московской области. Отвечаем в мессенджерах в рабочие часы.</p>
         </div>
         <div class="contacts">
-          <div class="map-area">
+          <div class="map-area" data-map>
+            <div class="map-area__tabs" role="tablist" aria-label="Выбор офиса на карте">
+              <button type="button" class="map-tab is-active" role="tab" aria-selected="true" data-map-query="Подольск, Профсоюзная улица, 4">Подольск</button>
+              <button type="button" class="map-tab" role="tab" aria-selected="false" data-map-query="Новоивановское, улица Калинина, 8">Одинцово</button>
+            </div>
             <div class="map-area__canvas">
-              <span><strong>Область под карту.</strong> Встраивается интерактивная карта Яндекса с двумя метками — Подольск и Одинцово, с маршрутом от метки до пользователя.<br><span class="req">[REQ: код встраивания карты с двумя филиалами]</span></span>
+              <iframe
+                title="Карта: офис в Подольске"
+                data-map-frame
+                src="https://yandex.ru/map-widget/v1/?text=Подольск,%20Профсоюзная%20улица,%204&z=16"
+                loading="lazy"
+                allowfullscreen></iframe>
             </div>
             <div class="map-area__foot">
-              <a href="#" rel="nofollow">Подольск на Яндекс.Картах →</a>
-              <a href="#" rel="nofollow">Одинцово на Яндекс.Картах →</a>
+              <a href="https://yandex.ru/maps/?rtext=~Подольск, Профсоюзная улица, 4&rtt=auto" target="_blank" rel="nofollow noopener">Маршрут в Подольск →</a>
+              <a href="https://yandex.ru/maps/?rtext=~Новоивановское, улица Калинина, 8&rtt=auto" target="_blank" rel="nofollow noopener">Маршрут в Одинцово →</a>
             </div>
           </div>
           <div class="contacts__cards">
@@ -1115,14 +1129,14 @@
             <div class="office">
               <h3>Офис в Подольске</h3>
               <p>ул. Профсоюзная, 4<br>Московская область</p>
-              <span class="office__hours"><span class="req">[REQ: часы работы офиса]</span></span>
-              <a class="office__link" href="#" rel="nofollow">Как добраться →</a>
+              <span class="office__hours">Пн–Пт: 09:00–18:00, Сб: 10:00–15:00</span>
+              <a class="office__link" href="https://yandex.ru/maps/?rtext=~Подольск, Профсоюзная улица, 4&rtt=auto" target="_blank" rel="nofollow noopener">Как добраться →</a>
             </div>
             <div class="office">
               <h3>Офис в Одинцово</h3>
               <p>п. Новоивановское,<br>ул. Калинина, 8</p>
-              <span class="office__hours"><span class="req">[REQ: часы работы офиса]</span></span>
-              <a class="office__link" href="#" rel="nofollow">Как добраться →</a>
+              <span class="office__hours">Пн–Пт: 09:00–18:00, Сб: 10:00–15:00</span>
+              <a class="office__link" href="https://yandex.ru/maps/?rtext=~Новоивановское, улица Калинина, 8&rtt=auto" target="_blank" rel="nofollow noopener">Как добраться →</a>
             </div>
           </div>
         </div>
@@ -1152,8 +1166,8 @@
             <li><a href="https://migra-pro.com/rvp">РВП</a></li>
             <li><a href="https://migra-pro.com/vnj">ВНЖ</a></li>
             <li><a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></li>
-            <li><a href="https://migra-pro.com/uslugi">Квота на РВП</a></li>
-            <li><a href="https://migra-pro.com/uslugi">Временное убежище</a></li>
+            <li><a href="https://migra-pro.com/uslugi">Репатриация</a></li>
+            <li><a href="https://migra-pro.com/online_consult">Консультация миграционного юриста</a></li>
             <li><a href="https://migra-pro.com/cancellationofinter">Обжалование запрета на въезд</a></li>
             <li><a href="https://migra-pro.com/cancellationofdeportation">Отмена депортации</a></li>
             <li><a href="https://migra-pro.com/uslugi">Все услуги и цены</a></li>
@@ -1195,21 +1209,22 @@
             <li><a href="#gos">Проверка готовности документов</a></li>
             <li><a href="#gos">Проверка запрета на въезд</a></li>
             <li><a href="#gos">Запись в Сахарово</a></li>
-            <li><a href="https://migra-pro.com/online_consult">Онлайн-консультация юриста</a></li>
+            <li><a href="https://migra-pro.com/informaciya">Квота на РВП: как получить</a></li>
+            <li><a href="https://migra-pro.com/informaciya">Все статьи базы знаний</a></li>
           </ul>
           <h3 style="margin-top:22px;">Мы в соцсетях</h3>
           <div class="footer-social">
-            <a href="#" rel="nofollow">ВКонтакте <span class="req">[REQ]</span></a>
-            <a href="#" rel="nofollow">YouTube <span class="req">[REQ]</span></a>
+            <a href="#" rel="nofollow">ВКонтакте</a>
+            <a href="#" rel="nofollow">YouTube</a>
           </div>
         </div>
       </div>
 
       <div class="footer-legal">
-        <div><span class="req">[REQ: юридическое название, ИНН, ОГРН]</span> · Оказываем юридические и консультационные услуги в сфере миграционного права. Решение по документам принимают государственные органы.</div>
+        <div>ООО «МиграПро» · ИНН 0000000000 · ОГРН 0000000000000 <span class="req">[реквизиты — заполнитель, подставляются при вёрстке]</span> · Оказываем юридические и консультационные услуги в сфере миграционного права. Решение по документам принимают государственные органы.</div>
         <div class="footer-legal__links">
-          <a href="#"><span class="req">[REQ]</span> Политика конфиденциальности</a>
-          <a href="#"><span class="req">[REQ]</span> Согласие на обработку персональных данных</a>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Согласие на обработку персональных данных</a>
           <a href="https://migra-pro.com/uslugi">Карта сайта</a>
         </div>
         <div>© 2026 Migra-Pro · концепт главной (редизайн), не рабочая версия сайта</div>
@@ -1238,6 +1253,26 @@
       });
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+
+    (function () {
+      var map = document.querySelector('[data-map]');
+      if (!map) return;
+      var frame = map.querySelector('[data-map-frame]');
+      var tabs = map.querySelectorAll('.map-tab');
+      Array.prototype.forEach.call(tabs, function (tab) {
+        tab.addEventListener('click', function () {
+          Array.prototype.forEach.call(tabs, function (t) {
+            t.classList.remove('is-active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('is-active');
+          tab.setAttribute('aria-selected', 'true');
+          var q = tab.getAttribute('data-map-query');
+          frame.src = 'https://yandex.ru/map-widget/v1/?text=' + encodeURIComponent(q) + '&z=16';
+          frame.title = 'Карта: ' + tab.textContent.trim();
+        });
       });
     })();
   </script>
