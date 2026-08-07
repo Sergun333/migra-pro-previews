@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Разрешение на работу, ВКС и квота для компаний — Москва и МО</title>
-  <meta name="description" content="Оформляем иностранных сотрудников компаниям: ВКС, квота и разрешение на привлечение, аудит документов. Замена работника в 30 дней. Бесплатная консультация.">
+  <title>Разрешение на работу и ввоз иностранных сотрудников — Москва и МО</title>
+  <meta name="description" content="Подбираем и привозим рабочих из Индии, Вьетнама и Бангладеш, оформляем квоту, визы и разрешения на работу. Оформляем ВКС. Замена работника в 30 дней.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -846,6 +846,21 @@
     .magnet strong { display: block; margin-bottom: 5px; }
     .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
 
+    .calendar { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-top: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .calendar h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .calendar > p { margin: 0 0 16px; color: var(--mp-muted); font-size: 0.95rem; }
+    .calendar .panel { background: var(--mp-primary-light); border-color: transparent; }
+    .calendar__note { margin: 16px 0 0 !important; }
+
+    .quiz { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 28px; box-shadow: var(--mp-shadow); max-width: 44rem; }
+    .quiz__step strong, .quiz__result strong { display: block; margin-bottom: 16px; font-size: 1.05rem; }
+    .quiz__opts { display: grid; gap: 10px; }
+    .quiz__opts button { text-align: left; padding: 16px 18px; border-radius: var(--mp-radius-sm); border: 1px solid var(--mp-border); background: var(--mp-white); font: inherit; font-size: 0.98rem; cursor: pointer; transition: 0.15s ease; }
+    .quiz__opts button:hover { border-color: var(--mp-primary); background: var(--mp-primary-light); }
+    .quiz__result p { margin: 0 0 18px; color: var(--mp-text); }
+    .quiz__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .quiz__note { margin: 16px 0 0 !important; color: var(--mp-muted); font-size: 0.88rem; }
+
     .case { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
     .case h3 { margin: 0 0 12px; font-size: 1.08rem; }
     .case p { margin: 0 0 10px; color: var(--mp-muted); font-size: 0.95rem; }
@@ -1087,6 +1102,30 @@
         <div><strong>30 дней</strong>испытательный срок с заменой</div>
         <div><strong>Пошлины отдельно</strong>размеры 2026 года <span class="req">[REQ]</span> ⚖️</div>
       </div>
+      <div class="calendar">
+        <h3>Когда подавать заявку на квоту — и что делать, если срок уже прошёл</h3>
+        <p>Квоты на привлечение иностранных работников формируются заранее: заявка о потребности подаётся до установленной даты, а не в любой момент ⚖️ <span class="req">[REQ: сроки и порядок подачи от юриста]</span>. Поэтому задачу «нужны рабочие через месяц» квотным путём закрыть невозможно — и об этом лучше знать до того, как вы начнёте планировать смену.</p>
+        <div class="duo">
+          <div class="panel">
+            <h3>Если вы внутри срока подачи</h3>
+            <ul>
+              <li>Готовим обоснование потребности и заявку в АИК «Миграционные квоты»</li>
+              <li>Ведём рассмотрение и получаем решение комиссии <span class="req">[REQ: срок]</span></li>
+              <li>Дальше — разрешение на привлечение, приглашение, виза, разрешение на работу</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Если срок подачи уже прошёл</h3>
+            <ul>
+              <li><strong>Внеквотные должности.</strong> Часть профессий не требует квоты — проверим вашу <span class="req">[REQ: перечень]</span> ⚖️</li>
+              <li><strong>Статус ВКС.</strong> Квота не нужна, срок оформления короче — подходит для специалистов с зарплатой от порога <span class="req">[REQ]</span> ⚖️</li>
+              <li><strong>Люди, которые уже в России.</strong> Часто задачу можно закрыть легализацией тех, кто уже здесь, — это быстрее ввоза</li>
+            </ul>
+          </div>
+        </div>
+        <p class="calendar__note">На консультации сразу скажем, попадаете ли вы в срок и какой путь в вашем случае короче. Если не попадаете — предложим тот, который реально успевает к вашей дате.</p>
+      </div>
+
       <div class="estimate">
         <h3>Из чего складывается стоимость ввоза одного сотрудника</h3>
         <ul class="checklist">
@@ -1138,6 +1177,7 @@
             <li>Перечень несоответствий по каждому сотруднику</li>
             <li>План устранения с приоритетами: что критично, что можно позже</li>
             <li>Оценку срочности по срокам действия документов</li>
+            <li><strong>Срок — 3 рабочих дня</strong> с момента передачи документов <span class="req">[REQ: подтвердить]</span></li>
           </ul>
         </div>
         <div class="panel">
@@ -1216,7 +1256,7 @@
             <tr>
               <td>Первичный аудит документов<small>вход в услугу</small></td>
               <td>Проверка по чек-листу до пяти сотрудников, перечень несоответствий</td>
-              <td><span class="req">[REQ]</span></td>
+              <td>3 раб. дня <span class="req">[REQ]</span></td>
               <td class="price">бесплатно</td>
             </tr>
             <tr>
@@ -1246,6 +1286,41 @@
           </tbody>
         </table>
       </div>
+      <div class="duo" style="margin-top:18px;">
+        <div class="panel">
+          <h3>Что входит в стоимость</h3>
+          <ul>
+            <li>Проверка ситуации и выбор основания до подачи документов</li>
+            <li>Подготовка полного комплекта и заявлений</li>
+            <li>Подача и взаимодействие с МВД и другими органами</li>
+            <li>Контроль сроков и информирование по этапам</li>
+            <li>Уведомления, которые обязана подать компания</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Что не входит</h3>
+          <ul>
+            <li>Государственные пошлины, медосвидетельствование, ДМС и нотариальные переводы — оплачиваются отдельно</li>
+            <li>Решение государственного органа: его принимает МВД, мы отвечаем за подготовку и сроки ⚖️</li>
+            <li>Перелёт, встреча и жильё для сотрудника <span class="req">[REQ: что берём, что на работодателе]</span></li>
+            <li>Адаптация и обучение русскому языку <span class="req">[REQ]</span></li>
+            <li>Кадровый учёт по российским сотрудникам и бухгалтерия компании</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:16px;">
+        <h3>Документы и оплата — для бухгалтерии</h3>
+        <ul class="checklist">
+          <li>Работаем по договору с юридическим лицом или ИП</li>
+          <li>Оплата по счёту, безналичным расчётом</li>
+          <li>НДС <span class="req">[REQ: с НДС или без]</span></li>
+          <li>Закрывающие документы: акт выполненных работ <span class="req">[REQ: УПД, счёт-фактура]</span></li>
+          <li>Порядок оплаты: <span class="req">[REQ: предоплата, по этапам или постоплата]</span></li>
+          <li>Смета с разбивкой по позициям — до начала работы</li>
+        </ul>
+      </div>
+
       <p class="terms-note">Аудит по сотруднику и сопровождение считаются за человека; при штате от десяти иностранных сотрудников делаем индивидуальный расчёт. Отдельно от стоимости услуг оплачиваются госпошлины (размеры 2026 года — <span class="req">[REQ]</span> ⚖️), полис ДМС для сотрудника, нотариальный перевод документов. На консультации считаем полную смету по вашей ситуации, чтобы бюджет был известен заранее.</p>
     </div>
   </section>
@@ -1330,6 +1405,11 @@
           </details>
         </div>
         <div class="trust-card">
+          <h3>Ответственность застрахована</h3>
+          <p>Профессиональная ответственность компании застрахована на <span class="req">[REQ: сумма]</span>. Если ошибка допущена нами — риск закрывает полис, а не бюджет вашей компании.</p>
+          <p><em>Блок публикуется только при наличии действующего полиса; если страховки нет — скрывается целиком.</em></p>
+        </div>
+        <div class="trust-card">
           <h3>Команда, которую видно</h3>
           <p>Юристы по разрешительным документам, ВКС и судебной защите — с именами и специализацией. Средний опыт специалиста — 8 лет.</p>
           <p><a href="https://migra-pro.com/about">Познакомиться с командой →</a></p>
@@ -1391,6 +1471,51 @@
     </div>
   </section>
 
+  <!-- 11.5. Квиз квалификации -->
+  <section class="section" id="kviz">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Не уверены, какой путь ваш?</h2>
+        <p>Ответьте на три вопроса — скажем, по какому основанию оформлять, что понадобится и укладываетесь ли вы в срок.</p>
+      </div>
+      <div class="quiz" data-quiz>
+        <div class="quiz__step" data-step="1">
+          <strong>Шаг 1 из 3. Что нужно сделать?</strong>
+          <div class="quiz__opts">
+            <button type="button" data-q="task" data-val="privezti">Привезти сотрудников из-за рубежа</button>
+            <button type="button" data-q="task" data-val="vks">Оформить ВКС специалисту</button>
+            <button type="button" data-q="task" data-val="uzhe">Проверить тех, кто уже работает</button>
+          </div>
+        </div>
+        <div class="quiz__step" data-step="2" hidden>
+          <strong>Шаг 2 из 3. Сколько человек?</strong>
+          <div class="quiz__opts">
+            <button type="button" data-q="count" data-val="one">Один специалист</button>
+            <button type="button" data-q="count" data-val="few">От двух до десяти</button>
+            <button type="button" data-q="count" data-val="many">Больше десяти</button>
+          </div>
+        </div>
+        <div class="quiz__step" data-step="3" hidden>
+          <strong>Шаг 3 из 3. Когда нужен результат?</strong>
+          <div class="quiz__opts">
+            <button type="button" data-q="when" data-val="urgent">В течение месяца</button>
+            <button type="button" data-q="when" data-val="normal">Через два-три месяца</button>
+            <button type="button" data-q="when" data-val="plan">Планируем на будущее</button>
+          </div>
+        </div>
+        <div class="quiz__result" data-quiz-result hidden>
+          <strong>Что мы предлагаем в вашем случае</strong>
+          <p data-quiz-text></p>
+          <div class="quiz__actions">
+            <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Квиз">Получить расчёт и план</a>
+            <button class="btn btn--secondary" type="button" data-quiz-reset>Ответить заново</button>
+          </div>
+          <p class="quiz__note">Это предварительная оценка по трём ответам. Точный путь подтверждаем на бесплатной консультации.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 12. Финальный CTA -->
   <section class="section section--alt">
     <div class="wrap">
@@ -1404,6 +1529,10 @@
           <div class="lead-form__row">
             <input type="text" name="name" placeholder="Имя" autocomplete="given-name" required>
             <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+          </div>
+          <div class="lead-form__row">
+            <input type="text" name="company" placeholder="Компания — по желанию" autocomplete="organization">
+            <input type="text" name="task" placeholder="Задача: сколько людей, откуда" autocomplete="off">
           </div>
           <button class="btn btn--light" type="submit">Получить консультацию</button>
           <label class="lead-form__agree">
@@ -1560,6 +1689,62 @@
   <a class="btn btn--secondary" href="tel:+74958590051">Позвонить</a>
   <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Мобильная панель">Консультация</a>
 </div>
+
+<script>
+  /* Квиз квалификации: три шага → предварительный путь оформления */
+  (function () {
+    var quiz = document.querySelector('[data-quiz]');
+    if (!quiz) return;
+    var steps = quiz.querySelectorAll('.quiz__step');
+    var result = quiz.querySelector('[data-quiz-result]');
+    var text = quiz.querySelector('[data-quiz-text]');
+    var answers = {};
+
+    var byTask = {
+      privezti: 'Ваш путь — ввоз по квоте: заявка о потребности, разрешение на привлечение, приглашение, рабочая виза и разрешение на работу на каждого сотрудника. Подбор ведём в Индии, Вьетнаме или Бангладеш.',
+      vks: 'Ваш путь — статус ВКС: квота не нужна, разрешение на работу выдаётся на срок договора до трёх лет, семья специалиста может получить визы. Сначала проверим, проходит ли специалист по требованиям к ВКС.',
+      uzhe: 'Начинаем с бесплатного аудита: проверим разрешительные документы, уведомления в МВД, договоры и патенты, отдадим перечень несоответствий и план устранения. Дальше — сопровождение учёта, если оно нужно.'
+    };
+    var byCount = {
+      one: ' Задача точечная — берём такие без минимального объёма.',
+      few: ' Для группы до десяти человек считаем смету по каждой позиции и согласуем график.',
+      many: ' Для объёма больше десяти человек делаем индивидуальный расчёт и график по партиям.'
+    };
+    var byWhen = {
+      urgent: ' По срокам: месяц — мало для квотного пути, поэтому в приоритете рассмотрим внеквотные должности, ВКС или легализацию тех, кто уже в России.',
+      normal: ' По срокам: два-три месяца — рабочий горизонт для оформления, но заявку на квоту нужно успеть подать в установленный срок.',
+      plan: ' По срокам: заранее — лучший вариант, успеваем в окно подачи заявки на квоту и планируем выход сотрудников к нужной дате.'
+    };
+
+    function show(n) {
+      Array.prototype.forEach.call(steps, function (s) {
+        if (s.getAttribute('data-step') === String(n)) s.removeAttribute('hidden');
+        else s.setAttribute('hidden', '');
+      });
+    }
+
+    quiz.addEventListener('click', function (e) {
+      var opt = e.target.closest('[data-q]');
+      if (opt) {
+        answers[opt.getAttribute('data-q')] = opt.getAttribute('data-val');
+        if (!answers.task) { show(1); return; }
+        if (!answers.count) { show(2); return; }
+        if (!answers.when) { show(3); return; }
+        Array.prototype.forEach.call(steps, function (s) { s.setAttribute('hidden', ''); });
+        text.textContent = (byTask[answers.task] || '') + (byCount[answers.count] || '') + (byWhen[answers.when] || '');
+        result.removeAttribute('hidden');
+        var hidden = document.querySelector('#modal-consult input[name="source"]');
+        if (hidden) hidden.value = 'Квиз: ' + answers.task + '/' + answers.count + '/' + answers.when;
+        return;
+      }
+      if (e.target.closest('[data-quiz-reset]')) {
+        answers = {};
+        result.setAttribute('hidden', '');
+        show(1);
+      }
+    });
+  })();
+</script>
 
 <script>
     (function () {
