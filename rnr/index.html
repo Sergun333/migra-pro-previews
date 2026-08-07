@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Разрешение на работу для сотрудников компании — МиграПро</title>
-  <meta name="description" content="Оформляем иностранных сотрудников компаниям в Москве и МО: ВКС, разрешение на привлечение и квота, аудит документов уже работающих. Бесплатная консультация.">
+  <title>Разрешение на работу, ВКС и квота для компаний — Москва и МО</title>
+  <meta name="description" content="Оформляем иностранных сотрудников компаниям: ВКС, квота и разрешение на привлечение, аудит документов. Замена работника в 30 дней. Бесплатная консультация.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -785,6 +785,9 @@
     .nav-link.is-active { color: var(--mp-primary); position: relative; }
     .nav-link.is-active::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 2px; background: var(--mp-accent); border-radius: 2px; }
 
+    /* H1 разбивается на три строки: 22ch держит перенос «Разрешение на работу / для иностранных / сотрудников компании» */
+    .hero h1 { max-width: 22ch; }
+
     .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
     .hero__facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.22); }
     .hero__facts div { display: flex; flex-direction: column; }
@@ -842,6 +845,11 @@
     @media (min-width: 800px) { .magnet { grid-template-columns: 1fr auto; gap: 24px; } }
     .magnet strong { display: block; margin-bottom: 5px; }
     .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .estimate { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .estimate h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .estimate .checklist li { padding-left: 30px; margin-bottom: 6px; }
+    .estimate > p { margin: 16px 0 18px; color: var(--mp-muted); font-size: 0.95rem; }
 
     .guarantee { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid #2f9e5b; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
     .guarantee h3 { margin: 0 0 14px; font-size: 1.08rem; }
@@ -1058,6 +1066,18 @@
         <div><strong>Индия · Вьетнам · Бангладеш</strong>страны подбора</div>
         <div><strong>30 дней</strong>испытательный срок с заменой</div>
         <div><strong>Пошлины отдельно</strong>размеры 2026 года <span class="req">[REQ]</span> ⚖️</div>
+      </div>
+      <div class="estimate">
+        <h3>Из чего складывается стоимость ввоза одного сотрудника</h3>
+        <ul class="checklist">
+          <li><strong>Наши услуги.</strong> Подбор, квота и разрешение на привлечение, приглашение, виза, разрешение на работу, уведомления.</li>
+          <li><strong>Государственные пошлины.</strong> Разрешение на привлечение, приглашение на въезд, разрешение на работу — размеры 2026 года <span class="req">[REQ]</span> ⚖️</li>
+          <li><strong>Обязательное для сотрудника.</strong> Медицинское освидетельствование, дактилоскопия, полис ДМС.</li>
+          <li><strong>Документы.</strong> Нотариальный перевод паспорта и сопутствующих документов.</li>
+          <li><strong>Логистика и размещение.</strong> Перелёт, встреча, жильё — что берёт на себя работодатель, а что мы <span class="req">[REQ]</span></li>
+        </ul>
+        <p>Итоговую сумму считаем под вашу задачу: она зависит от страны, должности, числа сотрудников и от того, нужна ли квота. Пришлём смету одним файлом — с разбивкой по каждой позиции.</p>
+        <a class="btn btn--secondary" href="#cta" data-modal-open data-modal-source="Смета">Получить смету по вашей ситуации</a>
       </div>
       <div class="block-actions">
         <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Блок персонал из-за рубежа">Обсудить заказ на персонал</a>
