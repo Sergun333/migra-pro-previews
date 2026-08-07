@@ -834,6 +834,14 @@
     .why div { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 22px; }
     .why strong { display: block; margin-bottom: 6px; }
     .why span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .industries { margin: -12px 0 22px; color: var(--mp-muted); font-size: 0.95rem; line-height: 1.5; }
+    .industries span { color: var(--mp-text); font-weight: 600; }
+
+    .magnet { margin-top: 16px; display: grid; gap: 14px; align-items: center; background: var(--mp-white); border: 1px dashed var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    @media (min-width: 800px) { .magnet { grid-template-columns: 1fr auto; gap: 24px; } }
+    .magnet strong { display: block; margin-bottom: 5px; }
+    .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
   </style>
 </head>
 <body>
@@ -1053,6 +1061,7 @@
         <h2>Сотрудники уже работают: проверим документы до проверки МВД</h2>
         <p>Если иностранцы уже в штате, риск обычно не в самом оформлении, а в деталях: пропущенное уведомление, истёкший патент, договор не по форме, смена должности без документов.</p>
       </div>
+      <p class="industries"><span>Кому это обычно нужно:</span> строительство и отделка · клининг · склады и логистика · производство · общепит и гостиницы · ЖКХ · ритейл и доставка · сельское хозяйство · транспорт</p>
       <div class="panel">
         <h3>Что проверяем в аудите</h3>
         <ul class="checklist">
@@ -1087,6 +1096,13 @@
             <li>Стоимость сопровождения — <span class="req">[REQ: цена за сотрудника]</span></li>
           </ul>
         </div>
+      </div>
+      <div class="magnet">
+        <div>
+          <strong>Чек-лист: что проверить у иностранного сотрудника до проверки МВД</strong>
+          <span>Те же пункты, что выше, — одним файлом, чтобы кадровая служба прошла по ним сама. Пришлём в MAX или Telegram, без звонка, если он не нужен.</span>
+        </div>
+        <a class="btn btn--secondary" href="#cta" data-modal-open data-modal-source="Чек-лист">Получить чек-лист <span class="req">[REQ: файл]</span></a>
       </div>
       <div class="block-actions">
         <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Блок аудит">Бесплатный аудит документов</a>
@@ -1227,8 +1243,14 @@
           <p>Оценка клиентов на Яндекс.Картах и 2ГИС по двум офисам. Отзывы на внешних площадках — их нельзя отредактировать на нашей стороне.</p>
         </div>
         <div class="trust-card">
-          <h3>Закрытый кейс по ВКС</h3>
-          <p><span class="req">[REQ: отрасль · срок · результат]</span> — кейс уже закрыт и масштабируется, нужна формулировка без персональных данных.</p>
+          <h3>Кейс: статус ВКС для сотрудника компании</h3>
+          <p><strong>Задача.</strong> Компания принимала в штат иностранного специалиста и не могла вывести его на работу легально: под квоту должность не подходила, а требования к ВКС в компании не проверяли.</p>
+          <details>
+            <summary>Что сделали и что получилось</summary>
+            <p><strong>Что сделали.</strong> Проверили, проходит ли специалист по требованиям к ВКС, до подачи документов. Собрали пакет и подготовили ходатайство работодателя, подали в МВД, получили разрешение на работу, оформили уведомления о приёме и о выплате заработной платы, передали компании календарь дальнейших уведомлений.</p>
+            <p><strong>Результат.</strong> Специалист вышел на работу законно, компания получила разрешительные документы и понятный порядок отчётности. Дело закрыто, тот же порядок мы применяем к следующим специалистам.</p>
+            <p>Отрасль компании — <span class="req">[REQ]</span>, срок оформления — <span class="req">[REQ]</span>. Без названия компании и персональных данных сотрудника.</p>
+          </details>
         </div>
         <div class="trust-card">
           <h3>Команда, которую видно</h3>
