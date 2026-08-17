@@ -898,7 +898,7 @@
          padding:10px 16px;font-size:15px;text-align:center}
   </style>
 </head>
-<body><div class="kontrol-bar">Контрольная копия. Жёлтым отмечено то, что ещё требует уточнения — всего пометок: 10. Чистая версия для передачи подрядчику — без суффикса -kontrol в адресе.</div>
+<body><div class="kontrol-bar">Контрольная копия. Жёлтым отмечено то, что ещё требует уточнения — всего пометок: 9. Чистая версия для передачи подрядчику — без суффикса -kontrol в адресе.</div>
 
 <header class="site-header">
     <div class="header-top">
@@ -1108,7 +1108,7 @@
         <div class="step">
           <h3>2. Договор и план</h3>
           <p>Фиксируем состав работ, цену и сроки. Вы получаете список документов конкретно под свою ситуацию.</p>
-          <strong><span class="req">[REQ: срок этапа — вопрос РОПу]</span></strong>
+          <strong>В течение 3 рабочих дней</strong>
         </div>
         <div class="step">
           <h3>3. Документы</h3>
@@ -1140,19 +1140,38 @@
           <h3>Свидетельства уже на руках</h3>
           <p>Семья приехала в Россию со свидетельствами участника. Подготовили и подали документы на гражданство.</p>
           <strong>Подача состоялась за месяц</strong>
+          <p><a class="case-link" href="#case-1" data-case-open="case-1">Как это было →</a></p>
         </div>
         <div class="trust-card">
           <h3>Германия · трудности на подаче</h3>
           <p>Свидетельство получили быстро, сложности начались в консульстве. Документы готовили сами, сопровождаем подачу.</p>
           <strong>Ведём около года, работа продолжается</strong>
+          <p><a class="case-link" href="#case-2" data-case-open="case-2">Как это было →</a></p>
         </div>
         <div class="trust-card">
           <h3>Узбекистан · документ 1937 года</h3>
           <p>Цепочка родства держалась на одном документе. Запросили областной архив, получили заверенные копии церковной и домовой книг.</p>
           <strong>Основание подтверждено, дело продолжается</strong>
-          <p><span class="req">[REQ: подтвердить у РОПа, один ли это случай с делом «Ким» из его ответа 2.6.1 — там та же справка 1937 года]</span></p>
+          <p><a class="case-link" href="#case-3" data-case-open="case-3">Как это было →</a></p>
         </div>
       </div>
+
+      <dialog class="case-dialog" id="case-1">
+        <h3>Свидетельства уже на руках</h3>
+        <p><span class="req">[REQ: подробное описание дела от РОПа — откуда приехали, состав семьи, что было на руках, что делали мы по шагам, где возникли сложности, сколько заняло, чем закончилось]</span></p>
+        <button class="btn btn--ghost" data-case-close>Закрыть</button>
+      </dialog>
+      <dialog class="case-dialog" id="case-2">
+        <h3>Германия · трудности на подаче</h3>
+        <p><span class="req">[REQ: подробное описание дела от РОПа — что именно затянулось в консульстве Германии, как мы действовали, на каком этапе дело сейчас]</span></p>
+        <button class="btn btn--ghost" data-case-close>Закрыть</button>
+      </dialog>
+      <dialog class="case-dialog" id="case-3">
+        <h3>Узбекистан · документ 1937 года</h3>
+        <p><span class="req">[REQ: подробное описание дела от РОПа. Отдельно подтвердить, один ли это случай с делом «Ким» из ответа 2.6.1 первого опросника — там та же справка 1937 года; если дела разные, показываем четыре кейса вместо трёх]</span></p>
+        <button class="btn btn--ghost" data-case-close>Закрыть</button>
+      </dialog>
+
       <div class="facts-row">
         <div><strong>Более 10 лет</strong><span>компания на рынке</span></div>
         <div><strong>6 000+</strong><span>оформленных документов</span></div>
@@ -1164,6 +1183,26 @@
         <p><span class="req">[REQ: тексты трёх отзывов — Карповы, Смирновы, Антонова Елена. Согласие на публикацию подтверждено заказчиком 2026-08-17, нужны сами тексты; вопрос РОПу]</span></p>
       </div>
     </div>
+    <style>
+      .case-link{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
+      .case-dialog{max-width:640px;width:calc(100% - 32px);border:none;border-radius:var(--mp-radius-sm,8px);
+        padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+      .case-dialog::backdrop{background:rgba(16,24,40,.55)}
+      .case-dialog h3{margin:0 0 12px}
+      .case-dialog .btn{margin-top:18px}
+    </style>
+    <script>
+      document.querySelectorAll('[data-case-open]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          var d = document.getElementById(a.getAttribute('data-case-open'));
+          if (d && d.showModal) { d.showModal(); }
+        });
+      });
+      document.querySelectorAll('[data-case-close]').forEach(function (b) {
+        b.addEventListener('click', function () { b.closest('dialog').close(); });
+      });
+    </script>
   </section>
 
 <section class="section" id="ceny">
@@ -1197,9 +1236,8 @@
           <li>Государственные пошлины: РВП — 15 000 ₽, вид на жительство — 30 000 ₽, если он оформляется. <strong>За приём в гражданство репатриант пошлину не платит</strong> — освобождение по Налоговому кодексу, подтверждается свидетельством участника при подаче. Регистрация по месту жительства — тоже без пошлины. Уплаченные пошлины и консульские сборы вам компенсируют <span class="req">[REQ: формулировку проверяет юрист]</span></li>
           <li>Апостиль и консульская легализация — мы этого не делаем: подскажем порядок, оформляете сами</li>
           <li>Медицинские справки в стране проживания — оформляет клиент</li>
-          <li>Архивные запросы <span class="req">[REQ: в цене или отдельно — вопрос РОПу]</span></li>
         </ul>
-        <p class="terms-note">Возможна оплата по этапам <span class="req">[REQ: подтвердить у РОПа]</span>. Итоговая сумма и состав работ фиксируются в договоре и не меняются в процессе.</p>
+        <p class="terms-note">Архивные запросы и нотариальные переводы входят в стоимость пакета — отдельно за них платить не нужно. Порядок оплаты обсуждаем с каждым клиентом отдельно. Итоговая сумма и состав работ фиксируются в договоре и не меняются в процессе.</p>
       </div>
       <div class="block-actions">
         <a class="btn btn--primary" href="#forma">Рассчитать стоимость для своей ситуации</a>
