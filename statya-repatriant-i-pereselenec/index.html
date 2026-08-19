@@ -977,6 +977,41 @@
     .lead-form select:focus, .lead-form textarea:focus {
       outline: none; border-color: var(--mp-primary); box-shadow: 0 0 0 3px rgba(26, 79, 176, 0.12);
     }
+    /* Сквозной виджет обращения в правом нижнем углу (заказчик 2026-08-19).
+       Держится тише страницы: без анимаций, без автораскрытия во весь экран,
+       на мобильном — узкая полоса, чтобы не перекрывать текст статьи. */
+    .cta-widget { position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 320px;
+                  background: var(--mp-white); border: 1px solid var(--mp-border);
+                  border-radius: var(--mp-radius); box-shadow: var(--mp-shadow-lg);
+                  overflow: hidden; font-size: 15px; }
+    .cta-widget[hidden] { display: none; }
+    .cta-widget__close { position: absolute; top: 6px; right: 8px; width: 24px; height: 24px;
+                         border: 0; background: transparent; color: var(--mp-muted);
+                         font-size: 20px; line-height: 1; cursor: pointer; }
+    .cta-widget__close:hover { color: var(--mp-text); }
+    .cta-widget__row { display: flex; gap: 12px; align-items: center; padding: 14px 16px;
+                       text-decoration: none; color: var(--mp-text); }
+    .cta-widget__row--call { border-bottom: 1px solid var(--mp-border); }
+    .cta-widget__row--expert { background: var(--mp-primary); color: #fff; }
+    .cta-widget__row--expert:hover { background: var(--mp-primary-dark); }
+    .cta-widget__icon { width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%;
+                        background: #e8f6ed; color: #1e9e57; display: flex;
+                        align-items: center; justify-content: center; }
+    .cta-widget__ava { width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%;
+                       background: rgba(255,255,255,.2); color: #fff; font-weight: 600;
+                       display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .cta-widget__text { display: flex; flex-direction: column; line-height: 1.35; }
+    .cta-widget__text strong { font-size: 15px; }
+    .cta-widget__text span { font-size: 13px; opacity: .85; }
+    .cta-widget__channels { display: flex; gap: 12px; align-items: center; padding: 10px 16px;
+                            background: var(--mp-bg); font-size: 13px; color: var(--mp-muted); }
+    .cta-widget__channels a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    .cta-widget__channels a:hover { text-decoration: underline; }
+    @media (max-width: 720px) {
+      .cta-widget { right: 10px; left: 10px; bottom: 10px; width: auto; }
+      .cta-widget__row { padding: 10px 14px; }
+      .cta-widget__row--call .cta-widget__text span { display: none; }
+    }
     @media (max-width: 1080px) {
       /* Оглавление уходит наверх и перестаёт быть закреплённым: на узком экране
          липкая колонка съедает половину высоты */
@@ -1389,6 +1424,56 @@
 
     </div>
   </article>
+
+<div class="cta-widget" id="cta-widget" hidden>
+    <button class="cta-widget__close" type="button" aria-label="Скрыть виджет">×</button>
+    <div class="cta-widget__row cta-widget__row--call">
+      <span class="cta-widget__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      </span>
+      <span class="cta-widget__text">
+        <strong>Закажите звонок</strong>
+        <span>Перезвоним в удобное время — скажите, когда</span>
+      </span>
+    </div>
+    <a class="cta-widget__row cta-widget__row--expert" href="#forma" data-goal="widget_expert">
+      <span class="cta-widget__ava" aria-hidden="true">РМ</span>
+      <span class="cta-widget__text">
+        <strong>Раиса Мишарина</strong>
+        <span>Эксперт по миграционному праву</span>
+      </span>
+    </a>
+    <div class="cta-widget__channels">
+      <span>Или напишите:</span>
+      <a href="https://wa.me/" data-goal="widget_whatsapp">WhatsApp</a>
+      <a href="https://t.me/" data-goal="widget_telegram">Telegram</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var w = document.getElementById('cta-widget');
+      if (!w) return;
+      var forma = document.getElementById('forma');
+      var closed = false;
+      w.querySelector('.cta-widget__close').addEventListener('click', function () {
+        closed = true; w.hidden = true;
+      });
+      function update() {
+        if (closed) return;
+        var progress = window.scrollY / (document.body.scrollHeight - window.innerHeight || 1);
+        var formaVisible = false;
+        if (forma) {
+          var r = forma.getBoundingClientRect();
+          formaVisible = r.top < window.innerHeight && r.bottom > 0;
+        }
+        w.hidden = !(progress > 0.35 && !formaVisible);
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
 
 </main>
 
