@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Чек-лист репатрианта: документы по этапам | Migra-Pro</title>
+  <meta name="description" content="Что собрать и в каком порядке пройти: восемь этапов от проверки основания до паспорта РФ. Отмечайте выполненное — прогресс сохранится, список можно распечатать.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --mp-primary: #1a4fb0;
+      --mp-primary-dark: #1a4694;
+      --mp-primary-light: #eaf1f6;
+      --mp-accent: #cc0a0a;
+      --mp-accent-hover: #a30808;
+      --mp-link: #50b3ff;
+      --mp-text: #1a1b1d;
+      --mp-muted: #5c6570;
+      --mp-border: #dde3e8;
+      --mp-bg: #f6f8fa;
+      --mp-white: #fff;
+      --mp-radius: 16px;
+      --mp-radius-sm: 12px;
+      --mp-shadow: 0 2px 10px rgba(20, 33, 61, 0.06), 0 8px 24px rgba(33, 84, 178, 0.08);
+      --mp-shadow-lg: 0 16px 48px rgba(20, 33, 61, 0.16);
+      --mp-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --mp-max: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--mp-font);
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--mp-text);
+      background: var(--mp-white);
+    }
+    a { color: var(--mp-primary); }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(100% - 40px, var(--mp-max)); margin-inline: auto; }/* ——— Двухэтажная шапка (паттерн живого сайта, логика IA) ——— */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--mp-white);
+      box-shadow: 0 4px 18px rgba(20, 33, 61, 0.08);
+    }
+    .header-top {
+      border-bottom: 1px solid var(--mp-border);
+      background: var(--mp-white);
+    }
+    .header-top__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 12px 0; flex-wrap: wrap;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none; color: inherit; min-width: 0;
+    }
+    .brand__mark {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--mp-primary) 0 50%, var(--mp-accent) 50% 100%);
+      color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 0.85rem;
+    }
+    .brand__name {
+      font-weight: 800; font-size: 1.15rem; color: var(--mp-primary);
+      letter-spacing: -0.02em; line-height: 1.1;
+    }
+    .brand__name em { font-style: normal; color: var(--mp-accent); }
+    .brand__sub {
+      display: block; font-size: 0.72rem; color: var(--mp-muted); margin-top: 2px;
+    }
+    .brand__img { height: 46px; width: auto; display: block; }
+    @media (max-width: 640px) { .brand__img { height: 36px; } }
+    .header-messengers .ico {
+      width: 18px; height: 18px; fill: currentColor;
+    }
+    .header-meta {
+      display: none; align-items: center; gap: 18px;
+      font-size: 0.88rem; color: var(--mp-muted);
+    }
+    @media (min-width: 960px) { .header-meta { display: flex; } }
+    .header-rating {
+      display: flex; flex-direction: column; gap: 2px;
+      font-size: 0.72rem; line-height: 1.25;
+    }
+    .header-rating__stars { color: #f5a623; letter-spacing: 1px; font-size: 0.85rem; }
+    .header-messengers { display: flex; gap: 8px; }
+    .header-messengers a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center; text-decoration: none;
+    }
+    .header-messengers a:hover { background: #d9e7f5; }
+    .header-phone-block { text-align: right; line-height: 1.25; }
+    .header-phone-block a {
+      color: var(--mp-text); font-weight: 800; text-decoration: none;
+      font-size: 1.05rem; letter-spacing: -0.02em;
+    }
+    .header-phone-block span { display: block; font-size: 0.75rem; color: var(--mp-muted); }
+    .header-top__cta { flex-shrink: 0; }
+
+    .header-nav-wrap {
+      background: var(--mp-white);
+      padding: 0 0 10px;
+    }
+    .header-nav {
+      display: flex; align-items: center; gap: 4px 6px;
+      flex-wrap: wrap;
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 0 0 18px 18px;
+      padding: 8px 12px;
+      box-shadow: var(--mp-shadow);
+    }
+    .nav-item { position: relative; }
+    .nav-item--split {
+      display: inline-flex; align-items: stretch;
+      border-radius: 10px;
+    }
+    .nav-item--split:hover,
+    .nav-item--split.is-open {
+      background: var(--mp-primary-light);
+    }
+    .nav-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 12px; border-radius: 10px;
+      color: var(--mp-text); text-decoration: none;
+      font-size: 0.92rem; font-weight: 600;
+      border: 0; background: transparent; cursor: pointer;
+      font-family: inherit;
+    }
+    .nav-link:hover { color: var(--mp-primary); }
+    .nav-item--split .nav-link--label {
+      border-radius: 10px 0 0 10px; padding-right: 6px;
+    }
+    .nav-item--split .nav-link--label:hover,
+    .nav-item--split.is-open .nav-link--label { color: var(--mp-primary); }
+    .nav-chev {
+      border-radius: 0 10px 10px 0; padding: 10px 12px 10px 4px;
+      color: var(--mp-text);
+    }
+    .nav-chev:hover,
+    .nav-item--split.is-open .nav-chev { color: var(--mp-primary); }
+    .nav-chev .chev {
+      width: 10px; height: 10px; opacity: 0.75;
+      transition: transform 0.15s ease;
+      display: block;
+    }
+    .nav-item--split.is-open .nav-chev .chev { transform: rotate(180deg); }
+
+    .dropdown {
+      display: none;
+      position: absolute; top: calc(100% - 2px); left: 0;
+      width: 340px; max-width: min(340px, 92vw);
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 14px;
+      box-shadow: var(--mp-shadow-lg);
+      padding: 8px;
+      z-index: 120;
+    }
+    .nav-item--split.is-open > .dropdown { display: block; }
+    .dropdown[hidden] { display: none !important; }
+    .dropdown a {
+      display: block; padding: 9px 12px; border-radius: 9px;
+      text-decoration: none; color: var(--mp-text);
+      font-size: 0.92rem; line-height: 1.3;
+    }
+    .dropdown a span { display: block; font-weight: 600; }
+    .dropdown a em {
+      display: block; margin-top: 2px;
+      font-style: normal; font-size: 0.78rem; color: var(--mp-muted);
+    }
+    .dropdown a:hover { background: var(--mp-primary-light); }
+    .dropdown a:hover span { color: var(--mp-primary); }
+    .dropdown__all {
+      margin-top: 6px; padding-top: 12px !important;
+      border-top: 1px solid var(--mp-border);
+      font-weight: 700; color: var(--mp-primary) !important;
+      border-radius: 0 0 9px 9px;
+    }
+    .nav-mobile-note {
+      display: block; width: 100%;
+      font-size: 0.78rem; color: var(--mp-muted);
+      padding: 4px 8px 2px;
+    }
+    @media (min-width: 900px) { .nav-mobile-note { display: none; } }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 12px 20px; border-radius: 999px;
+      font-weight: 700; font-size: 0.95rem; text-decoration: none;
+      border: 2px solid transparent; cursor: pointer; transition: 0.15s ease;
+      font-family: inherit;
+    }
+    .btn--sm { padding: 10px 16px; font-size: 0.88rem; }
+    .btn--primary { background: var(--mp-accent); color: #fff; }
+    .btn--primary:hover { background: var(--mp-accent-hover); }
+    .btn--secondary {
+      background: transparent; color: var(--mp-primary);
+      border-color: var(--mp-primary);
+    }
+    .btn--secondary:hover { background: var(--mp-primary-light); }
+    .btn--ghost {
+      background: rgba(255,255,255,0.14); color: #fff;
+      border-color: rgba(255,255,255,0.35);
+    }
+    .btn--ghost:hover { background: rgba(255,255,255,0.22); }
+    .btn--light { background: #fff; color: var(--mp-primary); }
+    .btn--light:hover { background: var(--mp-primary-light); }
+    .btn--block { width: 100%; }
+
+    /* ——— Полоса цифр доверия ——— */
+    .stats-band {
+      background: var(--mp-white);
+      border-bottom: 1px solid var(--mp-border);
+      padding: 22px 0;
+    }
+    .stats-band__grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .stats-band__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+    .stat strong {
+      font-size: 1.5rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .stat span { font-size: 0.88rem; color: var(--mp-muted); line-height: 1.3; }
+
+    /* маркер незаполненного факта (только в концепте) */
+    .req {
+      background: #fff3cd; color: #6b5500;
+      border-radius: 5px; padding: 0 5px;
+      font-weight: 700; white-space: nowrap;
+    }
+
+    /* ——— Как мы работаем ——— */
+    .steps {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+      counter-reset: step;
+    }
+    @media (min-width: 760px) {
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1040px) {
+      .steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    .step {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      position: relative;
+    }
+    .step__num {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--mp-primary); color: #fff;
+      display: grid; place-items: center;
+      font-weight: 800; font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .step h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .step p { margin: 0; color: var(--mp-muted); font-size: 0.93rem; }
+    .terms-note {
+      margin: 18px 0 0; padding: 16px 18px;
+      background: var(--mp-primary-light);
+      border-radius: var(--mp-radius-sm);
+      color: var(--mp-text); font-size: 0.95rem;
+    }
+
+    /* ——— Виджеты отзывов ——— */
+    .widgets {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .widgets { grid-template-columns: 1fr 1fr; }
+    }
+    .widget {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 20px;
+    }
+    .widget__head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 14px;
+    }
+    .widget__head strong { font-size: 1.05rem; }
+    .widget__rate {
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      font-weight: 800; border-radius: 999px; padding: 4px 12px;
+    }
+    .widget__slot {
+      border: 2px dashed var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      min-height: 220px;
+      display: grid; place-content: center; text-align: center;
+      color: var(--mp-muted); font-size: 0.95rem; padding: 20px;
+      background: var(--mp-bg);
+    }
+    .widget__slot small { color: #98a2ad; }
+
+    /* ——— FAQ ——— */
+    .faq { display: grid; gap: 10px; max-width: 52rem; }
+    .faq details {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 16px 20px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 700; font-size: 1rem;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+"; float: right; color: var(--mp-primary); font-size: 1.2rem; line-height: 1;
+    }
+    .faq details[open] summary::after { content: "–"; }
+    .faq p { margin: 12px 0 0; color: var(--mp-muted); font-size: 0.95rem; }
+
+    /* ——— Sticky CTA на мобильном ——— */
+    .mobile-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px; padding: 10px 12px;
+      background: rgba(255,255,255,0.97);
+      border-top: 1px solid var(--mp-border);
+      box-shadow: 0 -6px 20px rgba(20,33,61,0.1);
+    }
+    .mobile-bar .btn { padding: 12px 10px; font-size: 0.9rem; }
+    @media (min-width: 860px) { .mobile-bar { display: none; } }
+    @media (max-width: 859px) { body { padding-bottom: 74px; } }
+
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(80,179,255,0.28), transparent 60%),
+        linear-gradient(135deg, #163a7a 0%, var(--mp-primary) 48%, #2a6fd1 100%);
+      color: #fff;
+      padding: 48px 0 56px;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: auto -20% -40% 40%;
+      height: 280px;
+      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .hero__eyebrow {
+      display: inline-block; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      opacity: 0.85; margin-bottom: 12px;
+    }
+    .hero h1 {
+      margin: 0 0 12px; font-size: clamp(1.7rem, 4vw, 2.45rem);
+      line-height: 1.15; letter-spacing: -0.03em; max-width: 18ch;
+    }
+    .hero__lead {
+      margin: 0 0 28px; font-size: 1.05rem; opacity: 0.92;
+      max-width: 46ch;
+    }
+    .path-grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .path-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+    .path-card {
+      background: rgba(255,255,255,0.98);
+      color: var(--mp-text);
+      border-radius: var(--mp-radius);
+      padding: 24px;
+      box-shadow: var(--mp-shadow-lg);
+      display: flex; flex-direction: column; gap: 12px;
+      min-height: 100%;
+    }
+    .path-card__tag {
+      font-size: 0.78rem; font-weight: 700; color: var(--mp-primary);
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .path-card h2 {
+      margin: 0; font-size: 1.35rem; line-height: 1.25; letter-spacing: -0.02em;
+    }
+    .path-card p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .path-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+
+    .section { padding: 56px 0; }
+    .section--alt { background: var(--mp-bg); }
+    .section--tint { background: var(--mp-primary-light); }
+    .section__head { margin-bottom: 28px; max-width: 40rem; }
+    .section__head h2 {
+      margin: 0 0 8px; font-size: clamp(1.4rem, 3vw, 1.85rem);
+      letter-spacing: -0.02em;
+    }
+    .section__head p { margin: 0; color: var(--mp-muted); }
+
+    .tools {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) {
+      .tools { grid-template-columns: repeat(3, 1fr); }
+    }
+    .tool {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      text-decoration: none; color: inherit;
+      box-shadow: var(--mp-shadow);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      display: flex; flex-direction: column; gap: 10px;
+      min-height: 160px;
+    }
+    .tool:hover { transform: translateY(-2px); border-color: #b9c9e0; }
+    .tool__ico {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center;
+    }
+    .tool strong { font-size: 1.05rem; }
+    .tool span { color: var(--mp-muted); font-size: 0.95rem; }
+    .tool em {
+      margin-top: auto; font-style: normal; font-weight: 700;
+      color: var(--mp-primary); font-size: 0.9rem;
+    }
+
+    .services {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .services { grid-template-columns: repeat(3, 1fr); }
+    }
+    .service {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .service:hover { border-color: var(--mp-primary); }
+    .service h3 { margin: 0; font-size: 1.2rem; }
+    .service p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .service > strong { font-size: 1.05rem; color: var(--mp-text); }
+    .service__more { font-weight: 700; color: var(--mp-primary); }
+
+    .trust {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .trust { grid-template-columns: 1.2fr 1fr 1fr; }
+    }
+    .trust-stat, .trust-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+    }
+    .trust-stat strong {
+      display: block; font-size: 2rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; margin-bottom: 6px;
+    }
+    .trust-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .trust-card p { margin: 0; color: var(--mp-muted); font-size: 0.95rem; }
+    .trust-card details {
+      border-top: 1px solid var(--mp-border);
+      padding: 10px 0 0; margin-top: 10px;
+    }
+    .trust-card summary {
+      cursor: pointer; font-size: 0.93rem; font-weight: 600;
+      list-style: none;
+    }
+    .trust-card summary::-webkit-details-marker { display: none; }
+    .trust-card summary::after { content: " →"; color: var(--mp-primary); }
+    .trust-card details p { margin-top: 8px; }
+
+    .knowledge {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .knowledge { grid-template-columns: repeat(3, 1fr); }
+    }
+    .know-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+    }
+    .know-card__visual {
+      height: 120px;
+      background:
+        linear-gradient(135deg, rgba(33,84,178,0.9), rgba(26,70,148,0.85)),
+        repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,255,255,0.05) 8px, rgba(255,255,255,0.05) 16px);
+    }
+    .know-card__visual--2 {
+      background: linear-gradient(135deg, #265f91, #1a4fb0);
+    }
+    .know-card__visual--3 {
+      background: linear-gradient(135deg, #1a4694, #3a7bd5);
+    }
+    .know-card__body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .know-card__body strong { font-size: 1.02rem; line-height: 1.35; }
+    .know-card__body span { color: var(--mp-muted); font-size: 0.92rem; }
+
+    .gos {
+      display: grid; gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .gos { grid-template-columns: repeat(4, 1fr); }
+    }
+    .gos a {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-decoration: none;
+      color: var(--mp-text);
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      min-height: 74px;
+      display: flex; align-items: center;
+    }
+    .gos a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+
+    .cta-band {
+      background: linear-gradient(135deg, var(--mp-primary-dark), var(--mp-primary));
+      color: #fff;
+      border-radius: var(--mp-radius);
+      padding: 36px 28px;
+      display: grid; gap: 20px;
+      align-items: center;
+    }
+    @media (min-width: 800px) {
+      .cta-band { grid-template-columns: 1.05fr 400px; gap: 32px; padding: 40px 44px; }
+    }
+    .cta-band h2 { margin: 0 0 8px; font-size: 1.55rem; letter-spacing: -0.02em; }
+    .cta-band p { margin: 0; opacity: 0.92; max-width: 38ch; }
+
+    .contacts {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .contacts { grid-template-columns: 1.15fr 1fr; }
+    }
+    .contacts__cards { display: grid; gap: 16px; }
+    @media (min-width: 560px) and (max-width: 899px) {
+      .contacts__cards { grid-template-columns: 1fr 1fr; }
+      .contacts__cards .phone-block { grid-column: 1 / -1; }
+    }
+    .office, .phone-block {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+    }
+    .office h3, .phone-block h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .office p, .phone-block p { margin: 0; color: var(--mp-muted); }
+    .phone-block a.phone-block__num {
+      display: inline-block; margin-top: 8px;
+      font-size: 1.35rem; font-weight: 800;
+      color: var(--mp-primary); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .msgr-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .msgr-row a {
+      display: inline-flex; align-items: center; gap: 7px;
+      border: 1px solid var(--mp-border); border-radius: 10px;
+      padding: 8px 12px; font-size: 0.86rem; font-weight: 600;
+      color: var(--mp-text); text-decoration: none;
+    }
+    .msgr-row a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+    .msgr-row .ico { width: 16px; height: 16px; }
+    .office__hours { display: block; margin-top: 10px; font-size: 0.86rem; }
+    .office__link {
+      display: inline-block; margin-top: 12px;
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .office__link:hover { text-decoration: underline; }
+
+    .map-area {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      min-height: 380px;
+    }
+    .map-area__tabs {
+      display: flex; gap: 6px; padding: 10px 10px 0;
+    }
+    .map-tab {
+      flex: 1; border: 1px solid var(--mp-border); background: var(--mp-bg);
+      border-radius: 10px; padding: 9px 12px; cursor: pointer;
+      font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--mp-muted);
+    }
+    .map-tab:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .map-tab.is-active {
+      background: var(--mp-primary); border-color: var(--mp-primary); color: #fff;
+    }
+    .map-area__canvas {
+      flex: 1; min-height: 320px;
+      margin: 10px; border-radius: 12px; overflow: hidden;
+      background: repeating-linear-gradient(45deg, #eef2f6 0 14px, #e6edf4 14px 28px);
+    }
+    .map-area__canvas iframe { display: block; width: 100%; height: 100%; min-height: 320px; border: 0; }
+    .map-area__foot {
+      display: flex; flex-wrap: wrap; gap: 10px 20px;
+      padding: 14px 18px; border-top: 1px solid var(--mp-border);
+    }
+    .map-area__foot a {
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .map-area__foot a:hover { text-decoration: underline; }
+
+    .site-footer {
+      background: var(--mp-primary-dark);
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+      padding: 40px 0 32px;
+      margin-top: 8px;
+    }
+    .site-footer a { color: rgba(255, 255, 255, 0.75); text-decoration: none; }
+    .site-footer a:hover { color: #fff; }
+    .site-footer a.btn--primary { color: #fff; }
+    .footer-cta {
+      display: grid; gap: 16px; align-items: center;
+      padding-bottom: 28px; margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    @media (min-width: 800px) {
+      .footer-cta { grid-template-columns: 1fr auto; }
+    }
+    .footer-cta strong { display: block; color: #fff; font-size: 1.15rem; margin-bottom: 4px; }
+    .footer-cta p { margin: 0; }
+    .footer-cols {
+      display: grid; gap: 26px 24px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 900px) {
+      .footer-cols { grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    }
+    .footer-cols h3 {
+      margin: 0 0 12px; font-size: 0.82rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; color: #fff;
+    }
+    .footer-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .footer-cols li { line-height: 1.4; }
+    .footer-phone {
+      display: inline-block; margin-bottom: 6px;
+      font-size: 1.15rem; font-weight: 800; color: #fff !important;
+      letter-spacing: -0.02em;
+    }
+    .footer-social { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .footer-social a {
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9px;
+      padding: 7px 11px; font-size: 0.84rem; font-weight: 600;
+    }
+    .footer-social a:hover { border-color: #fff; }
+    .footer-legal {
+      margin-top: 30px; padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      display: grid; gap: 10px;
+      font-size: 0.82rem; line-height: 1.5;
+    }
+    .footer-legal__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-footer .req { background: rgba(255, 243, 205, 0.9); color: #6b5500; }
+
+    /* ——— Формы записи ——— */
+    .lead-form { display: grid; gap: 10px; }
+    .lead-form__row { display: grid; gap: 10px; }
+    @media (min-width: 560px) {
+      .lead-form__row { grid-template-columns: 1fr 1fr; }
+    }
+    .lead-form input[type="text"],
+    .lead-form input[type="tel"] {
+      width: 100%; box-sizing: border-box;
+      padding: 13px 14px; border-radius: 12px;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      font: inherit; font-size: 0.95rem; color: var(--mp-text);
+    }
+    .lead-form input::placeholder { color: #9aa4b0; }
+    .lead-form input:focus {
+      outline: none; border-color: var(--mp-primary);
+      box-shadow: 0 0 0 3px rgba(33, 84, 178, 0.15);
+    }
+    .lead-form .btn { width: 100%; }
+    .lead-form__agree {
+      display: flex; gap: 9px; align-items: flex-start;
+      font-size: 0.78rem; line-height: 1.4; color: var(--mp-muted);
+    }
+    .lead-form__agree input { margin-top: 2px; width: 16px; height: 16px; flex: none; }
+    .lead-form__agree a { color: inherit; text-decoration: underline; }
+    .lead-form__note { margin: 0; font-size: 0.8rem; color: var(--mp-muted); }
+    .lead-form__done {
+      display: none; padding: 16px; border-radius: 12px;
+      background: rgba(98, 197, 132, 0.14); border: 1px solid #62c584;
+      color: #1c6b3a; font-size: 0.92rem; line-height: 1.45;
+    }
+    .lead-form.is-sent .lead-form__done { display: block; }
+    .lead-form.is-sent .lead-form__row,
+    .lead-form.is-sent .lead-form__agree,
+    .lead-form.is-sent .lead-form__note,
+    .lead-form.is-sent .btn { display: none; }
+
+    /* форма внутри тёмной CTA-полосы */
+    .cta-band .lead-form__agree { color: rgba(255, 255, 255, 0.8); }
+    .cta-band .lead-form__note { color: rgba(255, 255, 255, 0.7); }
+    .cta-band .lead-form__agree a { color: #fff; }
+    .cta-form {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 16px; padding: 20px;
+    }
+
+    /* ——— Модальное окно ——— */
+    .modal {
+      position: fixed; inset: 0; z-index: 300;
+      display: none; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .modal.is-open { display: flex; }
+    .modal__overlay { position: absolute; inset: 0; background: rgba(12, 22, 40, 0.6); }
+    .modal__dialog {
+      position: relative; z-index: 1;
+      width: min(440px, 100%); max-height: 90vh; overflow-y: auto;
+      background: var(--mp-white); border-radius: 18px;
+      box-shadow: var(--mp-shadow-lg); padding: 28px 24px 24px;
+    }
+    .modal__close {
+      position: absolute; top: 12px; right: 12px;
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      cursor: pointer; font-size: 1.1rem; line-height: 1; color: var(--mp-muted);
+    }
+    .modal__close:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .modal__dialog h2 { margin: 0 0 8px; font-size: 1.3rem; letter-spacing: -0.02em; }
+    .modal__lead { margin: 0 0 18px; color: var(--mp-muted); font-size: 0.92rem; line-height: 1.5; }
+    .modal__alt {
+      margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--mp-border);
+      font-size: 0.85rem; color: var(--mp-muted); line-height: 1.5;
+    }
+    .modal__alt a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    body.is-locked { overflow: hidden; }
+
+    .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  
+  </style>
+  <style>
+    /* Дополнения для /rnr */
+    .nav-link.is-active { color: var(--mp-primary); position: relative; }
+    .nav-link.is-active::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 2px; background: var(--mp-accent); border-radius: 2px; }
+
+    /* H1 в три строки: 24ch держит перенос «Разрешение на работу и / ввоз иностранных / сотрудников для компаний» */
+    .hero h1 { max-width: 24ch; }
+
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.22); }
+    .hero__facts div { display: flex; flex-direction: column; }
+    .hero__facts strong { font-size: 1.15rem; letter-spacing: -0.02em; }
+    .hero__facts span { font-size: 0.85rem; opacity: 0.85; }
+
+    .divert { background: var(--mp-primary-light); border-bottom: 1px solid var(--mp-border); padding: 14px 0; }
+    .divert__inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-size: 0.95rem; color: var(--mp-muted); }
+    .divert__inner strong { color: var(--mp-text); font-weight: 600; }
+    .divert__inner a { font-weight: 700; }
+
+    .panel { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .panel h3 { margin: 0 0 12px; font-size: 1.05rem; }
+    .panel ul { margin: 0; padding-left: 20px; color: var(--mp-muted); }
+    .panel ul li { margin-bottom: 7px; }
+    .panel ul li:last-child { margin-bottom: 0; }
+    .duo { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 800px) { .duo { grid-template-columns: 1fr 1fr; } }
+
+    .facts-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .facts-row div { background: var(--mp-primary-light); border-radius: 10px; padding: 12px 16px; font-size: 0.92rem; }
+    .facts-row strong { display: block; font-size: 1.08rem; color: var(--mp-primary); }
+
+    .block-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; align-items: center; }
+    .block-actions span { color: var(--mp-muted); font-size: 0.9rem; }
+
+    .checklist { display: grid; gap: 10px 24px; grid-template-columns: 1fr; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 760px) { .checklist { grid-template-columns: 1fr 1fr; } }
+    .checklist li { position: relative; padding-left: 28px; color: var(--mp-text); font-size: 0.97rem; }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 20px; height: 20px; border-radius: 50%; background: #e8f6ed; color: #2f9e5b; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    .risk { margin-top: 20px; padding: 18px 20px; border-left: 4px solid var(--mp-accent); background: #fff5f5; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; font-size: 0.95rem; }
+    .risk strong { color: var(--mp-accent); }
+
+    .ptable-wrap { overflow-x: auto; border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); background: var(--mp-white); }
+    .ptable { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 0.95rem; }
+    .ptable th, .ptable td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--mp-border); vertical-align: top; }
+    .ptable thead th { background: var(--mp-primary-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mp-primary); }
+    .ptable tbody tr:last-child td { border-bottom: none; }
+    .ptable td:first-child { font-weight: 600; }
+    .ptable td small { display: block; color: var(--mp-muted); font-weight: 400; font-size: 0.86rem; margin-top: 3px; }
+    .ptable td.price { white-space: nowrap; font-weight: 700; color: var(--mp-primary); }
+
+    .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mp-primary); background: var(--mp-primary-light); border-radius: 999px; padding: 5px 12px; margin-bottom: 12px; }
+    .why { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .why { grid-template-columns: repeat(3, 1fr); } }
+    .why div { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 22px; }
+    .why strong { display: block; margin-bottom: 6px; }
+    .why span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .industries { margin: -12px 0 22px; color: var(--mp-muted); font-size: 0.95rem; line-height: 1.5; }
+    .industries span { color: var(--mp-text); font-weight: 600; }
+
+    .magnet { margin-top: 16px; display: grid; gap: 14px; align-items: center; background: var(--mp-white); border: 1px dashed var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    @media (min-width: 800px) { .magnet { grid-template-columns: 1fr auto; gap: 24px; } }
+    .magnet strong { display: block; margin-bottom: 5px; }
+    .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .calendar { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-top: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .calendar h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .calendar > p { margin: 0 0 16px; color: var(--mp-muted); font-size: 0.95rem; }
+    .calendar .panel { background: var(--mp-primary-light); border-color: transparent; }
+    .calendar__note { margin: 16px 0 0 !important; }
+
+    .quiz { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 28px; box-shadow: var(--mp-shadow); max-width: 44rem; }
+    .quiz__step strong, .quiz__result strong { display: block; margin-bottom: 16px; font-size: 1.05rem; }
+    .quiz__opts { display: grid; gap: 10px; }
+    .quiz__opts button { text-align: left; padding: 16px 18px; border-radius: var(--mp-radius-sm); border: 1px solid var(--mp-border); background: var(--mp-white); font: inherit; font-size: 0.98rem; cursor: pointer; transition: 0.15s ease; }
+    .quiz__opts button:hover { border-color: var(--mp-primary); background: var(--mp-primary-light); }
+    .quiz__result p { margin: 0 0 18px; color: var(--mp-text); }
+    .quiz__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .quiz__note { margin: 16px 0 0 !important; color: var(--mp-muted); font-size: 0.88rem; }
+
+    .case { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .case h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .case p { margin: 0 0 10px; color: var(--mp-muted); font-size: 0.95rem; }
+    .case p strong { color: var(--mp-text); }
+    .case details { border-top: 1px solid var(--mp-border); margin-top: 12px; padding-top: 12px; }
+    .case summary { cursor: pointer; font-weight: 700; font-size: 0.95rem; color: var(--mp-primary); list-style: none; }
+    .case summary::-webkit-details-marker { display: none; }
+    .case details p:last-child { margin-bottom: 0; }
+
+    .estimate { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .estimate h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .estimate .checklist li { padding-left: 30px; margin-bottom: 6px; }
+    .estimate > p { margin: 16px 0 18px; color: var(--mp-muted); font-size: 0.95rem; }
+
+    .guarantee { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid #2f9e5b; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .guarantee h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .guarantee .checklist li { padding-left: 30px; margin-bottom: 4px; }
+    .guarantee .checklist li strong { color: var(--mp-text); }
+    .guarantee > p { margin: 16px 0 0; color: var(--mp-muted); font-size: 0.93rem; }
+  </style>
+  <style>
+    .crumbs { font-size: 14px; color: var(--mp-muted); margin: 0 0 18px; }
+    .crumbs a { color: var(--mp-muted); text-decoration: none; }
+    .crumbs a:hover { color: var(--mp-primary); }
+
+    .cl-head { padding: 28px 0 4px; }
+    .cl-head h1 { font-size: clamp(30px, 4.2vw, 42px); line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.02em; }
+    .cl-updated { margin: 0 0 16px; font-size: 14px; color: var(--mp-muted); }
+    .cl-lead { max-width: 78ch; font-size: 18px; line-height: 1.65; margin: 0; }
+    .cl-lead a { color: var(--mp-primary); font-weight: 600; text-decoration: none;
+                 border-bottom: 1px solid rgba(26, 79, 176, .35); }
+    .cl-lead a:hover { border-bottom-color: var(--mp-primary); }
+
+    /* Панель прогресса закреплена: на списке в 76 пунктов человек должен видеть, сколько прошёл */
+    .cl-panel { position: sticky; top: 0; z-index: 40; background: var(--mp-white);
+                border-bottom: 1px solid var(--mp-border); padding: 14px 0; margin-top: 20px; }
+    .cl-panel__inner { display: flex; gap: 24px; align-items: center; justify-content: space-between;
+                       flex-wrap: wrap; }
+    .cl-progress { flex: 1 1 320px; min-width: 0; }
+    .cl-progress__label { margin: 0 0 8px; font-size: 15px; font-weight: 600; }
+    .cl-progress__label span { font-variant-numeric: tabular-nums; }
+    .cl-progress__bar { height: 8px; background: var(--mp-bg); border-radius: 999px; overflow: hidden; }
+    .cl-progress__bar span { display: block; height: 100%; width: 0;
+                             background: var(--mp-primary); border-radius: 999px; transition: width .2s; }
+    .cl-actions { display: flex; gap: 10px; flex-shrink: 0; }
+    .btn--brand { background: var(--mp-primary); color: #fff; }
+    .btn--brand:hover { background: var(--mp-primary-dark); }
+    .btn--ghost { background: transparent; color: var(--mp-muted); border: 1px solid var(--mp-border); }
+    .btn--ghost:hover { color: var(--mp-text); border-color: var(--mp-muted); }
+
+    .cl-body { padding: 28px 0 0; }
+    .cl-stage { margin: 0 0 36px; scroll-margin-top: 120px; }
+    .cl-stage__head { display: flex; gap: 16px; align-items: baseline; justify-content: space-between;
+                      border-bottom: 2px solid var(--mp-primary); padding-bottom: 10px; margin-bottom: 14px; }
+    .cl-stage__head h2 { font-size: clamp(20px, 2.3vw, 26px); line-height: 1.25; margin: 0; }
+    .cl-stage__count { flex-shrink: 0; font-size: 14px; color: var(--mp-muted);
+                       font-variant-numeric: tabular-nums; }
+    .cl-stage__count b { color: var(--mp-primary); }
+    .cl-sub { font-size: 16px; margin: 20px 0 8px; color: var(--mp-muted);
+              text-transform: uppercase; letter-spacing: .04em; }
+    .cl-hint { margin: 0 0 10px; font-size: 14px; color: var(--mp-accent); font-weight: 600; }
+
+    /* Пункт — цель для пальца: вся строка кликабельна, отметка крупная */
+    .cl-item { display: flex; gap: 14px; align-items: flex-start; padding: 11px 12px;
+               border-radius: var(--mp-radius-sm); cursor: pointer; transition: background .12s; }
+    .cl-item:hover { background: var(--mp-bg); }
+    .cl-item input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .cl-item__box { flex: 0 0 22px; width: 22px; height: 22px; margin-top: 1px;
+                    border: 2px solid var(--mp-border); border-radius: 6px; background: var(--mp-white);
+                    position: relative; transition: border-color .12s, background .12s; }
+    .cl-item:hover .cl-item__box { border-color: var(--mp-primary); }
+    .cl-item input:focus-visible + .cl-item__box { box-shadow: 0 0 0 3px rgba(26, 79, 176, .25); }
+    .cl-item input:checked + .cl-item__box { background: var(--mp-primary); border-color: var(--mp-primary); }
+    .cl-item input:checked + .cl-item__box::after {
+      content: ""; position: absolute; left: 6px; top: 2px; width: 5px; height: 10px;
+      border-right: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(45deg); }
+    .cl-item__text { font-size: 16px; line-height: 1.55; }
+    .cl-item input:checked ~ .cl-item__text { color: var(--mp-muted); text-decoration: line-through;
+                                              text-decoration-color: var(--mp-border); }
+
+    .cl-capture { padding: 32px 0 56px; }
+    .cl-capture__grid { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 40px;
+                        align-items: start; background: var(--mp-bg); border: 1px solid var(--mp-border);
+                        border-radius: var(--mp-radius); padding: 32px 36px;
+                        width: min(100% - 40px, var(--mp-max)); }
+    .cl-capture h2 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.25; margin: 0 0 12px; }
+    .cl-capture__text p { margin: 0 0 16px; font-size: 17px; line-height: 1.6; }
+    .cl-capture__links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+                         font-size: 16px; line-height: 1.5; color: var(--mp-muted); }
+    .cl-capture__links a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    .cl-capture__links a:hover { text-decoration: underline; }
+    .cl-capture__form { background: var(--mp-white); border: 1px solid var(--mp-border);
+                        border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    .cl-capture__note { margin: 10px 0 0; font-size: 13px; color: var(--mp-muted); }
+    .lead-form--inline label { display: block; font-size: 14px; color: var(--mp-muted); }
+    .lead-form__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .lead-form--inline input, .lead-form--inline textarea {
+      width: 100%; margin-top: 4px; padding: 11px 13px; font-family: inherit; font-size: 16px;
+      color: var(--mp-text); background: var(--mp-white);
+      border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); }
+    .lead-form--inline textarea { resize: vertical; }
+    .lead-form--inline input:focus, .lead-form--inline textarea:focus {
+      outline: none; border-color: var(--mp-primary); box-shadow: 0 0 0 3px rgba(26, 79, 176, .12); }
+    .lead-form--inline .btn { width: auto; margin-top: 14px; }
+
+    @media (max-width: 1080px) {
+      .cl-panel { position: static; }
+      .cl-capture__grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 720px) {
+      .cl-panel__inner { gap: 14px; }
+      .cl-actions { width: 100%; }
+      .cl-actions .btn { flex: 1; }
+      .lead-form__pair { grid-template-columns: 1fr; }
+      .cl-capture__grid { padding: 22px 18px; }
+    }
+
+    /* Печать: на бумаге остаются пункты и пустые квадраты для ручной отметки */
+    @media print {
+      .site-header, .site-footer, .cl-panel, .cl-capture, .cta-widget, .crumbs { display: none !important; }
+      body { font-size: 12pt; color: #000; background: #fff; }
+      .wrap { width: 100%; }
+      .cl-stage { break-inside: avoid; margin-bottom: 18px; }
+      .cl-stage__head { border-bottom: 1px solid #000; }
+      .cl-item { padding: 4px 0; break-inside: avoid; }
+      .cl-item__box { border: 1px solid #000 !important; background: #fff !important; }
+      .cl-item input:checked + .cl-item__box { background: #fff !important; }
+      .cl-item input:checked + .cl-item__box::after { border-color: #000 !important; }
+      .cl-item input:checked ~ .cl-item__text { color: #000; text-decoration: none; }
+      .cl-lead a { text-decoration: none; color: #000; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Чек-лист по программе репатриации",
+    "description": "Что собрать и в каком порядке пройти: восемь этапов от проверки основания до паспорта РФ.",
+    "url": "https://migra-pro.com/check-list/programma-repatriacii",
+    "step": [
+      { "@type": "HowToSection", "name": "Этап 1. Определение оснований для участия в программе репатриации",
+        "itemListElement": [
+          { "@type": "HowToStep", "text": "Лица, имевшие гражданство СССР, рожденные или постоянно жившие в РСФСР." },
+          { "@type": "HowToStep", "text": "Граждане РФ, постоянно проживавшие за пределами России на 24 февраля 2022 года" },
+          { "@type": "HowToStep", "text": "Граждане, выразившие желание выйти из гражданства РФ." },
+          { "@type": "HowToStep", "text": "Есть прямой родственник по восходящей линии — родитель, бабушка, дедушка, прадед" },
+          { "@type": "HowToStep", "text": "Этот родственник родился или постоянно жил на территории РСФСР" },
+          { "@type": "HowToStep", "text": "Либо жил на территории в нынешних границах России, входившей в СССР или Российскую империю" },
+          { "@type": "HowToStep", "text": "Представляющие угрозу безопасности РФ" },
+          { "@type": "HowToStep", "text": "Участвующие в экстремистской или террористической деятельности" },
+          { "@type": "HowToStep", "text": "Имеющие непогашенную судимость" },
+          { "@type": "HowToStep", "text": "Ранее выдворявшиеся из РФ" }
+        ] },
+      { "@type": "HowToSection", "name": "Этап 2. Получение статуса репатрианта",
+        "itemListElement": [
+          { "@type": "HowToStep", "text": "Размер «подъемных» (единовременного пособия на обустройство)" },
+          { "@type": "HowToStep", "text": "Размер ежемесячных пособий (для нетрудоспособных)" },
+          { "@type": "HowToStep", "text": "Компенсации на переезд, провоз багажа, аренду жилья" },
+          { "@type": "HowToStep", "text": "Список востребованных профессий (дает дополнительные баллы и льготы)" },
+          { "@type": "HowToStep", "text": "Национальный и заграничный паспорт гражданина" },
+          { "@type": "HowToStep", "text": "Документы, подтверждающие личность членов семьи репатрианта" },
+          { "@type": "HowToStep", "text": "Документы об образовании, профессиональной квалификации и навыках, о научных степенях и званиях" },
+          { "@type": "HowToStep", "text": "Фото размером 3,5×4,5 см" },
+          { "@type": "HowToStep", "text": "Свидетельство о рождении и семейном положении" },
+          { "@type": "HowToStep", "text": "Документы о стаже трудовой деятельности" },
+          { "@type": "HowToStep", "text": "Документы, доказывающие основания для получения статуса репатрианта" },
+          { "@type": "HowToStep", "text": "Документы, подтверждающие наличие родственника по прямой восходящей линии, имеющего связь с РСФСР" },
+          { "@type": "HowToStep", "text": "Заполненное заявление на участие в госпрограмме" }
+        ] },
+      { "@type": "HowToSection", "name": "Этап 3. Рассмотрение заявления",
+        "itemListElement": [
+          { "@type": "HowToStep", "text": "Дождаться уведомления о приёме заявления к рассмотрению" },
+          { "@type": "HowToStep", "text": "Проверить статус заявления в консульстве или в уполномоченном органе региона" },
+          { "@type": "HowToStep", "text": "Получить решение по заявлению" },
+          { "@type": "HowToStep", "text": "Забрать свидетельство участника Госпрограммы" }
+        ] },
+      { "@type": "HowToSection", "name": "Этап 4. Переезд в Россию и оформление статуса",
+        "itemListElement": [
+          { "@type": "HowToStep", "text": "Вы и члены вашей семьи имеете право на беспошлинный провоз через границу личного имущества без учета его веса и стоимости" },
+          { "@type": "HowToStep", "text": "Паспорта" },
+          { "@type": "HowToStep", "text": "Миграционная карта (цель визита — «частная»)" },
+          { "@type": "HowToStep", "text": "Свидетельство Репатрианта или его копия (если члены семьи въезжают отдельно)" }
+        ] },
+      { "@type": "HowToSection", "name": "Этап 5. Регистрация по месту пребывания",
+        "itemListElement": [
+          { "@type": "HowToStep", "text": "Работодатель (если официально трудоустроен)" },
+          { "@type": "HowToStep", "text": "Арендодатель (если снимает жилье)" },
+          { "@type": "HowToStep", "text": "Родственники или друзья, у которых проживает" },
+          { "@type": "HowToStep", "text": "Администрация гостиницы, хостела или санатория" },
+          { "@type": "HowToStep", "text": "Заявление о регистрации по месту пребывания" },
+          { "@type": "HowToStep", "text": "Национальный паспорт с нотариально заверенным переводом" },
+          { "@type": "HowToStep", "text": "Свидетельство участника Госпрограммы переселения («удостоверение переселенца»)" },
+          { "@type": "HowToStep", "text": "Договор найма (аренды) жилого помещения" },
+          { "@type": "HowToStep", "text": "Заявление собственника о согласии на проживание" },
+          { "@type": "HowToStep", "text": "Миграционная карта с отметкой о въезде в РФ" },
+          { "@type": "HowToStep", "text": "Паспорт РФ" },
+          { "@type": "HowToStep", "text": "Документ, подтверждающий право собственности (свидетельство или выписка из ЕГРН)" },
+          { "@type": "HowToStep", "text": "Прийти в отдел МВД в приемные часы" },
+          { "@type": "HowToStep", "text": "Передать инспектору пакет документов" },
+          { "@type": "HowToStep", "text": "Получить отметку о приеме уведомления" },
+          { "@type": "HowToStep", "text": "Собственник заходит в личный кабинет на gosuslugi.ru" },
+          { "@type": "HowToStep", "text": "Находит услугу «Прием уведомлений о прибытии иностранного гражданина»" },
+          { "@type": "HowToStep", "text": "Заполняет форму, загружает сканы" },
+          { "@type": "HowToStep", "text": "Получает уведомление в личный кабинет" }
+        ] },
+      { "@type": "HowToSection", "name": "Этап 6. Медицинский осмотр",
+        "itemListElement": [
+          { "@type": "HowToStep", "text": "Заключение врача-нарколога" },
+          { "@type": "HowToStep", "text": "Заключение врача-фтизиатра (об отсутствии туберкулеза)" },
+          { "@type": "HowToStep", "text": "Сертификат об отсутствии ВИЧ-инфекции" },
+          { "@type": "HowToStep", "text": "Паспорт с нотариальным переводом + копия" },
+          { "@type": "HowToStep", "text": "Действующая миграционная карта + копия" },
+          { "@type": "HowToStep", "text": "Действующая регистрация по месту пребывания + копия" },
+          { "@type": "HowToStep", "text": "Фотографии 3x4 см" },
+          { "@type": "HowToStep", "text": "Для мужчин — военный билет (или аналог с переводом)" }
+        ] },
+      { "@type": "HowToSection", "name": "Этап 7. Оформление вида на жительство (ВНЖ) — упрощенный порядок",
+        "itemListElement": [
+          { "@type": "HowToStep", "text": "Заявление о выдаче ВНЖ в двух экземплярах (на русском языке, без сокращений)" },
+          { "@type": "HowToStep", "text": "Национальный паспорт с нотариально заверенным переводом" },
+          { "@type": "HowToStep", "text": "Свидетельство участника Госпрограммы переселения (оригинал)" },
+          { "@type": "HowToStep", "text": "Миграционная карта с отметкой о въезде в РФ" },
+          { "@type": "HowToStep", "text": "Документ о доходах (справка с работы, выписка из банка, пенсионное удостоверение)" },
+          { "@type": "HowToStep", "text": "Документ о праве на проживание (договор аренды, выписка из ЕГРН, гарантийное письмо от работодателя)" },
+          { "@type": "HowToStep", "text": "Медицинские справки об отсутствии опасных заболеваний, ВИЧ, наркомании" },
+          { "@type": "HowToStep", "text": "Четыре фотографии 35×45 мм (матовые)" },
+          { "@type": "HowToStep", "text": "Квитанция об оплате госпошлины" },
+          { "@type": "HowToStep", "text": "Свидетельство о браке (с нотариальным переводом)" },
+          { "@type": "HowToStep", "text": "Свидетельства о рождении детей (с нотариальным переводом)" },
+          { "@type": "HowToStep", "text": "Нотариально заверенное согласие второго родителя (если ребенок выезжает с одним из родителей)" }
+        ] },
+      { "@type": "HowToSection", "name": "Этап 8. Получение гражданства РФ",
+        "itemListElement": [
+          { "@type": "HowToStep", "text": "Заявление о приеме в гражданство (2 экземпляра)" },
+          { "@type": "HowToStep", "text": "Вид на жительство" },
+          { "@type": "HowToStep", "text": "Документ, подтверждающий законный источник дохода" },
+          { "@type": "HowToStep", "text": "Квитанция об оплате госпошлины (3500 руб.)" },
+          { "@type": "HowToStep", "text": "Свидетельство участника программы" },
+          { "@type": "HowToStep", "text": "Справка об отсутствии судимости (для визовых стран)" },
+          { "@type": "HowToStep", "text": "Нотариально заверенные переводы всех документов" },
+          { "@type": "HowToStep", "text": "За рубежом: в дипломатическом представительстве или консульском учреждении РФ (Посольстве/Консульстве)" },
+          { "@type": "HowToStep", "text": "В России: в территориальном органе МВД по вопросам миграции (если вы уже находитесь в РФ на законном основании)" }
+        ] }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://migra-pro.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Чек-листы", "item": "https://migra-pro.com/check-list" },
+      { "@type": "ListItem", "position": 3, "name": "Программа репатриации" }
+    ]
+  }
+  </script>  <style>
+    .req{display:inline-block;background:#fff3bf;color:#7a4b00;border:1px solid #f0c000;
+         border-radius:4px;padding:1px 6px;font-size:14px;font-weight:600;line-height:1.35}
+    .kontrol-bar{position:sticky;top:0;z-index:9999;background:#7a4b00;color:#fff;
+         padding:10px 16px;font-size:15px;text-align:center}
+  </style>
+</head>
+<body><div class="kontrol-bar">Контрольная копия. Жёлтым отмечено то, что ещё требует уточнения — всего пометок: 3. Чистая версия для передачи подрядчику — без суффикса -kontrol в адресе.</div>
+
+<header class="site-header">
+    <div class="header-top">
+      <div class="wrap header-top__inner">
+        <a class="brand" href="https://migra-pro.com/">
+          <img class="brand__img" src="logo-migrapro.png" alt="МиграПро — российское миграционное агентство" width="316" height="74">
+        </a>
+        <div class="header-meta">
+          <div class="header-rating" aria-label="Рейтинг на основе Яндекс">
+            <span class="header-rating__stars">★★★★★</span>
+            <span>Наш рейтинг на основе Яндекс</span>
+          </div>
+          <div class="header-messengers" aria-label="Мессенджеры">
+            <a href="#" title="MAX" aria-label="MAX">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-1.2 4.4L21 21l-5.2-1.1A8.5 8.5 0 1 1 21 11.5z"/><path d="m8 14 2.6-4 2.4 2.6L15.9 9"/></svg>
+            </a>
+            <a href="#" title="Telegram" aria-label="Telegram">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M22 3 2.5 11.2c-.7.3-.7.8-.1 1l4.8 1.5 1.9 5.8c.2.7.6.8 1.1.5l2.7-2.3 4.8 3.5c.6.3 1 .1 1.1-.5L22.8 4c.2-.8-.3-1.2-.8-1z"/><path d="m9.3 14.1 9.2-7.2"/></svg>
+            </a>
+          </div>
+          <div class="header-phone-block">
+            <a href="tel:+74958590051">+7 (495) 859-00-51</a>
+            <span>Пн–Пт: 09:00–18:00</span>
+          </div>
+        </div>
+        <div class="header-top__cta">
+          <a class="btn btn--primary btn--sm" href="#cta" data-modal-open data-modal-source="Шапка">Бесплатная консультация</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-wrap">
+      <div class="wrap">
+        <nav class="header-nav" aria-label="Основное меню">
+          <div class="nav-item nav-item--split" data-dropdown>
+            <a class="nav-link nav-link--label" href="#uslugi">Услуги</a>
+            <button class="nav-link nav-chev" type="button" aria-expanded="false" aria-controls="dropdown-uslugi" aria-label="Открыть список услуг">
+              <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+            <div class="dropdown" id="dropdown-uslugi" role="menu" hidden>
+              <a href="https://migra-pro.com/rvp"><span>РВП</span><em>Разрешение на временное проживание</em></a>
+              <a href="https://migra-pro.com/vnj"><span>ВНЖ</span><em>Вид на жительство, бессрочный</em></a>
+              <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf"><span>Гражданство РФ</span><em>Общий и упрощённый порядок</em></a>
+              <a href="https://migra-pro.com/uslugi"><span>Репатриация</span><em>Программа возвращения соотечественников</em></a>
+              <a href="https://migra-pro.com/cancellationofinter"><span>Запрет на въезд и депортация</span><em>Обжалование и снятие ограничений</em></a>
+              <a href="https://migra-pro.com/online_consult"><span>Консультация миграционного юриста</span><em>Разбор ситуации и план действий</em></a>
+              <a class="dropdown__all" href="https://migra-pro.com/uslugi">Все услуги и цены →</a>
+            </div>
+          </div>
+          <a class="nav-link is-active" href="#top" aria-current="page">Работодателям</a>
+          <a class="nav-link" href="https://migra-pro.com/about">О нас</a>
+          <a class="nav-link" href="https://migra-pro.com/informaciya">База знаний</a>
+          <a class="nav-link" href="#otzyvy">Отзывы</a>
+          <a class="nav-link" href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<main id="top">
+
+  <section class="cl-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки">
+        <a href="https://migra-pro.com/">Главная</a> <span>&rarr;</span>
+        <a href="https://migra-pro.com/check-list">Чек-листы</a> <span>&rarr;</span>
+        <span>Программа репатриации</span>
+      </nav>
+      <h1>Чек-лист по программе репатриации</h1>
+      <p class="cl-updated">Обновлено 22 августа 2026</p>
+      <p class="cl-lead">Восемь этапов от проверки основания до паспорта РФ. Отмечайте выполненное — отметки сохранятся в браузере, список можно распечатать и взять с собой. Если нужен не перечень, а объяснение порядка, есть <a href="https://migra-pro.com/blog/repatriacia/repatriaciya-2025-programmy-dokumenty-sroki">подробный разбор программы репатриации</a>.</p>
+    </div>
+  </section>
+
+  <section class="cl-panel" id="progress">
+    <div class="wrap cl-panel__inner">
+      <div class="cl-progress">
+        <p class="cl-progress__label">Отмечено <span id="cl-done">0</span> из <span id="cl-total">79</span></p>
+        <div class="cl-progress__bar"><span id="cl-bar"></span></div>
+      </div>
+      <div class="cl-actions">
+        <button class="btn btn--brand" type="button" id="cl-print" data-goal="checklist_print">Распечатать</button>
+        <button class="btn btn--ghost" type="button" id="cl-reset">Начать заново</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="cl-body"><div class="wrap">
+    <section class="cl-stage" id="section1" data-stage="section1">
+      <div class="cl-stage__head">
+        <h2>Этап 1. Определение оснований для участия в программе репатриации</h2>
+        <span class="cl-stage__count"><b data-stage-done="section1">0</b> из 10</span>
+      </div>
+      <h3 class="cl-sub">К репатриантам относятся соотечественники из числа:</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-1">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Лица, имевшие гражданство СССР, рожденные или постоянно жившие в РСФСР.</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-2">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Граждане РФ, постоянно проживавшие за пределами России на 24 февраля 2022 года</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-3">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Граждане, выразившие желание выйти из гражданства РФ.</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-4">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Есть прямой родственник по восходящей линии — родитель, бабушка, дедушка, прадед</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-5">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Этот родственник родился или постоянно жил на территории РСФСР</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-6">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Либо жил на территории в нынешних границах России, входившей в СССР или Российскую империю</span>
+      </label>
+      <h3 class="cl-sub">Кому могут отказать в участии</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-7">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Представляющие угрозу безопасности РФ</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-8">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Участвующие в экстремистской или террористической деятельности</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-9">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Имеющие непогашенную судимость</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-10">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Ранее выдворявшиеся из РФ</span>
+      </label>
+    </section>
+    <section class="cl-stage" id="section2" data-stage="section2">
+      <div class="cl-stage__head">
+        <h2>Этап 2. Получение статуса репатрианта</h2>
+        <span class="cl-stage__count"><b data-stage-done="section2">0</b> из 13</span>
+      </div>
+      <h3 class="cl-sub">Что различается в региональных программах</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-11">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Размер «подъемных» (единовременного пособия на обустройство)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-12">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Размер ежемесячных пособий (для нетрудоспособных)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-13">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Компенсации на переезд, провоз багажа, аренду жилья</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-14">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Список востребованных профессий (дает дополнительные баллы и льготы)</span>
+      </label>
+      <h3 class="cl-sub">Документы для подачи заявления</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-15">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Национальный и заграничный паспорт гражданина</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-16">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Документы, подтверждающие личность членов семьи репатрианта</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-17">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Документы об образовании, профессиональной квалификации и навыках, о научных степенях и званиях</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-18">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Фото размером 3,5×4,5 см</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-19">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Свидетельство о рождении и семейном положении</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-20">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Документы о стаже трудовой деятельности</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-21">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Документы, доказывающие основания для получения статуса репатрианта</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-22">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Документы, подтверждающие наличие родственника по прямой восходящей линии, имеющего связь с РСФСР</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-23">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Заполненное заявление на участие в госпрограмме</span>
+      </label>
+    </section>
+    <section class="cl-stage" id="section3" data-stage="section3">
+      <div class="cl-stage__head">
+        <h2>Этап 3. Рассмотрение заявления</h2>
+        <span class="cl-stage__count"><b data-stage-done="section3">0</b> из 4</span>
+      </div>
+      <h3 class="cl-sub">Что происходит после подачи</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-24">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Дождаться уведомления о приёме заявления к рассмотрению</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-25">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Проверить статус заявления в консульстве или в уполномоченном органе региона</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-26">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Получить решение по заявлению</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-27">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Забрать свидетельство участника Госпрограммы</span>
+      </label>
+    </section>
+    <section class="cl-stage" id="section4" data-stage="section4">
+      <div class="cl-stage__head">
+        <h2>Этап 4. Переезд в Россию и оформление статуса</h2>
+        <span class="cl-stage__count"><b data-stage-done="section4">0</b> из 4</span>
+      </div>
+      <h3 class="cl-sub">Льготы при переезде</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-28">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Вы и члены вашей семьи имеете право на беспошлинный провоз через границу личного имущества без учета его веса и стоимости</span>
+      </label>
+      <h3 class="cl-sub">Что иметь при въезде</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-29">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Паспорта</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-30">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Миграционная карта (цель визита — «частная»)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-31">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Свидетельство Репатрианта или его копия (если члены семьи въезжают отдельно)</span>
+      </label>
+    </section>
+    <section class="cl-stage" id="section5" data-stage="section5">
+      <div class="cl-stage__head">
+        <h2>Этап 5. Регистрация по месту пребывания</h2>
+        <span class="cl-stage__count"><b data-stage-done="section5">0</b> из 19</span>
+      </div>
+      <h3 class="cl-sub">Кто может оформить регистрацию</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-32">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Работодатель (если официально трудоустроен)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-33">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Арендодатель (если снимает жилье)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-34">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Родственники или друзья, у которых проживает</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-35">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Администрация гостиницы, хостела или санатория</span>
+      </label>
+      <h3 class="cl-sub">Документы для временной регистрации</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-36">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Заявление о регистрации по месту пребывания</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-37">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Национальный паспорт с нотариально заверенным переводом</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-38">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Свидетельство участника Госпрограммы переселения («удостоверение переселенца»)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-39">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Договор найма (аренды) жилого помещения</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-40">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Заявление собственника о согласии на проживание</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-41">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Миграционная карта с отметкой о въезде в РФ</span>
+      </label>
+      <h3 class="cl-sub">Документы от собственника жилья</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-42">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Паспорт РФ</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-43">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Документ, подтверждающий право собственности (свидетельство или выписка из ЕГРН)</span>
+      </label>
+      <h3 class="cl-sub">Если подаёте лично в МВД</h3>
+      <p class="cl-hint">Выберите один способ из двух.</p>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-44">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Прийти в отдел МВД в приемные часы</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-45">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Передать инспектору пакет документов</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-46">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Получить отметку о приеме уведомления</span>
+      </label>
+      <h3 class="cl-sub">Если подаёте через Госуслуги</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-47">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Собственник заходит в личный кабинет на gosuslugi.ru</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-48">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Находит услугу «Прием уведомлений о прибытии иностранного гражданина»</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-49">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Заполняет форму, загружает сканы</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-50">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Получает уведомление в личный кабинет</span>
+      </label>
+    </section>
+    <section class="cl-stage" id="section6" data-stage="section6">
+      <div class="cl-stage__head">
+        <h2>Этап 6. Медицинский осмотр</h2>
+        <span class="cl-stage__count"><b data-stage-done="section6">0</b> из 8</span>
+      </div>
+      <h3 class="cl-sub">Необходимые медицинские документы</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-51">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Заключение врача-нарколога</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-52">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Заключение врача-фтизиатра (об отсутствии туберкулеза)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-53">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Сертификат об отсутствии ВИЧ-инфекции</span>
+      </label>
+      <h3 class="cl-sub">Документы для медосмотра</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-54">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Паспорт с нотариальным переводом + копия</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-55">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Действующая миграционная карта + копия</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-56">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Действующая регистрация по месту пребывания + копия</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-57">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Фотографии 3x4 см</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-58">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Для мужчин — военный билет (или аналог с переводом)</span>
+      </label>
+    </section>
+    <section class="cl-stage" id="section7" data-stage="section7">
+      <div class="cl-stage__head">
+        <h2>Этап 7. Оформление вида на жительство (ВНЖ) — упрощенный порядок</h2>
+        <span class="cl-stage__count"><b data-stage-done="section7">0</b> из 12</span>
+      </div>
+      <h3 class="cl-sub">Документы для подачи на ВНЖ</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-59">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Заявление о выдаче ВНЖ в двух экземплярах (на русском языке, без сокращений)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-60">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Национальный паспорт с нотариально заверенным переводом</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-61">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Свидетельство участника Госпрограммы переселения (оригинал)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-62">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Миграционная карта с отметкой о въезде в РФ</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-63">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Документ о доходах (справка с работы, выписка из банка, пенсионное удостоверение)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-64">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Документ о праве на проживание (договор аренды, выписка из ЕГРН, гарантийное письмо от работодателя)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-65">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Медицинские справки об отсутствии опасных заболеваний, ВИЧ, наркомании</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-66">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Четыре фотографии 35×45 мм (матовые)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-67">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Квитанция об оплате госпошлины</span>
+      </label>
+      <h3 class="cl-sub">Дополнительные документы при наличии семьи</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-68">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Свидетельство о браке (с нотариальным переводом)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-69">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Свидетельства о рождении детей (с нотариальным переводом)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-70">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Нотариально заверенное согласие второго родителя (если ребенок выезжает с одним из родителей)</span>
+      </label>
+    </section>
+    <section class="cl-stage" id="section8" data-stage="section8">
+      <div class="cl-stage__head">
+        <h2>Этап 8. Получение гражданства РФ</h2>
+        <span class="cl-stage__count"><b data-stage-done="section8">0</b> из 9</span>
+      </div>
+      <h3 class="cl-sub">Документы для гражданства</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-71">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Заявление о приеме в гражданство (2 экземпляра)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-72">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Вид на жительство</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-73">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Документ, подтверждающий законный источник дохода</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-74">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Квитанция об оплате госпошлины (3500 руб.)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-75">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Свидетельство участника программы</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-76">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Справка об отсутствии судимости (для визовых стран)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-77">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Нотариально заверенные переводы всех документов</span>
+      </label>
+      <h3 class="cl-sub">Получение паспорта</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-78">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">За рубежом: в дипломатическом представительстве или консульском учреждении РФ (Посольстве/Консульстве)</span>
+      </label>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-79">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">В России: в территориальном органе МВД по вопросам миграции (если вы уже находитесь в РФ на законном основании)</span>
+      </label>
+    </section>
+  </div></div>
+
+  <section class="cl-capture" id="pomoshch">
+    <div class="wrap cl-capture__grid">
+      <div class="cl-capture__text">
+        <h2>Застряли на каком-то этапе</h2>
+        <p>Чек-лист показывает порядок, но не решает частные случаи: документы предков на утраченном языке, отказ по прежнему заявлению, переезд с детьми от разных браков. Опишите свою ситуацию — разберём и скажем, что делать дальше.</p>
+        <ul class="cl-capture__links">
+          <li><a href="https://migra-pro.com/questions/repatriacia">частые вопросы о репатриации</a> — если случай типовой, ответ может быть уже там</li>
+          <li><a href="https://migra-pro.com/repatriatsiya">ведение дела о репатриации</a> — когда нужна работа с документами, а не совет</li>
+        </ul>
+      </div>
+      <div class="cl-capture__form">
+        <form class="lead-form lead-form--inline" data-goal="checklist_lead">
+          <div class="lead-form__pair">
+            <label>Как к вам обращаться
+              <input type="text" name="name" autocomplete="name" placeholder="Имя">
+            </label>
+            <label>Телефон или мессенджер
+              <input type="tel" name="phone" autocomplete="tel" placeholder="+7 ___ ___-__-__">
+            </label>
+          </div>
+          <label>На каком этапе застряли
+            <textarea name="task" rows="3" placeholder="Например: подал заявление в консульстве, три месяца нет ответа"></textarea>
+          </label>
+          <button class="btn btn--brand" type="submit">Разобрать мою ситуацию</button>
+          <p class="cl-capture__note">Отвечает юрист по миграционному праву. Обычно в течение рабочего дня.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    var KEY = "migra-checklist:" + location.pathname;
+    var boxes = Array.prototype.slice.call(document.querySelectorAll(".cl-check"));
+    var done = document.getElementById("cl-done");
+    var bar = document.getElementById("cl-bar");
+    if (!boxes.length) return;
+
+    function read() {
+      try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) { return []; }
+    }
+    function save() {
+      var ids = boxes.filter(function (b) { return b.checked; }).map(function (b) { return b.id; });
+      try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch (e) {}
+    }
+    function refresh() {
+      var n = boxes.filter(function (b) { return b.checked; }).length;
+      done.textContent = n;
+      bar.style.width = Math.round(100 * n / boxes.length) + "%";
+      document.querySelectorAll("[data-stage-done]").forEach(function (el) {
+        var stage = el.getAttribute("data-stage-done");
+        el.textContent = boxes.filter(function (b) {
+          return b.getAttribute("data-stage") === stage && b.checked;
+        }).length;
+      });
+    }
+
+    var saved = read();
+    boxes.forEach(function (b) {
+      if (saved.indexOf(b.id) !== -1) { b.checked = true; }
+      b.addEventListener("change", function () { save(); refresh(); });
+    });
+    refresh();
+
+    document.getElementById("cl-print").addEventListener("click", function () { window.print(); });
+    document.getElementById("cl-reset").addEventListener("click", function () {
+      if (!confirm("Снять все отметки?")) { return; }
+      boxes.forEach(function (b) { b.checked = false; });
+      save(); refresh();
+    });
+  })();
+  </script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-cta">
+      <div>
+        <strong>Оформляете иностранных сотрудников?</strong>
+        <p>Разберём задачу на бесплатной консультации и назовём сроки и стоимость.</p>
+      </div>
+      <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Подвал">Бесплатная консультация</a>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <h3>Работодателям</h3>
+        <ul>
+          <li><a href="#vks">Оформление ВКС</a></li>
+          <li><a href="#viza">Визовый персонал и квота</a></li>
+          <li><a href="#viza">Приглашение и рабочая виза</a></li>
+          <li><a href="#audit">Аудит документов сотрудников</a></li>
+          <li><a href="#audit">Сопровождение миграционного учёта</a></li>
+          <li><a href="#ceny">Цены и сроки</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Частным лицам</h3>
+        <ul>
+          <li><a href="https://migra-pro.com/">Оформление статуса себе и семье</a></li>
+          <li><a href="https://migra-pro.com/rvp">РВП</a></li>
+          <li><a href="https://migra-pro.com/vnj">ВНЖ</a></li>
+          <li><a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></li>
+          <li><a href="https://migra-pro.com/online_consult">Консультация миграционного юриста</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <ul>
+          <li><a class="footer-phone" href="tel:+74958590051">+7 (495) 859-00-51</a></li>
+          <li>Пн–Пт, 09:00–18:00</li>
+          <li>Подольск, ул. Профсоюзная, 4</li>
+          <li>Одинцово, п. Новоивановское, ул. Калинина, 8</li>
+          <li><a href="#contacts">Показать контакты →</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#" rel="nofollow">MAX</a>
+          <a href="#" rel="nofollow">Telegram</a>
+        </div>
+      </div>
+      <div>
+        <h3>Компания</h3>
+        <ul>
+          <li><a href="https://migra-pro.com/about">О нас</a></li>
+          <li><a href="https://migra-pro.com/informaciya">База знаний</a></li>
+          <li><a href="https://migra-pro.com/questions">Вопросы и ответы</a></li>
+          <li><a href="https://migra-pro.com/">На главную</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div><span class="req">[REQ: юридическое название, ИНН, ОГРН]</span> · Оказываем юридические и консультационные услуги в сфере миграционного права. Решение по документам принимают государственные органы. ⚖️</div>
+      <div class="footer-legal__links">
+        <a href="#">Политика конфиденциальности <span class="req">[REQ]</span></a>
+        <a href="#">Согласие на обработку персональных данных <span class="req">[REQ]</span></a>
+      </div>
+      <div>© 2026 Migra-Pro · концепт страницы «Работодателям» (/rnr), не рабочая версия сайта</div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal-consult" role="dialog" aria-modal="true" aria-labelledby="modal-consult-title" hidden>
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal__dialog">
+    <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">✕</button>
+    <h2 id="modal-consult-title">Бесплатная консультация для компании</h2>
+    <p class="modal__lead">Оставьте имя и телефон — перезвоним, уточним задачу по сотрудникам и назовём порядок действий.</p>
+    <form class="lead-form" data-lead-form novalidate>
+      <input type="hidden" name="source" value="">
+      <div class="lead-form__row" style="grid-template-columns:1fr;">
+        <input type="text" name="name" placeholder="Имя" autocomplete="given-name" required>
+        <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+      </div>
+      <button class="btn btn--primary" type="submit">Получить консультацию</button>
+      <label class="lead-form__agree">
+        <input type="checkbox" name="agree" required>
+        <span>Согласен на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span>
+      </label>
+      <p class="lead-form__note">Перезваниваем Пн–Пт с 09:00 до 18:00.</p>
+      <div class="lead-form__done" role="status">Заявка отправлена. Юрист перезвонит по указанному номеру. <em>(в концепте форма ничего не отправляет)</em></div>
+    </form>
+    <p class="modal__alt">Нужен ответ прямо сейчас — напишите в <a href="#" rel="nofollow">MAX</a> или <a href="#" rel="nofollow">Telegram</a>.</p>
+  </div>
+</div>
+
+<div class="mobile-bar">
+  <a class="btn btn--secondary" href="tel:+74958590051">Позвонить</a>
+  <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Мобильная панель">Консультация</a>
+</div>
+
+<script>
+  /* Квиз квалификации: три шага → предварительный путь оформления */
+  (function () {
+    var quiz = document.querySelector('[data-quiz]');
+    if (!quiz) return;
+    var steps = quiz.querySelectorAll('.quiz__step');
+    var result = quiz.querySelector('[data-quiz-result]');
+    var text = quiz.querySelector('[data-quiz-text]');
+    var answers = {};
+
+    var byTask = {
+      privezti: 'Ваш путь — ввоз по квоте: заявка о потребности, разрешение на привлечение, приглашение, рабочая виза и разрешение на работу на каждого сотрудника. Подбор ведём в Индии, Вьетнаме или Бангладеш.',
+      vks: 'Ваш путь — статус ВКС: квота не нужна, разрешение на работу выдаётся на срок договора до трёх лет, семья специалиста может получить визы. Сначала проверим, проходит ли специалист по требованиям к ВКС.',
+      uzhe: 'Начинаем с бесплатного аудита: проверим разрешительные документы, уведомления в МВД, договоры и патенты, отдадим перечень несоответствий и план устранения. Дальше — сопровождение учёта, если оно нужно.'
+    };
+    var byCount = {
+      one: ' Задача точечная — берём такие без минимального объёма.',
+      few: ' Для группы до десяти человек считаем смету по каждой позиции и согласуем график.',
+      many: ' Для объёма больше десяти человек делаем индивидуальный расчёт и график по партиям.'
+    };
+    var byWhen = {
+      urgent: ' По срокам: месяц — мало для квотного пути, поэтому в приоритете рассмотрим внеквотные должности, ВКС или легализацию тех, кто уже в России.',
+      normal: ' По срокам: два-три месяца — рабочий горизонт для оформления, но заявку на квоту нужно успеть подать в установленный срок.',
+      plan: ' По срокам: заранее — лучший вариант, успеваем в окно подачи заявки на квоту и планируем выход сотрудников к нужной дате.'
+    };
+
+    function show(n) {
+      Array.prototype.forEach.call(steps, function (s) {
+        if (s.getAttribute('data-step') === String(n)) s.removeAttribute('hidden');
+        else s.setAttribute('hidden', '');
+      });
+    }
+
+    quiz.addEventListener('click', function (e) {
+      var opt = e.target.closest('[data-q]');
+      if (opt) {
+        answers[opt.getAttribute('data-q')] = opt.getAttribute('data-val');
+        if (!answers.task) { show(1); return; }
+        if (!answers.count) { show(2); return; }
+        if (!answers.when) { show(3); return; }
+        Array.prototype.forEach.call(steps, function (s) { s.setAttribute('hidden', ''); });
+        text.textContent = (byTask[answers.task] || '') + (byCount[answers.count] || '') + (byWhen[answers.when] || '');
+        result.removeAttribute('hidden');
+        var hidden = document.querySelector('#modal-consult input[name="source"]');
+        if (hidden) hidden.value = 'Квиз: ' + answers.task + '/' + answers.count + '/' + answers.when;
+        return;
+      }
+      if (e.target.closest('[data-quiz-reset]')) {
+        answers = {};
+        result.setAttribute('hidden', '');
+        show(1);
+      }
+    });
+  })();
+</script>
+
+<script>
+    (function () {
+      var root = document.querySelector('[data-dropdown]');
+      if (!root) return;
+      var btn = root.querySelector('.nav-chev');
+      var panel = root.querySelector('.dropdown');
+      function setOpen(open) {
+        root.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) panel.removeAttribute('hidden');
+        else panel.setAttribute('hidden', '');
+      }
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setOpen(!root.classList.contains('is-open'));
+      });
+      document.addEventListener('click', function (e) {
+        if (!root.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+
+    (function () {
+      var map = document.querySelector('[data-map]');
+      if (!map) return;
+      var frame = map.querySelector('[data-map-frame]');
+      var tabs = map.querySelectorAll('.map-tab');
+      Array.prototype.forEach.call(tabs, function (tab) {
+        tab.addEventListener('click', function () {
+          Array.prototype.forEach.call(tabs, function (t) {
+            t.classList.remove('is-active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('is-active');
+          tab.setAttribute('aria-selected', 'true');
+          var q = tab.getAttribute('data-map-query');
+          frame.src = 'https://yandex.ru/map-widget/v1/?text=' + encodeURIComponent(q) + '&z=16';
+          frame.title = 'Карта: ' + tab.textContent.trim();
+        });
+      });
+    })();
+
+    (function () {
+      var modal = document.getElementById('modal-consult');
+      if (!modal) return;
+      var sourceField = modal.querySelector('input[name="source"]');
+      var lastFocused = null;
+
+      function open(source) {
+        lastFocused = document.activeElement;
+        if (sourceField) sourceField.value = source || '';
+        modal.removeAttribute('hidden');
+        modal.classList.add('is-open');
+        document.body.classList.add('is-locked');
+        var first = modal.querySelector('input[name="name"]');
+        if (first) first.focus();
+      }
+      function close() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('hidden', '');
+        document.body.classList.remove('is-locked');
+        if (lastFocused) lastFocused.focus();
+      }
+
+      document.addEventListener('click', function (e) {
+        var opener = e.target.closest('[data-modal-open]');
+        if (opener) {
+          e.preventDefault();
+          open(opener.getAttribute('data-modal-source'));
+          return;
+        }
+        if (e.target.closest('[data-modal-close]')) {
+          e.preventDefault();
+          close();
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+      });
+    })();
+
+    (function () {
+      Array.prototype.forEach.call(document.querySelectorAll('[data-lead-form]'), function (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = form.querySelector('input[name="name"]');
+          var phone = form.querySelector('input[name="phone"]');
+          var agree = form.querySelector('input[name="agree"]');
+          var invalid = null;
+          if (!name.value.trim()) invalid = name;
+          else if (phone.value.replace(/\D/g, '').length < 10) invalid = phone;
+          else if (!agree.checked) invalid = agree;
+          if (invalid) { invalid.focus(); return; }
+          form.classList.add('is-sent');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
