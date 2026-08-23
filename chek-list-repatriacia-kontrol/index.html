@@ -992,6 +992,7 @@
     "step": [
       { "@type": "HowToSection", "name": "Этап 1. Определение оснований для участия в программе репатриации",
         "itemListElement": [
+          { "@type": "HowToStep", "text": "Репатрианту не требуется подтверждать владение русским языком" },
           { "@type": "HowToStep", "text": "Лица, имевшие гражданство СССР, рожденные или постоянно жившие в РСФСР." },
           { "@type": "HowToStep", "text": "Граждане РФ, постоянно проживавшие за пределами России на 24 февраля 2022 года" },
           { "@type": "HowToStep", "text": "Граждане, выразившие желание выйти из гражданства РФ." },
@@ -1005,6 +1006,7 @@
         ] },
       { "@type": "HowToSection", "name": "Этап 2. Получение статуса репатрианта",
         "itemListElement": [
+          { "@type": "HowToStep", "text": "Заявление подаётся за пределами России — в консульстве или дипломатическом представительстве" },
           { "@type": "HowToStep", "text": "Размер «подъемных» (единовременного пособия на обустройство)" },
           { "@type": "HowToStep", "text": "Размер ежемесячных пособий (для нетрудоспособных)" },
           { "@type": "HowToStep", "text": "Компенсации на переезд, провоз багажа, аренду жилья" },
@@ -1191,7 +1193,7 @@
   <section class="cl-panel" id="progress">
     <div class="wrap cl-panel__inner">
       <div class="cl-progress">
-        <p class="cl-progress__label">Отмечено <span id="cl-done">0</span> из <span id="cl-total">79</span></p>
+        <p class="cl-progress__label">Отмечено <span id="cl-done">0</span> из <span id="cl-total">81</span></p>
         <div class="cl-progress__bar"><span id="cl-bar"></span></div>
       </div>
       <div class="cl-actions">
@@ -1205,57 +1207,63 @@
     <section class="cl-stage" id="section1" data-stage="section1">
       <div class="cl-stage__head">
         <h2>Этап 1. Определение оснований для участия в программе репатриации</h2>
-        <span class="cl-stage__count"><b data-stage-done="section1">0</b> из 10</span>
+        <span class="cl-stage__count"><b data-stage-done="section1">0</b> из 11</span>
       </div>
-      <h3 class="cl-sub">К репатриантам относятся соотечественники из числа:</h3>
+      <h3 class="cl-sub">Что важно знать сразу</h3>
       <label class="cl-item">
         <input type="checkbox" class="cl-check" data-stage="section1" id="cl-1">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Репатрианту не требуется подтверждать владение русским языком</span>
+      </label>
+      <h3 class="cl-sub">К репатриантам относятся соотечественники из числа:</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-2">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Лица, имевшие гражданство СССР, рожденные или постоянно жившие в РСФСР.</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-2">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-3">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Граждане РФ, постоянно проживавшие за пределами России на 24 февраля 2022 года</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-3">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-4">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Граждане, выразившие желание выйти из гражданства РФ.</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-4">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-5">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Есть прямой родственник по восходящей линии — родитель, бабушка, дедушка, прадед</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-5">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-6">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Этот родственник родился или постоянно жил на территории РСФСР</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-6">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-7">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Либо жил на территории в нынешних границах России, входившей в СССР или Российскую империю</span>
       </label>
       <h3 class="cl-sub">Кому могут отказать в участии</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-7">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-8">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Представляющие угрозу безопасности РФ</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-8">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-9">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Участвующие в экстремистской или террористической деятельности</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-9">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-10">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Имеющие непогашенную судимость</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-10">
+        <input type="checkbox" class="cl-check" data-stage="section1" id="cl-11">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Ранее выдворявшиеся из РФ</span>
       </label>
@@ -1263,72 +1271,78 @@
     <section class="cl-stage" id="section2" data-stage="section2">
       <div class="cl-stage__head">
         <h2>Этап 2. Получение статуса репатрианта</h2>
-        <span class="cl-stage__count"><b data-stage-done="section2">0</b> из 13</span>
+        <span class="cl-stage__count"><b data-stage-done="section2">0</b> из 14</span>
       </div>
+      <h3 class="cl-sub">Где подаётся заявление</h3>
+      <label class="cl-item">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-12">
+        <span class="cl-item__box" aria-hidden="true"></span>
+        <span class="cl-item__text">Заявление подаётся за пределами России — в консульстве или дипломатическом представительстве</span>
+      </label>
       <h3 class="cl-sub">Что различается в региональных программах</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-11">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-13">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Размер «подъемных» (единовременного пособия на обустройство)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-12">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-14">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Размер ежемесячных пособий (для нетрудоспособных)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-13">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-15">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Компенсации на переезд, провоз багажа, аренду жилья</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-14">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-16">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Список востребованных профессий (дает дополнительные баллы и льготы)</span>
       </label>
       <h3 class="cl-sub">Документы для подачи заявления</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-15">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-17">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Национальный и заграничный паспорт гражданина</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-16">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-18">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Документы, подтверждающие личность членов семьи репатрианта</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-17">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-19">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Документы об образовании, профессиональной квалификации и навыках, о научных степенях и званиях</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-18">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-20">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Фото размером 3,5×4,5 см</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-19">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-21">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Свидетельство о рождении и семейном положении</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-20">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-22">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Документы о стаже трудовой деятельности</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-21">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-23">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Документы, доказывающие основания для получения статуса репатрианта</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-22">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-24">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Документы, подтверждающие наличие родственника по прямой восходящей линии, имеющего связь с РСФСР</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-23">
+        <input type="checkbox" class="cl-check" data-stage="section2" id="cl-25">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Заполненное заявление на участие в госпрограмме</span>
       </label>
@@ -1340,22 +1354,22 @@
       </div>
       <h3 class="cl-sub">Что происходит после подачи</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-24">
+        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-26">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Дождаться уведомления о приёме заявления к рассмотрению</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-25">
+        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-27">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Проверить статус заявления в консульстве или в уполномоченном органе региона</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-26">
+        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-28">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Получить решение по заявлению</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-27">
+        <input type="checkbox" class="cl-check" data-stage="section3" id="cl-29">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Забрать свидетельство участника Госпрограммы</span>
       </label>
@@ -1367,23 +1381,23 @@
       </div>
       <h3 class="cl-sub">Льготы при переезде</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-28">
+        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-30">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Вы и члены вашей семьи имеете право на беспошлинный провоз через границу личного имущества без учета его веса и стоимости</span>
       </label>
       <h3 class="cl-sub">Что иметь при въезде</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-29">
+        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-31">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Паспорта</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-30">
+        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-32">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Миграционная карта (цель визита — «частная»)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-31">
+        <input type="checkbox" class="cl-check" data-stage="section4" id="cl-33">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Свидетельство Репатрианта или его копия (если члены семьи въезжают отдельно)</span>
       </label>
@@ -1395,102 +1409,102 @@
       </div>
       <h3 class="cl-sub">Кто может оформить регистрацию</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-32">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-34">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Работодатель (если официально трудоустроен)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-33">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-35">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Арендодатель (если снимает жилье)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-34">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-36">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Родственники или друзья, у которых проживает</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-35">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-37">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Администрация гостиницы, хостела или санатория</span>
       </label>
       <h3 class="cl-sub">Документы для временной регистрации</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-36">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-38">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Заявление о регистрации по месту пребывания</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-37">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-39">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Национальный паспорт с нотариально заверенным переводом</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-38">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-40">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Свидетельство участника Госпрограммы переселения («удостоверение переселенца»)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-39">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-41">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Договор найма (аренды) жилого помещения</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-40">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-42">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Заявление собственника о согласии на проживание</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-41">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-43">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Миграционная карта с отметкой о въезде в РФ</span>
       </label>
       <h3 class="cl-sub">Документы от собственника жилья</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-42">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-44">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Паспорт РФ</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-43">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-45">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Документ, подтверждающий право собственности (свидетельство или выписка из ЕГРН)</span>
       </label>
       <p class="cl-hint">Выберите один способ из двух.</p>
       <h3 class="cl-sub">Если подаёте лично в МВД</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-44">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-46">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Прийти в отдел МВД в приемные часы</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-45">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-47">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Передать инспектору пакет документов</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-46">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-48">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Получить отметку о приеме уведомления</span>
       </label>
       <h3 class="cl-sub">Если подаёте через Госуслуги</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-47">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-49">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Собственник заходит в личный кабинет на gosuslugi.ru</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-48">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-50">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Находит услугу «Прием уведомлений о прибытии иностранного гражданина»</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-49">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-51">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Заполняет форму, загружает сканы</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-50">
+        <input type="checkbox" class="cl-check" data-stage="section5" id="cl-52">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Получает уведомление в личный кабинет</span>
       </label>
@@ -1502,43 +1516,43 @@
       </div>
       <h3 class="cl-sub">Необходимые медицинские документы</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-51">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-53">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Заключение врача-нарколога</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-52">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-54">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Заключение врача-фтизиатра (об отсутствии туберкулеза)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-53">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-55">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Сертификат об отсутствии ВИЧ-инфекции</span>
       </label>
       <h3 class="cl-sub">Документы для медосмотра</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-54">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-56">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Паспорт с нотариальным переводом + копия</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-55">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-57">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Действующая миграционная карта + копия</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-56">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-58">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Действующая регистрация по месту пребывания + копия</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-57">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-59">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Фотографии 3x4 см</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-58">
+        <input type="checkbox" class="cl-check" data-stage="section6" id="cl-60">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Для мужчин — военный билет (или аналог с переводом)</span>
       </label>
@@ -1550,63 +1564,63 @@
       </div>
       <h3 class="cl-sub">Документы для подачи на ВНЖ</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-59">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-61">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Заявление о выдаче ВНЖ в двух экземплярах (на русском языке, без сокращений)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-60">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-62">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Национальный паспорт с нотариально заверенным переводом</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-61">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-63">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Свидетельство участника Госпрограммы переселения (оригинал)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-62">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-64">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Миграционная карта с отметкой о въезде в РФ</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-63">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-65">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Документ о доходах (справка с работы, выписка из банка, пенсионное удостоверение)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-64">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-66">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Документ о праве на проживание (договор аренды, выписка из ЕГРН, гарантийное письмо от работодателя)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-65">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-67">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Медицинские справки об отсутствии опасных заболеваний, ВИЧ, наркомании</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-66">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-68">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Четыре фотографии 35×45 мм (матовые)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-67">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-69">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Квитанция об оплате госпошлины</span>
       </label>
       <h3 class="cl-sub">Дополнительные документы при наличии семьи</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-68">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-70">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Свидетельство о браке (с нотариальным переводом)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-69">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-71">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Свидетельства о рождении детей (с нотариальным переводом)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-70">
+        <input type="checkbox" class="cl-check" data-stage="section7" id="cl-72">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Нотариально заверенное согласие второго родителя (если ребенок выезжает с одним из родителей)</span>
       </label>
@@ -1618,48 +1632,48 @@
       </div>
       <h3 class="cl-sub">Документы для гражданства</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-71">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-73">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Заявление о приеме в гражданство (2 экземпляра)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-72">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-74">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Вид на жительство</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-73">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-75">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Документ, подтверждающий законный источник дохода</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-74">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-76">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Квитанция об оплате госпошлины (3500 руб.)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-75">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-77">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Свидетельство участника программы</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-76">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-78">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Справка об отсутствии судимости (для визовых стран)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-77">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-79">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">Нотариально заверенные переводы всех документов</span>
       </label>
       <h3 class="cl-sub">Получение паспорта</h3>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-78">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-80">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">За рубежом: в дипломатическом представительстве или консульском учреждении РФ (Посольстве/Консульстве)</span>
       </label>
       <label class="cl-item">
-        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-79">
+        <input type="checkbox" class="cl-check" data-stage="section8" id="cl-81">
         <span class="cl-item__box" aria-hidden="true"></span>
         <span class="cl-item__text">В России: в территориальном органе МВД по вопросам миграции (если вы уже находитесь в РФ на законном основании)</span>
       </label>
