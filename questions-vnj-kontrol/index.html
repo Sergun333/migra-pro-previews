@@ -906,6 +906,16 @@
                 border-bottom: 1px solid transparent; }
     .qa-toc a:hover { color: var(--mp-primary); border-bottom-color: var(--mp-border); }
     .qa-toc span { font-size: 13px; color: var(--mp-muted); font-variant-numeric: tabular-nums; }
+    /* Компактность: при >10 темах свёртка (ВНЖ = 21). Десктоп — 8, мобиле — 4. */
+    .qa-toc.is-collapsed > li:nth-child(n+9) { display: none; }
+    .qa-toc-toggle { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+                     padding: 8px 0; border: 0; background: transparent; cursor: pointer;
+                     font-family: inherit; font-size: 15px; font-weight: 600; color: var(--mp-primary); }
+    .qa-toc-toggle:hover { text-decoration: underline; }
+    .qa-toc-toggle::after { content: ""; width: 8px; height: 8px; border-right: 2px solid currentColor;
+                            border-bottom: 2px solid currentColor; transform: rotate(45deg);
+                            margin-top: -4px; transition: transform .15s; }
+    .qa-toc-toggle[aria-expanded="true"]::after { transform: rotate(225deg); margin-top: 2px; }
 
     .qa-body { padding: 24px 0 0; }
     .qa-group { margin: 0 0 40px; scroll-margin-top: 180px; }
@@ -968,6 +978,7 @@
     }
     @media (max-width: 720px) {
       .qa-toc { grid-template-columns: 1fr; }
+      .qa-toc.is-collapsed > li:nth-child(n+5) { display: none; }
       .lead-form__pair { grid-template-columns: 1fr; }
       .qa-capture__grid { padding: 22px 18px; }
       .qa-item summary { font-size: 16px; }
@@ -1122,7 +1133,7 @@
           <input type="search" id="qa-search-input" placeholder="Найти вопрос: сроки, уведомление, фото…" autocomplete="off">
         </label>
         <p class="qa-found" id="qa-found" hidden></p>
-        <ul class="qa-toc">
+        <ul class="qa-toc is-collapsed" id="qa-toc">
           <li><a href="#chto">Что такое ВНЖ<span>5</span></a></li>
           <li><a href="#osnov">Основания для ВНЖ<span>6</span></a></li>
           <li><a href="#obzor">Как получить ВНЖ (обзор)<span>6</span></a></li>
@@ -1143,8 +1154,9 @@
           <li><a href="#otkaz">Отказ в ВНЖ<span>6</span></a></li>
           <li><a href="#otlichie">Отличие РВП от ВНЖ<span>12</span></a></li>
           <li><a href="#izm">Изменения правил ВНЖ<span>12</span></a></li>
-          <li><a href="#zhizn">Жизнь с ВНЖ (без отдельной статьи)<span>6</span></a></li>
+          <li><a href="#zhizn">Жизнь с ВНЖ<span>6</span></a></li>
         </ul>
+        <button type="button" class="qa-toc-toggle" id="qa-toc-toggle" aria-expanded="false" aria-controls="qa-toc">Показать все темы (21)</button>
       </div>
     </div>
   </section>
@@ -2669,6 +2681,17 @@
   (function () {
     var input = document.getElementById("qa-search-input");
     var found = document.getElementById("qa-found");
+    var toc = document.getElementById("qa-toc");
+    var tocBtn = document.getElementById("qa-toc-toggle");
+    if (toc && tocBtn) {
+      var totalTopics = toc.querySelectorAll("li").length;
+      tocBtn.addEventListener("click", function () {
+        toc.classList.toggle("is-collapsed");
+        var open = !toc.classList.contains("is-collapsed");
+        tocBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        tocBtn.textContent = open ? "Свернуть" : ("Показать все темы (" + totalTopics + ")");
+      });
+    }
     if (!input) return;
     var items = Array.prototype.slice.call(document.querySelectorAll(".qa-item"));
     var groups = Array.prototype.slice.call(document.querySelectorAll(".qa-group"));
