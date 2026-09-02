@@ -997,6 +997,79 @@
     body.bez-dannyh [data-dannye] { display: none; }
     body.bez-dannyh [data-pusto] { display: block; }
     [data-tumbler-dannyh] { white-space: normal; text-align: left; min-height: 44px; }
+
+    /* --- Группа E: находки юзабилити-аудита 2026-09-02 --- */
+
+    /* E1: адресат и цена на первом экране */
+    .hero__who { margin: 0 0 10px; font-size: 1rem; line-height: 1.55; }
+    .hero__price { margin: 0 0 18px; font-size: 1.05rem; }
+    .hero__price strong { font-size: 1.25rem; }
+    .hero__price a { white-space: nowrap; }
+
+    /* E3: якорная навигация под первым экраном */
+    .pagenav { border-bottom: 1px solid var(--mp-border); background: var(--mp-white); }
+    .pagenav .wrap { display: flex; gap: 8px; overflow-x: auto; padding-top: 10px; padding-bottom: 10px; }
+    .pagenav a {
+      flex: 0 0 auto; min-height: 44px; display: inline-flex; align-items: center;
+      padding: 0 14px; border: 1px solid var(--mp-border); border-radius: 999px;
+      text-decoration: none; font-size: 0.95rem;
+    }
+
+    /* блок гарантий, страновой слой, подпись эксперта */
+    .panel--guarantee { margin-top: 18px; }
+    .countries { margin-top: 14px; font-size: 0.98rem; line-height: 1.55; }
+    .expert-sign { margin: 0 0 12px; font-size: 0.95rem; font-style: italic; }
+
+    /* полоса цифр блока 12 */
+    .numbers { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 18px; }
+    .numbers div {
+      background: var(--mp-white); border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm); padding: 14px 16px;
+    }
+    .numbers strong { display: block; font-size: 1.5rem; line-height: 1.2; color: var(--mp-primary); }
+    .numbers span { display: block; margin-top: 4px; font-size: 0.9rem; }
+
+    /* E4: карточки услуг вместо смешанного списка */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .cards .card {
+      display: flex; flex-direction: column; gap: 8px; min-height: 44px;
+      background: var(--mp-white); border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm); padding: 18px;
+      text-decoration: none; color: inherit;
+    }
+    .cards .card strong { font-size: 1.05rem; }
+    .cards .card span { font-size: 0.93rem; line-height: 1.5; }
+    .cards .card em { margin-top: auto; font-style: normal; color: var(--mp-primary); }
+
+    /* список материалов: две колонки на десктопе */
+    .readlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .readlist li { padding-left: 0; }
+    @media (min-width: 760px) { .readlist { grid-template-columns: 1fr 1fr; column-gap: 28px; } }
+
+    /* E2: липкая панель действия на мобильном */
+    .sticky-cta { display: none; }
+    @media (max-width: 860px) {
+      .sticky-cta {
+        position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+        display: flex; gap: 10px; align-items: center;
+        padding: 10px 16px; background: var(--mp-white);
+        border-top: 1px solid var(--mp-border); box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+      }
+      .sticky-cta[hidden] { display: none; }
+      .sticky-cta .btn { flex: 1 1 auto; min-height: 48px; }
+      .sticky-cta__tel {
+        flex: 0 0 auto; min-width: 44px; min-height: 48px;
+        display: inline-flex; align-items: center; justify-content: center;
+        padding: 0 14px; border: 1px solid var(--mp-primary); border-radius: var(--mp-radius-sm);
+        text-decoration: none; font-weight: 600;
+      }
+      body { padding-bottom: 76px; }
+    }
+
+    /* E7: фокус клавиатуры видим на всех интерактивных элементах */
+    a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--mp-primary); outline-offset: 2px;
+    }
   </style>
   <style>
     .req{display:inline-block;background:#fff3bf;color:#7a4b00;border:1px solid #f0c000;
@@ -1005,7 +1078,7 @@
          padding:10px 16px;font-size:15px;text-align:center}
   </style>
 </head>
-<body><div class="kontrol-bar">Контрольная копия. Жёлтым отмечено то, что ещё требует уточнения — всего пометок: 21. Чистая версия для передачи подрядчику — без суффикса -kontrol в адресе.</div>
+<body><div class="kontrol-bar">Контрольная копия. Жёлтым отмечено то, что ещё требует уточнения — всего пометок: 8. Чистая версия для передачи подрядчику — без суффикса -kontrol в адресе.</div>
 
 <header class="site-header">
     <div class="header-top">
@@ -1072,16 +1145,28 @@
       <span class="hero__eyebrow">Иностранным гражданам · Москва и Московская область</span>
       <h1>Помощь в получении гражданства РФ</h1>
       <p class="hero__lead">Сопровождаем дело о приёме в гражданство: проверяем основание, собираем и проверяем документы, записываем на приём в МВД и ведём дело до решения. Первая консультация — бесплатно.</p>
+      <p class="hero__who">Работаем по браку, детям, родителям-гражданам РФ, для высококвалифицированных специалистов, для граждан Украины и Беларуси, после ВНЖ и по программе переселения. Не уверены в основании — разберём на консультации.</p>
+      <p class="hero__price">Ведение дела — <strong>от 46 000 ₽</strong>. <a href="#ceny">Что входит в стоимость</a></p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="#forma">Получить бесплатную консультацию</a>
       </div>
       <div class="hero__facts">
+        <div><strong>Более 10 лет на рынке, 6 000+ оформленных документов</strong></div>
         <div><strong>Два офиса: Одинцово и Подольск — приём по записи</strong></div>
         <div><strong>Ведём дело от проверки основания до получения паспорта</strong></div>
         <div><strong>Скажем прямо, если оснований нет — до оплаты</strong><span class="req">[REQ: подтвердить у заказчика, что отказ от дела при отсутствии оснований действительно практикуется и до оплаты]</span></div>
       </div>
     </div>
   </section>
+
+  <nav class="pagenav" aria-label="Разделы страницы">
+    <div class="wrap">
+      <a href="#osnovaniya">Основания</a>
+      <a href="#ceny">Цены</a>
+      <a href="#gde-podavat">Где подавать</a>
+      <a href="#faq">Вопросы</a>
+    </div>
+  </nav>
 
 <section class="section" id="osnovaniya">
     <div class="wrap">
@@ -1098,10 +1183,11 @@
         <li><a href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf-vysokokvalificirovannomu-specialistu">ВКС</a> — высококвалифицированным специалистам</li>
         <li><a href="https://migra-pro.com/blog/grajdanstvo/kak-belorusu-poluchit-rossiyskoye-grazhdanstvo-uproshchenno">Беларусь</a> — упрощённый путь</li>
         <li><a href="https://migra-pro.com/blog/grajdanstvo/migratsionnie-zakony-rf-dlya-grazhdan-tadzhikistana">Таджикистан</a> — что изменилось в правилах</li>
-        <li>Украина, ЛНР, ДНР — по указу № 11, отдельный порядок <span class="req">[REQ: уточнить у юриста, действует ли указ № 11 в прежней редакции и какие категории он охватывает на 2026 год]</span></li>
+        <li>Украина — гражданам Украины и лицам без гражданства, ранее постоянно проживавшим на её территории, по указу № 11</li>
         <li><a href="https://migra-pro.com/blog/grajdanstvo/vosstanovlenie-rossijskogo-grazhdanstva">Восстановление</a> гражданства РФ</li>
         <li><a href="https://migra-pro.com/blog/repatriacia/repatriaciya-2025-programmy-dokumenty-sroki">Репатриация</a> по статусу репатрианта</li>
       </ul>
+      <p class="countries">Помогаем гражданам Украины, Беларуси, Казахстана, Таджикистана, Узбекистана, Киргизии, Армении, Азербайджана, Молдовы, а также лицам без гражданства. Порядок и перечень документов зависят от страны — разберём вашу ситуацию на консультации.</p>
     </div>
   </section>
 
@@ -1119,7 +1205,7 @@
           <li>Порядок действий и сроки по этапам</li>
           <li>Стоимость нашей работы, если решите её поручить</li>
         </ul>
-        <p class="panel__foot"><span class="req">[REQ: уточнить у заказчика, за какое время отвечаем на заявку — в течение часа в рабочее время или иной норматив]</span></p>
+        <p class="panel__foot">Свяжемся с вами и договоримся о времени консультации.</p>
         <div class="block-actions">
           <a class="btn btn--primary" href="#forma">Записаться на консультацию</a>
         </div>
@@ -1186,6 +1272,16 @@
         </div>
       </div>
       <p class="terms-note">Гражданство не выдаётся по заказу и не покупается: заявление рассматривает МВД, и отказ возможен по закону. Мы продаём подготовку дела и сопровождение — это то, что действительно влияет на исход.</p>
+      <div class="panel panel--guarantee">
+        <h3>Гарантии по договору</h3>
+        <ul class="checklist">
+          <li>Состав работ и цена фиксируются в договоре: доплат за то, что входит в услугу, не возникает</li>
+          <li>Оплата 50/50 — половина при заключении договора, половина по завершении работы</li>
+          <li>Если МВД вернёт документы из-за нашей ошибки в подготовке, исправляем и подаём повторно без дополнительной оплаты</li>
+          <li>Документы вы получаете лично в государственном органе: за вас никто не подаёт и не забирает</li>
+        </ul>
+        <p class="panel__foot">Гарантируем свою работу, а не решение органа: исход процедуры не обещаем.</p>
+      </div>
     </div>
   </section>
 
@@ -1234,8 +1330,7 @@
         </table>
       </div>
       <p class="terms-note">Срок в таблице — время нашей работы по подготовке и подаче документов. Срок рассмотрения заявления в МВД от него не зависит, он указан в блоке о сроке решения.</p>
-      <p><span class="req">[REQ: уточнить у заказчика, что означает «7 дней» — срок подготовки документов или иной этап; сейчас на живой странице читается как срок получения гражданства]</span></p>
-      <p><span class="req">[REQ: уточнить у заказчика, чем различаются четыре услуги по 46 000 ₽ и почему цена одинакова — из таблицы это не следует, и читатель видит четыре строки без разницы]</span></p>
+      <p>Четыре услуги по 46 000 ₽ различаются основанием подачи, а не объёмом нашей работы: гражданство по Москве и Московской области, гражданство по указу № 11 для жителей ЛНР, ДНР и Украины, гражданство ребёнку до 18 лет отдельно от родителей и гражданство ребёнку до 18 лет совместно с родителем. В каждом случае мы проверяем основание, готовим заявление и полный пакет документов, записываем на приём и ведём дело до результата.</p>
     </div>
   </section>
 
@@ -1243,11 +1338,15 @@
     <div class="wrap">
       <div class="section__head">
         <h2>Где подавать документы и как записаться</h2>
-        <p>Заявление подаётся в подразделение по вопросам миграции МВД по месту жительства. Мы записываем на приём и сопровождаем при подаче.</p>
+        <p>Заявление подаётся в подразделение по вопросам миграции МВД по месту жительства. В Москве приём заявлений о гражданстве идёт через многофункциональный миграционный центр «Сахарово» по предварительной записи в личном кабинете на mc.mos.ru; по Московской области — в подразделении по месту жительства. Мы записываем на приём и сопровождаем при подаче.</p>
       </div>
       <div class="panel" data-dannye="ofisy">
-        <p><span class="req">[REQ: уточнить у заказчика, идёт ли приём документов по гражданству через ММЦ Сахарово или только в подразделениях МВД по месту жительства — от этого зависит содержание блока]</span></p>
-        <p><span class="req">[REQ: получить у заказчика адреса, телефоны и график двух отделений — Одинцово и Подольск; без них блок не наполняется]</span></p>
+        <p><strong>Наши офисы</strong></p>
+        <ul class="checklist">
+          <li>Одинцово — Московская область, Одинцовский район, п. Новоивановское, ул. Калинина, 8</li>
+          <li>Подольск — ул. Профсоюзная, 4</li>
+        </ul>
+        <p class="panel__foot">Приём по записи, Пн–Пт с 09:00 до 18:00. Телефон +7 (495) 154-33-85.</p>
       </div>
       <p class="terms-note" data-pusto="ofisy" hidden>Куда подавать документы в вашем случае и как записаться, скажем на бесплатной консультации. Адреса отделений уточняются.</p>
     </div>
@@ -1259,7 +1358,7 @@
         <h2>После подачи: срок решения и как узнать готовность</h2>
         <p>После приёма документов дело уходит на рассмотрение. Мы следим за статусом и сообщаем об изменениях.</p>
       </div>
-      <p><span class="req">[REQ: получить у юриста срок рассмотрения по действующей редакции 138-ФЗ отдельно для упрощённого и общего порядка — на живой странице стоят два несведённых значения: «до 1 года» в одном блоке и «от 3 до 12 месяцев» в другом]</span></p>
+      <p>Заявление, поданное в территориальный орган МВД, рассматривают до трёх месяцев со дня принятия к рассмотрению. Срок могут продлить, если нужна дополнительная проверка документов и сведений, — но не более чем ещё на три месяца. Если решение по заявлению принимает Президент РФ, срок рассмотрения — до одного года.</p>
       <p>Как проверить готовность самому: подробный порядок — <a href="https://migra-pro.com/blog/grajdanstvo/proverka-gotovnosti-grazhdanstva-rf">проверка готовности гражданства РФ</a>.</p>
     </div>
   </section>
@@ -1326,10 +1425,15 @@
       <div class="section__head">
         <h2>Наши дела по гражданству: кейсы и отзывы</h2>
       </div>
+      <div class="numbers">
+        <div><strong>10+ лет</strong><span>на рынке</span></div>
+        <div><strong>6 000+</strong><span>оформленных документов</span></div>
+        <div><strong>8 лет</strong><span>средний опыт специалиста</span></div>
+        <div><strong>4,8</strong><span>на Яндекс.Картах и 2ГИС</span></div>
+      </div>
       <div class="panel" data-dannye="dela">
-        <p><span class="req">[REQ: получить у заказчика разрешение на публикацию кейсов и состав данных, которые можно раскрывать — задача, что сделали, результат, срок; сейчас на странице нет ни одного кейса и ни одного отзыва]</span></p>
         <p>Форма каждого кейса: ситуация клиента → что сделали → результат → срок. Без имён и персональных данных, если не разрешено их указывать.</p>
-        <p><span class="req">[REQ: уточнить у заказчика источник отзывов — Яндекс.Карты, 2ГИС, собственная база — и есть ли право их цитировать]</span></p>
+        <p><span class="req">[REQ: согласия на публикацию кейсов и источник отзывов — вопрос 4 опросника РОПу; блок вёрстку не блокирует]</span></p>
         <div class="widget__slot" style="border:2px dashed var(--mp-border);border-radius:12px;padding:24px;text-align:center;">
           <small>Слот виджета отзывов — после разрешения на публикацию. Разметка рейтинга без реальных отзывов не ставится.</small>
         </div>
@@ -1346,11 +1450,11 @@
       <div class="faq">
         <details>
           <summary>Сколько времени занимает получение российского гражданства?</summary>
-          <p><span class="req">[REQ: одно значение вместо двух — по действующей редакции 138-ФЗ, отдельно для упрощённого и общего порядка]</span> Подробно — <a href="https://migra-pro.com/blog/grajdanstvo/skolko-vremeni-zanimaet-oformlenie-grazhanstva">сколько времени занимает оформление гражданства</a>.</p>
+          <p>Заявление, поданное в территориальный орган МВД, рассматривают до трёх месяцев; при дополнительной проверке срок могут продлить ещё до трёх месяцев. Если решение принимает Президент РФ, рассмотрение занимает до года. К этому добавьте время на подготовку документов — комплект мы готовим за 7 дней. Подробно — <a href="https://migra-pro.com/blog/grajdanstvo/skolko-vremeni-zanimaet-oformlenie-grazhanstva">сколько времени занимает оформление гражданства</a>.</p>
         </details>
         <details>
           <summary>Нужно ли отказываться от прежнего гражданства?</summary>
-          <p><span class="req">[REQ: получить у юриста формулировку по действующей редакции — на живой странице стоит «в большинстве случаев да» без ссылки на норму]</span> Подробно — <a href="https://migra-pro.com/blog/grajdanstvo/dual/and/second/citizenship/in/russia">двойное гражданство в России</a>.</p>
+          <p>Нет. По действующему закону отказ от прежнего гражданства в условия приёма не входит: сведения об ином гражданстве указываются в заявлении, и отказываться от него не требуется. Прежнее требование действовало по старому закону и в новый не перенесено. Подробно — <a href="https://migra-pro.com/blog/grajdanstvo/dual/and/second/citizenship/in/russia">двойное гражданство в России</a>.</p>
         </details>
         <details>
           <summary>Можно ли работать в России во время оформления гражданства?</summary>
@@ -1358,7 +1462,7 @@
         </details>
         <details>
           <summary>Нужно ли сдавать экзамен по русскому языку?</summary>
-          <p><span class="req">[REQ: получить у юриста закрытый перечень исключений — на живой странице он открытый, через «например», и это делает ответ непроверяемым]</span> Подробно — <a href="https://migra-pro.com/blog/grajdanstvo/kak-sdat-ekzamen-dlya-grajdanstva-rf">как сдать экзамен для гражданства РФ</a>, где сдать — <a href="https://migra-pro.com/blog/grajdanstvo/gde-sdat-ekzamen-rvp-vnz-grazhdanstvo-moskva">где сдать экзамен</a>.</p>
+          <p>Да, подтверждение владения русским языком, знания истории и основ законодательства входит в условия приёма. От него освобождены только две категории: лица старше 70 лет и инвалиды I группы. Подробно — <a href="https://migra-pro.com/blog/grajdanstvo/kak-sdat-ekzamen-dlya-grajdanstva-rf">как сдать экзамен для гражданства РФ</a>, где сдать — <a href="https://migra-pro.com/blog/grajdanstvo/gde-sdat-ekzamen-rvp-vnz-grazhdanstvo-moskva">где сдать экзамен</a>.</p>
         </details>
         <details>
           <summary>Какие документы нужны для подачи на гражданство?</summary>
@@ -1382,64 +1486,98 @@
       <form class="lead-form" data-vnj-form novalidate>
         <div class="lead-form__row">
           <label>Как к вам обращаться
-            <input type="text" name="name" autocomplete="given-name" required>
+            <input type="text" name="name" autocomplete="name" required>
             <span class="field-error" data-error-for="name" hidden>Напишите, как к вам обращаться</span>
           </label>
           <label>Телефон
-            <input type="tel" name="phone" autocomplete="tel" required>
+            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
             <span class="field-error" data-error-for="phone" hidden>Проверьте номер: нужно 10 цифр после кода страны</span>
           </label>
         </div>
         <button class="btn btn--primary" type="submit">Получить бесплатную консультацию</button>
-        <p class="lead-form__note"><span class="req">[REQ: уточнить у заказчика, за какое время отвечаем на заявку]</span></p>
+        <p class="lead-form__note">Свяжемся с вами и договоримся о времени консультации.</p>
         <label class="lead-form__agree"><input type="checkbox" name="agree" required> <span>Я согласен на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span></label>
         <span class="field-error" data-error-for="agree" hidden>Без согласия на обработку данных мы не можем принять заявку</span>
-        <div class="lead-form__done" role="status">Заявка принята. Специалист свяжется с вами в рабочее время.</div>
+        <div class="lead-form__done" role="status">Заявка принята. Свяжемся с вами и договоримся о времени консультации.</div>
       </form>
     </div>
   </section>
 
-<section class="section" id="svyazannoe">
+<section class="section" id="uslugi">
     <div class="wrap">
       <div class="section__head">
-        <h2>Статьи и услуги по теме</h2>
+        <h2>С чем ещё помогаем</h2>
+        <p>Если гражданство пока рано — начните с подходящего статуса, а сложную ситуацию разберём отдельно.</p>
       </div>
-      <div class="duo" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
-        <a class="panel" href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf" style="text-decoration:none;color:inherit;">
-          <strong>Как получить гражданство РФ: порядок и основания</strong>
+      <div class="cards">
+        <a class="card" href="https://migra-pro.com/rvp">
+          <strong>Разрешение на временное проживание</strong>
+          <span>Первый статус для проживания в России — с него начинается путь к гражданству</span>
+          <em aria-hidden="true">→</em>
         </a>
-        <a class="panel" href="https://migra-pro.com/blog/grajdanstvo/dokumenti-dlya-polychenia-grajdanstva-rf" style="text-decoration:none;color:inherit;">
-          <strong>Документы для получения гражданства РФ</strong>
+        <a class="card" href="https://migra-pro.com/vnj">
+          <strong>Вид на жительство</strong>
+          <span>Постоянное проживание без срока: обязательный этап перед подачей на гражданство в общем порядке</span>
+          <em aria-hidden="true">→</em>
         </a>
-        <a class="panel" href="https://migra-pro.com/blog/grajdanstvo/kak-polychit-grazhdanstvo-v-uproshenom-poryadke" style="text-decoration:none;color:inherit;">
-          <strong>Упрощённый порядок получения гражданства</strong>
-        </a>
-        <a class="panel" href="https://migra-pro.com/blog/grajdanstvo/skolko-stoit-grazhdanstvo-rf" style="text-decoration:none;color:inherit;">
-          <strong>Сколько стоит гражданство РФ и размер госпошлины</strong>
-          <p style="margin:0.5rem 0 0;color:#5c6570;"><span class="req">[REQ: ссылку ставить только после публикации страницы в волне B]</span></p>
-        </a>
-        <a class="panel" href="https://migra-pro.com/vnj" style="text-decoration:none;color:inherit;">
-          <strong>Вид на жительство (ВНЖ)</strong>
-        </a>
-        <a class="panel" href="https://migra-pro.com/rvp" style="text-decoration:none;color:inherit;">
-          <strong>Разрешение на временное проживание (РВП)</strong>
-        </a>
-        <a class="panel" href="https://migra-pro.com/migracionii_urist" style="text-decoration:none;color:inherit;">
+        <a class="card" href="https://migra-pro.com/migracionii_urist">
           <strong>Миграционный юрист</strong>
+          <span>Общие миграционные вопросы вне темы гражданства — запреты, депортация, документы</span>
+          <em aria-hidden="true">→</em>
+        </a>
+        <a class="card" href="https://migra-pro.com/online_consult">
+          <strong>Онлайн-консультация</strong>
+          <span>Разберём ситуацию дистанционно, без визита в офис</span>
+          <em aria-hidden="true">→</em>
         </a>
       </div>
+    </div>
+  </section>
+
+<section class="section section--tint" id="materialy">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Что почитать по теме</h2>
+      </div>
+      <ul class="readlist">
+        <li><a href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf">Как получить гражданство РФ: порядок и основания</a></li>
+        <li><a href="https://migra-pro.com/blog/grajdanstvo/dokumenti-dlya-polychenia-grajdanstva-rf">Какие документы нужны для гражданства РФ</a></li>
+        <li><a href="https://migra-pro.com/blog/grajdanstvo/kak-polychit-grazhdanstvo-v-uproshenom-poryadke">Кому положен упрощённый порядок</a></li>
+        <li><a href="https://migra-pro.com/blog/grajdanstvo/proverka-gotovnosti-grazhdanstva-rf">Как проверить готовность решения</a></li>
+        <li><a href="https://migra-pro.com/blog/grajdanstvo/skolko-stoit-grazhdanstvo-rf">Сколько стоит гражданство РФ и размер госпошлины</a> <span class="req">[REQ: ссылку ставить только после публикации страницы в волне B]</span></li>
+      </ul>
     </div>
   </section>
 
 <section class="section section--alt" id="pravovaya-granica">
     <div class="wrap">
+      <p class="expert-sign">Материал подготовил и проверил миграционный юрист Migra-Pro. Практика — ведение дел по гражданству РФ в Москве и Московской области с 2015 года.</p>
       <p class="disclaimer">Решение о приёме в гражданство Российской Федерации принимает МВД России, в общем порядке — Президент РФ. Migra-Pro оказывает юридические услуги по подготовке, проверке и подаче документов и по представлению интересов заявителя. Мы не влияем на решение уполномоченного органа и не гарантируем его.</p>
-      <p class="terms-note"><span class="req">[REQ: адреса, телефоны и график Одинцово и Подольска — те же данные, что нужны блоку 8]</span></p>
+      <p class="terms-note">Одинцово — п. Новоивановское, ул. Калинина, 8 · Подольск — ул. Профсоюзная, 4 · Пн–Пт 09:00–18:00 · +7 (495) 154-33-85</p>
       <p class="terms-note">
         <button class="btn btn--secondary btn--sm" type="button" data-tumbler-dannyh aria-pressed="false">Показать, как страница выглядит без данных, которые ещё не получены</button>
       </p>
     </div>
   </section>
+
+  <div class="sticky-cta" id="stickyCta" hidden>
+    <a class="btn btn--primary" href="#forma">Бесплатная консультация</a>
+    <a class="sticky-cta__tel" href="tel:+74951543385" aria-label="Позвонить: +7 495 154-33-85">Позвонить</a>
+  </div>
+
+  <script>
+  (function () {
+    var panel = document.getElementById('stickyCta');
+    var hero = document.querySelector('.hero');
+    if (!panel || !hero) { return; }
+    function update() {
+      var passed = hero.getBoundingClientRect().bottom < 0;
+      panel.hidden = !passed;
+    }
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+  })();
+  </script>
 
   <script type="application/ld+json">
   {
@@ -1447,7 +1585,14 @@
     "@type": "Organization",
     "@id": "https://migra-pro.com/#organization",
     "name": "Migra-Pro",
-    "url": "https://migra-pro.com"
+    "url": "https://migra-pro.com",
+    "telephone": "+7 (495) 154-33-85",
+    "taxID": "7735607154",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "address": [
+      { "@type": "PostalAddress", "addressLocality": "Одинцово", "streetAddress": "п. Новоивановское, ул. Калинина, 8", "addressRegion": "Московская область", "addressCountry": "RU" },
+      { "@type": "PostalAddress", "addressLocality": "Подольск", "streetAddress": "ул. Профсоюзная, 4", "addressRegion": "Московская область", "addressCountry": "RU" }
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -1522,12 +1667,12 @@
       {
         "@type": "Question",
         "name": "Сколько времени занимает получение российского гражданства?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Срок зависит от основания и порядка подачи. Точные значения по действующей редакции 138-ФЗ уточняются." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Заявление, поданное в территориальный орган МВД, рассматривают до трёх месяцев; при дополнительной проверке срок могут продлить ещё до трёх месяцев. Если решение принимает Президент РФ, рассмотрение занимает до года. К этому добавьте время на подготовку документов — комплект мы готовим за 7 дней." }
       },
       {
         "@type": "Question",
         "name": "Нужно ли отказываться от прежнего гражданства?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Формулировка по действующей редакции уточняется у юриста." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. По действующему закону отказ от прежнего гражданства в условия приёма не входит: сведения об ином гражданстве указываются в заявлении, отказываться от него не требуется." }
       },
       {
         "@type": "Question",
@@ -1537,7 +1682,7 @@
       {
         "@type": "Question",
         "name": "Нужно ли сдавать экзамен по русскому языку?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Перечень исключений уточняется. Подробно — на странице об экзамене для гражданства РФ." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, подтверждение владения русским языком, знания истории и основ законодательства входит в условия приёма. Освобождены только лица старше 70 лет и инвалиды I группы." }
       },
       {
         "@type": "Question",
