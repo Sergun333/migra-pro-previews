@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Гражданство РФ: что это, чем отличается от ВНЖ и ПМЖ</title>
+  <meta name="description" content="Что такое гражданство РФ и чем отличается от ВНЖ и ПМЖ. Понятия простым языком: натурализация, лицо без гражданства, какие права даёт паспорт России.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --mp-primary: #1a4fb0;
+      --mp-primary-dark: #1a4694;
+      --mp-primary-light: #eaf1f6;
+      --mp-accent: #cc0a0a;
+      --mp-accent-hover: #a30808;
+      --mp-link: #50b3ff;
+      --mp-text: #1a1b1d;
+      --mp-muted: #5c6570;
+      --mp-border: #dde3e8;
+      --mp-bg: #f6f8fa;
+      --mp-white: #fff;
+      --mp-radius: 16px;
+      --mp-radius-sm: 12px;
+      --mp-shadow: 0 2px 10px rgba(20, 33, 61, 0.06), 0 8px 24px rgba(33, 84, 178, 0.08);
+      --mp-shadow-lg: 0 16px 48px rgba(20, 33, 61, 0.16);
+      --mp-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --mp-max: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--mp-font);
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--mp-text);
+      background: var(--mp-white);
+    }
+    a { color: var(--mp-primary); }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(100% - 40px, var(--mp-max)); margin-inline: auto; }
+    .design-note {
+      background: #fff8e6;
+      border-bottom: 1px solid #e8d59a;
+      color: #6b5500;
+      font-size: 0.85rem;
+      padding: 10px 16px;
+      text-align: center;
+    }
+    .design-note strong { font-weight: 700; }
+
+    /* ——— Двухэтажная шапка (паттерн живого сайта, логика IA) ——— */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--mp-white);
+      box-shadow: 0 4px 18px rgba(20, 33, 61, 0.08);
+    }
+    .header-top {
+      border-bottom: 1px solid var(--mp-border);
+      background: var(--mp-white);
+    }
+    .header-top__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 12px 0; flex-wrap: wrap;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none; color: inherit; min-width: 0;
+    }
+    .brand__mark {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--mp-primary) 0 50%, var(--mp-accent) 50% 100%);
+      color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 0.85rem;
+    }
+    .brand__name {
+      font-weight: 800; font-size: 1.15rem; color: var(--mp-primary);
+      letter-spacing: -0.02em; line-height: 1.1;
+    }
+    .brand__name em { font-style: normal; color: var(--mp-accent); }
+    .brand__sub {
+      display: block; font-size: 0.72rem; color: var(--mp-muted); margin-top: 2px;
+    }
+    .brand__img { height: 46px; width: auto; display: block; }
+    @media (max-width: 640px) { .brand__img { height: 36px; } }
+    .header-messengers .ico {
+      width: 18px; height: 18px; fill: currentColor;
+    }
+    .header-meta {
+      display: none; align-items: center; gap: 18px;
+      font-size: 0.88rem; color: var(--mp-muted);
+    }
+    @media (min-width: 960px) { .header-meta { display: flex; } }
+    .header-rating {
+      display: flex; flex-direction: column; gap: 2px;
+      font-size: 0.72rem; line-height: 1.25;
+    }
+    .header-rating__stars { color: #f5a623; letter-spacing: 1px; font-size: 0.85rem; }
+    .header-messengers { display: flex; gap: 8px; }
+    .header-messengers a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center; text-decoration: none;
+    }
+    .header-messengers a:hover { background: #d9e7f5; }
+    .header-phone-block { text-align: right; line-height: 1.25; }
+    .header-phone-block a {
+      color: var(--mp-text); font-weight: 800; text-decoration: none;
+      font-size: 1.05rem; letter-spacing: -0.02em;
+    }
+    .header-phone-block span { display: block; font-size: 0.75rem; color: var(--mp-muted); }
+    .header-top__cta { flex-shrink: 0; }
+
+    .header-nav-wrap {
+      background: var(--mp-white);
+      padding: 0 0 10px;
+    }
+    .header-nav {
+      display: flex; align-items: center; gap: 4px 6px;
+      flex-wrap: wrap;
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 0 0 18px 18px;
+      padding: 8px 12px;
+      box-shadow: var(--mp-shadow);
+    }
+    .nav-item { position: relative; }
+    .nav-item--split {
+      display: inline-flex; align-items: stretch;
+      border-radius: 10px;
+    }
+    .nav-item--split:hover,
+    .nav-item--split.is-open {
+      background: var(--mp-primary-light);
+    }
+    .nav-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 12px; border-radius: 10px;
+      color: var(--mp-text); text-decoration: none;
+      font-size: 0.92rem; font-weight: 600;
+      border: 0; background: transparent; cursor: pointer;
+      font-family: inherit;
+    }
+    .nav-link:hover { color: var(--mp-primary); }
+    .nav-item--split .nav-link--label {
+      border-radius: 10px 0 0 10px; padding-right: 6px;
+    }
+    .nav-item--split .nav-link--label:hover,
+    .nav-item--split.is-open .nav-link--label { color: var(--mp-primary); }
+    .nav-chev {
+      border-radius: 0 10px 10px 0; padding: 10px 12px 10px 4px;
+      color: var(--mp-text);
+    }
+    .nav-chev:hover,
+    .nav-item--split.is-open .nav-chev { color: var(--mp-primary); }
+    .nav-chev .chev {
+      width: 10px; height: 10px; opacity: 0.75;
+      transition: transform 0.15s ease;
+      display: block;
+    }
+    .nav-item--split.is-open .nav-chev .chev { transform: rotate(180deg); }
+
+    .dropdown {
+      display: none;
+      position: absolute; top: calc(100% - 2px); left: 0;
+      width: 340px; max-width: min(340px, 92vw);
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 14px;
+      box-shadow: var(--mp-shadow-lg);
+      padding: 8px;
+      z-index: 120;
+    }
+    .nav-item--split.is-open > .dropdown { display: block; }
+    .dropdown[hidden] { display: none !important; }
+    .dropdown a {
+      display: block; padding: 9px 12px; border-radius: 9px;
+      text-decoration: none; color: var(--mp-text);
+      font-size: 0.92rem; line-height: 1.3;
+    }
+    .dropdown a span { display: block; font-weight: 600; }
+    .dropdown a em {
+      display: block; margin-top: 2px;
+      font-style: normal; font-size: 0.78rem; color: var(--mp-muted);
+    }
+    .dropdown a:hover { background: var(--mp-primary-light); }
+    .dropdown a:hover span { color: var(--mp-primary); }
+    .dropdown__all {
+      margin-top: 6px; padding-top: 12px !important;
+      border-top: 1px solid var(--mp-border);
+      font-weight: 700; color: var(--mp-primary) !important;
+      border-radius: 0 0 9px 9px;
+    }
+    .nav-mobile-note {
+      display: block; width: 100%;
+      font-size: 0.78rem; color: var(--mp-muted);
+      padding: 4px 8px 2px;
+    }
+    @media (min-width: 900px) { .nav-mobile-note { display: none; } }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 12px 20px; border-radius: 999px;
+      font-weight: 700; font-size: 0.95rem; text-decoration: none;
+      border: 2px solid transparent; cursor: pointer; transition: 0.15s ease;
+      font-family: inherit;
+    }
+    .btn--sm { padding: 10px 16px; font-size: 0.88rem; }
+    .btn--primary { background: var(--mp-accent); color: #fff; }
+    .btn--primary:hover { background: var(--mp-accent-hover); }
+    .btn--secondary {
+      background: transparent; color: var(--mp-primary);
+      border-color: var(--mp-primary);
+    }
+    .btn--secondary:hover { background: var(--mp-primary-light); }
+    .btn--ghost {
+      background: rgba(255,255,255,0.14); color: #fff;
+      border-color: rgba(255,255,255,0.35);
+    }
+    .btn--ghost:hover { background: rgba(255,255,255,0.22); }
+    .btn--light { background: #fff; color: var(--mp-primary); }
+    .btn--light:hover { background: var(--mp-primary-light); }
+    .btn--block { width: 100%; }
+
+    /* ——— Полоса цифр доверия ——— */
+    .stats-band {
+      background: var(--mp-white);
+      border-bottom: 1px solid var(--mp-border);
+      padding: 22px 0;
+    }
+    .stats-band__grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .stats-band__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+    .stat strong {
+      font-size: 1.5rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .stat span { font-size: 0.88rem; color: var(--mp-muted); line-height: 1.3; }
+
+    /* маркер незаполненного факта (только в концепте) */
+    .req {
+      background: #fff3cd; color: #6b5500;
+      border-radius: 5px; padding: 0 5px;
+      font-weight: 700; white-space: nowrap;
+    }
+
+    /* ——— Как мы работаем ——— */
+    .steps {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+      counter-reset: step;
+    }
+    @media (min-width: 760px) {
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1040px) {
+      .steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    .step {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      position: relative;
+    }
+    .step__num {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--mp-primary); color: #fff;
+      display: grid; place-items: center;
+      font-weight: 800; font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .step h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .step p { margin: 0; color: var(--mp-muted); font-size: 0.93rem; }
+    .terms-note {
+      margin: 18px 0 0; padding: 16px 18px;
+      background: var(--mp-primary-light);
+      border-radius: var(--mp-radius-sm);
+      color: var(--mp-text); font-size: 0.95rem;
+    }
+
+    /* ——— Виджеты отзывов ——— */
+    .widgets {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .widgets { grid-template-columns: 1fr 1fr; }
+    }
+    .widget {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 20px;
+    }
+    .widget__head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 14px;
+    }
+    .widget__head strong { font-size: 1.05rem; }
+    .widget__rate {
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      font-weight: 800; border-radius: 999px; padding: 4px 12px;
+    }
+    .widget__slot {
+      border: 2px dashed var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      min-height: 220px;
+      display: grid; place-content: center; text-align: center;
+      color: var(--mp-muted); font-size: 0.95rem; padding: 20px;
+      background: var(--mp-bg);
+    }
+    .widget__slot small { color: #98a2ad; }
+
+    /* ——— FAQ ——— */
+    .faq { display: grid; gap: 10px; max-width: 52rem; }
+    .faq details {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 16px 20px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 700; font-size: 1rem;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+"; float: right; color: var(--mp-primary); font-size: 1.2rem; line-height: 1;
+    }
+    .faq details[open] summary::after { content: "–"; }
+    .faq p { margin: 12px 0 0; color: var(--mp-muted); font-size: 0.95rem; }
+
+    /* ——— Sticky CTA на мобильном ——— */
+    .mobile-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px; padding: 10px 12px;
+      background: rgba(255,255,255,0.97);
+      border-top: 1px solid var(--mp-border);
+      box-shadow: 0 -6px 20px rgba(20,33,61,0.1);
+    }
+    .mobile-bar .btn { padding: 12px 10px; font-size: 0.9rem; }
+    @media (min-width: 860px) { .mobile-bar { display: none; } }
+    @media (max-width: 859px) { body { padding-bottom: 74px; } }
+
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(80,179,255,0.28), transparent 60%),
+        linear-gradient(135deg, #163a7a 0%, var(--mp-primary) 48%, #2a6fd1 100%);
+      color: #fff;
+      padding: 48px 0 56px;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: auto -20% -40% 40%;
+      height: 280px;
+      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .hero__eyebrow {
+      display: inline-block; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      opacity: 0.85; margin-bottom: 12px;
+    }
+    .hero h1 {
+      margin: 0 0 12px; font-size: clamp(1.7rem, 4vw, 2.45rem);
+      line-height: 1.15; letter-spacing: -0.03em; max-width: 18ch;
+    }
+    .hero__lead {
+      margin: 0 0 28px; font-size: 1.05rem; opacity: 0.92;
+      max-width: 46ch;
+    }
+    .path-grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .path-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+    .path-card {
+      background: rgba(255,255,255,0.98);
+      color: var(--mp-text);
+      border-radius: var(--mp-radius);
+      padding: 24px;
+      box-shadow: var(--mp-shadow-lg);
+      display: flex; flex-direction: column; gap: 12px;
+      min-height: 100%;
+    }
+    .path-card__tag {
+      font-size: 0.78rem; font-weight: 700; color: var(--mp-primary);
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .path-card h2 {
+      margin: 0; font-size: 1.35rem; line-height: 1.25; letter-spacing: -0.02em;
+    }
+    .path-card p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .path-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+
+    .section { padding: 56px 0; }
+    .section--alt { background: var(--mp-bg); }
+    .section--tint { background: var(--mp-primary-light); }
+    .section__head { margin-bottom: 28px; max-width: 40rem; }
+    .section__head h2 {
+      margin: 0 0 8px; font-size: clamp(1.4rem, 3vw, 1.85rem);
+      letter-spacing: -0.02em;
+    }
+    .section__head p { margin: 0; color: var(--mp-muted); }
+
+    .tools {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) {
+      .tools { grid-template-columns: repeat(3, 1fr); }
+    }
+    .tool {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      text-decoration: none; color: inherit;
+      box-shadow: var(--mp-shadow);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      display: flex; flex-direction: column; gap: 10px;
+      min-height: 160px;
+    }
+    .tool:hover { transform: translateY(-2px); border-color: #b9c9e0; }
+    .tool__ico {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center;
+    }
+    .tool strong { font-size: 1.05rem; }
+    .tool span { color: var(--mp-muted); font-size: 0.95rem; }
+    .tool em {
+      margin-top: auto; font-style: normal; font-weight: 700;
+      color: var(--mp-primary); font-size: 0.9rem;
+    }
+
+    .services {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .services { grid-template-columns: repeat(3, 1fr); }
+    }
+    .service {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .service:hover { border-color: var(--mp-primary); }
+    .service h3 { margin: 0; font-size: 1.2rem; }
+    .service p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .service > strong { font-size: 1.05rem; color: var(--mp-text); }
+    .service__more { font-weight: 700; color: var(--mp-primary); }
+
+    .trust {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .trust { grid-template-columns: 1.2fr 1fr 1fr; }
+    }
+    .trust-stat, .trust-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+    }
+    .trust-stat strong {
+      display: block; font-size: 2rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; margin-bottom: 6px;
+    }
+    .trust-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .trust-card p { margin: 0; color: var(--mp-muted); font-size: 0.95rem; }
+    .trust-card details {
+      border-top: 1px solid var(--mp-border);
+      padding: 10px 0 0; margin-top: 10px;
+    }
+    .trust-card summary {
+      cursor: pointer; font-size: 0.93rem; font-weight: 600;
+      list-style: none;
+    }
+    .trust-card summary::-webkit-details-marker { display: none; }
+    .trust-card summary::after { content: " →"; color: var(--mp-primary); }
+    .trust-card details p { margin-top: 8px; }
+
+    .knowledge {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .knowledge { grid-template-columns: repeat(3, 1fr); }
+    }
+    .know-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+    }
+    .know-card__visual {
+      height: 120px;
+      background:
+        linear-gradient(135deg, rgba(33,84,178,0.9), rgba(26,70,148,0.85)),
+        repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,255,255,0.05) 8px, rgba(255,255,255,0.05) 16px);
+    }
+    .know-card__visual--2 {
+      background: linear-gradient(135deg, #265f91, #1a4fb0);
+    }
+    .know-card__visual--3 {
+      background: linear-gradient(135deg, #1a4694, #3a7bd5);
+    }
+    .know-card__body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .know-card__body strong { font-size: 1.02rem; line-height: 1.35; }
+    .know-card__body span { color: var(--mp-muted); font-size: 0.92rem; }
+
+    .gos {
+      display: grid; gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .gos { grid-template-columns: repeat(4, 1fr); }
+    }
+    .gos a {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-decoration: none;
+      color: var(--mp-text);
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      min-height: 74px;
+      display: flex; align-items: center;
+    }
+    .gos a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+
+    .cta-band {
+      background: linear-gradient(135deg, var(--mp-primary-dark), var(--mp-primary));
+      color: #fff;
+      border-radius: var(--mp-radius);
+      padding: 36px 28px;
+      display: grid; gap: 20px;
+      align-items: center;
+    }
+    @media (min-width: 800px) {
+      .cta-band { grid-template-columns: 1.05fr 400px; gap: 32px; padding: 40px 44px; }
+    }
+    .cta-band h2 { margin: 0 0 8px; font-size: 1.55rem; letter-spacing: -0.02em; }
+    .cta-band p { margin: 0; opacity: 0.92; max-width: 38ch; }
+
+    .contacts {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .contacts { grid-template-columns: 1.15fr 1fr; }
+    }
+    .contacts__cards { display: grid; gap: 16px; }
+    @media (min-width: 560px) and (max-width: 899px) {
+      .contacts__cards { grid-template-columns: 1fr 1fr; }
+      .contacts__cards .phone-block { grid-column: 1 / -1; }
+    }
+    .office, .phone-block {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+    }
+    .office h3, .phone-block h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .office p, .phone-block p { margin: 0; color: var(--mp-muted); }
+    .phone-block a.phone-block__num {
+      display: inline-block; margin-top: 8px;
+      font-size: 1.35rem; font-weight: 800;
+      color: var(--mp-primary); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .msgr-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .msgr-row a {
+      display: inline-flex; align-items: center; gap: 7px;
+      border: 1px solid var(--mp-border); border-radius: 10px;
+      padding: 8px 12px; font-size: 0.86rem; font-weight: 600;
+      color: var(--mp-text); text-decoration: none;
+    }
+    .msgr-row a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+    .msgr-row .ico { width: 16px; height: 16px; }
+    .office__hours { display: block; margin-top: 10px; font-size: 0.86rem; }
+    .office__link {
+      display: inline-block; margin-top: 12px;
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .office__link:hover { text-decoration: underline; }
+
+    .map-area {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      min-height: 380px;
+    }
+    .map-area__tabs {
+      display: flex; gap: 6px; padding: 10px 10px 0;
+    }
+    .map-tab {
+      flex: 1; border: 1px solid var(--mp-border); background: var(--mp-bg);
+      border-radius: 10px; padding: 9px 12px; cursor: pointer;
+      font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--mp-muted);
+    }
+    .map-tab:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .map-tab.is-active {
+      background: var(--mp-primary); border-color: var(--mp-primary); color: #fff;
+    }
+    .map-area__canvas {
+      flex: 1; min-height: 320px;
+      margin: 10px; border-radius: 12px; overflow: hidden;
+      background: repeating-linear-gradient(45deg, #eef2f6 0 14px, #e6edf4 14px 28px);
+    }
+    .map-area__canvas iframe { display: block; width: 100%; height: 100%; min-height: 320px; border: 0; }
+    .map-area__foot {
+      display: flex; flex-wrap: wrap; gap: 10px 20px;
+      padding: 14px 18px; border-top: 1px solid var(--mp-border);
+    }
+    .map-area__foot a {
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .map-area__foot a:hover { text-decoration: underline; }
+
+    .site-footer {
+      background: var(--mp-primary-dark);
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+      padding: 40px 0 32px;
+      margin-top: 8px;
+    }
+    .site-footer a { color: rgba(255, 255, 255, 0.75); text-decoration: none; }
+    .site-footer a:hover { color: #fff; }
+    .site-footer a.btn--primary { color: #fff; }
+    .footer-cta {
+      display: grid; gap: 16px; align-items: center;
+      padding-bottom: 28px; margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    @media (min-width: 800px) {
+      .footer-cta { grid-template-columns: 1fr auto; }
+    }
+    .footer-cta strong { display: block; color: #fff; font-size: 1.15rem; margin-bottom: 4px; }
+    .footer-cta p { margin: 0; }
+    .footer-cols {
+      display: grid; gap: 26px 24px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 900px) {
+      .footer-cols { grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    }
+    .footer-cols h3 {
+      margin: 0 0 12px; font-size: 0.82rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; color: #fff;
+    }
+    .footer-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .footer-cols li { line-height: 1.4; }
+    .footer-phone {
+      display: inline-block; margin-bottom: 6px;
+      font-size: 1.15rem; font-weight: 800; color: #fff !important;
+      letter-spacing: -0.02em;
+    }
+    .footer-social { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .footer-social a {
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9px;
+      padding: 7px 11px; font-size: 0.84rem; font-weight: 600;
+    }
+    .footer-social a:hover { border-color: #fff; }
+    .footer-legal {
+      margin-top: 30px; padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      display: grid; gap: 10px;
+      font-size: 0.82rem; line-height: 1.5;
+    }
+    .footer-legal__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-footer .req { background: rgba(255, 243, 205, 0.9); color: #6b5500; }
+
+    /* ——— Формы записи ——— */
+    .lead-form { display: grid; gap: 10px; }
+    .lead-form__row { display: grid; gap: 10px; }
+    @media (min-width: 560px) {
+      .lead-form__row { grid-template-columns: 1fr 1fr; }
+    }
+    .lead-form input[type="text"],
+    .lead-form input[type="tel"] {
+      width: 100%; box-sizing: border-box;
+      padding: 13px 14px; border-radius: 12px;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      font: inherit; font-size: 0.95rem; color: var(--mp-text);
+    }
+    .lead-form input::placeholder { color: #9aa4b0; }
+    .lead-form input:focus {
+      outline: none; border-color: var(--mp-primary);
+      box-shadow: 0 0 0 3px rgba(33, 84, 178, 0.15);
+    }
+    .lead-form .btn { width: 100%; }
+    .lead-form__agree {
+      display: flex; gap: 9px; align-items: flex-start;
+      font-size: 0.78rem; line-height: 1.4; color: var(--mp-muted);
+    }
+    .lead-form__agree input { margin-top: 2px; width: 16px; height: 16px; flex: none; }
+    .lead-form__agree a { color: inherit; text-decoration: underline; }
+    .lead-form__note { margin: 0; font-size: 0.8rem; color: var(--mp-muted); }
+    .lead-form__done {
+      display: none; padding: 16px; border-radius: 12px;
+      background: rgba(98, 197, 132, 0.14); border: 1px solid #62c584;
+      color: #1c6b3a; font-size: 0.92rem; line-height: 1.45;
+    }
+    .lead-form.is-sent .lead-form__done { display: block; }
+    .lead-form.is-sent .lead-form__row,
+    .lead-form.is-sent .lead-form__agree,
+    .lead-form.is-sent .lead-form__note,
+    .lead-form.is-sent .btn { display: none; }
+
+    /* форма внутри тёмной CTA-полосы */
+    .cta-band .lead-form__agree { color: rgba(255, 255, 255, 0.8); }
+    .cta-band .lead-form__note { color: rgba(255, 255, 255, 0.7); }
+    .cta-band .lead-form__agree a { color: #fff; }
+    .cta-form {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 16px; padding: 20px;
+    }
+
+    /* ——— Модальное окно ——— */
+    .modal {
+      position: fixed; inset: 0; z-index: 300;
+      display: none; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .modal.is-open { display: flex; }
+    .modal__overlay { position: absolute; inset: 0; background: rgba(12, 22, 40, 0.6); }
+    .modal__dialog {
+      position: relative; z-index: 1;
+      width: min(440px, 100%); max-height: 90vh; overflow-y: auto;
+      background: var(--mp-white); border-radius: 18px;
+      box-shadow: var(--mp-shadow-lg); padding: 28px 24px 24px;
+    }
+    .modal__close {
+      position: absolute; top: 12px; right: 12px;
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      cursor: pointer; font-size: 1.1rem; line-height: 1; color: var(--mp-muted);
+    }
+    .modal__close:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .modal__dialog h2 { margin: 0 0 8px; font-size: 1.3rem; letter-spacing: -0.02em; }
+    .modal__lead { margin: 0 0 18px; color: var(--mp-muted); font-size: 0.92rem; line-height: 1.5; }
+    .modal__alt {
+      margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--mp-border);
+      font-size: 0.85rem; color: var(--mp-muted); line-height: 1.5;
+    }
+    .modal__alt a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    body.is-locked { overflow: hidden; }
+
+    .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  
+  </style>
+  <style>
+    /* Дополнения для /rnr */
+    .nav-link.is-active { color: var(--mp-primary); position: relative; }
+    .nav-link.is-active::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 2px; background: var(--mp-accent); border-radius: 2px; }
+
+    /* H1 в три строки: 24ch держит перенос «Разрешение на работу и / ввоз иностранных / сотрудников для компаний» */
+    .hero h1 { max-width: 24ch; }
+
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.22); }
+    .hero__facts div { display: flex; flex-direction: column; }
+    .hero__facts strong { font-size: 1.15rem; letter-spacing: -0.02em; }
+    .hero__facts span { font-size: 0.85rem; opacity: 0.85; }
+
+    .divert { background: var(--mp-primary-light); border-bottom: 1px solid var(--mp-border); padding: 14px 0; }
+    .divert__inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-size: 0.95rem; color: var(--mp-muted); }
+    .divert__inner strong { color: var(--mp-text); font-weight: 600; }
+    .divert__inner a { font-weight: 700; }
+
+    .panel { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .panel h3 { margin: 0 0 12px; font-size: 1.05rem; }
+    .panel ul { margin: 0; padding-left: 20px; color: var(--mp-muted); }
+    .panel ul li { margin-bottom: 7px; }
+    .panel ul li:last-child { margin-bottom: 0; }
+    .duo { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 800px) { .duo { grid-template-columns: 1fr 1fr; } }
+
+    .facts-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .facts-row div { background: var(--mp-primary-light); border-radius: 10px; padding: 12px 16px; font-size: 0.92rem; }
+    .facts-row strong { display: block; font-size: 1.08rem; color: var(--mp-primary); }
+
+    .block-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; align-items: center; }
+    .block-actions span { color: var(--mp-muted); font-size: 0.9rem; }
+
+    .checklist { display: grid; gap: 10px 24px; grid-template-columns: 1fr; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 760px) { .checklist { grid-template-columns: 1fr 1fr; } }
+    .checklist li { position: relative; padding-left: 28px; color: var(--mp-text); font-size: 0.97rem; }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 20px; height: 20px; border-radius: 50%; background: #e8f6ed; color: #2f9e5b; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    .risk { margin-top: 20px; padding: 18px 20px; border-left: 4px solid var(--mp-accent); background: #fff5f5; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; font-size: 0.95rem; }
+    .risk strong { color: var(--mp-accent); }
+
+    .ptable-wrap { overflow-x: auto; border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); background: var(--mp-white); }
+    .ptable { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 0.95rem; }
+    .ptable th, .ptable td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--mp-border); vertical-align: top; }
+    .ptable thead th { background: var(--mp-primary-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mp-primary); }
+    .ptable tbody tr:last-child td { border-bottom: none; }
+    .ptable td:first-child { font-weight: 600; }
+    .ptable td small { display: block; color: var(--mp-muted); font-weight: 400; font-size: 0.86rem; margin-top: 3px; }
+    .ptable td.price { white-space: nowrap; font-weight: 700; color: var(--mp-primary); }
+
+    .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mp-primary); background: var(--mp-primary-light); border-radius: 999px; padding: 5px 12px; margin-bottom: 12px; }
+    .why { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .why { grid-template-columns: repeat(3, 1fr); } }
+    .why div { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 22px; }
+    .why strong { display: block; margin-bottom: 6px; }
+    .why span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .industries { margin: -12px 0 22px; color: var(--mp-muted); font-size: 0.95rem; line-height: 1.5; }
+    .industries span { color: var(--mp-text); font-weight: 600; }
+
+    .magnet { margin-top: 16px; display: grid; gap: 14px; align-items: center; background: var(--mp-white); border: 1px dashed var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    @media (min-width: 800px) { .magnet { grid-template-columns: 1fr auto; gap: 24px; } }
+    .magnet strong { display: block; margin-bottom: 5px; }
+    .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .calendar { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-top: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .calendar h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .calendar > p { margin: 0 0 16px; color: var(--mp-muted); font-size: 0.95rem; }
+    .calendar .panel { background: var(--mp-primary-light); border-color: transparent; }
+    .calendar__note { margin: 16px 0 0 !important; }
+
+    .quiz { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 28px; box-shadow: var(--mp-shadow); max-width: 44rem; }
+    .quiz__step strong, .quiz__result strong { display: block; margin-bottom: 16px; font-size: 1.05rem; }
+    .quiz__opts { display: grid; gap: 10px; }
+    .quiz__opts button { text-align: left; padding: 16px 18px; border-radius: var(--mp-radius-sm); border: 1px solid var(--mp-border); background: var(--mp-white); font: inherit; font-size: 0.98rem; cursor: pointer; transition: 0.15s ease; }
+    .quiz__opts button:hover { border-color: var(--mp-primary); background: var(--mp-primary-light); }
+    .quiz__result p { margin: 0 0 18px; color: var(--mp-text); }
+    .quiz__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .quiz__note { margin: 16px 0 0 !important; color: var(--mp-muted); font-size: 0.88rem; }
+
+    .case { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .case h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .case p { margin: 0 0 10px; color: var(--mp-muted); font-size: 0.95rem; }
+    .case p strong { color: var(--mp-text); }
+    .case details { border-top: 1px solid var(--mp-border); margin-top: 12px; padding-top: 12px; }
+    .case summary { cursor: pointer; font-weight: 700; font-size: 0.95rem; color: var(--mp-primary); list-style: none; }
+    .case summary::-webkit-details-marker { display: none; }
+    .case details p:last-child { margin-bottom: 0; }
+
+    .estimate { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .estimate h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .estimate .checklist li { padding-left: 30px; margin-bottom: 6px; }
+    .estimate > p { margin: 16px 0 18px; color: var(--mp-muted); font-size: 0.95rem; }
+
+    .guarantee { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid #2f9e5b; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .guarantee h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .guarantee .checklist li { padding-left: 30px; margin-bottom: 4px; }
+    .guarantee .checklist li strong { color: var(--mp-text); }
+    .guarantee > p { margin: 16px 0 0; color: var(--mp-muted); font-size: 0.93rem; }
+  </style>
+  <style>
+    .crumbs { font-size: 14px; color: var(--mp-muted); margin: 0 0 18px; }
+    .crumbs a { color: var(--mp-muted); text-decoration: none; }
+    .crumbs a:hover { color: var(--mp-primary); }
+    .ico { width: 20px; height: 20px; flex: 0 0 20px; }
+
+    .qa-head { padding: 28px 0 4px; }
+    .qa-head h1 { font-size: clamp(30px, 4.2vw, 42px); line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.02em; }
+    .qa-lead { max-width: 78ch; }
+    .qa-lead p { font-size: 18px; line-height: 1.65; margin: 0 0 12px; }
+    .qa-lead p:last-child { margin-bottom: 0; }
+
+    /* Переключатель разделов и поиск держатся вместе: это панель управления страницей */
+    .qa-nav { padding: 24px 0 8px; position: sticky; top: 0; z-index: 40; background: var(--mp-white); }
+    .qa-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .qa-tab { display: inline-flex; align-items: center; padding: 9px 16px; border: 1px solid var(--mp-border);
+              border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none;
+              color: var(--mp-text); background: var(--mp-white); }
+    .qa-tab:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+    .qa-tab.is-active { background: var(--mp-primary); border-color: var(--mp-primary); color: #fff; }
+    .qa-finder { margin-top: 16px; padding: 18px 20px; background: var(--mp-bg);
+                 border: 1px solid var(--mp-border); border-radius: var(--mp-radius); }
+    .qa-search { display: flex; align-items: center; gap: 10px; padding: 12px 16px;
+                 background: var(--mp-white); border: 1px solid var(--mp-border);
+                 border-radius: var(--mp-radius-sm); color: var(--mp-muted); }
+    .qa-search:focus-within { border-color: var(--mp-primary); box-shadow: 0 0 0 3px rgba(26, 79, 176, .12); }
+    .qa-search input { flex: 1; border: 0; outline: none; font-family: inherit; font-size: 16px;
+                       color: var(--mp-text); background: transparent; }
+    .qa-found { margin: 10px 0 0; font-size: 14px; color: var(--mp-primary); font-weight: 600; }
+    .qa-toc { list-style: none; margin: 14px 0 0; padding: 0;
+              display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 20px; }
+    .qa-toc a { display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
+                padding: 6px 0; font-size: 15px; color: var(--mp-text); text-decoration: none;
+                border-bottom: 1px solid transparent; }
+    .qa-toc a:hover { color: var(--mp-primary); border-bottom-color: var(--mp-border); }
+    .qa-toc span { font-size: 13px; color: var(--mp-muted); font-variant-numeric: tabular-nums; }
+
+    .qa-body { padding: 24px 0 0; }
+    .qa-group { margin: 0 0 40px; scroll-margin-top: 180px; }
+    .qa-group h2 { display: flex; align-items: baseline; gap: 12px;
+                   font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; margin: 0 0 14px; }
+    .qa-group__count { font-size: 14px; font-weight: 500; color: var(--mp-muted);
+                       background: var(--mp-bg); border-radius: 999px; padding: 3px 10px; }
+    .qa-item { border-bottom: 1px solid var(--mp-border); }
+    .qa-item:first-of-type { border-top: 1px solid var(--mp-border); }
+    .qa-item summary { list-style: none; cursor: pointer; padding: 16px 44px 16px 0; position: relative;
+                       font-size: 17px; font-weight: 600; line-height: 1.45; }
+    .qa-item summary::-webkit-details-marker { display: none; }
+    .qa-item summary::after { content: ""; position: absolute; right: 12px; top: 22px;
+                              width: 10px; height: 10px; border-right: 2px solid var(--mp-primary);
+                              border-bottom: 2px solid var(--mp-primary); transform: rotate(45deg);
+                              transition: transform .15s; }
+    .qa-item[open] summary::after { transform: rotate(225deg); top: 26px; }
+    .qa-item summary:hover { color: var(--mp-primary); }
+    .qa-answer { padding: 0 44px 18px 0; }
+    .qa-answer p { margin: 0 0 10px; font-size: 16px; line-height: 1.65; color: var(--mp-text); }
+    .qa-answer p:last-child { margin-bottom: 0; }
+    /* Витринный ответ: тема раскрыта в статье, здесь остаётся суть */
+    .qa-item--vitrina .qa-answer { border-left: 3px solid var(--mp-border); padding-left: 16px; }
+    .qa-vitrina-note { font-size: 13px; color: var(--mp-muted); }
+    .qa-group__more { margin: 16px 0 0; padding: 14px 18px; background: var(--mp-primary-light);
+                      border-radius: var(--mp-radius-sm); }
+    .qa-group__more a { color: var(--mp-primary); font-weight: 600; font-size: 16px; text-decoration: none; }
+    .qa-group__more a:hover { text-decoration: underline; }
+
+    .qa-capture { padding: 32px 0 56px; }
+    .qa-capture__grid { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 40px;
+                        align-items: start; background: var(--mp-bg); border: 1px solid var(--mp-border);
+                        border-radius: var(--mp-radius); padding: 32px 36px;
+                        width: min(100% - 40px, var(--mp-max)); }
+    .qa-capture h2 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.25; margin: 0 0 12px; }
+    .qa-capture__text p { margin: 0 0 16px; font-size: 17px; line-height: 1.6; }
+    .qa-capture__links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+                         font-size: 16px; line-height: 1.5; color: var(--mp-muted); }
+    .qa-capture__links a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    .qa-capture__links a:hover { text-decoration: underline; }
+    .qa-capture__form { background: var(--mp-white); border: 1px solid var(--mp-border);
+                        border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    .qa-capture__note { margin: 10px 0 0; font-size: 13px; color: var(--mp-muted); }
+    .lead-form--inline label { display: block; font-size: 14px; color: var(--mp-muted); }
+    .lead-form__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .lead-form--inline input, .lead-form--inline textarea {
+      width: 100%; margin-top: 4px; padding: 11px 13px; font-family: inherit; font-size: 16px;
+      color: var(--mp-text); background: var(--mp-white);
+      border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); }
+    .lead-form--inline textarea { resize: vertical; }
+    .lead-form--inline input:focus, .lead-form--inline textarea:focus {
+      outline: none; border-color: var(--mp-primary); box-shadow: 0 0 0 3px rgba(26, 79, 176, .12); }
+    .lead-form--inline .btn { width: auto; margin-top: 14px; }
+    .btn--brand { background: var(--mp-primary); color: #fff; }
+    .btn--brand:hover { background: var(--mp-primary-dark); }
+
+    @media (max-width: 1080px) {
+      .qa-nav { position: static; }
+      .qa-capture__grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 720px) {
+      .qa-toc { grid-template-columns: 1fr; }
+      .lead-form__pair { grid-template-columns: 1fr; }
+      .qa-capture__grid { padding: 22px 18px; }
+      .qa-item summary { font-size: 16px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Какие существуют категории соотечественников?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Существует несколько категорий лиц, которые могут участвовать в программе репатриации: Этнические русские, проживающие за рубежом Выходцы (эмигранты) из Российской империи, СССР, РСФСР, РФ, имеющие соответствующую гражданскую принадлежность Потомки лиц, относящихся к вышеперечисленным группам" } },
+      { "@type": "Question", "name": "Может ли переселенец стать репатриантом?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Теоретически, да. Если человек сначала переехал в страну \"А\" как переселенец (например, по работе), а затем решил вернуться на свою историческую родину (страну \"Б\"), то при возвращении в страну \"Б\" он может рассматриваться как репатриант, особенно если он соответствует критериям государственной программы репатриации страны \"Б\". Чтобы понять разницу между Репатриантом и Переселенцем прочитайте нашу статью Репатриант vs Переселенец: Понимаем разницу" } },
+      { "@type": "Question", "name": "Всегда ли репатрианты получают гражданство автоматически?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Не всегда автоматически, но часто в упрощенном порядке. Условия зависят от законодательства конкретной страны и ее программы репатриации. Обычно требуется доказать свои корни или связь со страной и пройти определенные процедуры, которые, как правило, проще и быстрее, чем для других категорий мигрантов." } },
+      { "@type": "Question", "name": "Является ли беженец переселенцем?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, беженец является частным случаем переселенца. Это человек, который вынужденно покинул свою страну из-за угрозы преследования, войны или насилия. Его переезд — это форма вынужденного переселения, и его статус регулируется международным и национальным правом о беженцах." } },
+      { "@type": "Question", "name": "Можно ли быть репатриантом в стране, где ты родился?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Обычно нет. Термин \"репатриант\" подразумевает *возвращение* из-за границы. Если человек родился в стране своих предков, он является ее гражданином по рождению или происхождению, а не репатриантом. Репатриантами становятся те, кто родился за пределами своей исторической родины или чьи предки эмигрировали, а теперь они или их потомки возвращаются." } },
+      { "@type": "Question", "name": "Каковы преимущества участия в Государственной программе по сравнению с другими способами?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ответ: Основные преимущества: ускоренный срок получения гражданства (3 месяца вместо обычных 6-12), финансовая поддержка (подъемные до 240 тыс. руб.), компенсация переезда, гарантии трудоустройства и жилья в выбранном регионе, освобождение от таможенных пошлин при перевозке личного имущества. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какие основные документы требуются для участия в Государственной программе переселения соотечественников?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Базовый пакет обычно включает: заявление об участии, копии документов, удостоверяющих личность заявителя и членов его семьи (с нотариально заверенным переводом), документы о семейном положении, документы об образовании/квалификации (при наличии), документы, подтверждающие право на проживание за пределами РФ. Точный перечень зависит от страны исхода и конкретной ситуации заявителя, его необходимо уточнять в консульском учреждении РФ или представительстве МВД России за рубежом. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какие документы нужно подготовить к переезду в первую очередь?",
+        "acceptedAnswer": { "@type": "Answer", "text": "В первую очередь убедитесь, что ваши заграничные документы (паспорта, свидетельства о рождении/браке, дипломы) действительны. Начните процесс их легализации (апостилирования) и сделайте нотариально заверенные переводы на русский язык. Если вы участвуете в программе переселения соотечественников, изучите список документов, требуемых по программе. Подробнее можете ознакомиться в нашей статье “Пошаговое руководство по участию в Государственной программе переселения соотечественников”" } },
+      { "@type": "Question", "name": "Что делать, если в документах моих предков есть ошибки или разночтения в ФИО?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Это распространенная проблема. В таких случаях необходимо через суд устанавливать факт родственных отношений или факт принадлежности правоустанавливающих документов. Решение суда будет являться основанием для принятия документов миграционными органами. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Как подтвердить проживание предков на территории СССР, если документы утеряны?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ответ: В этом случае необходимо обратиться в государственные архивы бывших советских республик с запросами. Многие документы доступны в электронных архивах. Также можно использовать косвенные доказательства: трудовые книжки, военные билеты, партийные документы советского периода. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Можно ли выбрать любой регион России для проживания?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет, можно выбрать только регион, который участвует в Государственной программе. Каждый регион имеет свою региональную программу переселения с определенными условиями приема соотечественников. Наиболее привлекательные условия предлагают приоритетные регионы (Дальний Восток и Сибирь), где существуют дополнительные меры поддержки." } },
+      { "@type": "Question", "name": "Могу ли я изменить выбранный регион вселения после получения Свидетельства участника?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет, Свидетельство участника Госпрограммы выдается для переселения в конкретный субъект РФ, указанный в заявлении. Изменение региона после получения Свидетельства программой не предусмотрено. Если вы хотите переехать в другой регион-участник, вам, скорее всего, придется проходить процедуру подачи заявления заново для нового региона, при этом предыдущее Свидетельство будет аннулировано. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Можно ли выбрать любой город или район внутри региона-участника?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Не всегда. Некоторые региональные программы определяют конкретные \"территории вселения\" – это могут быть определенные города или муниципальные районы, куда преимущественно направляют переселенцев и где действуют основные меры поддержки. В других регионах ограничений может не быть. Эту информацию необходимо уточнять в описании региональной программы конкретного субъекта. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какие регионы России сейчас наиболее привлекательны для репатриантов и почему?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Выбор региона зависит от индивидуальных приоритетов (работа, климат, близость к родственникам). Традиционно популярны регионы Центральной России (Калужская, Липецкая, Воронежская области) благодаря развитой инфраструктуре и рынку труда. Также востребованы регионы Сибири и Дальнего Востока, где часто предлагаются дополнительные меры поддержки и \"подъемные\". Южные регионы (Краснодарский край, Ростовская область) привлекают климатом. Рекомендуется изучать региональные программы переселения на сайтах правительств субъектов РФ, так как условия и квоты могут меняться. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Чем территория приоритетного заселения отличается от обычного региона и какие льготы даёт?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Статус приоритетных регионов может меняться, но традиционно к ним относят субъекты Дальневосточного федерального округа (ДФО) и иногда другие стратегически важные или демографически проблемные территории. Перечень утверждается Правительством РФ. Льготы в приоритетных регионах обычно более существенные : Повышенный размер подъемных выплат. Дополнительные компенсации расходов на переезд. Специальные программы льготного ипотечного кредитования (например, \"Дальневосточная ипотека\" под низкий процент, хотя она доступна не только репатриантам). Субсидии или сертификаты на приобретение или строительство жилья (условия могут быть жесткими, например, требование проработать определенный срок в регионе). Содействие в приоритетном порядке при трудоустройстве на региональные предприятия. Актуальный список регионов и конкретные меры поддержки необходимо уточнять на официальном сайте Главного управления по вопросам миграции МВД России или в консульских учреждениях РФ за рубежом на момент подачи заявления. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Можно ли получить \"подъемные\", если я переехал в Россию до получения свидетельства участника Госпрограммы?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет, как правило, право на получение единовременного пособия на обустройство (\"подъемных\") и компенсаций возникает только у тех, кто получил свидетельство участника Госпрограммы до въезда на территорию РФ и выбрал конкретный регион вселения в рамках программы. Переезд до официального вступления в программу лишает права на эти выплаты. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Действует ли льготная ставка НДФЛ 13% для всех репатриантов с первого дня работы?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Льготная ставка НДФЛ 13% (вместо 30% для нерезидентов) с первого дня работы предоставляется именно участникам Государственной программы переселения соотечественников и членам их семей. Если вы репатриируетесь вне рамок этой программы, стандартное правило определения налогового резидентства (183 дня пребывания в РФ) будет применяться для определения вашей ставки НДФЛ. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какие документы нужны для компенсации расходов на переезд по Госпрограмме?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Для компенсации расходов потребуются: Заявление на компенсацию. Копии документов, удостоверяющих личность заявителя и членов семьи. Копия свидетельства участника Госпрограммы. Оригиналы проездных документов (билеты). Документы, подтверждающие оплату провоза личного имущества (договоры с транспортными компаниями, квитанции, инвойсы). Больше информации можете получить в наших статьях и ответах на частые вопросы Таможенные декларации (при перевозке вещей через границу). Реквизиты банковского счета для перечисления компенсации. Точный перечень лучше уточнить в территориальном органе МВД по вопросам миграции." } },
+      { "@type": "Question", "name": "Можно ли выбрать любой регион для переезда по Госпрограмме и получить одинаковые \"подъемные\"?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет, регионы в рамках Госпрограммы делятся на территории приоритетного заселения и обычные территории . Размер \"подъемных\" существенно различается: на территориях приоритетного заселения он значительно выше, чтобы стимулировать переезд именно туда. При подаче заявления на участие в Госпрограмме вы выбираете конкретный субъект РФ, и размер выплат будет зависеть от его статуса в программе. Список приоритетных территорий может меняться, его нужно проверять на актуальность. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какая финансовая поддержка оказывается участникам программы?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Объем и виды финансовой поддержки могут различаться в зависимости от выбранного региона \"приоритетного заселения\" или \"неприоритетного\". Обычно она включает: компенсацию расходов на переезд (проезд, провоз багажа), выплату единовременного \"подъемного\" пособия (размер зависит от региона и состава семьи), возможно содействие в жилищном обустройстве. Точную информацию о мерах поддержки в конкретном субъекте РФ нужно узнавать в его региональной программе переселения. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Можно ли использовать материнский капитал сразу после переезда по программе репатриации?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Право на материнский капитал возникает у граждан РФ. Семья репатриантов сможет получить сертификат и распорядиться средствами материнского капитала только после того, как все необходимые члены семьи (мать и ребенок/дети) получат российское гражданство. Процедура получения гражданства в рамках Госпрограммы ускоренная, но все равно занимает определенное время. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Как долго рассматривается заявление об участии в программе репатриации?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Срок рассмотрения заявления составляет до 60 дней. После принятия положительного решения соотечественнику выдается свидетельство участника Государственной программы. Данный документ действителен в течение 3 лет и является основанием для получения государственной поддержки." } },
+      { "@type": "Question", "name": "Нужно ли мне искать работу до подачи заявления на участие в Госпрограмме?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Это зависит от требований конкретной региональной программы переселения. Некоторые регионы отдают приоритет или требуют наличия у кандидата гарантийного письма от работодателя или подтверждения востребованности его профессии на местном рынке труда. Другие регионы могут не иметь таких строгих требований. Рекомендуется изучить условия программы выбранного вами субъекта РФ. Наличие подтвержденной вакансии может значительно повысить шансы на одобрение заявления. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Нужно ли мне отказываться от своего первого гражданства для получения гражданства РФ по Госпрограмме?",
+        "acceptedAnswer": { "@type": "Answer", "text": "В большинстве случаев для получения гражданства РФ требуется представить документ, подтверждающий обращение в полномочный орган иностранного государства с заявлением об отказе от имеющегося иного гражданства. Однако существуют исключения. Отказ не требуется, если это предусмотрено международным договором РФ (например, с Таджикистаном) или если отказ невозможен по не зависящим от лица причинам. Также граждане Беларуси, Казахстана, Кыргызстана и Южной Осетии могут не отказываться от своего гражданства. Рекомендуется уточнять актуальные требования на момент подачи документов. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Сколько времени занимает процесс оформления участия в программе и переезда?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Сроки могут сильно варьироваться. Рассмотрение заявления за рубежом обычно занимает несколько месяцев (2-4 месяца). После получения свидетельства участника программы дается определенный срок (обычно до 3 лет) на переезд. Процесс оформления документов уже в России (регистрация, получение РВП/гражданства) также занимает время – от нескольких месяцев до года, в зависимости от расторопности заявителя и работы миграционных служб региона. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Что такое \"подтверждение проживания\" по ВНЖ и как его проходить?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Каждый иностранный гражданин, имеющий вид на жительство в РФ, обязан ежегодно подавать в территориальный орган МВД уведомление о подтверждении своего проживания. К уведомлению прикладывается справка о доходах (справка с места работы, выписка с банковского счета и т.д.), подтверждающая, что у вас есть законный источник средств к существованию в размере не ниже прожиточного минимума. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Могут ли члены моей семьи получить гражданство РФ по программе, если они не переезжают вместе со мной сразу?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Члены семьи, вписанные в Свидетельство участника Госпрограммы, имеют право на упрощенное получение РВП и гражданства. Однако они должны въехать на территорию РФ и пройти соответствующие процедуры (постановка на учет, подача на РВП и гражданство) в период действия Свидетельства (5 лет). Если они решат переехать позже, им необходимо будет успеть оформить документы до истечения срока действия вашего Свидетельства. Важно, чтобы они были изначально включены в ваше заявление и Свидетельство. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Могут ли члены моей семьи получить гражданство РФ вместе со мной по Госпрограмме?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, члены семьи участника Государственной программы (супруг/супруга, дети, в том числе усыновленные, родители, дедушки, бабушки, внуки), вписанные в его свидетельство и переехавшие вместе с ним в РФ, также имеют право на получение РВП вне квоты и прием в гражданство РФ в упрощенном порядке на тех же условиях, что и сам участник. Они подают отдельные заявления и пакеты документов. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Существуют ли специальные программы или классы в школах для адаптации детей репатриантов, не очень хорошо владеющих русским языком?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Во многих регионах и отдельных школах существуют практики поддержки детей, для которых русский язык не является родным. Это могут быть: Дополнительные занятия по русскому языку как иностранному (РКИ). Работа школьного психолога и социального педагога, направленная на адаптацию ребенка. Назначение тьютора или куратора из числа учеников старших классов. Использование билингвальных учебных материалов (хотя это менее распространено). Наличие и формат таких программ сильно варьируется в зависимости от школы и региона. Родителям следует активно узнавать о доступных возможностях непосредственно в выбранном учебном заведении или в местном управлении образования. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Насколько сложно устроить детей в детский сад и школу после переезда?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Конституция РФ гарантирует право на общедоступное и бесплатное дошкольное, основное общее и среднее профессиональное образование. Дети участников госпрограммы и членов их семей имеют право на зачисление в детские сады и школы наравне с гражданами РФ. Сложности могут возникать: Очереди в детские сады: В крупных городах и густонаселенных районах может существовать очередь на получение места в муниципальном детском саду. Приоритет обычно отдается льготным категориям граждан РФ, но регионы могут устанавливать свои правила поддержки переселенцев. Возможно, придется подождать или рассмотреть вариант частного детского сада. Зачисление в школу: С зачислением в школу обычно проблем меньше, особенно если обращаться по месту регистрации. Ребенка обязаны принять при наличии свободных мест. Трудности могут возникнуть при желании попасть в конкретную \"престижную\" школу или гимназию, где может быть конкурсный отбор. Адаптация ребенка: Ребенку может потребоваться время на адаптацию к новой образовательной системе, коллективу и языковой среде (если язык не был родным). Школы обычно оказывают поддержку таким ученикам. Важно заранее изучить ситуацию с образовательными учреждениями в выбранном для переезда районе и начать процесс оформления как можно раньше. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Что делать, если мой ребенок совсем не говорит по-русски, а ему нужно идти в школу?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Во-первых, не стоит отчаиваться. При подаче документов в школу обязательно сообщите об уровне владения русским языком. Уточните, есть ли в школе или в районе подготовительные классы, группы интенсивного изучения русского языка или возможность дополнительных занятий РКИ. Параллельно ищите возможности для внешкольного изучения языка (курсы, репетиторы). Важно также сотрудничать с классным руководителем и психологом для разработки индивидуального плана адаптации. На начальном этапе основное внимание будет уделяться языку и социализации, а не только академической успеваемости. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Всегда ли нужно проходить процедуру признания (нострификации) школьного аттестата, полученного за границей?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Не всегда. Если аттестат выдан в стране, с которой у России есть соглашение о взаимном признании документов об образовании (например, многие страны СНГ), то процедура признания не требуется для продолжения обучения в школе или поступления в вуз на программы бакалавриата/специалитета. Однако, если такого соглашения нет, или если вы планируете использовать аттестат для поступления на некоторые специфические программы или для определенных видов профессиональной деятельности, признание через ФГБУ «Главэкспертцентр» может быть необходимо. Рекомендуется уточнять актуальный перечень стран с соглашениями на официальном сайте Рособрнадзора или Главэкспертцентра. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Может ли ребенок репатрианта посещать школу или детский сад, если у семьи еще нет российского гражданства, а только свидетельство участника Госпрограммы и регистрация по месту пребывания?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, может. Право на образование в России имеют все дети, законно находящиеся на территории РФ, независимо от их гражданства. Наличие свидетельства участника Госпрограммы и регистрации по месту жительства или пребывания являются достаточными основаниями для приема ребенка в детский сад или школу при наличии свободных мест (для школы – с учетом территориального закрепления). Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Существуют ли какие-то льготы или специальные условия для детей репатриантов при поступлении в российские вузы?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да. Соотечественники, в том числе участники Госпрограммы и их дети, имеют право поступать в российские вузы в рамках квоты Правительства РФ на образование иностранных граждан и лиц без гражданства. Это позволяет учиться бесплатно (на бюджетной основе) по результатам отбора, который проводит Россотрудничество или сами вузы. Кроме того, они могут поступать на общих основаниях, сдавая ЕГЭ или внутренние экзамены вуза, наравне с гражданами РФ, в том числе на бюджетные места по общему конкурсу. Наличие статуса соотечественника является одним из оснований для участия в конкурсе наравне с россиянами. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Что делать, если я репатриант, но у меня еще нет ни РВП, ни ВНЖ? Могу ли я получить медицинскую помощь?",
+        "acceptedAnswer": { "@type": "Answer", "text": "До получения РВП или ВНЖ вы не можете оформить полис ОМС и получать плановую бесплатную медицинскую помощь в рамках этой системы. Однако экстренная и неотложная медицинская помощь (при внезапных острых заболеваниях, состояниях, обострении хронических заболеваний, представляющих угрозу жизни пациента) оказывается всем лицам на территории РФ бесплатно и безотлагательно , независимо от наличия полиса ОМС или гражданства. Для получения плановой помощи до оформления ОМС можно воспользоваться платными медицинскими услугами или полисом добровольного медицинского страхования (ДМС), если он был приобретен. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какие именно документы нужны для оформления полиса ОМС репатрианту с ВНЖ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Репатрианту со статусом постоянно проживающего (имеющему вид на жительство - ВНЖ) для оформления полиса ОМС необходимо предоставить в выбранную страховую медицинскую организацию (СМО): Заявление о выборе (замене) СМО. Вид на жительство (ВНЖ) в РФ. СНИЛС (Страховой номер индивидуального лицевого счёта). Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Покрывает ли полис ОМС лечение в частных клиниках?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Полис ОМС покрывает лечение только в тех медицинских организациях (включая частные), которые включены в реестр медицинских организаций, осуществляющих деятельность в сфере ОМС на территории вашего региона. Многие частные клиники не работают в системе ОМС или предоставляют по ОМС лишь ограниченный перечень услуг. Информацию о том, какие клиники (государственные и частные) работают по ОМС в вашем регионе и какие услуги они предоставляют бесплатно по полису, можно уточнить в вашей страховой медицинской организации или на сайте территориального фонда ОМС (ТФОМС). Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Мой полис ОМС, полученный по РВП, скоро закончится вместе со сроком действия РВП. Что делать дальше?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Полис ОМС для временно проживающих иностранных граждан (имеющих РВП) действителен до конца срока действия РВП. Вам необходимо заблаговременно позаботиться о продлении своего легального статуса пребывания в РФ – либо получить вид на жительство (ВНЖ), либо гражданство РФ. После получения ВНЖ или паспорта гражданина РФ вам нужно будет обратиться в свою страховую медицинскую организацию для переоформления полиса ОМС как постоянно проживающему лицу или гражданину РФ. Если вы не продлите свой статус (РВП) и не получите новый (ВНЖ, гражданство), ваш полис ОМС станет недействительным, и вы потеряете право на бесплатную плановую медицинскую помощь. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Насколько критично знание русского языка для поиска работы не по рабочей специальности, а, например, в сфере IT или науки?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Знание русского языка остается важным фактором даже в сферах, где международное общение является нормой (как IT или наука). Хотя некоторые крупные международные компании или научные коллективы могут использовать английский как рабочий язык, большинство российских компаний и организаций ведут внутреннюю коммуникацию и документооборот на русском. Язык необходим для повседневного общения с коллегами, понимания корпоративной культуры, участия в совещаниях. Отсутствие или слабое знание русского языка может сузить круг доступных вакансий и затруднить карьерный рост, даже при высокой профессиональной квалификации. Однако в IT-сфере шансы найти работу с английским языком выше, чем во многих других отраслях. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Как можно построить успешный бизнес в новой стране?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Важнейшими аспектами являются тщательное изучение рынка, гибкость в принятии решений, поиск партнеров и постоянное обучение. Истории успешных предпринимателей показывают, что настойчивость и инновационный подход играют ключевую роль. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "С какими основными трудностями сталкиваются репатрианты при поиске работы, даже имея опыт и квалификацию?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Основные трудности включают: Непризнание/Необходимость подтверждения дипломов: Иностранные документы об образовании и квалификации часто требуют процедуры признания (нострификации) в России, что занимает время и средства. Несоответствие зарплатных ожиданий: Уровень оплаты труда в России, особенно в регионах, может быть ниже, чем в странах, откуда приезжает репатриант. Специфика местного рынка труда: Незнание местных реалий поиска работы, особенностей составления резюме, прохождения собеседований. Корпоративная культура также может отличаться. Конкуренция: В популярных отраслях и крупных городах конкуренция за хорошие вакансии высока. Языковой барьер (для неносителей): Хотя программа рассчитана на соотечественников, владеющих русским языком, у потомков эмигрантов или жителей стран с иной языковой средой могут возникать трудности с профессиональной лексикой или быстрым темпом речи. Предвзятость работодателей (редко): В редких случаях возможна некоторая настороженность работодателей к кандидатам с длительным опытом проживания за границей. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Реально ли найти работу в России с иностранным дипломом?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, реально, но может потребоваться процедура признания (нострификации) диплома, особенно для регулируемых профессий (врачи, юристы, педагоги). Во многих сферах (IT, маркетинг, менеджмент) важнее реальные навыки и опыт, подтвержденные портфолио или на собеседовании. Важно адаптировать резюме под местные стандарты и быть готовым подтвердить свою квалификацию. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какие основные меры государственной поддержки доступны репатриантам для открытия бизнеса?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Репатрианты, имеющие соответствующий правовой статус (гражданство, ВНЖ), могут воспользоваться общими программами поддержки МСП (льготные кредиты, гранты, субсидии через центры \"Мой бизнес\"), региональными программами для переселенцев, возможностью заключения социального контракта на открытие дела, а также налоговыми льготами для начинающих предпринимателей (налоговые каникулы, пониженные ставки по УСН/патенту). Конкретные условия зависят от региона. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "В каких отраслях репатриантам проще всего найти работу в России?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Стабильно высокий спрос наблюдается на квалифицированных рабочих и строителей, медицинский персонал (особенно в регионах), учителей, IT-специалистов, инженеров. Также всегда есть вакансии в сфере услуг, торговле и сельском хозяйстве. Выбор зависит от квалификации, опыта и региона проживания. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Нужно ли подтверждать иностранный диплом для работы в России?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Для трудоустройства по некоторым специальностям, требующим определенной квалификации (например, врач, учитель, инженер), может потребоваться процедура признания (нострификации) иностранного документа об образовании и/или квалификации. Информацию о необходимости и порядке процедуры можно получить в ФГБУ \"Главэкспертцентр\" и у потенциального работодателя. Для многих рабочих специальностей и должностей, не требующих лицензирования, подтверждение диплома может не понадобиться, но решение остается за работодателем. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "С какими основными трудностями сталкиваются переселенцы после приезда?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Наиболее частые трудности включают: Поиск работы: Не всегда удается быстро найти работу по специальности или с ожидаемым уровнем дохода. Жилищный вопрос: Сложности с арендой или покупкой жилья, особенно на первоначальном этапе и при ограниченных финансах. Адаптация: Привыкание к новому климату, менталитету, образу жизни, бюрократическим процедурам. Признание документов: Необходимость подтверждения (нострификации) дипломов об образовании или квалификации. Медицинское обслуживание: Понимание системы ОМС, поиск квалифицированных врачей. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какие основные документы потребуются репатрианту сразу после приезда в Россию для решения первоочередных задач (жилье, работа)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Первоочередными документами обычно являются: паспорт (заграничный и/или внутренний РФ, если уже получен), миграционная карта и уведомление о прибытии (регистрация по месту пребывания), ИНН (индивидуальный номер налогоплательщика), СНИЛС (страховой номер индивидуального лицевого счета). Для трудоустройства может понадобиться трудовая книжка (или сведения о трудовой деятельности) и документы об образовании/квалификации (возможно, с нотариальным переводом и нострификацией). Для аренды жилья обычно достаточно паспорта и регистрации. Точный перечень зависит от конкретной ситуации и статуса репатрианта (участник госпрограммы, наличие гражданства РФ и т.д.). Рекомендуется уточнять списки документов в соответствующих инстанциях (МФЦ, МВД, ПФР, ФНС). Больше информации можете получить в статье Пошаговое руководство по участию в Государственной программе переселения соотечественников" } },
+      { "@type": "Question", "name": "Как быстрее разобраться в особенностях российской бюрократии и оформлении документов (медицинский полис, запись к врачу, получение госуслуг)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Российская бюрократическая система может показаться сложной. Вот несколько советов: Портал Госуслуг (gosuslugi.ru): Зарегистрируйтесь на портале. Это основной инструмент для получения большинства государственных услуг онлайн, включая запись к врачу, подачу заявлений, получение справок и т.д. МФЦ (Многофункциональные центры \"Мои Документы\"): Эти центры работают по принципу \"одного окна\" и предоставляют множество государственных и муниципальных услуг. Сотрудники МФЦ могут проконсультировать по перечню документов и помочь с заполнением заявлений. Тематические форумы и сообщества: Ищите онлайн-группы репатриантов или экспатов, где люди делятся опытом взаимодействия с госучреждениями. Консультации: Не стесняйтесь задавать вопросы сотрудникам учреждений. Если ситуация сложная, можно обратиться за платной консультацией к юристам, специализирующимся на миграционных вопросах. Терпение и внимательность: Внимательно читайте инструкции, проверяйте перечни необходимых документов и будьте готовы, что некоторые процессы могут занять время. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какие шаги необходимо предпринять для успешной адаптации в России?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Репатриантам рекомендуется изучать русский язык, знакомиться с местной культурой, активно участвовать в общественной жизни и искать профессиональную поддержку через специализированные программы. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Что делать, если возникает чувство одиночества и ностальгия по родине?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Участие в местных культурных мероприятиях и общение с людьми, находящимися в схожей ситуации, поможет справиться с эмоциональными трудностями. Также полезным может оказаться общение с семьями и друзьями из родной страны через социальные сети и онлайн-платформы. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Сложно ли снять квартиру сразу после приезда?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Может быть сложно, так как у вас еще не будет постоянной регистрации и, возможно, официального подтверждения дохода в России. Арендодатели могут относиться с недоверием. Рекомендуется иметь достаточный запас средств на оплату аренды за несколько месяцев вперед и депозит, а также рассмотреть услуги риэлтора или начать поиск с временных вариантов жилья. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Какие основные причины отказа в выдаче Свидетельства участника или аннулирования статуса?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Основные причины отказа могут включать: несоответствие критериям соотечественника или требованиям региональной программы, предоставление ложных сведений или поддельных документов, наличие непогашенной судимости за тяжкие или особо тяжкие преступления, выступление за насильственное изменение основ конституционного строя РФ, создание угрозы безопасности РФ или ее граждан, наличие решения о нежелательности пребывания или запрете на въезд в РФ, выезд из выбранного региона на ПМЖ в другой регион РФ или за пределы РФ ранее, чем через 3 года после постановки на учет. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Что делать, если я получил РВП по Госпрограмме, но не успеваю подать на гражданство в течение срока действия РВП (3 года)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "РВП выдается на три года и не продлевается. Если участник Госпрограммы не успевает получить гражданство РФ в течение этого срока (например, из-за длительной процедуры отказа от иного гражданства или других обстоятельств), ему необходимо будет либо покинуть РФ по истечении срока действия РВП, либо заблаговременно (не позднее чем за 4 месяца до окончания срока РВП) подать документы на получение вида на жительство (ВНЖ). Получение ВНЖ позволит легально находиться в РФ и продолжить процедуру оформления гражданства, но уже на основании ВНЖ, а не РВП. Статус участника Госпрограммы при этом сохраняется, если не было оснований для его аннулирования. Больше информации можете получить в наших статьях и ответах на частые вопросы" } },
+      { "@type": "Question", "name": "Что делать, если в процессе репатриации изменилось законодательство?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ответ: Согласно ст. 41 ФЗ-62 \"О гражданстве РФ\", заявление о приеме в гражданство рассматривается по законодательству, действовавшему на момент подачи документов. Однако это не касается изменений, вступивших в силу до подачи заявления. Рекомендуется отслеживать изменения миграционного законодательства через официальные источники. Больше информации можете получить в наших статьях и ответах на частые вопросы" } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://migra-pro.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Вопросы", "item": "https://migra-pro.com/questions" },
+      { "@type": "ListItem", "position": 3, "name": "Гражданство РФ" }
+    ]
+  }
+  </script></head>
+<body>
+
+<header class="site-header">
+    <div class="header-top">
+      <div class="wrap header-top__inner">
+        <a class="brand" href="https://migra-pro.com/">
+          <img class="brand__img" src="logo-migrapro.png" alt="МиграПро — российское миграционное агентство" width="316" height="74">
+        </a>
+        <div class="header-meta">
+          <div class="header-rating" aria-label="Рейтинг на основе Яндекс">
+            <span class="header-rating__stars">★★★★★</span>
+            <span>Наш рейтинг на основе Яндекс</span>
+          </div>
+          <div class="header-messengers" aria-label="Мессенджеры">
+            <a href="#" title="MAX" aria-label="MAX">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-1.2 4.4L21 21l-5.2-1.1A8.5 8.5 0 1 1 21 11.5z"/><path d="m8 14 2.6-4 2.4 2.6L15.9 9"/></svg>
+            </a>
+            <a href="#" title="Telegram" aria-label="Telegram">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M22 3 2.5 11.2c-.7.3-.7.8-.1 1l4.8 1.5 1.9 5.8c.2.7.6.8 1.1.5l2.7-2.3 4.8 3.5c.6.3 1 .1 1.1-.5L22.8 4c.2-.8-.3-1.2-.8-1z"/><path d="m9.3 14.1 9.2-7.2"/></svg>
+            </a>
+          </div>
+          <div class="header-phone-block">
+            <a href="tel:+74958590051">+7 (495) 859-00-51</a>
+            <span>Пн–Пт: 09:00–18:00</span>
+          </div>
+        </div>
+        <div class="header-top__cta">
+          <a class="btn btn--primary btn--sm" href="#cta" data-modal-open data-modal-source="Шапка">Бесплатная консультация</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-wrap">
+      <div class="wrap">
+        <nav class="header-nav" aria-label="Основное меню">
+          <div class="nav-item nav-item--split" data-dropdown>
+            <a class="nav-link nav-link--label" href="#uslugi">Услуги</a>
+            <button class="nav-link nav-chev" type="button" aria-expanded="false" aria-controls="dropdown-uslugi" aria-label="Открыть список услуг">
+              <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+            <div class="dropdown" id="dropdown-uslugi" role="menu" hidden>
+              <a href="https://migra-pro.com/rvp"><span>РВП</span><em>Разрешение на временное проживание</em></a>
+              <a href="https://migra-pro.com/vnj"><span>ВНЖ</span><em>Вид на жительство, бессрочный</em></a>
+              <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf"><span>Гражданство РФ</span><em>Общий и упрощённый порядок</em></a>
+              <a href="https://migra-pro.com/uslugi"><span>Репатриация</span><em>Программа возвращения соотечественников</em></a>
+              <a href="https://migra-pro.com/cancellationofinter"><span>Запрет на въезд и депортация</span><em>Обжалование и снятие ограничений</em></a>
+              <a href="https://migra-pro.com/online_consult"><span>Консультация миграционного юриста</span><em>Разбор ситуации и план действий</em></a>
+              <a class="dropdown__all" href="https://migra-pro.com/uslugi">Все услуги и цены →</a>
+            </div>
+          </div>
+          <a class="nav-link is-active" href="#top" aria-current="page">Работодателям</a>
+          <a class="nav-link" href="https://migra-pro.com/about">О нас</a>
+          <a class="nav-link" href="https://migra-pro.com/informaciya">База знаний</a>
+          <a class="nav-link" href="#otzyvy">Отзывы</a>
+          <a class="nav-link" href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<main id="top">
+
+  <section class="qa-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки">
+        <a href="https://migra-pro.com/">Главная</a> <span>&rarr;</span>
+        <a href="https://migra-pro.com/questions">Вопросы</a> <span>&rarr;</span>
+        <span>Гражданство РФ</span>
+      </nav>
+      <h1>Гражданство РФ: что это такое и чем отличается от ВНЖ</h1>
+      <div class="qa-lead">
+        <p>Здесь собраны короткие ответы на вопросы о том, что такое гражданство России и чем оно отличается от других статусов — вида на жительство, ПМЖ, разрешения на временное проживание. Если вы уже определились со статусом и ищете порядок оформления, переходите к <a href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf">разбору путей получения гражданства</a>.</p>
+        <p>Вопросы разложены по темам: сначала понятия и различия статусов, дальше — условия, документы, сроки и то, что происходит после получения паспорта. Когда вопрос не типовой и ответа в списке нет, опишите ситуацию в форме внизу страницы.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="qa-nav">
+    <div class="wrap">
+      <nav class="qa-tabs" aria-label="Разделы вопросов">
+        <a class="qa-tab is-active" href="https://migra-pro.com/questions/grajdanstvo" aria-current="page">Гражданство РФ</a>
+        <a class="qa-tab" href="https://migra-pro.com/questions/repatriacia">Репатриация</a>
+        <a class="qa-tab" href="https://migra-pro.com/questions/rvp">РВП</a>
+        <a class="qa-tab" href="https://migra-pro.com/questions/vnj">Вид на жительство</a>
+        <a class="qa-tab" href="https://migra-pro.com/questions/rnr">Разрешение на работу</a>
+      </nav>
+
+      <div class="qa-finder">
+        <label class="qa-search">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16.5 16.5 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input type="search" id="qa-search-input" placeholder="Найти вопрос: ВНЖ, пошлина, экзамен, присяга…" autocomplete="off">
+        </label>
+        <p class="qa-found" id="qa-found" hidden></p>
+        <ul class="qa-toc">
+          <li><a href="#ponyatiya">Что такое гражданство и чем отличается от других статусов<span>6</span></a></li>
+          <li><a href="#usloviya">Условия и основания<span>5</span></a></li>
+          <li><a href="#dokumenty">Документы и подача<span>5</span></a></li>
+          <li><a href="#sroki">Сроки и статус заявления<span>5</span></a></li>
+          <li><a href="#posle">После получения гражданства<span>4</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="qa-body"><div class="wrap">
+
+    <section class="qa-group" id="ponyatiya">
+      <h2>Что такое гражданство и чем отличается от других статусов<span class="qa-group__count">6</span></h2>
+
+      <details class="qa-item" open>
+        <summary>Что такое гражданство Российской Федерации?</summary>
+        <div class="qa-answer">
+          <p>Гражданство России — это устойчивая правовая связь человека с государством, выражающаяся в совокупности их взаимных прав и обязанностей. Проще говоря: государство защищает вас, в том числе за границей, а вы несёте обязанности гражданина — платите налоги, соблюдаете законы, мужчины подлежат воинскому учёту. Гражданство подтверждается паспортом гражданина РФ.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Чем гражданство отличается от вида на жительство?</summary>
+        <div class="qa-answer">
+          <p>Вид на жительство — это разрешение долго жить в стране, оставаясь гражданином другого государства. Гражданство — это принадлежность к государству. Отсюда все различия:</p>
+          <ol>
+            <li>Паспорт. У гражданина — паспорт России, у обладателя вида на жительство — свой национальный паспорт плюс документ о виде на жительство.</li>
+            <li>Выборы. Голосовать и избираться может только гражданин.</li>
+            <li>Государственная служба. Работать в органах власти, полиции, прокуратуре может только гражданин.</li>
+            <li>Выезд и возвращение. Гражданин въезжает в Россию без ограничений; обладатель вида на жительство теряет статус, если проводит за пределами страны более шести месяцев в году.</li>
+            <li>Воинская обязанность. Появляется только с гражданством.</li>
+            <li>Продление. Вид на жительство бессрочный, но требует ежегодного подтверждения проживания; гражданство подтверждать не нужно.</li>
+          </ol>
+          <p class="osnovanie">Основание: статья 8 Федерального закона от 25.07.2002 № 115-ФЗ. <span class="req">[REQ]</span> формулировки про утрату статуса при отсутствии более шести месяцев и про ежегодное подтверждение — на вычитку юристу.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Что такое ПМЖ и чем оно отличается от ВНЖ?</summary>
+        <div class="qa-answer">
+          <p>В российском законодательстве термина «ПМЖ» нет. В разговорной речи так называют вид на жительство — документ, дающий право постоянно проживать в стране. Если вы встретили «ПМЖ в России» в статье или объявлении, речь почти всегда о виде на жительство.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Что такое натурализация?</summary>
+        <div class="qa-answer">
+          <p>Натурализация — общепринятый международный термин для приёма в гражданство человека, который родился гражданином другого государства. В российском законе это называется «приём в гражданство Российской Федерации». Натурализация противопоставляется приобретению гражданства по рождению.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Кто такое лицо без гражданства?</summary>
+        <div class="qa-answer">
+          <p>Это человек, который не является гражданином России и не имеет доказательств принадлежности к гражданству другого государства. Такие люди живут в России по особым правилам: для них предусмотрены отдельные основания получения статуса и освобождение от государственной пошлины при приёме в гражданство.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Чем гражданство отличается от национальности?</summary>
+        <div class="qa-answer">
+          <p>Гражданство — правовая связь с государством, национальность — этническая принадлежность. Гражданин России может быть по национальности татарином, армянином, немцем — на объём прав это не влияет. В российском паспорте графы «национальность» нет с 1997 года.</p>
+        </div>
+      </details>
+
+      <p class="qa-group__more"><a href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf">Разбор темы: все пути получения гражданства РФ</a></p>
+    </section>
+
+    <section class="qa-group" id="usloviya">
+      <h2>Условия и основания<span class="qa-group__count">5</span></h2>
+
+      <details class="qa-item" open>
+        <summary>В чём разница между общим и упрощённым порядком?</summary>
+        <div class="qa-answer">
+          <p>В общем порядке нужно прожить в России пять лет непрерывно по виду на жительство. Упрощённый порядок это требование снимает: заявление подаётся независимо от срока проживания, если есть одно из оснований — родитель или ребёнок гражданин России, брак с гражданином России при наличии общего ребёнка, рождение на территории РСФСР, диплом российского вуза с отличием, статус носителя русского языка, участие в программе переселения.</p>
+          <p class="osnovanie">Основание: статьи 15 и 16 Федерального закона от 28.04.2023 № 138-ФЗ.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Нужно ли отказываться от прежнего гражданства?</summary>
+        <div class="qa-answer">
+          <p>Нет. Требование отказаться от прежнего гражданства действовало до 2023 года и отменено вместе с прежним законом. Достаточно подать заявление о приёме в гражданство России.</p>
+          <p class="osnovanie">Основание: часть 1 статьи 15 Федерального закона от 28.04.2023 № 138-ФЗ.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Нужно ли сдавать экзамен по русскому языку?</summary>
+        <div class="qa-answer">
+          <p>Да, за исключением двух категорий: людей, достигших семидесяти лет, и инвалидов I группы. Экзамен проверяет владение русским языком, знание истории России и основ законодательства.</p>
+          <p class="osnovanie">Основание: часть 3 статьи 15 Федерального закона от 28.04.2023 № 138-ФЗ.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Можно ли подать на гражданство без вида на жительство?</summary>
+        <div class="qa-answer">
+          <p>Нет. Постоянное проживание в России, то есть наличие действующего вида на жительство, — общее требование и для общего, и для упрощённого порядка. Упрощённый порядок снимает требование к сроку проживания, но не отменяет сам вид на жительство.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Можно ли подать документы, проживая в другом регионе?</summary>
+        <div class="qa-answer">
+          <p>Нет. Заявление подаётся в подразделение по вопросам миграции МВД по месту жительства — то есть по адресу регистрации по виду на жительство. В другом регионе документы не примут.</p>
+        </div>
+      </details>
+
+      <p class="qa-group__more"><a href="https://migra-pro.com/blog/grajdanstvo/kak-polychit-grazhdanstvo-v-uproshenom-poryadke">Разбор темы: все основания упрощённого порядка</a></p>
+    </section>
+
+    <section class="qa-group" id="dokumenty">
+      <h2>Документы и подача<span class="qa-group__count">5</span></h2>
+
+      <details class="qa-item" open>
+        <summary>Какие документы нужны для подачи на гражданство?</summary>
+        <div class="qa-answer">
+          <p>Основной комплект: заявление в двух экземплярах, национальный паспорт с нотариальным переводом, вид на жительство, сертификат об экзамене, документы о законном источнике средств, фотографии, документы по вашему основанию и квитанция об оплате пошлины. Перечень отличается в зависимости от основания.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Сколько стоит оформление гражданства?</summary>
+        <div class="qa-answer">
+          <p>Государственная пошлина — 50 000 ₽; размер действует с 26 июля 2026 года. От пошлины освобождены лица без гражданства из числа бывших граждан СССР и участники государственной программы переселения с членами семьи.</p>
+          <p class="osnovanie">Основание: подпункт 25 пункта 1 статьи 333.28 и пункт 2 статьи 333.29 Налогового кодекса в редакции Федерального закона от 26.06.2026 № 190-ФЗ.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Можно ли подать документы через представителя?</summary>
+        <div class="qa-answer">
+          <p>Заявление о приёме в гражданство подаётся лично. Представитель может помочь подготовить комплект и сопровождать вас, но подпись на заявлении и подача — ваши.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Что делать, если документ на иностранном языке?</summary>
+        <div class="qa-answer">
+          <p>Каждый документ на иностранном языке переводится на русский, и перевод заверяется нотариально. Документы, выданные за границей, дополнительно требуют апостиля или консульской легализации — кроме случаев, когда с государством есть договор, отменяющий это требование.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Что будет, если в документах ошибка?</summary>
+        <div class="qa-answer">
+          <p>Инспектор проверяет комплектность при приёме. Неполный комплект или ошибка в заявлении означают возврат документов на доработку — и отсчёт срока рассмотрения в этом случае не начинается.</p>
+        </div>
+      </details>
+
+      <p class="qa-group__more"><a href="https://migra-pro.com/blog/grajdanstvo/dokumenti-dlya-polychenia-grajdanstva-rf">Разбор темы: перечень документов по основаниям</a></p>
+    </section>
+
+    <section class="qa-group" id="sroki">
+      <h2>Сроки и статус заявления<span class="qa-group__count">5</span></h2>
+
+      <details class="qa-item" open>
+        <summary>Сколько времени занимает получение российского гражданства?</summary>
+        <div class="qa-answer">
+          <p>Решение по заявлению принимается в срок до трёх месяцев со дня, когда его приняли к рассмотрению; срок может быть продлён на проверки, но не более чем ещё на три месяца. Если заявление подано через консульство за рубежом, срок — до шести месяцев.</p>
+          <p class="osnovanie">Основание: части 2–4 статьи 37 Федерального закона от 28.04.2023 № 138-ФЗ.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>С какого момента идёт отсчёт срока?</summary>
+        <div class="qa-answer">
+          <p>Не с того дня, когда вы принесли документы, а с того, когда их приняли к рассмотрению. Если комплект вернули на доработку, срок ещё не пошёл.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Можно ли отследить статус заявления онлайн?</summary>
+        <div class="qa-answer">
+          <p>Отдельного сервиса проверки готовности гражданства у МВД нет — есть информационный раздел общего назначения. Надёжный способ узнать решение — обращение в то подразделение, куда подавались документы.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Что делать, если срок вышел, а решения нет?</summary>
+        <div class="qa-answer">
+          <p>Сначала уточните в подразделении, не было ли продления: закон допускает продлить срок на проверки не более чем на три месяца. Если предельный срок истёк, бездействие обжалуется в вышестоящий орган или в суд.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Можно ли ускорить рассмотрение?</summary>
+        <div class="qa-answer">
+          <p>Законных способов сократить установленный срок нет. Реально влияет другое: полный и правильно оформленный комплект документов с первого раза — тогда срок начинает идти сразу, а не после доработки.</p>
+        </div>
+      </details>
+
+      <p class="qa-group__more"><a href="https://migra-pro.com/blog/grajdanstvo/proverka-gotovnosti-grazhdanstva-rf">Разбор темы: как узнать решение по заявлению</a></p>
+    </section>
+
+    <section class="qa-group" id="posle">
+      <h2>После получения гражданства<span class="qa-group__count">4</span></h2>
+
+      <details class="qa-item" open>
+        <summary>Обязательно ли приносить Присягу?</summary>
+        <div class="qa-answer">
+          <p>Да, решение о приёме в гражданство вступает в силу только после принесения Присяги. От неё освобождены не достигшие восемнадцати лет, а также признанные недееспособными или ограниченными в дееспособности.</p>
+          <p class="osnovanie">Основание: статья 21 Федерального закона от 28.04.2023 № 138-ФЗ.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Сколько занимает оформление паспорта после гражданства?</summary>
+        <div class="qa-answer">
+          <p>Паспорт оформляется отдельной процедурой после вступления решения в силу. Это самостоятельная услуга со своей пошлиной и своими сроками.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Нужно ли вставать на воинский учёт?</summary>
+        <div class="qa-answer">
+          <p>Мужчинам от 18 до 30 лет — да, после получения гражданства. Неисполнение обязанности по первоначальной постановке на воинский учёт закон относит к основаниям прекращения приобретённого гражданства.</p>
+          <p class="osnovanie">Основание: подпункт «в» пункта 2 части 1 статьи 22 Федерального закона от 28.04.2023 № 138-ФЗ в редакции Федерального закона от 08.08.2024 № 281-ФЗ.</p>
+        </div>
+      </details>
+
+      <details class="qa-item">
+        <summary>Разрешено ли иметь два гражданства?</summary>
+        <div class="qa-answer">
+          <p>Иметь второе гражданство закон не запрещает, но о нём нужно уведомить МВД. Обязанность уведомить лежит на самом человеке, и за несообщение предусмотрена ответственность.</p>
+        </div>
+      </details>
+
+      <p class="qa-group__more"><a href="https://migra-pro.com/blog/grajdanstvo/dual/and/second/citizenship/in/russia">Разбор темы: двойное и второе гражданство</a></p>
+    </section>
+
+  </div></div>
+
+  <section class="qa-capture" id="pomoshch">
+    <div class="wrap qa-capture__grid">
+
+      <div class="qa-capture__text">
+        <h2>Вашего вопроса здесь нет</h2>
+        <p>Так бывает с нестандартными случаями: документы утрачены, прежнее гражданство СССР без подтверждения, брак без общего ребёнка, отказ по прежнему заявлению, судимость в прошлом.</p>
+        <ul class="qa-capture__list">
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Скажем, какое основание вам подходит и что оно требует</span>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Проверим комплект документов до подачи</span>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Подскажем, что делать, если по заявлению уже был отказ</span>
+          </li>
+        </ul>
+        <p class="qa-capture__links"><a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Помощь в получении гражданства РФ</a> · <a data-goal="checklist_grazhdanstvo" href="https://migra-pro.com/check-list/poluchenie-grazhdanstva-rf">чек-лист по девяти этапам</a></p>
+      </div>
+
+      <div class="qa-capture__form">
+        <form class="lead-form lead-form--inline" data-goal="qa_lead">
+          <div class="lead-form__pair">
+            <label>Как к вам обращаться
+              <input type="text" name="name" autocomplete="name" placeholder="Имя">
+            </label>
+            <label>Телефон или мессенджер
+              <input type="tel" name="phone" autocomplete="tel" placeholder="+7 ___ ___-__-__">
+            </label>
+          </div>
+          <label>Ваш вопрос
+            <textarea name="task" rows="3" placeholder="Например: есть ВНЖ, жена гражданка РФ, общего ребёнка нет — какой у меня путь"></textarea>
+          </label>
+          <button class="btn btn--brand" type="submit">Задать вопрос юристу</button>
+          <p class="qa-capture__note">Отвечает юрист по миграционному праву. Обычно в течение рабочего дня.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    var input = document.getElementById("qa-search-input");
+    var found = document.getElementById("qa-found");
+    if (!input) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll(".qa-item"));
+    var groups = Array.prototype.slice.call(document.querySelectorAll(".qa-group"));
+    input.addEventListener("input", function () {
+      var q = input.value.trim().toLowerCase();
+      if (!q) {
+        items.forEach(function (i) { i.hidden = false; });
+        groups.forEach(function (g) { g.hidden = false; });
+        found.hidden = true;
+        return;
+      }
+      var n = 0;
+      items.forEach(function (i) {
+        var t = i.querySelector("summary").textContent.toLowerCase();
+        var hit = t.indexOf(q) !== -1;
+        i.hidden = !hit;
+        if (hit) { n++; }
+      });
+      groups.forEach(function (g) {
+        g.hidden = g.querySelectorAll(".qa-item:not([hidden])").length === 0;
+      });
+      found.hidden = false;
+      found.textContent = n ? ("Найдено вопросов: " + n) : "Ничего не нашлось — опишите свой случай в форме внизу страницы";
+    });
+  })();
+  </script>
+
+</main>
+
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-cta">
+      <div>
+        <strong>Оформляете иностранных сотрудников?</strong>
+        <p>Разберём задачу на бесплатной консультации и назовём сроки и стоимость.</p>
+      </div>
+      <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Подвал">Бесплатная консультация</a>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <h3>Работодателям</h3>
+        <ul>
+          <li><a href="#vks">Оформление ВКС</a></li>
+          <li><a href="#viza">Визовый персонал и квота</a></li>
+          <li><a href="#viza">Приглашение и рабочая виза</a></li>
+          <li><a href="#audit">Аудит документов сотрудников</a></li>
+          <li><a href="#audit">Сопровождение миграционного учёта</a></li>
+          <li><a href="#ceny">Цены и сроки</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Частным лицам</h3>
+        <ul>
+          <li><a href="https://migra-pro.com/">Оформление статуса себе и семье</a></li>
+          <li><a href="https://migra-pro.com/rvp">РВП</a></li>
+          <li><a href="https://migra-pro.com/vnj">ВНЖ</a></li>
+          <li><a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></li>
+          <li><a href="https://migra-pro.com/online_consult">Консультация миграционного юриста</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <ul>
+          <li><a class="footer-phone" href="tel:+74958590051">+7 (495) 859-00-51</a></li>
+          <li>Пн–Пт, 09:00–18:00</li>
+          <li>Подольск, ул. Профсоюзная, 4</li>
+          <li>Одинцово, п. Новоивановское, ул. Калинина, 8</li>
+          <li><a href="#contacts">Показать контакты →</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#" rel="nofollow">MAX</a>
+          <a href="#" rel="nofollow">Telegram</a>
+        </div>
+      </div>
+      <div>
+        <h3>Компания</h3>
+        <ul>
+          <li><a href="https://migra-pro.com/about">О нас</a></li>
+          <li><a href="https://migra-pro.com/informaciya">База знаний</a></li>
+          <li><a href="https://migra-pro.com/questions">Вопросы и ответы</a></li>
+          <li><a href="https://migra-pro.com/">На главную</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div><span class="req">[REQ: юридическое название, ИНН, ОГРН]</span> · Оказываем юридические и консультационные услуги в сфере миграционного права. Решение по документам принимают государственные органы. ⚖️</div>
+      <div class="footer-legal__links">
+        <a href="#">Политика конфиденциальности <span class="req">[REQ]</span></a>
+        <a href="#">Согласие на обработку персональных данных <span class="req">[REQ]</span></a>
+      </div>
+      <div>© 2026 Migra-Pro · концепт страницы «Работодателям» (/rnr), не рабочая версия сайта</div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal-consult" role="dialog" aria-modal="true" aria-labelledby="modal-consult-title" hidden>
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal__dialog">
+    <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">✕</button>
+    <h2 id="modal-consult-title">Бесплатная консультация для компании</h2>
+    <p class="modal__lead">Оставьте имя и телефон — перезвоним, уточним задачу по сотрудникам и назовём порядок действий.</p>
+    <form class="lead-form" data-lead-form novalidate>
+      <input type="hidden" name="source" value="">
+      <div class="lead-form__row" style="grid-template-columns:1fr;">
+        <input type="text" name="name" placeholder="Имя" autocomplete="given-name" required>
+        <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+      </div>
+      <button class="btn btn--primary" type="submit">Получить консультацию</button>
+      <label class="lead-form__agree">
+        <input type="checkbox" name="agree" required>
+        <span>Согласен на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span>
+      </label>
+      <p class="lead-form__note">Перезваниваем Пн–Пт с 09:00 до 18:00.</p>
+      <div class="lead-form__done" role="status">Заявка отправлена. Юрист перезвонит по указанному номеру. <em>(в концепте форма ничего не отправляет)</em></div>
+    </form>
+    <p class="modal__alt">Нужен ответ прямо сейчас — напишите в <a href="#" rel="nofollow">MAX</a> или <a href="#" rel="nofollow">Telegram</a>.</p>
+  </div>
+</div>
+
+<div class="mobile-bar">
+  <a class="btn btn--secondary" href="tel:+74958590051">Позвонить</a>
+  <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Мобильная панель">Консультация</a>
+</div>
+
+<script>
+  /* Квиз квалификации: три шага → предварительный путь оформления */
+  (function () {
+    var quiz = document.querySelector('[data-quiz]');
+    if (!quiz) return;
+    var steps = quiz.querySelectorAll('.quiz__step');
+    var result = quiz.querySelector('[data-quiz-result]');
+    var text = quiz.querySelector('[data-quiz-text]');
+    var answers = {};
+
+    var byTask = {
+      privezti: 'Ваш путь — ввоз по квоте: заявка о потребности, разрешение на привлечение, приглашение, рабочая виза и разрешение на работу на каждого сотрудника. Подбор ведём в Индии, Вьетнаме или Бангладеш.',
+      vks: 'Ваш путь — статус ВКС: квота не нужна, разрешение на работу выдаётся на срок договора до трёх лет, семья специалиста может получить визы. Сначала проверим, проходит ли специалист по требованиям к ВКС.',
+      uzhe: 'Начинаем с бесплатного аудита: проверим разрешительные документы, уведомления в МВД, договоры и патенты, отдадим перечень несоответствий и план устранения. Дальше — сопровождение учёта, если оно нужно.'
+    };
+    var byCount = {
+      one: ' Задача точечная — берём такие без минимального объёма.',
+      few: ' Для группы до десяти человек считаем смету по каждой позиции и согласуем график.',
+      many: ' Для объёма больше десяти человек делаем индивидуальный расчёт и график по партиям.'
+    };
+    var byWhen = {
+      urgent: ' По срокам: месяц — мало для квотного пути, поэтому в приоритете рассмотрим внеквотные должности, ВКС или легализацию тех, кто уже в России.',
+      normal: ' По срокам: два-три месяца — рабочий горизонт для оформления, но заявку на квоту нужно успеть подать в установленный срок.',
+      plan: ' По срокам: заранее — лучший вариант, успеваем в окно подачи заявки на квоту и планируем выход сотрудников к нужной дате.'
+    };
+
+    function show(n) {
+      Array.prototype.forEach.call(steps, function (s) {
+        if (s.getAttribute('data-step') === String(n)) s.removeAttribute('hidden');
+        else s.setAttribute('hidden', '');
+      });
+    }
+
+    quiz.addEventListener('click', function (e) {
+      var opt = e.target.closest('[data-q]');
+      if (opt) {
+        answers[opt.getAttribute('data-q')] = opt.getAttribute('data-val');
+        if (!answers.task) { show(1); return; }
+        if (!answers.count) { show(2); return; }
+        if (!answers.when) { show(3); return; }
+        Array.prototype.forEach.call(steps, function (s) { s.setAttribute('hidden', ''); });
+        text.textContent = (byTask[answers.task] || '') + (byCount[answers.count] || '') + (byWhen[answers.when] || '');
+        result.removeAttribute('hidden');
+        var hidden = document.querySelector('#modal-consult input[name="source"]');
+        if (hidden) hidden.value = 'Квиз: ' + answers.task + '/' + answers.count + '/' + answers.when;
+        return;
+      }
+      if (e.target.closest('[data-quiz-reset]')) {
+        answers = {};
+        result.setAttribute('hidden', '');
+        show(1);
+      }
+    });
+  })();
+</script>
+
+<script>
+    (function () {
+      var root = document.querySelector('[data-dropdown]');
+      if (!root) return;
+      var btn = root.querySelector('.nav-chev');
+      var panel = root.querySelector('.dropdown');
+      function setOpen(open) {
+        root.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) panel.removeAttribute('hidden');
+        else panel.setAttribute('hidden', '');
+      }
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setOpen(!root.classList.contains('is-open'));
+      });
+      document.addEventListener('click', function (e) {
+        if (!root.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+
+    (function () {
+      var map = document.querySelector('[data-map]');
+      if (!map) return;
+      var frame = map.querySelector('[data-map-frame]');
+      var tabs = map.querySelectorAll('.map-tab');
+      Array.prototype.forEach.call(tabs, function (tab) {
+        tab.addEventListener('click', function () {
+          Array.prototype.forEach.call(tabs, function (t) {
+            t.classList.remove('is-active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('is-active');
+          tab.setAttribute('aria-selected', 'true');
+          var q = tab.getAttribute('data-map-query');
+          frame.src = 'https://yandex.ru/map-widget/v1/?text=' + encodeURIComponent(q) + '&z=16';
+          frame.title = 'Карта: ' + tab.textContent.trim();
+        });
+      });
+    })();
+
+    (function () {
+      var modal = document.getElementById('modal-consult');
+      if (!modal) return;
+      var sourceField = modal.querySelector('input[name="source"]');
+      var lastFocused = null;
+
+      function open(source) {
+        lastFocused = document.activeElement;
+        if (sourceField) sourceField.value = source || '';
+        modal.removeAttribute('hidden');
+        modal.classList.add('is-open');
+        document.body.classList.add('is-locked');
+        var first = modal.querySelector('input[name="name"]');
+        if (first) first.focus();
+      }
+      function close() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('hidden', '');
+        document.body.classList.remove('is-locked');
+        if (lastFocused) lastFocused.focus();
+      }
+
+      document.addEventListener('click', function (e) {
+        var opener = e.target.closest('[data-modal-open]');
+        if (opener) {
+          e.preventDefault();
+          open(opener.getAttribute('data-modal-source'));
+          return;
+        }
+        if (e.target.closest('[data-modal-close]')) {
+          e.preventDefault();
+          close();
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+      });
+    })();
+
+    (function () {
+      Array.prototype.forEach.call(document.querySelectorAll('[data-lead-form]'), function (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = form.querySelector('input[name="name"]');
+          var phone = form.querySelector('input[name="phone"]');
+          var agree = form.querySelector('input[name="agree"]');
+          var invalid = null;
+          if (!name.value.trim()) invalid = name;
+          else if (phone.value.replace(/\D/g, '').length < 10) invalid = phone;
+          else if (!agree.checked) invalid = agree;
+          if (invalid) { invalid.focus(); return; }
+          form.classList.add('is-sent');
+        });
+      });
+    })();
+  </script>
+
+
+</body>
+</html>
