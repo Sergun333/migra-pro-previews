@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>РВП в Москве и Московской области — помощь в оформлении</title>
+  <link rel="canonical" href="https://migra-pro.com/rvp">
+  <meta name="description" content="Ведём миграционное дело по РВП в Москве и МО: подберём основание, соберём документы, запишем на подачу и сопроводим в МВД. Бесплатная консультация.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --mp-primary: #1a4fb0;
+      --mp-primary-dark: #1a4694;
+      --mp-primary-light: #eaf1f6;
+      --mp-accent: #cc0a0a;
+      --mp-accent-hover: #a30808;
+      --mp-text: #1a1b1d;
+      --mp-muted: #5c6570;
+      --mp-border: #dde3e8;
+      --mp-bg: #f6f8fa;
+      --mp-white: #fff;
+      --mp-radius: 16px;
+      --mp-radius-sm: 12px;
+      --mp-shadow: 0 2px 10px rgba(20, 33, 61, .06), 0 8px 24px rgba(33, 84, 178, .08);
+      --mp-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --mp-max: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--mp-font); font-size: 17px; line-height: 1.55; color: var(--mp-text); background: var(--mp-white); }
+    a { color: var(--mp-primary); }
+    .wrap { width: min(100% - 40px, var(--mp-max)); margin-inline: auto; }
+
+    .design-note { background: #fff8e6; border-bottom: 1px solid #e8d59a; color: #6b5500; font-size: .85rem; padding: 10px 16px; text-align: center; }
+    .req { background: #fff3cd; border-bottom: 2px dotted #b8860b; padding: 0 2px; }
+
+    /* Шапка */
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--mp-white); box-shadow: 0 4px 18px rgba(20,33,61,.08); }
+    .header-top__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .brand__mark { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--mp-primary) 0 50%, var(--mp-accent) 50% 100%); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: .85rem; }
+    .brand__name { font-weight: 800; font-size: 1.15rem; color: var(--mp-primary); line-height: 1.1; }
+    .brand__name em { font-style: normal; color: var(--mp-accent); }
+    .brand__sub { display: block; font-size: .72rem; color: var(--mp-muted); margin-top: 2px; }
+    .header-phone-block { text-align: right; line-height: 1.25; }
+    .header-phone-block a { color: var(--mp-text); font-weight: 800; text-decoration: none; font-size: 1.05rem; }
+    .header-phone-block span { display: block; font-size: .75rem; color: var(--mp-muted); }
+
+    .btn { display: inline-block; border: 0; cursor: pointer; font-family: inherit; font-weight: 700; text-decoration: none; text-align: center; border-radius: var(--mp-radius-sm); padding: 14px 26px; font-size: 1rem; transition: background .15s ease; }
+    .btn--accent { background: var(--mp-accent); color: #fff; }
+    .btn--accent:hover { background: var(--mp-accent-hover); }
+    .btn--ghost { background: var(--mp-primary-light); color: var(--mp-primary); }
+    .btn--wide { width: 100%; }
+
+    section { padding: 56px 0; }
+    section:nth-of-type(even) { background: var(--mp-bg); }
+    h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); line-height: 1.2; letter-spacing: -.02em; margin: 0 0 8px; }
+    .lead { color: var(--mp-muted); margin: 0 0 28px; max-width: 70ch; }
+
+    /* Первый экран */
+    .hero { background: linear-gradient(180deg, var(--mp-primary-light) 0%, var(--mp-white) 100%); padding: 56px 0 48px; }
+    .hero h1 { font-size: clamp(1.7rem, 1.2rem + 2.2vw, 2.7rem); line-height: 1.15; letter-spacing: -.03em; margin: 0 0 14px; }
+    .hero p { font-size: 1.1rem; color: var(--mp-muted); max-width: 62ch; margin: 0 0 26px; }
+    .trust { display: grid; gap: 12px; grid-template-columns: 1fr; margin: 28px 0 0; padding: 0; list-style: none; }
+    @media (min-width: 760px) { .trust { grid-template-columns: repeat(3, 1fr); } }
+    .trust li { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 14px 16px; font-weight: 600; font-size: .95rem; box-shadow: var(--mp-shadow); }
+
+    .cards { display: grid; gap: 16px; grid-template-columns: 1fr; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 720px) { .cards--2 { grid-template-columns: repeat(2, 1fr); } .cards--3 { grid-template-columns: repeat(3, 1fr); } .cards--4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .cards--4 { grid-template-columns: repeat(4, 1fr); } }
+    .card { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 20px; box-shadow: var(--mp-shadow); }
+    .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--mp-muted); font-size: .95rem; }
+
+    ul.plain { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    ul.plain li { position: relative; padding-left: 28px; }
+    ul.plain li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--mp-primary); font-weight: 800; }
+    ul.pay li::before { content: "₽"; color: var(--mp-accent); }
+
+    .osn { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .osn li { background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 14px 18px; }
+    .osn a { font-weight: 700; }
+
+    .steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+    .steps li { counter-increment: s; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 18px 18px 18px 68px; position: relative; }
+    .steps li::before { content: counter(s); position: absolute; left: 18px; top: 16px; width: 34px; height: 34px; border-radius: 50%; background: var(--mp-primary); color: #fff; display: grid; place-items: center; font-weight: 800; }
+    .steps b { display: block; margin-bottom: 4px; }
+
+    .panels { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 820px) { .panels { grid-template-columns: 1fr 1fr; } }
+    .panel { border-radius: var(--mp-radius); padding: 22px; border: 1px solid var(--mp-border); }
+    .panel--in { background: var(--mp-primary-light); }
+    .panel--out { background: var(--mp-white); }
+    .panel h3 { margin: 0 0 14px; font-size: 1.1rem; }
+
+    table.price { width: 100%; border-collapse: collapse; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); overflow: hidden; }
+    table.price th, table.price td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--mp-border); vertical-align: top; font-size: .95rem; }
+    table.price th { background: var(--mp-primary-light); font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; color: var(--mp-primary-dark); }
+    table.price td:last-child { font-weight: 800; white-space: nowrap; }
+    table.price tr:last-child td { border-bottom: 0; }
+    .price-note { margin: 16px 0 0; color: var(--mp-muted); font-size: .95rem; }
+    @media (max-width: 700px) {
+      table.price thead { display: none; }
+      table.price tr { display: block; border-bottom: 1px solid var(--mp-border); padding: 8px 0; }
+      table.price td { display: block; border: 0; padding: 4px 16px; }
+      table.price td::before { content: attr(data-l); display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; color: var(--mp-muted); }
+    }
+
+    .cmp { display: grid; gap: 12px; }
+    .cmp__row { display: grid; gap: 8px; grid-template-columns: 1fr; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 14px 16px; }
+    @media (min-width: 860px) { .cmp__row { grid-template-columns: 180px 1fr 1fr; align-items: start; } }
+    .cmp__stage { font-weight: 700; }
+    .cmp__self { color: var(--mp-muted); font-size: .95rem; }
+    .cmp__we { background: var(--mp-primary-light); border-radius: 10px; padding: 10px 12px; font-size: .95rem; }
+    .cmp__head { display: none; }
+    @media (min-width: 860px) { .cmp__head { display: grid; grid-template-columns: 180px 1fr 1fr; gap: 8px; padding: 0 16px; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--mp-muted); } }
+
+    details.faq { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 0; margin-bottom: 10px; }
+    details.faq > summary { cursor: pointer; padding: 16px 18px; font-weight: 700; list-style: none; }
+    details.faq > summary::-webkit-details-marker { display: none; }
+    details.faq > summary::after { content: "+"; float: right; color: var(--mp-primary); font-weight: 800; }
+    details.faq[open] > summary::after { content: "–"; }
+    details.faq .faq__body { padding: 0 18px 18px; color: var(--mp-muted); }
+
+    .form-box { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 26px; max-width: 520px; box-shadow: var(--mp-shadow); }
+    .field { margin-bottom: 14px; }
+    .field label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 6px; }
+    .field input[type="text"], .field input[type="tel"] { width: 100%; padding: 13px 14px; font: inherit; border: 1px solid var(--mp-border); border-radius: 10px; }
+    .field input:focus { outline: 2px solid var(--mp-primary); outline-offset: 1px; border-color: var(--mp-primary); }
+    .agree { display: flex; gap: 10px; align-items: flex-start; font-size: .8rem; color: var(--mp-muted); margin-bottom: 16px; }
+    .form-note { font-size: .8rem; color: var(--mp-muted); margin: 12px 0 0; }
+
+    .disclaimer { background: var(--mp-primary-light); border-radius: var(--mp-radius); padding: 20px 22px; font-size: .95rem; color: var(--mp-primary-dark); }
+
+    .site-footer { background: #14213d; color: #c9d3e3; padding: 40px 0 28px; font-size: .9rem; }
+    .site-footer a { color: #9dc4ff; }
+    .footer-grid { display: grid; gap: 24px; grid-template-columns: 1fr; }
+    @media (min-width: 760px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    dialog.modal { border: 0; border-radius: var(--mp-radius); padding: 0; max-width: 520px; width: calc(100% - 32px); box-shadow: 0 16px 48px rgba(20,33,61,.24); }
+    dialog.modal::backdrop { background: rgba(20,33,61,.5); }
+    .modal__inner { padding: 26px; }
+    .modal__close { position: absolute; top: 10px; right: 14px; background: none; border: 0; font-size: 1.6rem; cursor: pointer; color: var(--mp-muted); }
+  </style>
+</head>
+<body>
+
+<div class="design-note">
+  Прототип ступени 9 · посадочная <strong>/rvp</strong>, роль T-R2, волна П кластера РВП. Тексты — из ТЗ версии 1.0, утверждённого 2026-09-09.
+  Жёлтым помечены формулировки с меткой <strong>[REQ]</strong> — ждут вычитки юриста. Страница закрыта от индексации.
+</div>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="wrap header-top__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark">МП</span>
+        <span>
+          <span class="brand__name">МИГРА<em>ПРО</em></span>
+          <span class="brand__sub">Миграционные услуги в Москве и МО</span>
+        </span>
+      </a>
+      <div class="header-phone-block">
+        <a href="tel:+74951543385">+7 (495) 154-33-85</a>
+        <span>пн–пт: 09:00–18:00 <span class="req">[REQ 5.1]</span></span>
+      </div>
+      <a class="btn btn--accent header-top__cta" href="#forma" data-modal>Бесплатная консультация</a>
+    </div>
+  </div>
+</header>
+
+<!-- Блок 2. Первый экран -->
+<div class="hero">
+  <div class="wrap">
+    <h1>Помощь в получении РВП в Москве и Московской области</h1>
+    <p>Подберём основание, соберём документы и сопроводим на подачу в МВД. Работаем с гражданами стран СНГ и других государств.</p>
+    <a class="btn btn--accent" href="#forma" data-modal>Получить бесплатную консультацию</a>
+    <ul class="trust">
+      <li>Ведём дело до приёма документов</li>
+      <li>Проверяем каждую справку перед подачей</li>
+      <li>Записываем на подачу и сопровождаем в МВД</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Блок 3. Кому подходит — основания -->
+<section id="osnovaniya">
+  <div class="wrap">
+    <h2>Кому подходит РВП: основания для подачи</h2>
+    <p class="lead">РВП выдают по квоте или без неё — если у вас есть одно из оснований. Ниже перечислены те, по которым мы ведём дела чаще всего.</p>
+    <ul class="osn">
+      <li><span class="req">Брак с гражданином России — с 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения. Исключение — общий ребёнок, рождённый или усыновлённый в этом браке. [REQ 4.1, 4.7]</span><br>
+        <a href="https://migra-pro.com/blog/rvp/rvp-po-braku-s-grazhdaninom-rf">РВП по браку с гражданином России</a></li>
+      <li>Родитель или ребёнок — гражданин России.<br>
+        <a href="https://migra-pro.com/blog/rvp/osnovaniya-dlya-polucheniya-rvp">основания для получения РВП</a></li>
+      <li>Вы родились на территории РСФСР или Российской Федерации.<br>
+        <a href="https://migra-pro.com/blog/rvp/osnovaniya-dlya-polucheniya-rvp">основания для получения РВП</a></li>
+      <li>Окончили российский вуз или колледж по очной форме.<br>
+        <a href="https://migra-pro.com/blog/rvp/rvp-v-uproshchennom-poryadke">РВП в упрощённом порядке</a></li>
+      <li>Гражданство страны СНГ — упрощённый порядок подачи.<br>
+        <a href="https://migra-pro.com/blog/rvp/rvp-dlya-grazhdan-sng">РВП для граждан стран СНГ</a></li>
+      <li>Ни одно основание не подходит — оформляем через квоту.<br>
+        <a href="https://migra-pro.com/blog/kvota-rvp/kvota-na-rvp-2025">квота на РВП</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Блок 4. Бесплатная консультация -->
+<section id="konsultaciya">
+  <div class="wrap">
+    <h2>Бесплатная консультация: что вы получите</h2>
+    <p class="lead">На консультации специалист разбирает вашу ситуацию и даёт три ответа, с которыми уже можно действовать.</p>
+    <ul class="cards cards--3">
+      <li class="card"><h3>Основание</h3><p>По какому основанию вам подавать — и нужна ли квота</p></li>
+      <li class="card"><h3>Документы</h3><p>Какие документы нужны именно в вашем случае</p></li>
+      <li class="card"><h3>Срок и цена</h3><p>Сколько времени и денег займёт ваше дело</p></li>
+    </ul>
+    <p class="price-note">Консультация бесплатная, длится около 20 минут. Отвечаем в течение рабочего дня.</p>
+    <p><a class="btn btn--accent" href="#forma" data-modal>Записаться на консультацию</a></p>
+  </div>
+</section>
+
+<!-- Блок 5. Как проходит оформление -->
+<section id="kak">
+  <div class="wrap">
+    <h2>Как проходит оформление РВП</h2>
+    <ol class="steps">
+      <li><b>Заявка и консультация</b>Оставляете заявку или звоните. Специалист уточняет вашу ситуацию и подходящее основание.</li>
+      <li><b>Проверяем основание и документы</b>Смотрим, что у вас уже есть, и составляем список того, что нужно донести.</li>
+      <li><b>Готовим пакет документов</b>Заполняем заявление, проверяем каждую справку и перевод перед подачей.</li>
+      <li><b>Записываем на подачу и едем с вами</b>Берём запись на конкретный день, сопровождаем в МВД и отслеживаем статус заявления.</li>
+      <li><b>Получаете РВП</b>Отдаём документы и объясняем, что делать дальше: уведомление о проживании, работа, переход к ВНЖ.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- Блок 6. Что входит и что оплачивается отдельно -->
+<section id="chto-vhodit">
+  <div class="wrap">
+    <h2>Что входит в услугу и что оплачивается отдельно</h2>
+    <p class="lead">Слева — наша работа. Справа — платежи, которые вы делаете сами: их сумма в нашу цену не входит.</p>
+    <div class="panels">
+      <div class="panel panel--in">
+        <h3>Входит в нашу услугу</h3>
+        <ul class="plain">
+          <li>Разбор ситуации и выбор основания подачи</li>
+          <li>Проверка документов, которые у вас уже есть</li>
+          <li>Заполнение заявления и проверка переводов</li>
+          <li>Запись на подачу на конкретный день</li>
+          <li>Сопровождение на подаче в МВД</li>
+          <li>Доработка пакета, если документы не приняли с первого раза</li>
+        </ul>
+      </div>
+      <div class="panel panel--out">
+        <h3>Оплачивается отдельно</h3>
+        <ul class="plain pay">
+          <li><span class="req">Государственная пошлина за выдачу РВП — 15 000 ₽ [REQ 4.2]</span></li>
+          <li>Медицинское освидетельствование — осмотр врачей и справка об отсутствии опасных заболеваний</li>
+          <li>Экзамен по русскому языку, истории и основам законодательства — если у вас нет освобождения</li>
+          <li>Нотариальный перевод документов — перевод с печатью нотариуса</li>
+          <li>Полис медицинского страхования</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note">Точную сумму сопутствующих расходов по вашему случаю назовём на консультации. Размер пошлины и порядок оплаты — в статье о стоимости РВП <em>(ссылка появится, когда страница будет готова)</em>.</p>
+  </div>
+</section>
+
+<!-- Блок 7. Цены -->
+<section id="ceny">
+  <div class="wrap">
+    <h2>Цены на ведение миграционного дела по РВП</h2>
+    <table class="price">
+      <thead><tr><th>Услуга</th><th>Срок подготовки</th><th>Что входит в эту строку</th><th>Стоимость</th></tr></thead>
+      <tbody>
+        <tr>
+          <td data-l="Услуга">Ведение дела по получению квоты на РВП по Москве и МО, безлимитные подачи</td>
+          <td data-l="Срок">5 дней</td>
+          <td data-l="Что входит">заявление на квоту, проверка документов, подача в комиссию, повторные подачи без доплаты до получения квотоместа</td>
+          <td data-l="Стоимость">от 44 000 ₽</td>
+        </tr>
+        <tr>
+          <td data-l="Услуга">Ведение дела по получению РВП по Москве или МО</td>
+          <td data-l="Срок">7 дней</td>
+          <td data-l="Что входит">выбор основания, полный пакет документов, заявление, запись на подачу, сопровождение в МВД</td>
+          <td data-l="Стоимость">от 46 000 ₽</td>
+        </tr>
+        <tr>
+          <td data-l="Услуга">Ведение дела по получению РВП для ребёнка до 18 лет по Москве или МО</td>
+          <td data-l="Срок">7 дней</td>
+          <td data-l="Что входит">документы на ребёнка, заявление от законного представителя, запись и сопровождение</td>
+          <td data-l="Стоимость">от 33 000 ₽</td>
+        </tr>
+        <tr>
+          <td data-l="Услуга">Юридическое сопровождение при получении РВП в Москве</td>
+          <td data-l="Срок">7 дней</td>
+          <td data-l="Что входит">проверка вашего пакета и заявления, подготовка к подаче; документы собираете вы</td>
+          <td data-l="Стоимость">от 14 000 ₽</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="price-note"><span class="req">Оплата поэтапно, по мере продвижения дела. Аванс за первый этап — на консультации. [REQ 4.3]</span></p>
+    <p class="price-note">Государственная пошлина, медкомиссия, экзамен и переводы в стоимость не входят — их перечень в блоке <a href="#chto-vhodit">«Что входит в услугу и что оплачивается отдельно»</a>.</p>
+  </div>
+</section>
+
+<!-- Блок 8. Где подавать документы -->
+<section id="gde-podavat">
+  <div class="wrap">
+    <h2>Где подают документы на РВП и как записаться</h2>
+    <p class="lead">Заявление на РВП подают в подразделение по вопросам миграции МВД по месту предполагаемого проживания. Москва и Московская область — разные субъекты, и подавать нужно в тот, где вы планируете жить.</p>
+    <ul class="cards cards--2">
+      <li class="card"><h3>Москва</h3><p><span class="req">Многофункциональный миграционный центр в Сахарово, приём по предварительной записи. [REQ 4.4]</span></p></li>
+      <li class="card"><h3>Московская область</h3><p><span class="req">Подразделение по вопросам миграции по месту проживания. [REQ 4.4]</span></p></li>
+      <li class="card"><h3>Запись</h3><p>Через портал государственных услуг или через нас: берём дату и время под ваш случай.</p></li>
+      <li class="card"><h3>Сопровождение</h3><p>На подаче с вами едет наш специалист.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Блок 9. После подачи -->
+<section id="posle-podachi">
+  <div class="wrap">
+    <h2>Что происходит после подачи документов</h2>
+    <p class="lead">Заявление рассматривает МВД. Пока идёт рассмотрение, мы держим дело на контроле.</p>
+    <ul class="plain">
+      <li>Отслеживаем статус вашего заявления</li>
+      <li>Сообщаем, когда решение принято</li>
+      <li>Если запросили дополнительные документы — готовим их и подаём</li>
+      <li>Если срок нарушен — готовим обращение</li>
+    </ul>
+    <p class="price-note">Точные сроки рассмотрения различаются по основанию подачи — они разобраны в статье <a href="https://migra-pro.com/blog/rvp/sroki-oformleniya-rvp-v-rossii">сроки оформления РВП</a>.</p>
+  </div>
+</section>
+
+<!-- Блок 10. Если отказали -->
+<section id="otkaz">
+  <div class="wrap">
+    <h2>Если отказали или документы не приняли</h2>
+    <p class="lead">Это другая ситуация и другая работа. Если вы уже подавали сами и получили отказ — приходите с решением на руках.</p>
+    <ul class="plain">
+      <li>Разберём причину отказа по документам, а не по догадке</li>
+      <li>Подготовим возражение или новый пакет</li>
+      <li>Добьёмся приёма документов</li>
+      <li>Разберём, есть ли у вас второе основание для подачи</li>
+    </ul>
+    <p class="price-note">Причины отказа и способы их избежать разобраны в статье <a href="https://migra-pro.com/blog/rvp/oshibki-pri-oformlenii-rvp">причины отказа в РВП</a>.</p>
+  </div>
+</section>
+
+<!-- Блок 11. Самостоятельно или с нами -->
+<section id="sravnenie">
+  <div class="wrap">
+    <h2>Самостоятельно или с нами</h2>
+    <div class="cmp__head"><div>Этап</div><div>Если оформляете сами</div><div>Если ведём мы</div></div>
+    <div class="cmp">
+      <div class="cmp__row"><div class="cmp__stage">Выбор основания</div><div class="cmp__self">ищете норму и решаете, подходит ли она вам</div><div class="cmp__we">подбираем основание и проверяем, подтверждается ли оно вашими документами</div></div>
+      <div class="cmp__row"><div class="cmp__stage">Документы</div><div class="cmp__self">собираете по списку из интернета, который мог устареть</div><div class="cmp__we">даём список под ваш случай и проверяем каждую справку и перевод</div></div>
+      <div class="cmp__row"><div class="cmp__stage">Заявление</div><div class="cmp__self">заполняете сами, ошибка в бланке — причина отказа в приёме</div><div class="cmp__we">заполняем и проверяем перед подачей</div></div>
+      <div class="cmp__row"><div class="cmp__stage">Запись на подачу</div><div class="cmp__self">ловите свободное окно самостоятельно</div><div class="cmp__we">берём запись на конкретный день</div></div>
+      <div class="cmp__row"><div class="cmp__stage">Подача</div><div class="cmp__self">едете один</div><div class="cmp__we">едем с вами</div></div>
+      <div class="cmp__row"><div class="cmp__stage">Документы не приняли</div><div class="cmp__self">собираете заново и записываетесь заново</div><div class="cmp__we">дорабатываем пакет и подаём повторно без доплаты</div></div>
+    </div>
+    <p class="price-note"><span class="req">Если документы не приняли по нашей ошибке, доработку и повторную подачу делаем без доплаты. [REQ 4.5]</span></p>
+  </div>
+</section>
+
+<!-- Блок 12. Доказательства: кейсы и отзывы -->
+<section id="dela">
+  <div class="wrap">
+    <h2>Наши дела по РВП: кейсы и отзывы</h2>
+    <p class="lead">Одно дело — одна ситуация. Ниже случай, который мы вели полностью.</p>
+    <ul class="cards cards--2">
+      <li class="card">
+        <h3>РВП для выпускницы российского вуза</h3>
+        <p><b>Задача.</b> Легализовать работу до получения статуса при ошибке в дипломе.<br>
+           <b>Что сделали.</b> Исправили ошибку в документе об образовании и провели подачу.<br>
+           <b>Результат.</b> Статус получен, работа легальна.</p>
+        <p style="margin-top:12px"><a href="https://migra-pro.com/blog/rvp/trp-case-study">все наши дела по РВП</a></p>
+      </li>
+      <li class="card" style="display:grid;place-items:center;text-align:center;border-style:dashed;color:var(--mp-muted)">
+        <p><b>Слот виджета отзывов</b><br>Сервис и наличие согласий клиентов — запрос 5.2 к заказчику. Отзывы не выдумываются: до ответа слот остаётся пустым.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Блок 13. Частые вопросы -->
+<section id="faq">
+  <div class="wrap">
+    <h2>Частые вопросы о РВП</h2>
+    <p class="lead">Порядок вопросов пока выведен из спроса, а не из практики консультаций — гипотеза снимается ответом на запрос 5.3.</p>
+
+    <details class="faq"><summary>Нужна ли мне квота</summary><div class="faq__body">Квота нужна, если у вас нет основания для подачи без неё. Основания перечислены выше в блоке <a href="#osnovaniya">«Кому подходит»</a>. Подробно — <a href="https://migra-pro.com/blog/kvota-rvp/rvp-bez-kvoty">РВП без квоты</a>.</div></details>
+
+    <details class="faq"><summary>Сколько стоит сама процедура, помимо ваших услуг</summary><div class="faq__body">Государственная пошлина, медкомиссия, экзамен и переводы оплачиваются отдельно. Перечень — в блоке <a href="#chto-vhodit">«Что входит»</a>; суммы будут разобраны в статье о стоимости РВП.</div></details>
+
+    <details class="faq"><summary>Сколько ждать решения</summary><div class="faq__body">Срок зависит от основания подачи и от того, визовая у вас страна или безвизовая. Подробно — <a href="https://migra-pro.com/blog/rvp/sroki-oformleniya-rvp-v-rossii">сроки оформления РВП</a>.</div></details>
+
+    <details class="faq"><summary>Что делать, когда РВП заканчивается</summary><div class="faq__body">РВП не продлевают: нужно либо оформлять ВНЖ, либо получать РВП заново. Подробно — <a href="https://migra-pro.com/blog/rvp/kak-prodlit-rvp">что делать, когда РВП заканчивается</a>.</div></details>
+
+    <details class="faq"><summary>Можно ли подать по браку</summary><div class="faq__body"><span class="req">Можно. С 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения, кроме случая с общим ребёнком. [REQ 4.7]</span> Подробно — <a href="https://migra-pro.com/blog/rvp/rvp-po-braku-s-grazhdaninom-rf">РВП по браку с гражданином России</a>.</div></details>
+
+    <details class="faq"><summary>Нужно ли сдавать экзамен</summary><div class="faq__body">Экзамен по русскому языку, истории и основам законодательства нужен, если у вас нет освобождения. Подробно — <a href="https://migra-pro.com/blog/grajdanstvo/gde-sdat-ekzamen-rvp-vnz-grazhdanstvo-moskva">экзамен для РВП</a>.</div></details>
+
+    <details class="faq"><summary>Что даёт РВП и чем отличается от ВНЖ</summary><div class="faq__body">РВП действует три года и привязано к региону получения; ВНЖ бессрочно и без территориальной привязки. Подробно — <a href="https://migra-pro.com/blog/rvp/rvp-v-rossii-preimushchestva">что даёт РВП</a>.</div></details>
+  </div>
+</section>
+
+<!-- Блок 14. Финальный CTA с формой -->
+<section id="forma">
+  <div class="wrap">
+    <h2>Оставьте заявку на бесплатную консультацию</h2>
+    <p class="lead">Специалист разберёт вашу ситуацию, назовёт подходящее основание и список документов под ваш случай.</p>
+    <form class="form-box" onsubmit="event.preventDefault(); alert('Прототип: отправка формы не подключена. В проде — лид в Битрикс24.');">
+      <div class="field"><label for="n1">Имя</label><input id="n1" type="text" name="name" required></div>
+      <div class="field"><label for="p1">Телефон</label><input id="p1" type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></div>
+      <label class="agree"><input type="checkbox" required> Согласен на обработку персональных данных в соответствии с политикой конфиденциальности</label>
+      <button class="btn btn--accent btn--wide" type="submit">Записаться на консультацию</button>
+      <p class="form-note">Консультация бесплатная. Отвечаем в течение рабочего дня.</p>
+    </form>
+  </div>
+</section>
+
+<!-- Блок 15. Связанное -->
+<section id="svyazannoe">
+  <div class="wrap">
+    <h2>Что почитать по теме</h2>
+    <ul class="cards cards--4">
+      <li class="card"><h3><a href="https://migra-pro.com/blog/rvp/kak-oformit-rvp-v-rossii">как оформить РВП: пошаговая инструкция</a></h3><p>Обзорная статья о процедуре целиком.</p></li>
+      <li class="card"><h3><a href="https://migra-pro.com/blog/rvp/oformlenie-rvp-dokumenty">документы для РВП: полный чек-лист</a></h3><p>Что собрать и в каком виде.</p></li>
+      <li class="card"><h3><a href="https://migra-pro.com/blog/rvp/oshibki-pri-oformlenii-rvp">причины отказа в РВП</a></h3><p>Где чаще всего теряют статус.</p></li>
+      <li class="card"><h3><a href="https://migra-pro.com/blog/rvp/poluchenie-vnj-posle-rvp">что делать после РВП: переход к ВНЖ</a></h3><p>Следующий шаг после получения статуса.</p></li>
+    </ul>
+    <p class="price-note" style="margin-top:24px">Линия статусов: <a href="https://migra-pro.com/rvp">РВП</a> → <a href="https://migra-pro.com/vnj">Вид на жительство</a> → <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></p>
+  </div>
+</section>
+
+<!-- Блок 16. Правовой дисклеймер -->
+<section>
+  <div class="wrap">
+    <p class="disclaimer"><span class="req">Решение о выдаче разрешения на временное проживание принимает исключительно уполномоченное подразделение МВД России. Мы оказываем юридическую помощь и сопровождение при подготовке и подаче документов. [REQ 4.6]</span></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand__name" style="color:#fff">МИГРА<em style="color:#ff6b6b;font-style:normal">ПРО</em></div>
+      <p>Московская область, Одинцовский район, п. Новоивановское, ул. Калинина, 8</p>
+      <p><a href="tel:+74951543385">+7 (495) 154-33-85</a><br><span class="req">пн–пт: 09:00–18:00 [REQ 5.1]</span></p>
+    </div>
+    <div>
+      <p><b>Услуги</b></p>
+      <p><a href="https://migra-pro.com/rvp">РВП</a><br><a href="https://migra-pro.com/vnj">ВНЖ</a><br><a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></p>
+    </div>
+    <div>
+      <p><b>Полезные ресурсы</b></p>
+      <p><a href="https://www.gosuslugi.ru/">Портал Госуслуг</a><br><a href="https://мвд.рф/">МВД России</a></p>
+    </div>
+  </div>
+</footer>
+
+<dialog class="modal" id="modal">
+  <button class="modal__close" onclick="document.getElementById('modal').close()" aria-label="Закрыть">×</button>
+  <div class="modal__inner">
+    <h3 style="font-size:1.3rem;margin:0 0 8px">Бесплатная консультация</h3>
+    <p class="lead" style="margin-bottom:18px">Специалист разберёт вашу ситуацию и назовёт подходящее основание.</p>
+    <form onsubmit="event.preventDefault(); alert('Прототип: отправка формы не подключена. В проде — лид в Битрикс24.');">
+      <div class="field"><label for="n2">Имя</label><input id="n2" type="text" required></div>
+      <div class="field"><label for="p2">Телефон</label><input id="p2" type="tel" required placeholder="+7 (___) ___-__-__"></div>
+      <label class="agree"><input type="checkbox" required> Согласен на обработку персональных данных</label>
+      <button class="btn btn--accent btn--wide" type="submit">Записаться на консультацию</button>
+      <p class="form-note">Консультация бесплатная. Отвечаем в течение рабочего дня.</p>
+    </form>
+  </div>
+</dialog>
+
+<script>
+  document.querySelectorAll('[data-modal]').forEach(function (el) {
+    el.addEventListener('click', function (e) { e.preventDefault(); document.getElementById('modal').showModal(); });
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://migra-pro.com/#org",
+      "name": "Мигра Про",
+      "telephone": "+7 (495) 154-33-85",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Московская область",
+        "streetAddress": "Одинцовский район, п. Новоивановское, ул. Калинина, 8",
+        "addressCountry": "RU"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://migra-pro.com/" },
+        { "@type": "ListItem", "position": 2, "name": "РВП", "item": "https://migra-pro.com/rvp" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Помощь в получении РВП в Москве и Московской области",
+      "serviceType": "Юридическое сопровождение при оформлении разрешения на временное проживание",
+      "provider": { "@id": "https://migra-pro.com/#org" },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Москва" },
+        { "@type": "AdministrativeArea", "name": "Московская область" }
+      ],
+      "offers": [
+        { "@type": "Offer", "name": "Ведение дела по получению квоты на РВП по Москве и МО, безлимитные подачи", "price": "44000", "priceCurrency": "RUB", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "44000", "priceCurrency": "RUB" } },
+        { "@type": "Offer", "name": "Ведение дела по получению РВП по Москве или МО", "price": "46000", "priceCurrency": "RUB", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "46000", "priceCurrency": "RUB" } },
+        { "@type": "Offer", "name": "Ведение дела по получению РВП для ребёнка до 18 лет", "price": "33000", "priceCurrency": "RUB", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "33000", "priceCurrency": "RUB" } },
+        { "@type": "Offer", "name": "Юридическое сопровождение при получении РВП в Москве", "price": "14000", "priceCurrency": "RUB", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "14000", "priceCurrency": "RUB" } }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Нужна ли мне квота", "acceptedAnswer": { "@type": "Answer", "text": "Квота нужна, если у вас нет основания для подачи без неё." } },
+        { "@type": "Question", "name": "Сколько стоит сама процедура, помимо ваших услуг", "acceptedAnswer": { "@type": "Answer", "text": "Государственная пошлина, медкомиссия, экзамен и переводы оплачиваются отдельно." } },
+        { "@type": "Question", "name": "Сколько ждать решения", "acceptedAnswer": { "@type": "Answer", "text": "Срок зависит от основания подачи и от того, визовая у вас страна или безвизовая." } },
+        { "@type": "Question", "name": "Что делать, когда РВП заканчивается", "acceptedAnswer": { "@type": "Answer", "text": "РВП не продлевают: нужно либо оформлять ВНЖ, либо получать РВП заново." } },
+        { "@type": "Question", "name": "Можно ли подать по браку", "acceptedAnswer": { "@type": "Answer", "text": "Можно. С 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения, кроме случая с общим ребёнком." } },
+        { "@type": "Question", "name": "Нужно ли сдавать экзамен", "acceptedAnswer": { "@type": "Answer", "text": "Экзамен по русскому языку, истории и основам законодательства нужен, если у вас нет освобождения." } },
+        { "@type": "Question", "name": "Что даёт РВП и чем отличается от ВНЖ", "acceptedAnswer": { "@type": "Answer", "text": "РВП действует три года и привязано к региону получения; ВНЖ бессрочно и без территориальной привязки." } }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
