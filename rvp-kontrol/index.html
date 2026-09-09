@@ -11,12 +11,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+
     :root {
       --mp-primary: #1a4fb0;
       --mp-primary-dark: #1a4694;
       --mp-primary-light: #eaf1f6;
       --mp-accent: #cc0a0a;
       --mp-accent-hover: #a30808;
+      --mp-link: #50b3ff;
       --mp-text: #1a1b1d;
       --mp-muted: #5c6570;
       --mp-border: #dde3e8;
@@ -24,518 +26,1804 @@
       --mp-white: #fff;
       --mp-radius: 16px;
       --mp-radius-sm: 12px;
-      --mp-shadow: 0 2px 10px rgba(20, 33, 61, .06), 0 8px 24px rgba(33, 84, 178, .08);
+      --mp-shadow: 0 2px 10px rgba(20, 33, 61, 0.06), 0 8px 24px rgba(33, 84, 178, 0.08);
+      --mp-shadow-lg: 0 16px 48px rgba(20, 33, 61, 0.16);
       --mp-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
       --mp-max: 1120px;
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: var(--mp-font); font-size: 17px; line-height: 1.55; color: var(--mp-text); background: var(--mp-white); }
+    body {
+      margin: 0;
+      font-family: var(--mp-font);
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--mp-text);
+      background: var(--mp-white);
+    }
     a { color: var(--mp-primary); }
+    img { max-width: 100%; display: block; }
     .wrap { width: min(100% - 40px, var(--mp-max)); margin-inline: auto; }
+    .design-note {
+      background: #fff8e6;
+      border-bottom: 1px solid #e8d59a;
+      color: #6b5500;
+      font-size: 0.85rem;
+      padding: 10px 16px;
+      text-align: center;
+    }
+    .design-note strong { font-weight: 700; }
 
-    .design-note { background: #fff8e6; border-bottom: 1px solid #e8d59a; color: #6b5500; font-size: .85rem; padding: 10px 16px; text-align: center; }
-    .req { background: #fff3cd; border-bottom: 2px dotted #b8860b; padding: 0 2px; }
-
-    /* Шапка */
-    .site-header { position: sticky; top: 0; z-index: 100; background: var(--mp-white); box-shadow: 0 4px 18px rgba(20,33,61,.08); }
-    .header-top__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; flex-wrap: wrap; }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
-    .brand__mark { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--mp-primary) 0 50%, var(--mp-accent) 50% 100%); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: .85rem; }
-    .brand__name { font-weight: 800; font-size: 1.15rem; color: var(--mp-primary); line-height: 1.1; }
+    /* ——— Двухэтажная шапка (паттерн живого сайта, логика IA) ——— */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--mp-white);
+      box-shadow: 0 4px 18px rgba(20, 33, 61, 0.08);
+    }
+    .header-top {
+      border-bottom: 1px solid var(--mp-border);
+      background: var(--mp-white);
+    }
+    .header-top__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 12px 0; flex-wrap: wrap;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none; color: inherit; min-width: 0;
+    }
+    .brand__mark {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--mp-primary) 0 50%, var(--mp-accent) 50% 100%);
+      color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 0.85rem;
+    }
+    .brand__name {
+      font-weight: 800; font-size: 1.15rem; color: var(--mp-primary);
+      letter-spacing: -0.02em; line-height: 1.1;
+    }
     .brand__name em { font-style: normal; color: var(--mp-accent); }
-    .brand__sub { display: block; font-size: .72rem; color: var(--mp-muted); margin-top: 2px; }
+    .brand__sub {
+      display: block; font-size: 0.72rem; color: var(--mp-muted); margin-top: 2px;
+    }
+    .brand__img { height: 46px; width: auto; display: block; }
+    @media (max-width: 640px) { .brand__img { height: 36px; } }
+    .header-messengers .ico {
+      width: 18px; height: 18px; fill: currentColor;
+    }
+    .header-meta {
+      display: none; align-items: center; gap: 18px;
+      font-size: 0.88rem; color: var(--mp-muted);
+    }
+    @media (min-width: 960px) { .header-meta { display: flex; } }
+    .header-rating {
+      display: flex; flex-direction: column; gap: 2px;
+      font-size: 0.72rem; line-height: 1.25;
+    }
+    .header-rating__stars { color: #f5a623; letter-spacing: 1px; font-size: 0.85rem; }
+    .header-messengers { display: flex; gap: 8px; }
+    .header-messengers a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center; text-decoration: none;
+    }
+    .header-messengers a:hover { background: #d9e7f5; }
     .header-phone-block { text-align: right; line-height: 1.25; }
-    .header-phone-block a { color: var(--mp-text); font-weight: 800; text-decoration: none; font-size: 1.05rem; }
-    .header-phone-block span { display: block; font-size: .75rem; color: var(--mp-muted); }
+    .header-phone-block a {
+      color: var(--mp-text); font-weight: 800; text-decoration: none;
+      font-size: 1.05rem; letter-spacing: -0.02em;
+    }
+    .header-phone-block span { display: block; font-size: 0.75rem; color: var(--mp-muted); }
+    .header-top__cta { flex-shrink: 0; }
 
-    .btn { display: inline-block; border: 0; cursor: pointer; font-family: inherit; font-weight: 700; text-decoration: none; text-align: center; border-radius: var(--mp-radius-sm); padding: 14px 26px; font-size: 1rem; transition: background .15s ease; }
-    .btn--accent { background: var(--mp-accent); color: #fff; }
-    .btn--accent:hover { background: var(--mp-accent-hover); }
-    .btn--ghost { background: var(--mp-primary-light); color: var(--mp-primary); }
-    .btn--wide { width: 100%; }
+    .header-nav-wrap {
+      background: var(--mp-white);
+      padding: 0 0 10px;
+    }
+    .header-nav {
+      display: flex; align-items: center; gap: 4px 6px;
+      flex-wrap: wrap;
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 0 0 18px 18px;
+      padding: 8px 12px;
+      box-shadow: var(--mp-shadow);
+    }
+    .nav-item { position: relative; }
+    .nav-item--split {
+      display: inline-flex; align-items: stretch;
+      border-radius: 10px;
+    }
+    .nav-item--split:hover,
+    .nav-item--split.is-open {
+      background: var(--mp-primary-light);
+    }
+    .nav-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 12px; border-radius: 10px;
+      color: var(--mp-text); text-decoration: none;
+      font-size: 0.92rem; font-weight: 600;
+      border: 0; background: transparent; cursor: pointer;
+      font-family: inherit;
+    }
+    .nav-link:hover { color: var(--mp-primary); }
+    .nav-item--split .nav-link--label {
+      border-radius: 10px 0 0 10px; padding-right: 6px;
+    }
+    .nav-item--split .nav-link--label:hover,
+    .nav-item--split.is-open .nav-link--label { color: var(--mp-primary); }
+    .nav-chev {
+      border-radius: 0 10px 10px 0; padding: 10px 12px 10px 4px;
+      color: var(--mp-text);
+    }
+    .nav-chev:hover,
+    .nav-item--split.is-open .nav-chev { color: var(--mp-primary); }
+    .nav-chev .chev {
+      width: 10px; height: 10px; opacity: 0.75;
+      transition: transform 0.15s ease;
+      display: block;
+    }
+    .nav-item--split.is-open .nav-chev .chev { transform: rotate(180deg); }
 
-    section { padding: 56px 0; }
-    section:nth-of-type(even) { background: var(--mp-bg); }
-    h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); line-height: 1.2; letter-spacing: -.02em; margin: 0 0 8px; }
-    .lead { color: var(--mp-muted); margin: 0 0 28px; max-width: 70ch; }
+    .dropdown {
+      display: none;
+      position: absolute; top: calc(100% - 2px); left: 0;
+      width: 340px; max-width: min(340px, 92vw);
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 14px;
+      box-shadow: var(--mp-shadow-lg);
+      padding: 8px;
+      z-index: 120;
+    }
+    .nav-item--split.is-open > .dropdown { display: block; }
+    .dropdown[hidden] { display: none !important; }
+    .dropdown a {
+      display: block; padding: 9px 12px; border-radius: 9px;
+      text-decoration: none; color: var(--mp-text);
+      font-size: 0.92rem; line-height: 1.3;
+    }
+    .dropdown a span { display: block; font-weight: 600; }
+    .dropdown a em {
+      display: block; margin-top: 2px;
+      font-style: normal; font-size: 0.78rem; color: var(--mp-muted);
+    }
+    .dropdown a:hover { background: var(--mp-primary-light); }
+    .dropdown a:hover span { color: var(--mp-primary); }
+    .dropdown__all {
+      margin-top: 6px; padding-top: 12px !important;
+      border-top: 1px solid var(--mp-border);
+      font-weight: 700; color: var(--mp-primary) !important;
+      border-radius: 0 0 9px 9px;
+    }
+    .nav-mobile-note {
+      display: block; width: 100%;
+      font-size: 0.78rem; color: var(--mp-muted);
+      padding: 4px 8px 2px;
+    }
+    @media (min-width: 900px) { .nav-mobile-note { display: none; } }
 
-    /* Первый экран */
-    .hero { background: linear-gradient(180deg, var(--mp-primary-light) 0%, var(--mp-white) 100%); padding: 56px 0 48px; }
-    .hero h1 { font-size: clamp(1.7rem, 1.2rem + 2.2vw, 2.7rem); line-height: 1.15; letter-spacing: -.03em; margin: 0 0 14px; }
-    .hero p { font-size: 1.1rem; color: var(--mp-muted); max-width: 62ch; margin: 0 0 26px; }
-    .trust { display: grid; gap: 12px; grid-template-columns: 1fr; margin: 28px 0 0; padding: 0; list-style: none; }
-    @media (min-width: 760px) { .trust { grid-template-columns: repeat(3, 1fr); } }
-    .trust li { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 14px 16px; font-weight: 600; font-size: .95rem; box-shadow: var(--mp-shadow); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 12px 20px; border-radius: 999px;
+      font-weight: 700; font-size: 0.95rem; text-decoration: none;
+      border: 2px solid transparent; cursor: pointer; transition: 0.15s ease;
+      font-family: inherit;
+    }
+    .btn--sm { padding: 10px 16px; font-size: 0.88rem; }
+    .btn--primary { background: var(--mp-accent); color: #fff; }
+    .btn--primary:hover { background: var(--mp-accent-hover); }
+    .btn--secondary {
+      background: transparent; color: var(--mp-primary);
+      border-color: var(--mp-primary);
+    }
+    .btn--secondary:hover { background: var(--mp-primary-light); }
+    .btn--ghost {
+      background: rgba(255,255,255,0.14); color: #fff;
+      border-color: rgba(255,255,255,0.35);
+    }
+    .btn--ghost:hover { background: rgba(255,255,255,0.22); }
+    .btn--light { background: #fff; color: var(--mp-primary); }
+    .btn--light:hover { background: var(--mp-primary-light); }
+    .btn--block { width: 100%; }
 
-    .cards { display: grid; gap: 16px; grid-template-columns: 1fr; margin: 0; padding: 0; list-style: none; }
-    @media (min-width: 720px) { .cards--2 { grid-template-columns: repeat(2, 1fr); } .cards--3 { grid-template-columns: repeat(3, 1fr); } .cards--4 { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1000px) { .cards--4 { grid-template-columns: repeat(4, 1fr); } }
-    .card { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 20px; box-shadow: var(--mp-shadow); }
-    .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
-    .card p { margin: 0; color: var(--mp-muted); font-size: .95rem; }
+    /* ——— Полоса цифр доверия ——— */
+    .stats-band {
+      background: var(--mp-white);
+      border-bottom: 1px solid var(--mp-border);
+      padding: 22px 0;
+    }
+    .stats-band__grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .stats-band__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+    .stat strong {
+      font-size: 1.5rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .stat span { font-size: 0.88rem; color: var(--mp-muted); line-height: 1.3; }
 
-    ul.plain { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-    ul.plain li { position: relative; padding-left: 28px; }
-    ul.plain li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--mp-primary); font-weight: 800; }
-    ul.pay li::before { content: "₽"; color: var(--mp-accent); }
-
-    .osn { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-    .osn li { background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 14px 18px; }
-    .osn a { font-weight: 700; }
-
-    .steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
-    .steps li { counter-increment: s; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 18px 18px 18px 68px; position: relative; }
-    .steps li::before { content: counter(s); position: absolute; left: 18px; top: 16px; width: 34px; height: 34px; border-radius: 50%; background: var(--mp-primary); color: #fff; display: grid; place-items: center; font-weight: 800; }
-    .steps b { display: block; margin-bottom: 4px; }
-
-    .panels { display: grid; gap: 16px; grid-template-columns: 1fr; }
-    @media (min-width: 820px) { .panels { grid-template-columns: 1fr 1fr; } }
-    .panel { border-radius: var(--mp-radius); padding: 22px; border: 1px solid var(--mp-border); }
-    .panel--in { background: var(--mp-primary-light); }
-    .panel--out { background: var(--mp-white); }
-    .panel h3 { margin: 0 0 14px; font-size: 1.1rem; }
-
-    table.price { width: 100%; border-collapse: collapse; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); overflow: hidden; }
-    table.price th, table.price td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--mp-border); vertical-align: top; font-size: .95rem; }
-    table.price th { background: var(--mp-primary-light); font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; color: var(--mp-primary-dark); }
-    table.price td:last-child { font-weight: 800; white-space: nowrap; }
-    table.price tr:last-child td { border-bottom: 0; }
-    .price-note { margin: 16px 0 0; color: var(--mp-muted); font-size: .95rem; }
-    @media (max-width: 700px) {
-      table.price thead { display: none; }
-      table.price tr { display: block; border-bottom: 1px solid var(--mp-border); padding: 8px 0; }
-      table.price td { display: block; border: 0; padding: 4px 16px; }
-      table.price td::before { content: attr(data-l); display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; color: var(--mp-muted); }
+    /* маркер незаполненного факта (только в концепте) */
+    .req {
+      background: #fff3cd; color: #6b5500;
+      border-radius: 5px; padding: 0 5px;
+      font-weight: 700; white-space: nowrap;
     }
 
-    .cmp { display: grid; gap: 12px; }
-    .cmp__row { display: grid; gap: 8px; grid-template-columns: 1fr; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 14px 16px; }
-    @media (min-width: 860px) { .cmp__row { grid-template-columns: 180px 1fr 1fr; align-items: start; } }
-    .cmp__stage { font-weight: 700; }
-    .cmp__self { color: var(--mp-muted); font-size: .95rem; }
-    .cmp__we { background: var(--mp-primary-light); border-radius: 10px; padding: 10px 12px; font-size: .95rem; }
-    .cmp__head { display: none; }
-    @media (min-width: 860px) { .cmp__head { display: grid; grid-template-columns: 180px 1fr 1fr; gap: 8px; padding: 0 16px; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--mp-muted); } }
+    /* ——— Как мы работаем ——— */
+    .steps {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+      counter-reset: step;
+    }
+    @media (min-width: 760px) {
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1040px) {
+      .steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    .step {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      position: relative;
+    }
+    .step__num {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--mp-primary); color: #fff;
+      display: grid; place-items: center;
+      font-weight: 800; font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .step h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .step p { margin: 0; color: var(--mp-muted); font-size: 0.93rem; }
+    .terms-note {
+      margin: 18px 0 0; padding: 16px 18px;
+      background: var(--mp-primary-light);
+      border-radius: var(--mp-radius-sm);
+      color: var(--mp-text); font-size: 0.95rem;
+    }
 
-    details.faq { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 0; margin-bottom: 10px; }
-    details.faq > summary { cursor: pointer; padding: 16px 18px; font-weight: 700; list-style: none; }
-    details.faq > summary::-webkit-details-marker { display: none; }
-    details.faq > summary::after { content: "+"; float: right; color: var(--mp-primary); font-weight: 800; }
-    details.faq[open] > summary::after { content: "–"; }
-    details.faq .faq__body { padding: 0 18px 18px; color: var(--mp-muted); }
+    /* ——— Виджеты отзывов ——— */
+    .widgets {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .widgets { grid-template-columns: 1fr 1fr; }
+    }
+    .widget {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 20px;
+    }
+    .widget__head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 14px;
+    }
+    .widget__head strong { font-size: 1.05rem; }
+    .widget__rate {
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      font-weight: 800; border-radius: 999px; padding: 4px 12px;
+    }
+    .widget__slot {
+      border: 2px dashed var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      min-height: 220px;
+      display: grid; place-content: center; text-align: center;
+      color: var(--mp-muted); font-size: 0.95rem; padding: 20px;
+      background: var(--mp-bg);
+    }
+    .widget__slot small { color: #98a2ad; }
 
-    .form-box { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 26px; max-width: 520px; box-shadow: var(--mp-shadow); }
-    .field { margin-bottom: 14px; }
-    .field label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 6px; }
-    .field input[type="text"], .field input[type="tel"] { width: 100%; padding: 13px 14px; font: inherit; border: 1px solid var(--mp-border); border-radius: 10px; }
-    .field input:focus { outline: 2px solid var(--mp-primary); outline-offset: 1px; border-color: var(--mp-primary); }
-    .agree { display: flex; gap: 10px; align-items: flex-start; font-size: .8rem; color: var(--mp-muted); margin-bottom: 16px; }
-    .form-note { font-size: .8rem; color: var(--mp-muted); margin: 12px 0 0; }
+    /* ——— FAQ ——— */
+    .faq { display: grid; gap: 10px; max-width: 52rem; }
+    .faq details {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 16px 20px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 700; font-size: 1rem;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+"; float: right; color: var(--mp-primary); font-size: 1.2rem; line-height: 1;
+    }
+    .faq details[open] summary::after { content: "–"; }
+    .faq p { margin: 12px 0 0; color: var(--mp-muted); font-size: 0.95rem; }
 
-    .disclaimer { background: var(--mp-primary-light); border-radius: var(--mp-radius); padding: 20px 22px; font-size: .95rem; color: var(--mp-primary-dark); }
+    /* ——— Sticky CTA на мобильном ——— */
+    .mobile-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px; padding: 10px 12px;
+      background: rgba(255,255,255,0.97);
+      border-top: 1px solid var(--mp-border);
+      box-shadow: 0 -6px 20px rgba(20,33,61,0.1);
+    }
+    .mobile-bar .btn { padding: 12px 10px; font-size: 0.9rem; }
+    @media (min-width: 860px) { .mobile-bar { display: none; } }
+    @media (max-width: 859px) { body { padding-bottom: 74px; } }
 
-    .site-footer { background: #14213d; color: #c9d3e3; padding: 40px 0 28px; font-size: .9rem; }
-    .site-footer a { color: #9dc4ff; }
-    .footer-grid { display: grid; gap: 24px; grid-template-columns: 1fr; }
-    @media (min-width: 760px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(80,179,255,0.28), transparent 60%),
+        linear-gradient(135deg, #163a7a 0%, var(--mp-primary) 48%, #2a6fd1 100%);
+      color: #fff;
+      padding: 48px 0 56px;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: auto -20% -40% 40%;
+      height: 280px;
+      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .hero__eyebrow {
+      display: inline-block; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      opacity: 0.85; margin-bottom: 12px;
+    }
+    .hero h1 {
+      margin: 0 0 12px; font-size: clamp(1.7rem, 4vw, 2.45rem);
+      line-height: 1.15; letter-spacing: -0.03em; max-width: 18ch;
+    }
+    .hero__lead {
+      margin: 0 0 28px; font-size: 1.05rem; opacity: 0.92;
+      max-width: 46ch;
+    }
+    .path-grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .path-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+    .path-card {
+      background: rgba(255,255,255,0.98);
+      color: var(--mp-text);
+      border-radius: var(--mp-radius);
+      padding: 24px;
+      box-shadow: var(--mp-shadow-lg);
+      display: flex; flex-direction: column; gap: 12px;
+      min-height: 100%;
+    }
+    .path-card__tag {
+      font-size: 0.78rem; font-weight: 700; color: var(--mp-primary);
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .path-card h2 {
+      margin: 0; font-size: 1.35rem; line-height: 1.25; letter-spacing: -0.02em;
+    }
+    .path-card p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .path-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
 
-    dialog.modal { border: 0; border-radius: var(--mp-radius); padding: 0; max-width: 520px; width: calc(100% - 32px); box-shadow: 0 16px 48px rgba(20,33,61,.24); }
-    dialog.modal::backdrop { background: rgba(20,33,61,.5); }
-    .modal__inner { padding: 26px; }
-    .modal__close { position: absolute; top: 10px; right: 14px; background: none; border: 0; font-size: 1.6rem; cursor: pointer; color: var(--mp-muted); }
+    .section { padding: 56px 0; }
+    .section--alt { background: var(--mp-bg); }
+    .section--tint { background: var(--mp-primary-light); }
+    .section__head { margin-bottom: 28px; max-width: 40rem; }
+    .section__head h2 {
+      margin: 0 0 8px; font-size: clamp(1.4rem, 3vw, 1.85rem);
+      letter-spacing: -0.02em;
+    }
+    .section__head p { margin: 0; color: var(--mp-muted); }
+
+    .tools {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) {
+      .tools { grid-template-columns: repeat(3, 1fr); }
+    }
+    .tool {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      text-decoration: none; color: inherit;
+      box-shadow: var(--mp-shadow);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      display: flex; flex-direction: column; gap: 10px;
+      min-height: 160px;
+    }
+    .tool:hover { transform: translateY(-2px); border-color: #b9c9e0; }
+    .tool__ico {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center;
+    }
+    .tool strong { font-size: 1.05rem; }
+    .tool span { color: var(--mp-muted); font-size: 0.95rem; }
+    .tool em {
+      margin-top: auto; font-style: normal; font-weight: 700;
+      color: var(--mp-primary); font-size: 0.9rem;
+    }
+
+    .services {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .services { grid-template-columns: repeat(3, 1fr); }
+    }
+    .service {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .service:hover { border-color: var(--mp-primary); }
+    .service h3 { margin: 0; font-size: 1.2rem; }
+    .service p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .service > strong { font-size: 1.05rem; color: var(--mp-text); }
+    .service__more { font-weight: 700; color: var(--mp-primary); }
+
+    .trust {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .trust { grid-template-columns: 1.2fr 1fr 1fr; }
+    }
+    .trust-stat, .trust-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+    }
+    .trust-stat strong {
+      display: block; font-size: 2rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; margin-bottom: 6px;
+    }
+    .trust-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .trust-card p { margin: 0; color: var(--mp-muted); font-size: 0.95rem; }
+    .trust-card details {
+      border-top: 1px solid var(--mp-border);
+      padding: 10px 0 0; margin-top: 10px;
+    }
+    .trust-card summary {
+      cursor: pointer; font-size: 0.93rem; font-weight: 600;
+      list-style: none;
+    }
+    .trust-card summary::-webkit-details-marker { display: none; }
+    .trust-card summary::after { content: " →"; color: var(--mp-primary); }
+    .trust-card details p { margin-top: 8px; }
+
+    .knowledge {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .knowledge { grid-template-columns: repeat(3, 1fr); }
+    }
+    .know-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+    }
+    .know-card__visual {
+      height: 120px;
+      background:
+        linear-gradient(135deg, rgba(33,84,178,0.9), rgba(26,70,148,0.85)),
+        repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,255,255,0.05) 8px, rgba(255,255,255,0.05) 16px);
+    }
+    .know-card__visual--2 {
+      background: linear-gradient(135deg, #265f91, #1a4fb0);
+    }
+    .know-card__visual--3 {
+      background: linear-gradient(135deg, #1a4694, #3a7bd5);
+    }
+    .know-card__body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .know-card__body strong { font-size: 1.02rem; line-height: 1.35; }
+    .know-card__body span { color: var(--mp-muted); font-size: 0.92rem; }
+
+    .gos {
+      display: grid; gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .gos { grid-template-columns: repeat(4, 1fr); }
+    }
+    .gos a {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-decoration: none;
+      color: var(--mp-text);
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      min-height: 74px;
+      display: flex; align-items: center;
+    }
+    .gos a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+
+    .cta-band {
+      background: linear-gradient(135deg, var(--mp-primary-dark), var(--mp-primary));
+      color: #fff;
+      border-radius: var(--mp-radius);
+      padding: 36px 28px;
+      display: grid; gap: 20px;
+      align-items: center;
+    }
+    @media (min-width: 800px) {
+      .cta-band { grid-template-columns: 1.05fr 400px; gap: 32px; padding: 40px 44px; }
+    }
+    .cta-band h2 { margin: 0 0 8px; font-size: 1.55rem; letter-spacing: -0.02em; }
+    .cta-band p { margin: 0; opacity: 0.92; max-width: 38ch; }
+
+    .contacts {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .contacts { grid-template-columns: 1.15fr 1fr; }
+    }
+    .contacts__cards { display: grid; gap: 16px; }
+    @media (min-width: 560px) and (max-width: 899px) {
+      .contacts__cards { grid-template-columns: 1fr 1fr; }
+      .contacts__cards .phone-block { grid-column: 1 / -1; }
+    }
+    .office, .phone-block {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+    }
+    .office h3, .phone-block h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .office p, .phone-block p { margin: 0; color: var(--mp-muted); }
+    .phone-block a.phone-block__num {
+      display: inline-block; margin-top: 8px;
+      font-size: 1.35rem; font-weight: 800;
+      color: var(--mp-primary); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .msgr-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .msgr-row a {
+      display: inline-flex; align-items: center; gap: 7px;
+      border: 1px solid var(--mp-border); border-radius: 10px;
+      padding: 8px 12px; font-size: 0.86rem; font-weight: 600;
+      color: var(--mp-text); text-decoration: none;
+    }
+    .msgr-row a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+    .msgr-row .ico { width: 16px; height: 16px; }
+    .office__hours { display: block; margin-top: 10px; font-size: 0.86rem; }
+    .office__link {
+      display: inline-block; margin-top: 12px;
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .office__link:hover { text-decoration: underline; }
+
+    .map-area {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      min-height: 380px;
+    }
+    .map-area__tabs {
+      display: flex; gap: 6px; padding: 10px 10px 0;
+    }
+    .map-tab {
+      flex: 1; border: 1px solid var(--mp-border); background: var(--mp-bg);
+      border-radius: 10px; padding: 9px 12px; cursor: pointer;
+      font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--mp-muted);
+    }
+    .map-tab:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .map-tab.is-active {
+      background: var(--mp-primary); border-color: var(--mp-primary); color: #fff;
+    }
+    .map-area__canvas {
+      flex: 1; min-height: 320px;
+      margin: 10px; border-radius: 12px; overflow: hidden;
+      background: repeating-linear-gradient(45deg, #eef2f6 0 14px, #e6edf4 14px 28px);
+    }
+    .map-area__canvas iframe { display: block; width: 100%; height: 100%; min-height: 320px; border: 0; }
+    .map-area__foot {
+      display: flex; flex-wrap: wrap; gap: 10px 20px;
+      padding: 14px 18px; border-top: 1px solid var(--mp-border);
+    }
+    .map-area__foot a {
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .map-area__foot a:hover { text-decoration: underline; }
+
+    .site-footer {
+      background: var(--mp-primary-dark);
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+      padding: 40px 0 32px;
+      margin-top: 8px;
+    }
+    .site-footer a { color: rgba(255, 255, 255, 0.75); text-decoration: none; }
+    .site-footer a:hover { color: #fff; }
+    .site-footer a.btn--primary { color: #fff; }
+    .footer-cta {
+      display: grid; gap: 16px; align-items: center;
+      padding-bottom: 28px; margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    @media (min-width: 800px) {
+      .footer-cta { grid-template-columns: 1fr auto; }
+    }
+    .footer-cta strong { display: block; color: #fff; font-size: 1.15rem; margin-bottom: 4px; }
+    .footer-cta p { margin: 0; }
+    .footer-cols {
+      display: grid; gap: 26px 24px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 900px) {
+      .footer-cols { grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    }
+    .footer-cols h3 {
+      margin: 0 0 12px; font-size: 0.82rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; color: #fff;
+    }
+    .footer-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .footer-cols li { line-height: 1.4; }
+    .footer-phone {
+      display: inline-block; margin-bottom: 6px;
+      font-size: 1.15rem; font-weight: 800; color: #fff !important;
+      letter-spacing: -0.02em;
+    }
+    .footer-social { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .footer-social a {
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9px;
+      padding: 7px 11px; font-size: 0.84rem; font-weight: 600;
+    }
+    .footer-social a:hover { border-color: #fff; }
+    .footer-legal {
+      margin-top: 30px; padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      display: grid; gap: 10px;
+      font-size: 0.82rem; line-height: 1.5;
+    }
+    .footer-legal__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-footer .req { background: rgba(255, 243, 205, 0.9); color: #6b5500; }
+
+    /* ——— Формы записи ——— */
+    .lead-form { display: grid; gap: 10px; }
+    .lead-form__row { display: grid; gap: 10px; }
+    @media (min-width: 560px) {
+      .lead-form__row { grid-template-columns: 1fr 1fr; }
+    }
+    .lead-form input[type="text"],
+    .lead-form input[type="tel"] {
+      width: 100%; box-sizing: border-box;
+      padding: 13px 14px; border-radius: 12px;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      font: inherit; font-size: 0.95rem; color: var(--mp-text);
+    }
+    .lead-form input::placeholder { color: #9aa4b0; }
+    .lead-form input:focus {
+      outline: none; border-color: var(--mp-primary);
+      box-shadow: 0 0 0 3px rgba(33, 84, 178, 0.15);
+    }
+    .lead-form .btn { width: 100%; }
+    .lead-form__agree {
+      display: flex; gap: 9px; align-items: flex-start;
+      font-size: 0.78rem; line-height: 1.4; color: var(--mp-muted);
+    }
+    .lead-form__agree input { margin-top: 2px; width: 16px; height: 16px; flex: none; }
+    .lead-form__agree a { color: inherit; text-decoration: underline; }
+    .lead-form__note { margin: 0; font-size: 0.8rem; color: var(--mp-muted); }
+    .lead-form__done {
+      display: none; padding: 16px; border-radius: 12px;
+      background: rgba(98, 197, 132, 0.14); border: 1px solid #62c584;
+      color: #1c6b3a; font-size: 0.92rem; line-height: 1.45;
+    }
+    .lead-form.is-sent .lead-form__done { display: block; }
+    .lead-form.is-sent .lead-form__row,
+    .lead-form.is-sent .lead-form__agree,
+    .lead-form.is-sent .lead-form__note,
+    .lead-form.is-sent .btn { display: none; }
+
+    /* форма внутри тёмной CTA-полосы */
+    .cta-band .lead-form__agree { color: rgba(255, 255, 255, 0.8); }
+    .cta-band .lead-form__note { color: rgba(255, 255, 255, 0.7); }
+    .cta-band .lead-form__agree a { color: #fff; }
+    .cta-form {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 16px; padding: 20px;
+    }
+
+    /* ——— Модальное окно ——— */
+    .modal {
+      position: fixed; inset: 0; z-index: 300;
+      display: none; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .modal.is-open { display: flex; }
+    .modal__overlay { position: absolute; inset: 0; background: rgba(12, 22, 40, 0.6); }
+    .modal__dialog {
+      position: relative; z-index: 1;
+      width: min(440px, 100%); max-height: 90vh; overflow-y: auto;
+      background: var(--mp-white); border-radius: 18px;
+      box-shadow: var(--mp-shadow-lg); padding: 28px 24px 24px;
+    }
+    .modal__close {
+      position: absolute; top: 12px; right: 12px;
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      cursor: pointer; font-size: 1.1rem; line-height: 1; color: var(--mp-muted);
+    }
+    .modal__close:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .modal__dialog h2 { margin: 0 0 8px; font-size: 1.3rem; letter-spacing: -0.02em; }
+    .modal__lead { margin: 0 0 18px; color: var(--mp-muted); font-size: 0.92rem; line-height: 1.5; }
+    .modal__alt {
+      margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--mp-border);
+      font-size: 0.85rem; color: var(--mp-muted); line-height: 1.5;
+    }
+    .modal__alt a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    body.is-locked { overflow: hidden; }
+
+    .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  
+  </style>
+  <style>
+    /* Дополнения для /rnr */
+    .nav-link.is-active { color: var(--mp-primary); position: relative; }
+    .nav-link.is-active::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 2px; background: var(--mp-accent); border-radius: 2px; }
+
+    /* H1 в три строки: 24ch держит перенос «Разрешение на работу и / ввоз иностранных / сотрудников для компаний» */
+    .hero h1 { max-width: 24ch; }
+
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.22); }
+    .hero__facts div { display: flex; flex-direction: column; }
+    .hero__facts strong { font-size: 1.15rem; letter-spacing: -0.02em; }
+    .hero__facts span { font-size: 0.85rem; opacity: 0.85; }
+
+    .divert { background: var(--mp-primary-light); border-bottom: 1px solid var(--mp-border); padding: 14px 0; }
+    .divert__inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-size: 0.95rem; color: var(--mp-muted); }
+    .divert__inner strong { color: var(--mp-text); font-weight: 600; }
+    .divert__inner a { font-weight: 700; }
+
+    .panel { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .panel h3 { margin: 0 0 12px; font-size: 1.05rem; }
+    .panel ul { margin: 0; padding-left: 20px; color: var(--mp-muted); }
+    .panel ul li { margin-bottom: 7px; }
+    .panel ul li:last-child { margin-bottom: 0; }
+    .duo { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 800px) { .duo { grid-template-columns: 1fr 1fr; } }
+
+    .facts-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .facts-row div { background: var(--mp-primary-light); border-radius: 10px; padding: 12px 16px; font-size: 0.92rem; }
+    .facts-row strong { display: block; font-size: 1.08rem; color: var(--mp-primary); }
+
+    .block-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; align-items: center; }
+    .block-actions span { color: var(--mp-muted); font-size: 0.9rem; }
+
+    .checklist { display: grid; gap: 10px 24px; grid-template-columns: 1fr; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 760px) { .checklist { grid-template-columns: 1fr 1fr; } }
+    .checklist li { position: relative; padding-left: 28px; color: var(--mp-text); font-size: 0.97rem; }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 20px; height: 20px; border-radius: 50%; background: #e8f6ed; color: #2f9e5b; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    .risk { margin-top: 20px; padding: 18px 20px; border-left: 4px solid var(--mp-accent); background: #fff5f5; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; font-size: 0.95rem; }
+    .risk strong { color: var(--mp-accent); }
+
+    .ptable-wrap { overflow-x: auto; border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); background: var(--mp-white); }
+    .ptable { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 0.95rem; }
+    .ptable th, .ptable td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--mp-border); vertical-align: top; }
+    .ptable thead th { background: var(--mp-primary-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mp-primary); }
+    .ptable tbody tr:last-child td { border-bottom: none; }
+    .ptable td:first-child { font-weight: 600; }
+    .ptable td small { display: block; color: var(--mp-muted); font-weight: 400; font-size: 0.86rem; margin-top: 3px; }
+    .ptable td.price { white-space: nowrap; font-weight: 700; color: var(--mp-primary); }
+
+    .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mp-primary); background: var(--mp-primary-light); border-radius: 999px; padding: 5px 12px; margin-bottom: 12px; }
+    .why { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .why { grid-template-columns: repeat(3, 1fr); } }
+    .why div { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 22px; }
+    .why strong { display: block; margin-bottom: 6px; }
+    .why span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .industries { margin: -12px 0 22px; color: var(--mp-muted); font-size: 0.95rem; line-height: 1.5; }
+    .industries span { color: var(--mp-text); font-weight: 600; }
+
+    .magnet { margin-top: 16px; display: grid; gap: 14px; align-items: center; background: var(--mp-white); border: 1px dashed var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    @media (min-width: 800px) { .magnet { grid-template-columns: 1fr auto; gap: 24px; } }
+    .magnet strong { display: block; margin-bottom: 5px; }
+    .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .calendar { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-top: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .calendar h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .calendar > p { margin: 0 0 16px; color: var(--mp-muted); font-size: 0.95rem; }
+    .calendar .panel { background: var(--mp-primary-light); border-color: transparent; }
+    .calendar__note { margin: 16px 0 0 !important; }
+
+    .quiz { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 28px; box-shadow: var(--mp-shadow); max-width: 44rem; }
+    .quiz__step strong, .quiz__result strong { display: block; margin-bottom: 16px; font-size: 1.05rem; }
+    .quiz__opts { display: grid; gap: 10px; }
+    .quiz__opts button { text-align: left; padding: 16px 18px; border-radius: var(--mp-radius-sm); border: 1px solid var(--mp-border); background: var(--mp-white); font: inherit; font-size: 0.98rem; cursor: pointer; transition: 0.15s ease; }
+    .quiz__opts button:hover { border-color: var(--mp-primary); background: var(--mp-primary-light); }
+    .quiz__result p { margin: 0 0 18px; color: var(--mp-text); }
+    .quiz__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .quiz__note { margin: 16px 0 0 !important; color: var(--mp-muted); font-size: 0.88rem; }
+
+    .case { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .case h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .case p { margin: 0 0 10px; color: var(--mp-muted); font-size: 0.95rem; }
+    .case p strong { color: var(--mp-text); }
+    .case details { border-top: 1px solid var(--mp-border); margin-top: 12px; padding-top: 12px; }
+    .case summary { cursor: pointer; font-weight: 700; font-size: 0.95rem; color: var(--mp-primary); list-style: none; }
+    .case summary::-webkit-details-marker { display: none; }
+    .case details p:last-child { margin-bottom: 0; }
+
+    .estimate { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .estimate h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .estimate .checklist li { padding-left: 30px; margin-bottom: 6px; }
+    .estimate > p { margin: 16px 0 18px; color: var(--mp-muted); font-size: 0.95rem; }
+
+    .guarantee { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid #2f9e5b; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .guarantee h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .guarantee .checklist li { padding-left: 30px; margin-bottom: 4px; }
+    .guarantee .checklist li strong { color: var(--mp-text); }
+    .guarantee > p { margin: 16px 0 0; color: var(--mp-muted); font-size: 0.93rem; }
+  </style>
+  <style>
+    /* --- C1, главное: в эталоне у метки .req стоит white-space: nowrap. Метка там была
+       короткой («[REQ: цена]»), а у нас в ней целый вопрос РОПу — строка не переносится и
+       растягивает страницу до 2103 px при вьюпорте 360. Поймано рендером, не глазами. --- */
+    .req { white-space: normal; }
+
+    /* --- C2: в эталоне девять селекторов с размером ниже 13 px, поднимаем до 13,1 px --- */
+    .hero__eyebrow { font-size: 0.85rem; }
+    .widget__slot small { font-size: 0.85rem; }
+    .brand__sub, .header-rating { font-size: 0.82rem; }
+    .header-phone-block span, .dropdown a em, .nav-mobile-note { font-size: 0.82rem; }
+    .path-card__tag, .badge { font-size: 0.82rem; }
+    .lead-form__agree { font-size: 0.85rem; }
+    .lead-form__note { font-size: 0.85rem; }
+
+    /* --- C3: подпись слота и плейсхолдер не проходили AA на светлом фоне --- */
+    .widget__slot small { color: var(--mp-muted); }
+    .lead-form input::placeholder { color: #6b7480; }
+
+    /* --- C2: поле формы от 48 px и 16 px шрифта, чтобы мобильный не зумил при фокусе --- */
+    .lead-form input[type="text"],
+    .lead-form input[type="tel"] { font-size: 16px; padding: 14px; }
+
+    /* --- блок 14: панель формы до 720 px, поля в одну колонку (ТЗ 3.3) --- */
+    #forma .lead-form {
+      max-width: 720px; margin: 0 auto;
+      background: var(--mp-white); border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm); padding: 24px;
+    }
+    #forma .lead-form__row { grid-template-columns: 1fr; display: grid; gap: 14px; }
+    #forma .lead-form button[type="submit"] { width: 100%; }
+
+    /* --- C7: подпись поля, состояние ошибки под конкретным полем --- */
+    .lead-form__row label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--mp-text); }
+    .lead-form__row label input { margin-top: 6px; }
+    .field-error {
+      display: block; margin-top: 6px;
+      color: #b3261e; font-size: 0.85rem; line-height: 1.35;
+    }
+    .field-error[hidden] { display: none; }
+    .lead-form__row label.is-error input,
+    .lead-form input.is-error {
+      border-color: #b3261e;
+      box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.12);
+    }
+    .lead-form__agree.is-error span { color: #b3261e; }
+    .lead-form.is-sent .field-error { display: none; }
+    .lead-form.is-sent .lead-form__agree { display: none; }
+
+    /* --- первый экран: H2 «помощь + гео» — самая доходная формулировка страницы (ТЗ 2.3),
+       поэтому она подаётся крупно, сразу под H1, а не служебной подписью --- */
+    .hero__h2 {
+      margin: 10px 0 0; max-width: 44rem;
+      font-size: 1.28rem; line-height: 1.35; font-weight: 600;
+      letter-spacing: -0.01em; color: #ffffff; opacity: 0.96;
+    }
+    @media (min-width: 900px) { .hero__h2 { font-size: 1.5rem; } }
+    /* запрос РОПу внутри факта первого экрана не должен ломать полосу из трёх фактов */
+    .hero__facts .req { display: block; margin-top: 6px; max-width: 26rem; }
+
+    /* --- блок 7: навигатор «Что выбрать» над таблицей прайса (ТЗ 3.3) --- */
+    .panel--navigator { margin-bottom: 16px; }
+    .panel--navigator ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+    .panel--navigator li { font-size: 0.97rem; }
+
+    /* --- блок 16: правовой дисклеймер перед подвалом, приглушённо и мелко (ТЗ 3.3) --- */
+    .disclaimer {
+      margin: 0; padding: 18px 20px;
+      background: var(--mp-white); border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      color: var(--mp-muted); font-size: 0.9rem; line-height: 1.6;
+    }
+
+    /* --- пять шагов в ряд на десктопе, чтобы пятый не оставался один в новой строке --- */
+    @media (min-width: 1000px) {
+      .steps { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+    /* --- длинные перечни в две колонки на широком экране --- */
+    @media (min-width: 820px) {
+      .checklist--two { grid-template-columns: 1fr 1fr; }
+    }
+    /* Внутри половинной панели и панели гарантий две колонки эталона рвут строки с запросом
+       РОПу на 5–6 обрывков — поймано на фрагментах блоков 6 и 11, ставим одну колонку. */
+    .duo .checklist, .guarantee .checklist { grid-template-columns: 1fr; }
+
+    /* --- первый экран: три факта одной полосой, как задано ТЗ 3.3 --- */
+    @media (min-width: 900px) {
+      .hero__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
+    }
+
+    /* --- блок 7: колонка «Цена» по правому краю (ТЗ 3.3) --- */
+    .ptable:not(.ptable--compare) th:last-child, .ptable td.price { text-align: right; }
+    /* --- блок 11: колонка «С нами» выделена фоном (ТЗ 3.3) --- */
+    .ptable--compare td:last-child { background: #f5f9ff; }
+
+    /* --- C1: на узком экране таблицы становятся карточками, бокового скролла нет --- */
+    @media (max-width: 660px) {
+      .ptable-wrap { border: none; background: transparent; overflow: visible; }
+      .ptable { min-width: 0; display: block; }
+      .ptable thead { display: none; }
+      .ptable tbody, .ptable tr, .ptable td { display: block; width: auto; }
+      .ptable tr {
+        background: var(--mp-white);
+        border: 1px solid var(--mp-border);
+        border-radius: var(--mp-radius-sm);
+        margin-bottom: 12px; padding: 6px 0;
+      }
+      .ptable td { border-bottom: none; padding: 8px 16px; }
+      .ptable td::before {
+        content: attr(data-label);
+        display: block; margin-bottom: 3px;
+        font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+        letter-spacing: 0.04em; color: var(--mp-primary);
+      }
+      .ptable td:first-child { font-size: 1.02rem; }
+      /* название позиции говорит за себя — подпись «что делаем» над ним лишняя */
+      .ptable td:first-child::before { display: none; }
+      /* ТЗ 3.1: в карточке прайса цена — самый крупный элемент */
+      .ptable td.price { font-size: 1.4rem; text-align: left; padding-top: 2px; }
+      .ptable--compare td.price { font-size: inherit; }
+    }
+
+    /* --- C9: блоки на данных РОПа в двух состояниях --- */
+    body.bez-dannyh [data-dannye] { display: none; }
+    body.bez-dannyh [data-pusto] { display: block; }
+    [data-tumbler-dannyh] { white-space: normal; text-align: left; min-height: 44px; }
   </style>
 </head>
 <body>
 
 <div class="design-note">
-  Прототип ступени 9 · посадочная <strong>/rvp</strong>, роль T-R2, волна П кластера РВП. Тексты — из ТЗ версии 1.0, утверждённого 2026-09-09.
-  Жёлтым помечены формулировки с меткой <strong>[REQ]</strong> — ждут вычитки юриста. Страница закрыта от индексации.
+  Прототип ступени 9 · посадочная <strong>/rvp</strong>, роль T-R2, волна П кластера РВП. Оболочка — принятая дизайн-система сайта, тексты из ТЗ версии 1.0 (утверждено 2026-09-09).
+  <strong>Жёлтым</strong> помечены формулировки с меткой [REQ] — уходят юристу пакетом после приёмки кластера. Страница закрыта от индексации, формы не подключены.
 </div>
-
 <header class="site-header">
-  <div class="header-top">
-    <div class="wrap header-top__inner">
-      <a class="brand" href="#">
-        <span class="brand__mark">МП</span>
-        <span>
-          <span class="brand__name">МИГРА<em>ПРО</em></span>
-          <span class="brand__sub">Миграционные услуги в Москве и МО</span>
-        </span>
-      </a>
-      <div class="header-phone-block">
-        <a href="tel:+74951543385">+7 (495) 154-33-85</a>
-        <span>пн–пт: 09:00–18:00 <span class="req">[REQ 5.1]</span></span>
-      </div>
-      <a class="btn btn--accent header-top__cta" href="#forma" data-modal>Бесплатная консультация</a>
-    </div>
-  </div>
-</header>
-
-<!-- Блок 2. Первый экран -->
-<div class="hero">
-  <div class="wrap">
-    <h1>Помощь в получении РВП в Москве и Московской области</h1>
-    <p>Подберём основание, соберём документы и сопроводим на подачу в МВД. Работаем с гражданами стран СНГ и других государств.</p>
-    <a class="btn btn--accent" href="#forma" data-modal>Получить бесплатную консультацию</a>
-    <ul class="trust">
-      <li>Ведём дело до приёма документов</li>
-      <li>Проверяем каждую справку перед подачей</li>
-      <li>Записываем на подачу и сопровождаем в МВД</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Блок 3. Кому подходит — основания -->
-<section id="osnovaniya">
-  <div class="wrap">
-    <h2>Кому подходит РВП: основания для подачи</h2>
-    <p class="lead">РВП выдают по квоте или без неё — если у вас есть одно из оснований. Ниже перечислены те, по которым мы ведём дела чаще всего.</p>
-    <ul class="osn">
-      <li><span class="req">Брак с гражданином России — с 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения. Исключение — общий ребёнок, рождённый или усыновлённый в этом браке. [REQ 4.1, 4.7]</span><br>
-        <a href="https://migra-pro.com/blog/rvp/rvp-po-braku-s-grazhdaninom-rf">РВП по браку с гражданином России</a></li>
-      <li>Родитель или ребёнок — гражданин России.<br>
-        <a href="https://migra-pro.com/blog/rvp/osnovaniya-dlya-polucheniya-rvp">основания для получения РВП</a></li>
-      <li>Вы родились на территории РСФСР или Российской Федерации.<br>
-        <a href="https://migra-pro.com/blog/rvp/osnovaniya-dlya-polucheniya-rvp">основания для получения РВП</a></li>
-      <li>Окончили российский вуз или колледж по очной форме.<br>
-        <a href="https://migra-pro.com/blog/rvp/rvp-v-uproshchennom-poryadke">РВП в упрощённом порядке</a></li>
-      <li>Гражданство страны СНГ — упрощённый порядок подачи.<br>
-        <a href="https://migra-pro.com/blog/rvp/rvp-dlya-grazhdan-sng">РВП для граждан стран СНГ</a></li>
-      <li>Ни одно основание не подходит — оформляем через квоту.<br>
-        <a href="https://migra-pro.com/blog/kvota-rvp/kvota-na-rvp-2025">квота на РВП</a></li>
-    </ul>
-  </div>
-</section>
-
-<!-- Блок 4. Бесплатная консультация -->
-<section id="konsultaciya">
-  <div class="wrap">
-    <h2>Бесплатная консультация: что вы получите</h2>
-    <p class="lead">На консультации специалист разбирает вашу ситуацию и даёт три ответа, с которыми уже можно действовать.</p>
-    <ul class="cards cards--3">
-      <li class="card"><h3>Основание</h3><p>По какому основанию вам подавать — и нужна ли квота</p></li>
-      <li class="card"><h3>Документы</h3><p>Какие документы нужны именно в вашем случае</p></li>
-      <li class="card"><h3>Срок и цена</h3><p>Сколько времени и денег займёт ваше дело</p></li>
-    </ul>
-    <p class="price-note">Консультация бесплатная, длится около 20 минут. Отвечаем в течение рабочего дня.</p>
-    <p><a class="btn btn--accent" href="#forma" data-modal>Записаться на консультацию</a></p>
-  </div>
-</section>
-
-<!-- Блок 5. Как проходит оформление -->
-<section id="kak">
-  <div class="wrap">
-    <h2>Как проходит оформление РВП</h2>
-    <ol class="steps">
-      <li><b>Заявка и консультация</b>Оставляете заявку или звоните. Специалист уточняет вашу ситуацию и подходящее основание.</li>
-      <li><b>Проверяем основание и документы</b>Смотрим, что у вас уже есть, и составляем список того, что нужно донести.</li>
-      <li><b>Готовим пакет документов</b>Заполняем заявление, проверяем каждую справку и перевод перед подачей.</li>
-      <li><b>Записываем на подачу и едем с вами</b>Берём запись на конкретный день, сопровождаем в МВД и отслеживаем статус заявления.</li>
-      <li><b>Получаете РВП</b>Отдаём документы и объясняем, что делать дальше: уведомление о проживании, работа, переход к ВНЖ.</li>
-    </ol>
-  </div>
-</section>
-
-<!-- Блок 6. Что входит и что оплачивается отдельно -->
-<section id="chto-vhodit">
-  <div class="wrap">
-    <h2>Что входит в услугу и что оплачивается отдельно</h2>
-    <p class="lead">Слева — наша работа. Справа — платежи, которые вы делаете сами: их сумма в нашу цену не входит.</p>
-    <div class="panels">
-      <div class="panel panel--in">
-        <h3>Входит в нашу услугу</h3>
-        <ul class="plain">
-          <li>Разбор ситуации и выбор основания подачи</li>
-          <li>Проверка документов, которые у вас уже есть</li>
-          <li>Заполнение заявления и проверка переводов</li>
-          <li>Запись на подачу на конкретный день</li>
-          <li>Сопровождение на подаче в МВД</li>
-          <li>Доработка пакета, если документы не приняли с первого раза</li>
-        </ul>
-      </div>
-      <div class="panel panel--out">
-        <h3>Оплачивается отдельно</h3>
-        <ul class="plain pay">
-          <li><span class="req">Государственная пошлина за выдачу РВП — 15 000 ₽ [REQ 4.2]</span></li>
-          <li>Медицинское освидетельствование — осмотр врачей и справка об отсутствии опасных заболеваний</li>
-          <li>Экзамен по русскому языку, истории и основам законодательства — если у вас нет освобождения</li>
-          <li>Нотариальный перевод документов — перевод с печатью нотариуса</li>
-          <li>Полис медицинского страхования</li>
-        </ul>
+    <div class="header-top">
+      <div class="wrap header-top__inner">
+        <a class="brand" href="https://migra-pro.com/">
+          <img class="brand__img" src="logo-migrapro.png" alt="МиграПро — российское миграционное агентство" width="316" height="74">
+        </a>
+        <div class="header-meta">
+          <div class="header-rating" aria-label="Рейтинг на основе Яндекс">
+            <span class="header-rating__stars">★★★★★</span>
+            <span>Наш рейтинг на основе Яндекс</span>
+          </div>
+          <div class="header-messengers" aria-label="Мессенджеры">
+            <a href="#" title="MAX" aria-label="MAX">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-1.2 4.4L21 21l-5.2-1.1A8.5 8.5 0 1 1 21 11.5z"/><path d="m8 14 2.6-4 2.4 2.6L15.9 9"/></svg>
+            </a>
+            <a href="#" title="Telegram" aria-label="Telegram">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M22 3 2.5 11.2c-.7.3-.7.8-.1 1l4.8 1.5 1.9 5.8c.2.7.6.8 1.1.5l2.7-2.3 4.8 3.5c.6.3 1 .1 1.1-.5L22.8 4c.2-.8-.3-1.2-.8-1z"/><path d="m9.3 14.1 9.2-7.2"/></svg>
+            </a>
+          </div>
+          <div class="header-phone-block">
+            <a href="tel:+74958590051">+7 (495) 859-00-51</a>
+            <span>Пн–Пт: 09:00–18:00</span>
+          </div>
+        </div>
+        <div class="header-top__cta">
+          <a class="btn btn--primary btn--sm" href="#cta" data-modal-open data-modal-source="Шапка">Бесплатная консультация</a>
+        </div>
       </div>
     </div>
-    <p class="price-note">Точную сумму сопутствующих расходов по вашему случаю назовём на консультации. Размер пошлины и порядок оплаты — в статье о стоимости РВП <em>(ссылка появится, когда страница будет готова)</em>.</p>
-  </div>
-</section>
 
-<!-- Блок 7. Цены -->
-<section id="ceny">
-  <div class="wrap">
-    <h2>Цены на ведение миграционного дела по РВП</h2>
-    <table class="price">
-      <thead><tr><th>Услуга</th><th>Срок подготовки</th><th>Что входит в эту строку</th><th>Стоимость</th></tr></thead>
-      <tbody>
-        <tr>
-          <td data-l="Услуга">Ведение дела по получению квоты на РВП по Москве и МО, безлимитные подачи</td>
-          <td data-l="Срок">5 дней</td>
-          <td data-l="Что входит">заявление на квоту, проверка документов, подача в комиссию, повторные подачи без доплаты до получения квотоместа</td>
-          <td data-l="Стоимость">от 44 000 ₽</td>
-        </tr>
-        <tr>
-          <td data-l="Услуга">Ведение дела по получению РВП по Москве или МО</td>
-          <td data-l="Срок">7 дней</td>
-          <td data-l="Что входит">выбор основания, полный пакет документов, заявление, запись на подачу, сопровождение в МВД</td>
-          <td data-l="Стоимость">от 46 000 ₽</td>
-        </tr>
-        <tr>
-          <td data-l="Услуга">Ведение дела по получению РВП для ребёнка до 18 лет по Москве или МО</td>
-          <td data-l="Срок">7 дней</td>
-          <td data-l="Что входит">документы на ребёнка, заявление от законного представителя, запись и сопровождение</td>
-          <td data-l="Стоимость">от 33 000 ₽</td>
-        </tr>
-        <tr>
-          <td data-l="Услуга">Юридическое сопровождение при получении РВП в Москве</td>
-          <td data-l="Срок">7 дней</td>
-          <td data-l="Что входит">проверка вашего пакета и заявления, подготовка к подаче; документы собираете вы</td>
-          <td data-l="Стоимость">от 14 000 ₽</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="price-note"><span class="req">Оплата поэтапно, по мере продвижения дела. Аванс за первый этап — на консультации. [REQ 4.3]</span></p>
-    <p class="price-note">Государственная пошлина, медкомиссия, экзамен и переводы в стоимость не входят — их перечень в блоке <a href="#chto-vhodit">«Что входит в услугу и что оплачивается отдельно»</a>.</p>
-  </div>
-</section>
-
-<!-- Блок 8. Где подавать документы -->
-<section id="gde-podavat">
-  <div class="wrap">
-    <h2>Где подают документы на РВП и как записаться</h2>
-    <p class="lead">Заявление на РВП подают в подразделение по вопросам миграции МВД по месту предполагаемого проживания. Москва и Московская область — разные субъекты, и подавать нужно в тот, где вы планируете жить.</p>
-    <ul class="cards cards--2">
-      <li class="card"><h3>Москва</h3><p><span class="req">Многофункциональный миграционный центр в Сахарово, приём по предварительной записи. [REQ 4.4]</span></p></li>
-      <li class="card"><h3>Московская область</h3><p><span class="req">Подразделение по вопросам миграции по месту проживания. [REQ 4.4]</span></p></li>
-      <li class="card"><h3>Запись</h3><p>Через портал государственных услуг или через нас: берём дату и время под ваш случай.</p></li>
-      <li class="card"><h3>Сопровождение</h3><p>На подаче с вами едет наш специалист.</p></li>
-    </ul>
-  </div>
-</section>
-
-<!-- Блок 9. После подачи -->
-<section id="posle-podachi">
-  <div class="wrap">
-    <h2>Что происходит после подачи документов</h2>
-    <p class="lead">Заявление рассматривает МВД. Пока идёт рассмотрение, мы держим дело на контроле.</p>
-    <ul class="plain">
-      <li>Отслеживаем статус вашего заявления</li>
-      <li>Сообщаем, когда решение принято</li>
-      <li>Если запросили дополнительные документы — готовим их и подаём</li>
-      <li>Если срок нарушен — готовим обращение</li>
-    </ul>
-    <p class="price-note">Точные сроки рассмотрения различаются по основанию подачи — они разобраны в статье <a href="https://migra-pro.com/blog/rvp/sroki-oformleniya-rvp-v-rossii">сроки оформления РВП</a>.</p>
-  </div>
-</section>
-
-<!-- Блок 10. Если отказали -->
-<section id="otkaz">
-  <div class="wrap">
-    <h2>Если отказали или документы не приняли</h2>
-    <p class="lead">Это другая ситуация и другая работа. Если вы уже подавали сами и получили отказ — приходите с решением на руках.</p>
-    <ul class="plain">
-      <li>Разберём причину отказа по документам, а не по догадке</li>
-      <li>Подготовим возражение или новый пакет</li>
-      <li>Добьёмся приёма документов</li>
-      <li>Разберём, есть ли у вас второе основание для подачи</li>
-    </ul>
-    <p class="price-note">Причины отказа и способы их избежать разобраны в статье <a href="https://migra-pro.com/blog/rvp/oshibki-pri-oformlenii-rvp">причины отказа в РВП</a>.</p>
-  </div>
-</section>
-
-<!-- Блок 11. Самостоятельно или с нами -->
-<section id="sravnenie">
-  <div class="wrap">
-    <h2>Самостоятельно или с нами</h2>
-    <div class="cmp__head"><div>Этап</div><div>Если оформляете сами</div><div>Если ведём мы</div></div>
-    <div class="cmp">
-      <div class="cmp__row"><div class="cmp__stage">Выбор основания</div><div class="cmp__self">ищете норму и решаете, подходит ли она вам</div><div class="cmp__we">подбираем основание и проверяем, подтверждается ли оно вашими документами</div></div>
-      <div class="cmp__row"><div class="cmp__stage">Документы</div><div class="cmp__self">собираете по списку из интернета, который мог устареть</div><div class="cmp__we">даём список под ваш случай и проверяем каждую справку и перевод</div></div>
-      <div class="cmp__row"><div class="cmp__stage">Заявление</div><div class="cmp__self">заполняете сами, ошибка в бланке — причина отказа в приёме</div><div class="cmp__we">заполняем и проверяем перед подачей</div></div>
-      <div class="cmp__row"><div class="cmp__stage">Запись на подачу</div><div class="cmp__self">ловите свободное окно самостоятельно</div><div class="cmp__we">берём запись на конкретный день</div></div>
-      <div class="cmp__row"><div class="cmp__stage">Подача</div><div class="cmp__self">едете один</div><div class="cmp__we">едем с вами</div></div>
-      <div class="cmp__row"><div class="cmp__stage">Документы не приняли</div><div class="cmp__self">собираете заново и записываетесь заново</div><div class="cmp__we">дорабатываем пакет и подаём повторно без доплаты</div></div>
+    <div class="header-nav-wrap">
+      <div class="wrap">
+        <nav class="header-nav" aria-label="Основное меню">
+          <div class="nav-item nav-item--split" data-dropdown>
+            <a class="nav-link nav-link--label" href="#uslugi">Услуги</a>
+            <button class="nav-link nav-chev" type="button" aria-expanded="false" aria-controls="dropdown-uslugi" aria-label="Открыть список услуг">
+              <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+            <div class="dropdown" id="dropdown-uslugi" role="menu" hidden>
+              <a href="https://migra-pro.com/rvp"><span>РВП</span><em>Разрешение на временное проживание</em></a>
+              <a href="https://migra-pro.com/vnj"><span>ВНЖ</span><em>Вид на жительство, бессрочный</em></a>
+              <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf"><span>Гражданство РФ</span><em>Общий и упрощённый порядок</em></a>
+              <a href="https://migra-pro.com/uslugi"><span>Репатриация</span><em>Программа возвращения соотечественников</em></a>
+              <a href="https://migra-pro.com/cancellationofinter"><span>Запрет на въезд и депортация</span><em>Обжалование и снятие ограничений</em></a>
+              <a href="https://migra-pro.com/online_consult"><span>Консультация миграционного юриста</span><em>Разбор ситуации и план действий</em></a>
+              <a class="dropdown__all" href="https://migra-pro.com/uslugi">Все услуги и цены →</a>
+            </div>
+          </div>
+          <a class="nav-link is-active" href="#top" aria-current="page">Иностранным гражданам</a>
+          <a class="nav-link" href="https://migra-pro.com/about">О нас</a>
+          <a class="nav-link" href="https://migra-pro.com/informaciya">База знаний</a>
+          <a class="nav-link" href="#otzyvy">Отзывы</a>
+          <a class="nav-link" href="#contacts">Контакты</a>
+        </nav>
+      </div>
     </div>
-    <p class="price-note"><span class="req">Если документы не приняли по нашей ошибке, доработку и повторную подачу делаем без доплаты. [REQ 4.5]</span></p>
-  </div>
-</section>
+  </header>
 
-<!-- Блок 12. Доказательства: кейсы и отзывы -->
-<section id="dela">
-  <div class="wrap">
-    <h2>Наши дела по РВП: кейсы и отзывы</h2>
-    <p class="lead">Одно дело — одна ситуация. Ниже случай, который мы вели полностью.</p>
-    <ul class="cards cards--2">
-      <li class="card">
+<main id="top">
+
+  <!-- 2. Первый экран -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="hero__eyebrow">Иностранным гражданам · Москва и Московская область</span>
+      <h1>Помощь в получении РВП в Москве и Московской области</h1>
+      <p class="hero__lead">Подберём основание, соберём документы и сопроводим на подачу в МВД. Работаем с гражданами стран СНГ и других государств.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#forma" data-modal-open data-modal-source="Первый экран">Получить бесплатную консультацию</a>
+      </div>
+      <div class="hero__facts">
+        <div><strong>Ведём дело до приёма документов</strong><span>Решение принимает МВД — наша часть в том, чтобы к документам не было замечаний</span></div>
+        <div><strong>Проверяем каждую справку перед подачей</strong><span>Ошибка в бланке — самая частая причина отказа в приёме</span></div>
+        <div><strong>Записываем на подачу и сопровождаем в МВД</strong><span>Берём дату и время, специалист едет с вами</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Кому подходит — основания -->
+  <section class="section" id="osnovaniya">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Кому подходит РВП: основания для подачи</h2>
+        <p>РВП выдают по квоте или без неё — если у вас есть одно из оснований. Ниже те, по которым мы ведём дела чаще всего.</p>
+      </div>
+      <div class="services">
+        <a class="service" href="https://migra-pro.com/blog/rvp/rvp-po-braku-s-grazhdaninom-rf">
+          <h3>Брак с гражданином России</h3>
+          <p><span class="req">С 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения. Исключение — общий ребёнок, рождённый или усыновлённый в этом браке. [REQ: юрист 4.1 и 4.7]</span></p>
+          <span class="service__more">РВП по браку с гражданином России →</span>
+        </a>
+        <a class="service" href="https://migra-pro.com/blog/rvp/osnovaniya-dlya-polucheniya-rvp">
+          <h3>Родитель или ребёнок — гражданин России</h3>
+          <p>Основание не требует квоты. Подтверждается документами о родстве и гражданстве близкого родственника.</p>
+          <span class="service__more">основания для получения РВП →</span>
+        </a>
+        <a class="service" href="https://migra-pro.com/blog/rvp/osnovaniya-dlya-polucheniya-rvp">
+          <h3>Рождение на территории РСФСР или России</h3>
+          <p>Подтверждается свидетельством о рождении и документами о гражданстве СССР у родителей.</p>
+          <span class="service__more">основания для получения РВП →</span>
+        </a>
+        <a class="service" href="https://migra-pro.com/blog/rvp/rvp-v-uproshchennom-poryadke">
+          <h3>Образование в России</h3>
+          <p>Окончили российский вуз или колледж по очной форме — подача идёт в упрощённом порядке.</p>
+          <span class="service__more">РВП в упрощённом порядке →</span>
+        </a>
+        <a class="service" href="https://migra-pro.com/blog/rvp/rvp-dlya-grazhdan-sng">
+          <h3>Гражданство страны СНГ</h3>
+          <p>Для граждан безвизовых стран порядок подачи и сроки рассмотрения отличаются.</p>
+          <span class="service__more">РВП для граждан стран СНГ →</span>
+        </a>
+        <a class="service" href="https://migra-pro.com/blog/kvota-rvp/kvota-na-rvp-2025">
+          <h3>Ни одно основание не подходит</h3>
+          <p>Тогда оформляем через квоту: заявление в комиссию, подачи до получения квотоместа.</p>
+          <span class="service__more">квота на РВП →</span>
+        </a>
+      </div>
+      <p class="terms-note">Перечень сокращён до одной строки на основание. Полный правовой разбор — в материале <a href="https://migra-pro.com/blog/rvp/osnovaniya-dlya-polucheniya-rvp">основания для получения РВП</a>: на этой странице мы продаём сопровождение, а не пересказываем закон.</p>
+    </div>
+  </section>
+
+  <!-- 4. Бесплатная консультация -->
+  <section class="section section--tint" id="konsultaciya">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Бесплатная консультация: что вы получите</h2>
+        <p>Специалист разбирает вашу ситуацию и даёт три ответа, с которыми уже можно действовать.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>Основание</h3>
+          <p>По какому основанию вам подавать — и нужна ли квота</p>
+        </div>
+        <div class="step">
+          <h3>Документы</h3>
+          <p>Какие документы нужны именно в вашем случае</p>
+        </div>
+        <div class="step">
+          <h3>Срок и цена</h3>
+          <p>Сколько времени и денег займёт ваше дело</p>
+        </div>
+      </div>
+      <p class="terms-note">Консультация бесплатная, длится около 20 минут. Отвечаем в течение рабочего дня.</p>
+      <p><a class="btn btn--primary" href="#forma" data-modal-open data-modal-source="Блок консультации">Записаться на консультацию</a></p>
+    </div>
+  </section>
+
+  <!-- 5. Как проходит оформление -->
+  <section class="section" id="kak">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Как проходит оформление РВП</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>1. Заявка и консультация</h3>
+          <p>Оставляете заявку или звоните. Специалист уточняет вашу ситуацию и подходящее основание</p>
+        </div>
+        <div class="step">
+          <h3>2. Проверяем основание и документы</h3>
+          <p>Смотрим, что у вас уже есть, и составляем список того, что нужно донести</p>
+        </div>
+        <div class="step">
+          <h3>3. Готовим пакет документов</h3>
+          <p>Заполняем заявление, проверяем каждую справку и перевод перед подачей. Полный перечень — в материале <a href="https://migra-pro.com/blog/rvp/oformlenie-rvp-dokumenty">документы для РВП</a></p>
+        </div>
+        <div class="step">
+          <h3>4. Записываем на подачу и едем с вами</h3>
+          <p>Берём запись на конкретный день, сопровождаем в МВД и отслеживаем статус заявления</p>
+        </div>
+        <div class="step">
+          <h3>5. Получаете РВП</h3>
+          <p>Отдаём документы и объясняем, что делать дальше: уведомление о проживании, работа, переход к ВНЖ</p>
+        </div>
+      </div>
+      <p class="terms-note">Решение о выдаче принимает МВД. Наша часть — чтобы к вашим документам не было замечаний, а сроки не сдвинулись из-за бумаг.</p>
+    </div>
+  </section>
+
+  <!-- 6. Что входит в услугу и что оплачивается отдельно -->
+  <section class="section section--tint" id="chto-vhodit">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Что входит в услугу и что оплачивается отдельно</h2>
+        <p>Слева — наша работа. Справа — платежи, которые вы делаете сами: в нашу цену они не входят.</p>
+      </div>
+      <div class="duo">
+        <div class="panel">
+          <h3>Входит в цену</h3>
+          <ul class="checklist">
+            <li>Разбор ситуации и выбор основания подачи</li>
+            <li>Проверка документов, которые у вас уже есть</li>
+            <li>Заполнение заявления и проверка переводов</li>
+            <li>Запись на подачу на конкретный день</li>
+            <li>Сопровождение на подаче в МВД</li>
+            <li>Доработка пакета, если документы не приняли с первого раза</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Оплачивается отдельно, напрямую ведомству и организациям</h3>
+          <ul class="checklist">
+            <li><span class="req">Государственная пошлина за выдачу РВП — 15 000 ₽ [REQ: юрист 4.2]</span></li>
+            <li>Медицинское освидетельствование — осмотр врачей и справка об отсутствии опасных заболеваний, по тарифам медучреждения</li>
+            <li>Экзамен по русскому языку, истории и основам законодательства — тем, кто от него не освобождён: <a href="https://migra-pro.com/blog/grajdanstvo/gde-sdat-ekzamen-rvp-vnz-grazhdanstvo-moskva">экзамен для РВП</a></li>
+            <li>Нотариальный перевод документов — перевод с печатью нотариуса</li>
+            <li>Полис медицинского страхования</li>
+          </ul>
+        </div>
+      </div>
+      <p class="terms-note">Точную сумму сопутствующих расходов по вашему случаю назовём на консультации.</p>
+    </div>
+  </section>
+
+  <!-- 7. Цены -->
+  <section class="section" id="ceny">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Цены на ведение миграционного дела по РВП</h2>
+        <p>У каждой строки — состав работ: за что именно вы платите.</p>
+      </div>
+      <div class="services">
+        <div class="service">
+          <strong>от 44 000 ₽</strong>
+          <h3>Квота на РВП по Москве и МО, безлимитные подачи</h3>
+          <p>Заявление на квоту, проверка документов, подача в комиссию, повторные подачи без доплаты до получения квотоместа. Срок подготовки — 5 дней.</p>
+        </div>
+        <div class="service">
+          <strong>от 46 000 ₽</strong>
+          <h3>Ведение дела по получению РВП по Москве или МО</h3>
+          <p>Выбор основания, полный пакет документов, заявление, запись на подачу, сопровождение в МВД. Срок подготовки — 7 дней.</p>
+        </div>
+        <div class="service">
+          <strong>от 33 000 ₽</strong>
+          <h3>РВП для ребёнка до 18 лет по Москве или МО</h3>
+          <p>Документы на ребёнка, заявление от законного представителя, запись и сопровождение. Срок подготовки — 7 дней.</p>
+        </div>
+        <div class="service">
+          <strong>от 14 000 ₽</strong>
+          <h3>Юридическое сопровождение при получении РВП в Москве</h3>
+          <p>Проверка вашего пакета и заявления, подготовка к подаче; документы собираете вы. Срок — 7 дней.</p>
+        </div>
+      </div>
+      <p class="terms-note"><span class="req">Оплата поэтапно, по мере продвижения дела. Аванс за первый этап — на консультации. [REQ: юрист 4.3]</span></p>
+      <p class="terms-note">Государственная пошлина, медкомиссия, экзамен и переводы в стоимость не входят — их перечень в блоке <a href="#chto-vhodit">«Что входит в услугу и что оплачивается отдельно»</a>.</p>
+    </div>
+  </section>
+
+  <!-- 8. Где подавать документы -->
+  <section class="section section--alt" id="gde-podavat">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Где подают документы на РВП и как записаться</h2>
+        <p>Заявление подают в подразделение по вопросам миграции МВД по месту предполагаемого проживания. Москва и Московская область — разные субъекты, и подавать нужно в тот, где вы планируете жить.</p>
+      </div>
+      <div class="duo">
+        <div class="panel">
+          <h3>Москва</h3>
+          <p>Документы принимает Многофункциональный миграционный центр в Сахарово — Варшавское шоссе, 64-й километр, дом 1, строение 47. Приём идёт только по предварительной записи. Записаться можно онлайн на сайте центра, лично через вход № 5 — он работает ежедневно с 08:00 до 20:00, — или в представительстве центра в 1-м Красногвардейском проезде, дом 21, строение 1, по рабочим дням с 09:00 до 18:00.</p>
+        </div>
+        <div class="panel">
+          <h3>Московская область</h3>
+          <p>Подразделение по вопросам миграции по месту проживания. Запись — через портал государственных услуг или через нас: берём дату и время под ваш случай. На подаче с вами едет наш специалист.</p>
+        </div>
+      </div>
+      <p class="terms-note"><span class="req">Адрес и порядок записи по Московской области уточняются по официальному источнику ведомства до публикации. [REQ: юрист 4.4]</span></p>
+    </div>
+  </section>
+
+  <!-- 9. После подачи -->
+  <section class="section" id="posle-podachi">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Что происходит после подачи документов</h2>
+        <p>Заявление рассматривает МВД. Пока идёт рассмотрение, мы держим дело на контроле.</p>
+      </div>
+      <ul class="checklist">
+        <li>Отслеживаем статус вашего заявления</li>
+        <li>Сообщаем, когда решение принято</li>
+        <li>Если запросили дополнительные документы — готовим их и подаём</li>
+        <li>Если срок нарушен — готовим обращение</li>
+      </ul>
+      <p class="terms-note">Точные сроки рассмотрения различаются по основанию подачи — они разобраны в материале <a href="https://migra-pro.com/blog/rvp/sroki-oformleniya-rvp-v-rossii">сроки оформления РВП</a>.</p>
+    </div>
+  </section>
+
+  <!-- 10. Если отказали -->
+  <section class="section section--tint" id="otkaz">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Если отказали или документы не приняли</h2>
+        <p>Это другая ситуация и другая работа. Если вы уже подавали сами и получили отказ — приходите с решением на руках.</p>
+      </div>
+      <ul class="checklist">
+        <li>Разберём причину отказа по документам, а не по догадке</li>
+        <li>Подготовим возражение или новый пакет</li>
+        <li>Добьёмся приёма документов</li>
+        <li>Разберём, есть ли у вас второе основание для подачи</li>
+      </ul>
+      <p class="terms-note">Причины отказа и способы их избежать разобраны в материале <a href="https://migra-pro.com/blog/rvp/oshibki-pri-oformlenii-rvp">причины отказа в РВП</a>.</p>
+    </div>
+  </section>
+
+  <!-- 11. Самостоятельно или с нами -->
+  <section class="section" id="sravnenie">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Самостоятельно или с нами</h2>
+        <p>По каждому этапу процедуры: что придётся делать вам и что делаем мы.</p>
+      </div>
+      <div class="duo">
+        <div class="panel">
+          <h3>Если оформляете сами</h3>
+          <ul class="checklist">
+            <li>Ищете норму и решаете, подходит ли она вам</li>
+            <li>Собираете документы по списку из интернета, который мог устареть</li>
+            <li>Заполняете заявление сами: ошибка в бланке — причина отказа в приёме</li>
+            <li>Ловите свободное окно записи самостоятельно</li>
+            <li>Едете на подачу один</li>
+            <li>Если документы не приняли — собираете заново и записываетесь заново</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Если ведём мы</h3>
+          <ul class="checklist">
+            <li>Подбираем основание и проверяем, подтверждается ли оно вашими документами</li>
+            <li>Даём список под ваш случай и проверяем каждую справку и перевод</li>
+            <li>Заполняем заявление и проверяем перед подачей</li>
+            <li>Берём запись на конкретный день</li>
+            <li>Едем с вами на подачу</li>
+            <li>Если документы не приняли — дорабатываем пакет и подаём повторно без доплаты</li>
+          </ul>
+        </div>
+      </div>
+      <p class="terms-note"><span class="req">Если документы не приняли по нашей ошибке, доработку и повторную подачу делаем без доплаты. [REQ: юрист 4.5]</span></p>
+    </div>
+  </section>
+
+  <!-- 12. Доказательства -->
+  <section class="section section--alt" id="dela">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Наши дела по РВП: кейсы и отзывы</h2>
+        <p>Одно дело — одна ситуация. Ниже случай, который мы вели полностью.</p>
+      </div>
+      <div class="trust-card">
         <h3>РВП для выпускницы российского вуза</h3>
-        <p><b>Задача.</b> Легализовать работу до получения статуса при ошибке в дипломе.<br>
-           <b>Что сделали.</b> Исправили ошибку в документе об образовании и провели подачу.<br>
-           <b>Результат.</b> Статус получен, работа легальна.</p>
-        <p style="margin-top:12px"><a href="https://migra-pro.com/blog/rvp/trp-case-study">все наши дела по РВП</a></p>
-      </li>
-      <li class="card" style="display:grid;place-items:center;text-align:center;border-style:dashed;color:var(--mp-muted)">
-        <p><b>Слот виджета отзывов</b><br>Сервис и наличие согласий клиентов — запрос 5.2 к заказчику. Отзывы не выдумываются: до ответа слот остаётся пустым.</p>
-      </li>
-    </ul>
-  </div>
-</section>
+        <p><strong>Задача.</strong> Легализовать работу до получения статуса при ошибке в дипломе.</p>
+        <p><strong>Что сделали.</strong> Исправили ошибку в документе об образовании и провели подачу.</p>
+        <p><strong>Результат.</strong> Статус получен, работа легальна.</p>
+        <p><a href="https://migra-pro.com/blog/rvp/trp-case-study">все наши дела по РВП</a></p>
+      </div>
+      <div class="widgets" id="otzyvy">
+        <div class="widget">
+          <div class="widget__head"><strong>Отзывы на Яндекс.Картах</strong><span class="widget__rate">★★★★★</span></div>
+          <div class="widget__slot">Слот виджета<small>Встраивается виджет организации с Яндекс.Карт</small></div>
+        </div>
+        <div class="widget">
+          <div class="widget__head"><strong>Отзывы клиентов по РВП</strong></div>
+          <div class="widget__slot">Слот виджета<small>Отзывы не выдумываются: слот остаётся пустым, пока не подтверждены согласия клиентов</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Блок 13. Частые вопросы -->
-<section id="faq">
-  <div class="wrap">
-    <h2>Частые вопросы о РВП</h2>
-    <p class="lead">Порядок вопросов пока выведен из спроса, а не из практики консультаций — гипотеза снимается ответом на запрос 5.3.</p>
+  <!-- 13. Частые вопросы -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Частые вопросы о РВП</h2>
+        <p>Порядок вопросов пока выведен из спроса, а не из практики консультаций.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Нужна ли мне квота</summary>
+          <p>Квота нужна, если у вас нет основания для подачи без неё. Основания перечислены выше в блоке <a href="#osnovaniya">«Кому подходит»</a>. Подробно — <a href="https://migra-pro.com/blog/kvota-rvp/rvp-bez-kvoty">РВП без квоты</a>.</p>
+        </details>
+        <details>
+          <summary>Сколько стоит сама процедура, помимо ваших услуг</summary>
+          <p>Государственная пошлина, медкомиссия, экзамен и переводы оплачиваются отдельно. Перечень — в блоке <a href="#chto-vhodit">«Что входит»</a>.</p>
+        </details>
+        <details>
+          <summary>Сколько ждать решения</summary>
+          <p>Срок зависит от основания подачи и от того, визовая у вас страна или безвизовая. Подробно — <a href="https://migra-pro.com/blog/rvp/sroki-oformleniya-rvp-v-rossii">сроки оформления РВП</a>.</p>
+        </details>
+        <details>
+          <summary>Что делать, когда РВП заканчивается</summary>
+          <p>РВП не продлевают: нужно либо оформлять ВНЖ, либо получать РВП заново. Подробно — <a href="https://migra-pro.com/blog/rvp/kak-prodlit-rvp">что делать, когда РВП заканчивается</a>.</p>
+        </details>
+        <details>
+          <summary>Можно ли подать по браку</summary>
+          <p><span class="req">Можно. С 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения, кроме случая с общим ребёнком. [REQ: юрист 4.7]</span> Подробно — <a href="https://migra-pro.com/blog/rvp/rvp-po-braku-s-grazhdaninom-rf">РВП по браку с гражданином России</a>.</p>
+        </details>
+        <details>
+          <summary>Нужно ли сдавать экзамен</summary>
+          <p>Экзамен по русскому языку, истории и основам законодательства нужен, если у вас нет освобождения. Подробно — <a href="https://migra-pro.com/blog/grajdanstvo/gde-sdat-ekzamen-rvp-vnz-grazhdanstvo-moskva">экзамен для РВП</a>.</p>
+        </details>
+        <details>
+          <summary>Что даёт РВП и чем отличается от ВНЖ</summary>
+          <p>РВП действует три года и привязано к региону получения; ВНЖ бессрочно и без территориальной привязки. Подробно — <a href="https://migra-pro.com/blog/rvp/rvp-v-rossii-preimushchestva">что даёт РВП</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
-    <details class="faq"><summary>Нужна ли мне квота</summary><div class="faq__body">Квота нужна, если у вас нет основания для подачи без неё. Основания перечислены выше в блоке <a href="#osnovaniya">«Кому подходит»</a>. Подробно — <a href="https://migra-pro.com/blog/kvota-rvp/rvp-bez-kvoty">РВП без квоты</a>.</div></details>
+  <!-- 14. Финальный CTA с формой -->
+  <section class="cta-band" id="forma">
+    <div class="wrap">
+      <h2>Оставьте заявку на бесплатную консультацию</h2>
+      <p>Специалист разберёт вашу ситуацию, назовёт подходящее основание и список документов под ваш случай.</p>
+      <form class="lead-form cta-form" onsubmit="event.preventDefault(); this.classList.add('is-sent');">
+        <div class="lead-form__row">
+          <input type="text" name="name" placeholder="Имя" required>
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+          <button class="btn btn--primary" type="submit">Записаться на консультацию</button>
+        </div>
+        <label class="lead-form__agree"><input type="checkbox" required> Согласен на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></label>
+        <p class="lead-form__note">Консультация бесплатная. Перезвоним в рабочее время, Пн–Пт с 09:00 до 18:00 по московскому времени.</p>
+        <div class="lead-form__done" role="status">Заявка принята. Перезвоним в рабочее время, Пн–Пт с 09:00 до 18:00 по московскому времени.</div>
+      </form>
+    </div>
+  </section>
 
-    <details class="faq"><summary>Сколько стоит сама процедура, помимо ваших услуг</summary><div class="faq__body">Государственная пошлина, медкомиссия, экзамен и переводы оплачиваются отдельно. Перечень — в блоке <a href="#chto-vhodit">«Что входит»</a>; суммы будут разобраны в статье о стоимости РВП.</div></details>
+  <!-- 15. Связанное -->
+  <section class="section" id="svyazannoe">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Что почитать по теме</h2>
+        <p>Линия статусов: <a href="https://migra-pro.com/rvp">РВП</a> → <a href="https://migra-pro.com/vnj">Вид на жительство</a> → <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></p>
+      </div>
+      <div class="knowledge">
+        <a class="know-card" href="https://migra-pro.com/blog/rvp/kak-oformit-rvp-v-rossii">
+          <div class="know-card__body"><strong>как оформить РВП: пошаговая инструкция</strong><span>Обзорная статья о процедуре целиком</span></div>
+        </a>
+        <a class="know-card" href="https://migra-pro.com/blog/rvp/oformlenie-rvp-dokumenty">
+          <div class="know-card__body"><strong>документы для РВП: полный чек-лист</strong><span>Что собрать и в каком виде</span></div>
+        </a>
+        <a class="know-card" href="https://migra-pro.com/blog/rvp/oshibki-pri-oformlenii-rvp">
+          <div class="know-card__body"><strong>причины отказа в РВП</strong><span>Где чаще всего теряют статус</span></div>
+        </a>
+        <a class="know-card" href="https://migra-pro.com/blog/rvp/poluchenie-vnj-posle-rvp">
+          <div class="know-card__body"><strong>что делать после РВП: переход к ВНЖ</strong><span>Следующий шаг после получения статуса</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <details class="faq"><summary>Сколько ждать решения</summary><div class="faq__body">Срок зависит от основания подачи и от того, визовая у вас страна или безвизовая. Подробно — <a href="https://migra-pro.com/blog/rvp/sroki-oformleniya-rvp-v-rossii">сроки оформления РВП</a>.</div></details>
+  <!-- 16. Правовой дисклеймер -->
+  <section class="section section--tint" id="contacts">
+    <div class="wrap">
+      <div class="contacts">
+        <div class="office">
+          <h3>Одинцово</h3>
+          <p>Московская область, Одинцовский район, п. Новоивановское, ул. Калинина, 8</p>
+          <p class="office__hours">Пн–Пт: 09:00–18:00</p>
+        </div>
+        <div class="office">
+          <h3>Подольск</h3>
+          <p>Московская область, Подольск, ул. Профсоюзная, 4</p>
+          <p class="office__hours">Пн–Пт: 09:00–18:00</p>
+        </div>
+      </div>
+      <p class="terms-note"><span class="req">Решение о выдаче разрешения на временное проживание принимает исключительно уполномоченное подразделение МВД России. Мы оказываем юридическую помощь и сопровождение при подготовке и подаче документов. [REQ: юрист 4.6]</span></p>
+    </div>
+  </section>
 
-    <details class="faq"><summary>Что делать, когда РВП заканчивается</summary><div class="faq__body">РВП не продлевают: нужно либо оформлять ВНЖ, либо получать РВП заново. Подробно — <a href="https://migra-pro.com/blog/rvp/kak-prodlit-rvp">что делать, когда РВП заканчивается</a>.</div></details>
+</main>
 
-    <details class="faq"><summary>Можно ли подать по браку</summary><div class="faq__body"><span class="req">Можно. С 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения, кроме случая с общим ребёнком. [REQ 4.7]</span> Подробно — <a href="https://migra-pro.com/blog/rvp/rvp-po-braku-s-grazhdaninom-rf">РВП по браку с гражданином России</a>.</div></details>
-
-    <details class="faq"><summary>Нужно ли сдавать экзамен</summary><div class="faq__body">Экзамен по русскому языку, истории и основам законодательства нужен, если у вас нет освобождения. Подробно — <a href="https://migra-pro.com/blog/grajdanstvo/gde-sdat-ekzamen-rvp-vnz-grazhdanstvo-moskva">экзамен для РВП</a>.</div></details>
-
-    <details class="faq"><summary>Что даёт РВП и чем отличается от ВНЖ</summary><div class="faq__body">РВП действует три года и привязано к региону получения; ВНЖ бессрочно и без территориальной привязки. Подробно — <a href="https://migra-pro.com/blog/rvp/rvp-v-rossii-preimushchestva">что даёт РВП</a>.</div></details>
-  </div>
-</section>
-
-<!-- Блок 14. Финальный CTA с формой -->
-<section id="forma">
-  <div class="wrap">
-    <h2>Оставьте заявку на бесплатную консультацию</h2>
-    <p class="lead">Специалист разберёт вашу ситуацию, назовёт подходящее основание и список документов под ваш случай.</p>
-    <form class="form-box" onsubmit="event.preventDefault(); alert('Прототип: отправка формы не подключена. В проде — лид в Битрикс24.');">
-      <div class="field"><label for="n1">Имя</label><input id="n1" type="text" name="name" required></div>
-      <div class="field"><label for="p1">Телефон</label><input id="p1" type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></div>
-      <label class="agree"><input type="checkbox" required> Согласен на обработку персональных данных в соответствии с политикой конфиденциальности</label>
-      <button class="btn btn--accent btn--wide" type="submit">Записаться на консультацию</button>
-      <p class="form-note">Консультация бесплатная. Отвечаем в течение рабочего дня.</p>
-    </form>
-  </div>
-</section>
-
-<!-- Блок 15. Связанное -->
-<section id="svyazannoe">
-  <div class="wrap">
-    <h2>Что почитать по теме</h2>
-    <ul class="cards cards--4">
-      <li class="card"><h3><a href="https://migra-pro.com/blog/rvp/kak-oformit-rvp-v-rossii">как оформить РВП: пошаговая инструкция</a></h3><p>Обзорная статья о процедуре целиком.</p></li>
-      <li class="card"><h3><a href="https://migra-pro.com/blog/rvp/oformlenie-rvp-dokumenty">документы для РВП: полный чек-лист</a></h3><p>Что собрать и в каком виде.</p></li>
-      <li class="card"><h3><a href="https://migra-pro.com/blog/rvp/oshibki-pri-oformlenii-rvp">причины отказа в РВП</a></h3><p>Где чаще всего теряют статус.</p></li>
-      <li class="card"><h3><a href="https://migra-pro.com/blog/rvp/poluchenie-vnj-posle-rvp">что делать после РВП: переход к ВНЖ</a></h3><p>Следующий шаг после получения статуса.</p></li>
-    </ul>
-    <p class="price-note" style="margin-top:24px">Линия статусов: <a href="https://migra-pro.com/rvp">РВП</a> → <a href="https://migra-pro.com/vnj">Вид на жительство</a> → <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></p>
-  </div>
-</section>
-
-<!-- Блок 16. Правовой дисклеймер -->
-<section>
-  <div class="wrap">
-    <p class="disclaimer"><span class="req">Решение о выдаче разрешения на временное проживание принимает исключительно уполномоченное подразделение МВД России. Мы оказываем юридическую помощь и сопровождение при подготовке и подаче документов. [REQ 4.6]</span></p>
-  </div>
-</section>
 
 <footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div>
-      <div class="brand__name" style="color:#fff">МИГРА<em style="color:#ff6b6b;font-style:normal">ПРО</em></div>
-      <p>Московская область, Одинцовский район, п. Новоивановское, ул. Калинина, 8</p>
-      <p><a href="tel:+74951543385">+7 (495) 154-33-85</a><br><span class="req">пн–пт: 09:00–18:00 [REQ 5.1]</span></p>
+  <div class="wrap">
+    <div class="footer-cta">
+      <div>
+        <strong>Оформляете РВП себе или семье?</strong>
+        <p>Разберём вашу ситуацию на бесплатной консультации: назовём основание, документы, срок и стоимость.</p>
+      </div>
+      <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Подвал">Бесплатная консультация</a>
     </div>
-    <div>
-      <p><b>Услуги</b></p>
-      <p><a href="https://migra-pro.com/rvp">РВП</a><br><a href="https://migra-pro.com/vnj">ВНЖ</a><br><a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></p>
+
+    <div class="footer-cols">
+      <div>
+        <h3>РВП: что почитать</h3>
+        <ul>
+          <li><a href="https://migra-pro.com/blog/rvp/kak-oformit-rvp-v-rossii">Как оформить РВП</a></li>
+          <li><a href="https://migra-pro.com/blog/rvp/oformlenie-rvp-dokumenty">Документы для РВП</a></li>
+          <li><a href="https://migra-pro.com/blog/kvota-rvp/kvota-na-rvp-2025">Квота на РВП</a></li>
+          <li><a href="https://migra-pro.com/blog/rvp/rvp-po-braku-s-grazhdaninom-rf">РВП по браку</a></li>
+          <li><a href="https://migra-pro.com/blog/rvp/oshibki-pri-oformlenii-rvp">Причины отказа в РВП</a></li>
+          <li><a href="#ceny">Цены и сроки</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Частным лицам</h3>
+        <ul>
+          <li><a href="https://migra-pro.com/">Оформление статуса себе и семье</a></li>
+          <li><a href="https://migra-pro.com/rvp">РВП</a></li>
+          <li><a href="https://migra-pro.com/vnj">ВНЖ</a></li>
+          <li><a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></li>
+          <li><a href="https://migra-pro.com/online_consult">Консультация миграционного юриста</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <ul>
+          <li><a class="footer-phone" href="tel:+74958590051">+7 (495) 859-00-51</a></li>
+          <li>Пн–Пт, 09:00–18:00</li>
+          <li>Подольск, ул. Профсоюзная, 4</li>
+          <li>Одинцово, п. Новоивановское, ул. Калинина, 8</li>
+          <li><a href="#contacts">Показать контакты →</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#" rel="nofollow">MAX</a>
+          <a href="#" rel="nofollow">Telegram</a>
+        </div>
+      </div>
+      <div>
+        <h3>Компания</h3>
+        <ul>
+          <li><a href="https://migra-pro.com/about">О нас</a></li>
+          <li><a href="https://migra-pro.com/informaciya">База знаний</a></li>
+          <li><a href="https://migra-pro.com/questions">Вопросы и ответы</a></li>
+          <li><a href="https://migra-pro.com/">На главную</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <p><b>Полезные ресурсы</b></p>
-      <p><a href="https://www.gosuslugi.ru/">Портал Госуслуг</a><br><a href="https://мвд.рф/">МВД России</a></p>
+
+    <div class="footer-legal">
+      <div>ООО «ТРУДОВОЙ КОНСУЛЬТАНТ», ИНН 7735607154 <span class="req">[REQ: ОГРН]</span> · Оказываем юридические и консультационные услуги в сфере миграционного права. Решение по документам принимают государственные органы. ⚖️</div>
+      <div class="footer-legal__links">
+        <a href="#">Политика конфиденциальности <span class="req">[REQ]</span></a>
+        <a href="#">Согласие на обработку персональных данных <span class="req">[REQ]</span></a>
+      </div>
+      <div>© 2026 Migra-Pro · концепт посадочной «РВП» (/rvp), не рабочая версия сайта</div>
     </div>
   </div>
 </footer>
 
-<dialog class="modal" id="modal">
-  <button class="modal__close" onclick="document.getElementById('modal').close()" aria-label="Закрыть">×</button>
-  <div class="modal__inner">
-    <h3 style="font-size:1.3rem;margin:0 0 8px">Бесплатная консультация</h3>
-    <p class="lead" style="margin-bottom:18px">Специалист разберёт вашу ситуацию и назовёт подходящее основание.</p>
-    <form onsubmit="event.preventDefault(); alert('Прототип: отправка формы не подключена. В проде — лид в Битрикс24.');">
-      <div class="field"><label for="n2">Имя</label><input id="n2" type="text" required></div>
-      <div class="field"><label for="p2">Телефон</label><input id="p2" type="tel" required placeholder="+7 (___) ___-__-__"></div>
-      <label class="agree"><input type="checkbox" required> Согласен на обработку персональных данных</label>
-      <button class="btn btn--accent btn--wide" type="submit">Записаться на консультацию</button>
-      <p class="form-note">Консультация бесплатная. Отвечаем в течение рабочего дня.</p>
+<div class="modal" id="modal-consult" role="dialog" aria-modal="true" aria-labelledby="modal-consult-title" hidden>
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal__dialog">
+    <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">✕</button>
+    <div class="modal__title" id="modal-consult-title" style="font-size:1.35rem;font-weight:800;letter-spacing:-.02em;margin:0 0 8px">Бесплатная консультация по РВП</div>
+    <p class="modal__lead">Оставьте имя и телефон — перезвоним в рабочее время, разберём вашу ситуацию и назовём порядок действий.</p>
+    <form class="lead-form" data-lead-form novalidate>
+      <input type="hidden" name="source" value="">
+      <div class="lead-form__row" style="grid-template-columns:1fr;">
+        <input type="text" name="name" placeholder="Имя" autocomplete="given-name" required>
+        <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+      </div>
+      <button class="btn btn--primary" type="submit">Получить консультацию</button>
+      <label class="lead-form__agree">
+        <input type="checkbox" name="agree" required>
+        <span>Согласен на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span>
+      </label>
+      <p class="lead-form__note">Перезваниваем Пн–Пт с 09:00 до 18:00.</p>
+      <div class="lead-form__done" role="status">Заявка принята. Специалист свяжется с вами в рабочее время.</div>
     </form>
+    <p class="modal__alt">Нужен ответ прямо сейчас — напишите в <a href="#" rel="nofollow">MAX</a> или <a href="#" rel="nofollow">Telegram</a>.</p>
   </div>
-</dialog>
+</div>
+
+<div class="mobile-bar">
+  <a class="btn btn--secondary" href="tel:+74958590051">Позвонить</a>
+  <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Мобильная панель">Консультация</a>
+</div>
 
 <script>
-  document.querySelectorAll('[data-modal]').forEach(function (el) {
-    el.addEventListener('click', function (e) { e.preventDefault(); document.getElementById('modal').showModal(); });
-  });
+  /* Квиз квалификации: три шага → предварительный путь оформления */
+  (function () {
+    var quiz = document.querySelector('[data-quiz]');
+    if (!quiz) return;
+    var steps = quiz.querySelectorAll('.quiz__step');
+    var result = quiz.querySelector('[data-quiz-result]');
+    var text = quiz.querySelector('[data-quiz-text]');
+    var answers = {};
+
+    var byTask = {
+      privezti: 'Ваш путь — ввоз по квоте: заявка о потребности, разрешение на привлечение, приглашение, рабочая виза и разрешение на работу на каждого сотрудника. Подбор ведём в Индии, Вьетнаме или Бангладеш.',
+      vks: 'Ваш путь — статус ВКС: квота не нужна, разрешение на работу выдаётся на срок договора до трёх лет, семья специалиста может получить визы. Сначала проверим, проходит ли специалист по требованиям к ВКС.',
+      uzhe: 'Начинаем с бесплатного аудита: проверим разрешительные документы, уведомления в МВД, договоры и патенты, отдадим перечень несоответствий и план устранения. Дальше — сопровождение учёта, если оно нужно.'
+    };
+    var byCount = {
+      one: ' Задача точечная — берём такие без минимального объёма.',
+      few: ' Для группы до десяти человек считаем смету по каждой позиции и согласуем график.',
+      many: ' Для объёма больше десяти человек делаем индивидуальный расчёт и график по партиям.'
+    };
+    var byWhen = {
+      urgent: ' По срокам: месяц — мало для квотного пути, поэтому в приоритете рассмотрим внеквотные должности, ВКС или легализацию тех, кто уже в России.',
+      normal: ' По срокам: два-три месяца — рабочий горизонт для оформления, но заявку на квоту нужно успеть подать в установленный срок.',
+      plan: ' По срокам: заранее — лучший вариант, успеваем в окно подачи заявки на квоту и планируем выход сотрудников к нужной дате.'
+    };
+
+    function show(n) {
+      Array.prototype.forEach.call(steps, function (s) {
+        if (s.getAttribute('data-step') === String(n)) s.removeAttribute('hidden');
+        else s.setAttribute('hidden', '');
+      });
+    }
+
+    quiz.addEventListener('click', function (e) {
+      var opt = e.target.closest('[data-q]');
+      if (opt) {
+        answers[opt.getAttribute('data-q')] = opt.getAttribute('data-val');
+        if (!answers.task) { show(1); return; }
+        if (!answers.count) { show(2); return; }
+        if (!answers.when) { show(3); return; }
+        Array.prototype.forEach.call(steps, function (s) { s.setAttribute('hidden', ''); });
+        text.textContent = (byTask[answers.task] || '') + (byCount[answers.count] || '') + (byWhen[answers.when] || '');
+        result.removeAttribute('hidden');
+        var hidden = document.querySelector('#modal-consult input[name="source"]');
+        if (hidden) hidden.value = 'Квиз: ' + answers.task + '/' + answers.count + '/' + answers.when;
+        return;
+      }
+      if (e.target.closest('[data-quiz-reset]')) {
+        answers = {};
+        result.setAttribute('hidden', '');
+        show(1);
+      }
+    });
+  })();
 </script>
 
+<script>
+    (function () {
+      var root = document.querySelector('[data-dropdown]');
+      if (!root) return;
+      var btn = root.querySelector('.nav-chev');
+      var panel = root.querySelector('.dropdown');
+      function setOpen(open) {
+        root.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) panel.removeAttribute('hidden');
+        else panel.setAttribute('hidden', '');
+      }
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setOpen(!root.classList.contains('is-open'));
+      });
+      document.addEventListener('click', function (e) {
+        if (!root.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+
+    (function () {
+      var map = document.querySelector('[data-map]');
+      if (!map) return;
+      var frame = map.querySelector('[data-map-frame]');
+      var tabs = map.querySelectorAll('.map-tab');
+      Array.prototype.forEach.call(tabs, function (tab) {
+        tab.addEventListener('click', function () {
+          Array.prototype.forEach.call(tabs, function (t) {
+            t.classList.remove('is-active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('is-active');
+          tab.setAttribute('aria-selected', 'true');
+          var q = tab.getAttribute('data-map-query');
+          frame.src = 'https://yandex.ru/map-widget/v1/?text=' + encodeURIComponent(q) + '&z=16';
+          frame.title = 'Карта: ' + tab.textContent.trim();
+        });
+      });
+    })();
+
+    (function () {
+      var modal = document.getElementById('modal-consult');
+      if (!modal) return;
+      var sourceField = modal.querySelector('input[name="source"]');
+      var lastFocused = null;
+
+      function open(source) {
+        lastFocused = document.activeElement;
+        if (sourceField) sourceField.value = source || '';
+        modal.removeAttribute('hidden');
+        modal.classList.add('is-open');
+        document.body.classList.add('is-locked');
+        var first = modal.querySelector('input[name="name"]');
+        if (first) first.focus();
+      }
+      function close() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('hidden', '');
+        document.body.classList.remove('is-locked');
+        if (lastFocused) lastFocused.focus();
+      }
+
+      document.addEventListener('click', function (e) {
+        var opener = e.target.closest('[data-modal-open]');
+        if (opener) {
+          e.preventDefault();
+          open(opener.getAttribute('data-modal-source'));
+          return;
+        }
+        if (e.target.closest('[data-modal-close]')) {
+          e.preventDefault();
+          close();
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+      });
+    })();
+
+    (function () {
+      Array.prototype.forEach.call(document.querySelectorAll('[data-lead-form]'), function (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = form.querySelector('input[name="name"]');
+          var phone = form.querySelector('input[name="phone"]');
+          var agree = form.querySelector('input[name="agree"]');
+          var invalid = null;
+          if (!name.value.trim()) invalid = name;
+          else if (phone.value.replace(/\D/g, '').length < 10) invalid = phone;
+          else if (!agree.checked) invalid = agree;
+          if (invalid) { invalid.focus(); return; }
+          form.classList.add('is-sent');
+        });
+      });
+    })();
+  </script>
+
+
+<script>
+  /* Форма страницы: ошибка выводится ПОД конкретным полем, успех — на месте формы (критерий C7). */
+  (function () {
+    var form = document.querySelector('[data-vnj-form]');
+    if (!form) return;
+
+    function mark(name, bad) {
+      var msg = form.querySelector('[data-error-for="' + name + '"]');
+      if (msg) {
+        if (bad) { msg.removeAttribute('hidden'); } else { msg.setAttribute('hidden', ''); }
+      }
+      var field = form.querySelector('[name="' + name + '"]');
+      if (!field) return;
+      var holder = field.closest('label') || field;
+      if (bad) { holder.classList.add('is-error'); } else { holder.classList.remove('is-error'); }
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = form.querySelector('[name="name"]');
+      var phone = form.querySelector('[name="phone"]');
+      var agree = form.querySelector('[name="agree"]');
+      var bad = {
+        name: !name.value.trim(),
+        phone: phone.value.replace(/\D/g, '').length < 10,
+        agree: !agree.checked
+      };
+      mark('name', bad.name);
+      mark('phone', bad.phone);
+      mark('agree', bad.agree);
+      var first = bad.name ? name : (bad.phone ? phone : (bad.agree ? agree : null));
+      if (first) { first.focus(); return; }
+      form.classList.add('is-sent');
+    });
+
+    Array.prototype.forEach.call(form.querySelectorAll('[name="name"], [name="phone"]'), function (f) {
+      f.addEventListener('input', function () { mark(f.getAttribute('name'), false); });
+    });
+    var agreeBox = form.querySelector('[name="agree"]');
+    if (agreeBox) { agreeBox.addEventListener('change', function () { mark('agree', false); }); }
+  })();
+
+  /* Блоки на данных РОПа: показ обоих состояний — с данными и скрытого (критерий C9). */
+  (function () {
+    var btn = document.querySelector('[data-tumbler-dannyh]');
+    if (!btn) return;
+    var withData = 'Показать, как страница выглядит без данных, которые ещё не получены';
+    var noData = 'Вернуть блоки с данными';
+    btn.addEventListener('click', function () {
+      var off = document.body.classList.toggle('bez-dannyh');
+      btn.setAttribute('aria-pressed', off ? 'true' : 'false');
+      btn.textContent = off ? noData : withData;
+    });
+  })();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://migra-pro.com/#org",
-      "name": "Мигра Про",
-      "telephone": "+7 (495) 154-33-85",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Московская область",
-        "streetAddress": "Одинцовский район, п. Новоивановское, ул. Калинина, 8",
-        "addressCountry": "RU"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://migra-pro.com/" },
-        { "@type": "ListItem", "position": 2, "name": "РВП", "item": "https://migra-pro.com/rvp" }
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "Помощь в получении РВП в Москве и Московской области",
+    { "@type": "Organization", "@id": "https://migra-pro.com/#org", "name": "МиграПро",
+      "telephone": "+7 (495) 859-00-51", "openingHours": "Mo-Fr 09:00-18:00",
+      "address": [
+        { "@type": "PostalAddress", "addressRegion": "Московская область", "addressLocality": "Одинцовский район, п. Новоивановское", "streetAddress": "ул. Калинина, 8", "addressCountry": "RU" },
+        { "@type": "PostalAddress", "addressRegion": "Московская область", "addressLocality": "Подольск", "streetAddress": "ул. Профсоюзная, 4", "addressCountry": "RU" }
+      ] },
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://migra-pro.com/" },
+      { "@type": "ListItem", "position": 2, "name": "РВП", "item": "https://migra-pro.com/rvp" } ] },
+    { "@type": "Service", "name": "Помощь в получении РВП в Москве и Московской области",
       "serviceType": "Юридическое сопровождение при оформлении разрешения на временное проживание",
       "provider": { "@id": "https://migra-pro.com/#org" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Москва" },
-        { "@type": "AdministrativeArea", "name": "Московская область" }
-      ],
+      "areaServed": [ { "@type": "AdministrativeArea", "name": "Москва" }, { "@type": "AdministrativeArea", "name": "Московская область" } ],
       "offers": [
-        { "@type": "Offer", "name": "Ведение дела по получению квоты на РВП по Москве и МО, безлимитные подачи", "price": "44000", "priceCurrency": "RUB", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "44000", "priceCurrency": "RUB" } },
-        { "@type": "Offer", "name": "Ведение дела по получению РВП по Москве или МО", "price": "46000", "priceCurrency": "RUB", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "46000", "priceCurrency": "RUB" } },
-        { "@type": "Offer", "name": "Ведение дела по получению РВП для ребёнка до 18 лет", "price": "33000", "priceCurrency": "RUB", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "33000", "priceCurrency": "RUB" } },
-        { "@type": "Offer", "name": "Юридическое сопровождение при получении РВП в Москве", "price": "14000", "priceCurrency": "RUB", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "14000", "priceCurrency": "RUB" } }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Нужна ли мне квота", "acceptedAnswer": { "@type": "Answer", "text": "Квота нужна, если у вас нет основания для подачи без неё." } },
-        { "@type": "Question", "name": "Сколько стоит сама процедура, помимо ваших услуг", "acceptedAnswer": { "@type": "Answer", "text": "Государственная пошлина, медкомиссия, экзамен и переводы оплачиваются отдельно." } },
-        { "@type": "Question", "name": "Сколько ждать решения", "acceptedAnswer": { "@type": "Answer", "text": "Срок зависит от основания подачи и от того, визовая у вас страна или безвизовая." } },
-        { "@type": "Question", "name": "Что делать, когда РВП заканчивается", "acceptedAnswer": { "@type": "Answer", "text": "РВП не продлевают: нужно либо оформлять ВНЖ, либо получать РВП заново." } },
-        { "@type": "Question", "name": "Можно ли подать по браку", "acceptedAnswer": { "@type": "Answer", "text": "Можно. С 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения, кроме случая с общим ребёнком." } },
-        { "@type": "Question", "name": "Нужно ли сдавать экзамен", "acceptedAnswer": { "@type": "Answer", "text": "Экзамен по русскому языку, истории и основам законодательства нужен, если у вас нет освобождения." } },
-        { "@type": "Question", "name": "Что даёт РВП и чем отличается от ВНЖ", "acceptedAnswer": { "@type": "Answer", "text": "РВП действует три года и привязано к региону получения; ВНЖ бессрочно и без территориальной привязки." } }
-      ]
-    }
+        { "@type": "Offer", "name": "Квота на РВП по Москве и МО, безлимитные подачи", "price": "44000", "priceCurrency": "RUB" },
+        { "@type": "Offer", "name": "Ведение дела по получению РВП по Москве или МО", "price": "46000", "priceCurrency": "RUB" },
+        { "@type": "Offer", "name": "РВП для ребёнка до 18 лет по Москве или МО", "price": "33000", "priceCurrency": "RUB" },
+        { "@type": "Offer", "name": "Юридическое сопровождение при получении РВП в Москве", "price": "14000", "priceCurrency": "RUB" } ] },
+    { "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "Нужна ли мне квота", "acceptedAnswer": { "@type": "Answer", "text": "Квота нужна, если у вас нет основания для подачи без неё." } },
+      { "@type": "Question", "name": "Сколько стоит сама процедура, помимо ваших услуг", "acceptedAnswer": { "@type": "Answer", "text": "Государственная пошлина, медкомиссия, экзамен и переводы оплачиваются отдельно." } },
+      { "@type": "Question", "name": "Сколько ждать решения", "acceptedAnswer": { "@type": "Answer", "text": "Срок зависит от основания подачи и от того, визовая у вас страна или безвизовая." } },
+      { "@type": "Question", "name": "Что делать, когда РВП заканчивается", "acceptedAnswer": { "@type": "Answer", "text": "РВП не продлевают: нужно либо оформлять ВНЖ, либо получать РВП заново." } },
+      { "@type": "Question", "name": "Можно ли подать по браку", "acceptedAnswer": { "@type": "Answer", "text": "Можно. С 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения, кроме случая с общим ребёнком." } },
+      { "@type": "Question", "name": "Нужно ли сдавать экзамен", "acceptedAnswer": { "@type": "Answer", "text": "Экзамен по русскому языку, истории и основам законодательства нужен, если у вас нет освобождения." } },
+      { "@type": "Question", "name": "Что даёт РВП и чем отличается от ВНЖ", "acceptedAnswer": { "@type": "Answer", "text": "РВП действует три года и привязано к региону получения; ВНЖ бессрочно и без территориальной привязки." } } ] }
   ]
 }
 </script>
