@@ -42,18 +42,7 @@
     }
     a { color: var(--mp-primary); }
     img { max-width: 100%; display: block; }
-    .wrap { width: min(100% - 40px, var(--mp-max)); margin-inline: auto; }
-    .design-note {
-      background: #fff8e6;
-      border-bottom: 1px solid #e8d59a;
-      color: #6b5500;
-      font-size: 0.85rem;
-      padding: 10px 16px;
-      text-align: center;
-    }
-    .design-note strong { font-weight: 700; }
-
-    /* ——— Двухэтажная шапка (паттерн живого сайта, логика IA) ——— */
+    .wrap { width: min(100% - 40px, var(--mp-max)); margin-inline: auto; }/* ——— Двухэтажная шапка (паттерн живого сайта, логика IA) ——— */
     .site-header {
       position: sticky; top: 0; z-index: 100;
       background: var(--mp-white);
@@ -1036,8 +1025,14 @@
       { "@type": "ListItem", "position": 3, "name": "Гражданство РФ" }
     ]
   }
-  </script></head>
-<body>
+  </script>  <style>
+    .req{display:inline-block;background:#fff3bf;color:#7a4b00;border:1px solid #f0c000;
+         border-radius:4px;padding:1px 6px;font-size:14px;font-weight:600;line-height:1.35}
+    .kontrol-bar{position:sticky;top:0;z-index:9999;background:#7a4b00;color:#fff;
+         padding:10px 16px;font-size:15px;text-align:center}
+  </style>
+</head>
+<body><div class="kontrol-bar">Контрольная копия. Жёлтым отмечено то, что ещё требует уточнения — всего пометок: 5. Чистая версия для передачи подрядчику — без суффикса -kontrol в адресе.</div>
 
 <header class="site-header">
     <div class="header-top">
@@ -1099,8 +1094,7 @@
 
 <main id="top">
 
-  <!-- ШАПКА РУБРИКИ: крошки, H1, лид с двумя контекстными ссылками -->
-  <section class="hub-head">
+<section class="hub-head">
     <div class="wrap">
 
       <nav class="crumbs" aria-label="Хлебные крошки">
@@ -1115,17 +1109,15 @@
           <h1>Гражданство РФ: все материалы по шагам процедуры</h1>
 
           <div class="hub-lead">
-            <p>Оформление гражданства идёт по шагам, и материалы рубрики выстроены в том же порядке. Если вы только начинаете и не знаете, какой путь вам подходит, начните с обзора всех оснований по кнопке ниже — там разобрано, кто может подать в упрощённом порядке, а кому придётся идти общим путём.</p>
+            <p>Оформление гражданства идёт по шагам, и материалы рубрики выстроены в том же порядке. Если вы только начинаете и не знаете, какой путь вам подходит, начните с <a href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf">обзора всех оснований</a> — там разобрано, кто может подать в упрощённом порядке, а кому придётся идти общим путём.</p>
             <p>Если путь уже выбран, переходите сразу к нужной группе: документы, подача заявления, экзамен, сроки и стоимость, получение паспорта. Когда нужен короткий ответ, а не разбор, есть <a href="https://migra-pro.com/questions/grajdanstvo">короткие ответы на частые вопросы</a>. Когда нужна не статья, а работа с конкретным делом, есть <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">помощь в получении гражданства РФ</a>.</p>
           </div>
-
-          <p class="hub-cta-line"><a class="btn btn--brand" href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf">Начать с обзора: все пути получения гражданства РФ</a></p>
         </div>
 
         <aside class="hub-head__aside">
           <div class="hub-stat">
-            <span class="hub-stat__num">21</span>
-            <span class="hub-stat__label">разбор в рубрике</span>
+            <span class="hub-stat__num">23</span>
+            <span class="hub-stat__label">разбора в рубрике</span>
           </div>
           <ul class="hub-facts">
             <li>
@@ -1147,12 +1139,11 @@
     </div>
   </section>
 
-  <!-- МАРШРУТ «С ЧЕГО НАЧАТЬ»: пять шагов процедуры -->
-  <section class="hub-route" id="s-chego-nachat">
+<section class="hub-route" id="s-chego-nachat">
     <div class="wrap">
       <div class="section__head">
         <h2>С чего начать</h2>
-        <p>Пять шагов пути к паспорту. Каждый шаг ведёт в разбор, где он расписан подробно.</p>
+        <p>Пять шагов пути к паспорту и чек-лист, чтобы отмечать пройденное. Каждый шаг ведёт в разбор.</p>
       </div>
 
       <ol class="route">
@@ -1188,28 +1179,32 @@
           <span class="route__num">5</span>
           <div class="route__body">
             <p class="route__step">Получить паспорт</p>
-            <p class="route__text"><a href="https://migra-pro.com/blog/grajdanstvo/pasport-rossii-dlya-inostrancev">Паспорт после получения гражданства</a> — что делать после Присяги и в какие сроки.</p>
+            <p class="route__text"><a href="https://migra-pro.com/blog/grajdanstvo/pasport-rossii-dlya-inostrancev">Паспорт после получения гражданства</a> — что делать после присяги и в какие сроки.</p>
+          </div>
+        </li>
+        <li class="route__item">
+          <span class="route__num">6</span>
+          <div class="route__body">
+            <p class="route__step">Собрать всё по шагам</p>
+            <p class="route__text"><a href="https://migra-pro.com/check-list/poluchenie-grazhdanstva-rf" data-goal="checklist_grazhdanstvo">Чек-лист получения гражданства</a> — перечень этапов и документов, который можно отмечать в браузере.</p>
           </div>
         </li>
       </ol>
-
-      <p class="route__checklist"><a class="btn btn--ghost" data-goal="checklist_grazhdanstvo" href="https://migra-pro.com/check-list/poluchenie-grazhdanstva-rf">Открыть чек-лист по девяти этапам и отмечать пройденное</a></p>
     </div>
   </section>
 
-  <!-- ЛИСТИНГ РУБРИКИ: переключатель рубрик блога + карточки по шагам -->
-  <section class="hub-list" id="materialy">
+<section class="hub-list" id="materialy">
     <div class="wrap">
 
       <div class="hub-toolbar">
         <nav class="hub-tabs" aria-label="Рубрики блога">
           <a class="hub-tab is-active" href="https://migra-pro.com/blog/grajdanstvo" aria-current="page">Гражданство</a>
+          <a class="hub-tab" href="https://migra-pro.com/blog/vnj">Вид на жительство</a>
           <a class="hub-tab" href="https://migra-pro.com/blog/repatriacia">Репатриация</a>
-          <a class="hub-tab" href="https://migra-pro.com/blog/vnj">ВНЖ</a>
-          <a class="hub-tab" href="https://migra-pro.com/blog/rvp">РВП</a>
+          <a class="hub-tab" href="https://migra-pro.com/blog/examen">Экзамен</a>
           <a class="hub-tab hub-tab--all" href="https://migra-pro.com/blog">Все рубрики</a>
         </nav>
-        <p class="hub-toolbar__note">Даты карточек сейчас выводятся на английском — «Monday, August 3». При переносе включить русский формат и убрать день недели: <span class="req">[REQ-1]</span>.</p>
+        <p class="hub-toolbar__note">Состав рубрик и адреса их хабов подтверждает вебмастер: <span class="req">[REQ-2]</span> — часть ссылок на хабы рубрик со страниц сайта сейчас ведёт на несуществующие адреса.</p>
       </div>
 
       <div class="section__head section__head--tight">
@@ -1222,9 +1217,17 @@
         <article class="card card--featured">
           <div class="card__body">
             <p class="card__tag">Начните отсюда</p>
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf">Как получить гражданство РФ в 2026: все способы и законы</a></h3>
+            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf">Как получить гражданство РФ: все способы</a></h3>
             <p class="card__excerpt">Все основания приёма в гражданство в одном разборе: общий и упрощённый порядок, брак, дети, образование, программа переселения. Требования, документы и сроки.</p>
-            <p class="card__meta"><time datetime="2026-05-13">13 мая 2026</time><span class="card__dot">·</span>обзорный разбор направления</p>
+            <p class="card__meta"><time datetime="2026-09-04">4 сентября 2026</time><span class="card__dot">·</span>обзорный разбор направления</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body">
+            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/zakon-o-grazhdanstve-rf">Закон о гражданстве РФ</a></h3>
+            <p class="card__excerpt">Какой закон действует сейчас, чем 138-ФЗ отличается от отменённого 62-ФЗ и где в нём искать своё основание.</p>
+            <p class="card__meta"><time datetime="2026-09-03">3 сентября 2026</time><span class="card__dot">·</span>новый разбор</p>
           </div>
         </article>
 
@@ -1276,14 +1279,6 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="card__body">
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/vosstanovlenie-rossijskogo-grazhdanstva">Восстановление российского гражданства для бывших граждан</a></h3>
-            <p class="card__excerpt">Что делать бывшим гражданам России, если процедуры восстановления в действующем законе больше нет, и какие основания приёма подходят вместо неё.</p>
-            <p class="card__meta"><time datetime="2026-04-22">22 апреля 2026</time></p>
-          </div>
-        </article>
-
       </div>
 
       <div class="section__head section__head--tight">
@@ -1311,9 +1306,9 @@
 
         <article class="card">
           <div class="card__body">
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/the/new/application/form">Новое заявление на гражданство 2026: разбор ошибок</a></h3>
-            <p class="card__excerpt">Пошаговый разбор нового бланка: пункты о трудовой деятельности, родственниках и выездах за границу, где чаще всего ошибаются.</p>
-            <p class="card__meta"><time datetime="2026-08-03">3 августа 2026</time></p>
+            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/kak-pisat-grazhdanstvo-v-ankete">Как писать гражданство в анкете и документах</a></h3>
+            <p class="card__excerpt">Как заполнять графу «гражданство» в анкетах, можно ли писать «Россия» и чем официальный классификатор расходится с советами в интернете.</p>
+            <p class="card__meta"><time datetime="2026-09-03">3 сентября 2026</time><span class="card__dot">·</span>новый разбор</p>
           </div>
         </article>
 
@@ -1353,17 +1348,9 @@
 
         <article class="card">
           <div class="card__body">
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/skolko-stoit-grazhdanstvo-rf">Сколько стоит гражданство РФ: госпошлина 50 000 ₽</a></h3>
+            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/skolko-stoit-grazhdanstvo-rf">Сколько стоит гражданство РФ</a></h3>
             <p class="card__excerpt">Госпошлина за приём в гражданство с 26 июля 2026 года, кто от неё освобождён и какие расходы придётся оплатить помимо неё.</p>
-            <p class="card__meta"><time datetime="2026-07-28">28 июля 2026</time></p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__body">
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/skolko-vremeni-zanimaet-oformlenie-grazhanstva">Сколько времени занимает оформление гражданства РФ</a></h3>
-            <p class="card__excerpt">Сколько рассматривают заявление в 2026 году, с какого момента идёт отсчёт и на какой срок его могут продлить.</p>
-            <p class="card__meta"><time datetime="2026-04-26">26 апреля 2026</time></p>
+            <p class="card__meta"><time datetime="2026-09-03">3 сентября 2026</time><span class="card__dot">·</span>новый разбор</p>
           </div>
         </article>
 
@@ -1375,22 +1362,22 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="card__body">
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/kak-izbezhat-otkaza-v-grazhdanstve-rf">Как избежать отказа в гражданстве РФ</a></h3>
-            <p class="card__excerpt">Основания, по которым МВД отклоняет заявление, типичные ошибки в документах и что делать, если решение уже принято.</p>
-            <p class="card__meta"><time datetime="2026-04-21">21 апреля 2026</time></p>
-          </div>
-        </article>
-
       </div>
 
       <div class="section__head section__head--tight">
         <h2>Шаг 5. После получения гражданства</h2>
-        <p>Паспорт, второй паспорт и обязанности нового гражданина.</p>
+        <p>Присяга, паспорт и второй паспорт.</p>
       </div>
 
       <div class="hub-grid">
+
+        <article class="card">
+          <div class="card__body">
+            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/prisyaga-na-grazhdanstvo-rf">Присяга на гражданство РФ</a></h3>
+            <p class="card__excerpt">Полный текст присяги, кто обязан её приносить, как проходит процедура и какой срок явки действует с 2026 года.</p>
+            <p class="card__meta"><time datetime="2026-09-03">3 сентября 2026</time><span class="card__dot">·</span>новый разбор</p>
+          </div>
+        </article>
 
         <article class="card">
           <div class="card__body">
@@ -1402,15 +1389,24 @@
 
         <article class="card">
           <div class="card__body">
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/dual/and/second/citizenship/in/russia">Можно ли иметь двойное гражданство в России</a></h3>
+            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/dual/and/second/citizenship/in/russia">Можно ли иметь двойное гражданство в России: двойное или второе</a></h3>
             <p class="card__excerpt">Можно ли сохранить прежний паспорт, надо ли уведомлять МВД о втором гражданстве и в какой срок. Что грозит за несообщение.</p>
             <p class="card__meta"><time datetime="2026-04-14">14 апреля 2026</time></p>
           </div>
         </article>
 
+      </div>
+
+      <div class="section__head section__head--tight">
+        <h2>Прекращение и восстановление гражданства</h2>
+        <p>За что прекращают приобретённое гражданство, как выйти самому и что делать бывшим гражданам.</p>
+      </div>
+
+      <div class="hub-grid">
+
         <article class="card">
           <div class="card__body">
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/deprivation/of/citizenship/for/dodging/military/registration">Могут ли лишить гражданства за уклонение от военкомата</a></h3>
+            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/deprivation/of/citizenship/for/dodging/military/registration">За что могут лишить гражданства РФ</a></h3>
             <p class="card__excerpt">За что прекращают приобретённое гражданство, почему в перечень попал воинский учёт и что делать, если решение уже принято.</p>
             <p class="card__meta"><time datetime="2026-05-11">11 мая 2026</time></p>
           </div>
@@ -1418,9 +1414,17 @@
 
         <article class="card">
           <div class="card__body">
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/vyhod-iz-grazhdanstva-rf">Выход из гражданства РФ: порядок и четыре запрета</a></h3>
+            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/vyhod-iz-grazhdanstva-rf">Выход из гражданства РФ: порядок, сроки и четыре запрета</a></h3>
             <p class="card__excerpt">Как выйти из гражданства России, куда подавать заявление и в каких четырёх случаях закон выход не допускает.</p>
             <p class="card__meta"><time datetime="2026-09-04">4 сентября 2026</time><span class="card__dot">·</span>новый разбор</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body">
+            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/vosstanovlenie-rossijskogo-grazhdanstva">Восстановление российского гражданства для бывших граждан</a></h3>
+            <p class="card__excerpt">Что делать бывшим гражданам России, если процедуры восстановления в действующем законе больше нет, и какие основания приёма подходят вместо неё.</p>
+            <p class="card__meta"><time datetime="2026-04-22">22 апреля 2026</time></p>
           </div>
         </article>
 
@@ -1449,27 +1453,18 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="card__body">
-            <h3 class="card__title"><a href="https://migra-pro.com/blog/grajdanstvo/kak-poluchit-grazhdanstvo-rf-vysokokvalificirovannomu-specialistu">Гражданство РФ высококвалифицированному специалисту</a></h3>
-            <p class="card__excerpt">Особенности процедуры для иностранных специалистов с высоким уровнем квалификации и критерии соответствия.</p>
-            <p class="card__meta"><time datetime="2026-06-13">13 июня 2026</time></p>
-          </div>
-        </article>
-
       </div>
 
-      <p class="hub-note"><span class="req">[REQ-2]</span> Из рубрики убрана статья «Аннулирование ВНЖ из-за болезни» — она относится к рубрике ВНЖ. Статья остаётся на сайте по своему адресу.</p>
+      <p class="hub-order-note">Порядок карточек фиксированный, по группам шагов. Группировка по этапам технически возможна в текущем шаблоне рубрики: <span class="req">[REQ-1]</span>. Если лента фиксированный порядок не поддерживает — вебмастер сообщает доступные варианты.</p>
 
     </div>
   </section>
 
-  <!-- ТОЧКА ЗАХВАТА РУБРИКИ: одна, в конце листинга -->
-  <section class="hub-capture" id="pomoshch">
+<section class="hub-capture" id="pomoshch">
     <div class="wrap hub-capture__grid">
 
       <div class="hub-capture__text">
-        <h2>Не поняли, какое основание ваше</h2>
+        <h2>Случай не подходит ни под один разбор</h2>
         <p>Так бывает чаще, чем кажется: брак без общего ребёнка, диплом российского вуза без отличия, родитель-гражданин без регистрации по месту жительства, прежнее гражданство СССР без документов.</p>
         <ul class="hub-capture__list">
           <li>
@@ -1509,7 +1504,6 @@
   </section>
 
 </main>
-
 
 <footer class="site-footer">
   <div class="wrap">
@@ -1765,7 +1759,6 @@
       });
     })();
   </script>
-
 
 </body>
 </html>
