@@ -1,0 +1,2542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>РВП: вопросы и ответы — 114 разборов с юристом</title>
+  <meta name="description" content="Все вопросы о РВП с ответами: основания и квота, брак, документы, сроки и пошлина, отказ, работа и переход к ВНЖ.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --mp-primary: #1a4fb0;
+      --mp-primary-dark: #1a4694;
+      --mp-primary-light: #eaf1f6;
+      --mp-accent: #cc0a0a;
+      --mp-accent-hover: #a30808;
+      --mp-link: #50b3ff;
+      --mp-text: #1a1b1d;
+      --mp-muted: #5c6570;
+      --mp-border: #dde3e8;
+      --mp-bg: #f6f8fa;
+      --mp-white: #fff;
+      --mp-radius: 16px;
+      --mp-radius-sm: 12px;
+      --mp-shadow: 0 2px 10px rgba(20, 33, 61, 0.06), 0 8px 24px rgba(33, 84, 178, 0.08);
+      --mp-shadow-lg: 0 16px 48px rgba(20, 33, 61, 0.16);
+      --mp-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --mp-max: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--mp-font);
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--mp-text);
+      background: var(--mp-white);
+    }
+    a { color: var(--mp-primary); }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(100% - 40px, var(--mp-max)); margin-inline: auto; }
+    .design-note {
+      background: #fff8e6;
+      border-bottom: 1px solid #e8d59a;
+      color: #6b5500;
+      font-size: 0.85rem;
+      padding: 10px 16px;
+      text-align: center;
+    }
+    .design-note strong { font-weight: 700; }
+
+    /* ——— Двухэтажная шапка (паттерн живого сайта, логика IA) ——— */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--mp-white);
+      box-shadow: 0 4px 18px rgba(20, 33, 61, 0.08);
+    }
+    .header-top {
+      border-bottom: 1px solid var(--mp-border);
+      background: var(--mp-white);
+    }
+    .header-top__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; padding: 12px 0; flex-wrap: wrap;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none; color: inherit; min-width: 0;
+    }
+    .brand__mark {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--mp-primary) 0 50%, var(--mp-accent) 50% 100%);
+      color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 0.85rem;
+    }
+    .brand__name {
+      font-weight: 800; font-size: 1.15rem; color: var(--mp-primary);
+      letter-spacing: -0.02em; line-height: 1.1;
+    }
+    .brand__name em { font-style: normal; color: var(--mp-accent); }
+    .brand__sub {
+      display: block; font-size: 0.72rem; color: var(--mp-muted); margin-top: 2px;
+    }
+    .brand__img { height: 46px; width: auto; display: block; }
+    @media (max-width: 640px) { .brand__img { height: 36px; } }
+    .header-messengers .ico {
+      width: 18px; height: 18px; fill: currentColor;
+    }
+    .header-meta {
+      display: none; align-items: center; gap: 18px;
+      font-size: 0.88rem; color: var(--mp-muted);
+    }
+    @media (min-width: 960px) { .header-meta { display: flex; } }
+    .header-rating {
+      display: flex; flex-direction: column; gap: 2px;
+      font-size: 0.72rem; line-height: 1.25;
+    }
+    .header-rating__stars { color: #f5a623; letter-spacing: 1px; font-size: 0.85rem; }
+    .header-messengers { display: flex; gap: 8px; }
+    .header-messengers a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center; text-decoration: none;
+    }
+    .header-messengers a:hover { background: #d9e7f5; }
+    .header-phone-block { text-align: right; line-height: 1.25; }
+    .header-phone-block a {
+      color: var(--mp-text); font-weight: 800; text-decoration: none;
+      font-size: 1.05rem; letter-spacing: -0.02em;
+    }
+    .header-phone-block span { display: block; font-size: 0.75rem; color: var(--mp-muted); }
+    .header-top__cta { flex-shrink: 0; }
+
+    .header-nav-wrap {
+      background: var(--mp-white);
+      padding: 0 0 10px;
+    }
+    .header-nav {
+      display: flex; align-items: center; gap: 4px 6px;
+      flex-wrap: wrap;
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 0 0 18px 18px;
+      padding: 8px 12px;
+      box-shadow: var(--mp-shadow);
+    }
+    .nav-item { position: relative; }
+    .nav-item--split {
+      display: inline-flex; align-items: stretch;
+      border-radius: 10px;
+    }
+    .nav-item--split:hover,
+    .nav-item--split.is-open {
+      background: var(--mp-primary-light);
+    }
+    .nav-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 12px; border-radius: 10px;
+      color: var(--mp-text); text-decoration: none;
+      font-size: 0.92rem; font-weight: 600;
+      border: 0; background: transparent; cursor: pointer;
+      font-family: inherit;
+    }
+    .nav-link:hover { color: var(--mp-primary); }
+    .nav-item--split .nav-link--label {
+      border-radius: 10px 0 0 10px; padding-right: 6px;
+    }
+    .nav-item--split .nav-link--label:hover,
+    .nav-item--split.is-open .nav-link--label { color: var(--mp-primary); }
+    .nav-chev {
+      border-radius: 0 10px 10px 0; padding: 10px 12px 10px 4px;
+      color: var(--mp-text);
+    }
+    .nav-chev:hover,
+    .nav-item--split.is-open .nav-chev { color: var(--mp-primary); }
+    .nav-chev .chev {
+      width: 10px; height: 10px; opacity: 0.75;
+      transition: transform 0.15s ease;
+      display: block;
+    }
+    .nav-item--split.is-open .nav-chev .chev { transform: rotate(180deg); }
+
+    .dropdown {
+      display: none;
+      position: absolute; top: calc(100% - 2px); left: 0;
+      width: 340px; max-width: min(340px, 92vw);
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 14px;
+      box-shadow: var(--mp-shadow-lg);
+      padding: 8px;
+      z-index: 120;
+    }
+    .nav-item--split.is-open > .dropdown { display: block; }
+    .dropdown[hidden] { display: none !important; }
+    .dropdown a {
+      display: block; padding: 9px 12px; border-radius: 9px;
+      text-decoration: none; color: var(--mp-text);
+      font-size: 0.92rem; line-height: 1.3;
+    }
+    .dropdown a span { display: block; font-weight: 600; }
+    .dropdown a em {
+      display: block; margin-top: 2px;
+      font-style: normal; font-size: 0.78rem; color: var(--mp-muted);
+    }
+    .dropdown a:hover { background: var(--mp-primary-light); }
+    .dropdown a:hover span { color: var(--mp-primary); }
+    .dropdown__all {
+      margin-top: 6px; padding-top: 12px !important;
+      border-top: 1px solid var(--mp-border);
+      font-weight: 700; color: var(--mp-primary) !important;
+      border-radius: 0 0 9px 9px;
+    }
+    .nav-mobile-note {
+      display: block; width: 100%;
+      font-size: 0.78rem; color: var(--mp-muted);
+      padding: 4px 8px 2px;
+    }
+    @media (min-width: 900px) { .nav-mobile-note { display: none; } }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 12px 20px; border-radius: 999px;
+      font-weight: 700; font-size: 0.95rem; text-decoration: none;
+      border: 2px solid transparent; cursor: pointer; transition: 0.15s ease;
+      font-family: inherit;
+    }
+    .btn--sm { padding: 10px 16px; font-size: 0.88rem; }
+    .btn--primary { background: var(--mp-accent); color: #fff; }
+    .btn--primary:hover { background: var(--mp-accent-hover); }
+    .btn--secondary {
+      background: transparent; color: var(--mp-primary);
+      border-color: var(--mp-primary);
+    }
+    .btn--secondary:hover { background: var(--mp-primary-light); }
+    .btn--ghost {
+      background: rgba(255,255,255,0.14); color: #fff;
+      border-color: rgba(255,255,255,0.35);
+    }
+    .btn--ghost:hover { background: rgba(255,255,255,0.22); }
+    .btn--light { background: #fff; color: var(--mp-primary); }
+    .btn--light:hover { background: var(--mp-primary-light); }
+    .btn--block { width: 100%; }
+
+    /* ——— Полоса цифр доверия ——— */
+    .stats-band {
+      background: var(--mp-white);
+      border-bottom: 1px solid var(--mp-border);
+      padding: 22px 0;
+    }
+    .stats-band__grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .stats-band__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+    .stat strong {
+      font-size: 1.5rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .stat span { font-size: 0.88rem; color: var(--mp-muted); line-height: 1.3; }
+
+    /* маркер незаполненного факта (только в концепте) */
+    .req {
+      background: #fff3cd; color: #6b5500;
+      border-radius: 5px; padding: 0 5px;
+      font-weight: 700; white-space: nowrap;
+    }
+
+    /* ——— Как мы работаем ——— */
+    .steps {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+      counter-reset: step;
+    }
+    @media (min-width: 760px) {
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1040px) {
+      .steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    .step {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      position: relative;
+    }
+    .step__num {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--mp-primary); color: #fff;
+      display: grid; place-items: center;
+      font-weight: 800; font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .step h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .step p { margin: 0; color: var(--mp-muted); font-size: 0.93rem; }
+    .terms-note {
+      margin: 18px 0 0; padding: 16px 18px;
+      background: var(--mp-primary-light);
+      border-radius: var(--mp-radius-sm);
+      color: var(--mp-text); font-size: 0.95rem;
+    }
+
+    /* ——— Виджеты отзывов ——— */
+    .widgets {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .widgets { grid-template-columns: 1fr 1fr; }
+    }
+    .widget {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 20px;
+    }
+    .widget__head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 14px;
+    }
+    .widget__head strong { font-size: 1.05rem; }
+    .widget__rate {
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      font-weight: 800; border-radius: 999px; padding: 4px 12px;
+    }
+    .widget__slot {
+      border: 2px dashed var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      min-height: 220px;
+      display: grid; place-content: center; text-align: center;
+      color: var(--mp-muted); font-size: 0.95rem; padding: 20px;
+      background: var(--mp-bg);
+    }
+    .widget__slot small { color: #98a2ad; }
+
+    /* ——— FAQ ——— */
+    .faq { display: grid; gap: 10px; max-width: 52rem; }
+    .faq details {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 16px 20px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 700; font-size: 1rem;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "+"; float: right; color: var(--mp-primary); font-size: 1.2rem; line-height: 1;
+    }
+    .faq details[open] summary::after { content: "–"; }
+    .faq p { margin: 12px 0 0; color: var(--mp-muted); font-size: 0.95rem; }
+
+    /* ——— Sticky CTA на мобильном ——— */
+    .mobile-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px; padding: 10px 12px;
+      background: rgba(255,255,255,0.97);
+      border-top: 1px solid var(--mp-border);
+      box-shadow: 0 -6px 20px rgba(20,33,61,0.1);
+    }
+    .mobile-bar .btn { padding: 12px 10px; font-size: 0.9rem; }
+    @media (min-width: 860px) { .mobile-bar { display: none; } }
+    @media (max-width: 859px) { body { padding-bottom: 74px; } }
+
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(80,179,255,0.28), transparent 60%),
+        linear-gradient(135deg, #163a7a 0%, var(--mp-primary) 48%, #2a6fd1 100%);
+      color: #fff;
+      padding: 48px 0 56px;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: auto -20% -40% 40%;
+      height: 280px;
+      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
+      pointer-events: none;
+    }
+    .hero__eyebrow {
+      display: inline-block; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      opacity: 0.85; margin-bottom: 12px;
+    }
+    .hero h1 {
+      margin: 0 0 12px; font-size: clamp(1.7rem, 4vw, 2.45rem);
+      line-height: 1.15; letter-spacing: -0.03em; max-width: 18ch;
+    }
+    .hero__lead {
+      margin: 0 0 28px; font-size: 1.05rem; opacity: 0.92;
+      max-width: 46ch;
+    }
+    .path-grid {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .path-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+    .path-card {
+      background: rgba(255,255,255,0.98);
+      color: var(--mp-text);
+      border-radius: var(--mp-radius);
+      padding: 24px;
+      box-shadow: var(--mp-shadow-lg);
+      display: flex; flex-direction: column; gap: 12px;
+      min-height: 100%;
+    }
+    .path-card__tag {
+      font-size: 0.78rem; font-weight: 700; color: var(--mp-primary);
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .path-card h2 {
+      margin: 0; font-size: 1.35rem; line-height: 1.25; letter-spacing: -0.02em;
+    }
+    .path-card p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .path-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+
+    .section { padding: 56px 0; }
+    .section--alt { background: var(--mp-bg); }
+    .section--tint { background: var(--mp-primary-light); }
+    .section__head { margin-bottom: 28px; max-width: 40rem; }
+    .section__head h2 {
+      margin: 0 0 8px; font-size: clamp(1.4rem, 3vw, 1.85rem);
+      letter-spacing: -0.02em;
+    }
+    .section__head p { margin: 0; color: var(--mp-muted); }
+
+    .tools {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) {
+      .tools { grid-template-columns: repeat(3, 1fr); }
+    }
+    .tool {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+      text-decoration: none; color: inherit;
+      box-shadow: var(--mp-shadow);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      display: flex; flex-direction: column; gap: 10px;
+      min-height: 160px;
+    }
+    .tool:hover { transform: translateY(-2px); border-color: #b9c9e0; }
+    .tool__ico {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--mp-primary-light); color: var(--mp-primary);
+      display: grid; place-items: center;
+    }
+    .tool strong { font-size: 1.05rem; }
+    .tool span { color: var(--mp-muted); font-size: 0.95rem; }
+    .tool em {
+      margin-top: auto; font-style: normal; font-weight: 700;
+      color: var(--mp-primary); font-size: 0.9rem;
+    }
+
+    .services {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .services { grid-template-columns: repeat(3, 1fr); }
+    }
+    .service {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .service:hover { border-color: var(--mp-primary); }
+    .service h3 { margin: 0; font-size: 1.2rem; }
+    .service p { margin: 0; color: var(--mp-muted); flex: 1; }
+    .service > strong { font-size: 1.05rem; color: var(--mp-text); }
+    .service__more { font-weight: 700; color: var(--mp-primary); }
+
+    .trust {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .trust { grid-template-columns: 1.2fr 1fr 1fr; }
+    }
+    .trust-stat, .trust-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      padding: 24px;
+      border: 1px solid var(--mp-border);
+    }
+    .trust-stat strong {
+      display: block; font-size: 2rem; color: var(--mp-primary);
+      letter-spacing: -0.03em; margin-bottom: 6px;
+    }
+    .trust-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .trust-card p { margin: 0; color: var(--mp-muted); font-size: 0.95rem; }
+    .trust-card details {
+      border-top: 1px solid var(--mp-border);
+      padding: 10px 0 0; margin-top: 10px;
+    }
+    .trust-card summary {
+      cursor: pointer; font-size: 0.93rem; font-weight: 600;
+      list-style: none;
+    }
+    .trust-card summary::-webkit-details-marker { display: none; }
+    .trust-card summary::after { content: " →"; color: var(--mp-primary); }
+    .trust-card details p { margin-top: 8px; }
+
+    .knowledge {
+      display: grid; gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 800px) {
+      .knowledge { grid-template-columns: repeat(3, 1fr); }
+    }
+    .know-card {
+      background: var(--mp-white);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--mp-border);
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+    }
+    .know-card__visual {
+      height: 120px;
+      background:
+        linear-gradient(135deg, rgba(33,84,178,0.9), rgba(26,70,148,0.85)),
+        repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,255,255,0.05) 8px, rgba(255,255,255,0.05) 16px);
+    }
+    .know-card__visual--2 {
+      background: linear-gradient(135deg, #265f91, #1a4fb0);
+    }
+    .know-card__visual--3 {
+      background: linear-gradient(135deg, #1a4694, #3a7bd5);
+    }
+    .know-card__body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .know-card__body strong { font-size: 1.02rem; line-height: 1.35; }
+    .know-card__body span { color: var(--mp-muted); font-size: 0.92rem; }
+
+    .gos {
+      display: grid; gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 800px) {
+      .gos { grid-template-columns: repeat(4, 1fr); }
+    }
+    .gos a {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-decoration: none;
+      color: var(--mp-text);
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      min-height: 74px;
+      display: flex; align-items: center;
+    }
+    .gos a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+
+    .cta-band {
+      background: linear-gradient(135deg, var(--mp-primary-dark), var(--mp-primary));
+      color: #fff;
+      border-radius: var(--mp-radius);
+      padding: 36px 28px;
+      display: grid; gap: 20px;
+      align-items: center;
+    }
+    @media (min-width: 800px) {
+      .cta-band { grid-template-columns: 1.05fr 400px; gap: 32px; padding: 40px 44px; }
+    }
+    .cta-band h2 { margin: 0 0 8px; font-size: 1.55rem; letter-spacing: -0.02em; }
+    .cta-band p { margin: 0; opacity: 0.92; max-width: 38ch; }
+
+    .contacts {
+      display: grid; gap: 16px;
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+    @media (min-width: 900px) {
+      .contacts { grid-template-columns: 1.15fr 1fr; }
+    }
+    .contacts__cards { display: grid; gap: 16px; }
+    @media (min-width: 560px) and (max-width: 899px) {
+      .contacts__cards { grid-template-columns: 1fr 1fr; }
+      .contacts__cards .phone-block { grid-column: 1 / -1; }
+    }
+    .office, .phone-block {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      padding: 22px;
+    }
+    .office h3, .phone-block h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .office p, .phone-block p { margin: 0; color: var(--mp-muted); }
+    .phone-block a.phone-block__num {
+      display: inline-block; margin-top: 8px;
+      font-size: 1.35rem; font-weight: 800;
+      color: var(--mp-primary); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .msgr-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .msgr-row a {
+      display: inline-flex; align-items: center; gap: 7px;
+      border: 1px solid var(--mp-border); border-radius: 10px;
+      padding: 8px 12px; font-size: 0.86rem; font-weight: 600;
+      color: var(--mp-text); text-decoration: none;
+    }
+    .msgr-row a:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+    .msgr-row .ico { width: 16px; height: 16px; }
+    .office__hours { display: block; margin-top: 10px; font-size: 0.86rem; }
+    .office__link {
+      display: inline-block; margin-top: 12px;
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .office__link:hover { text-decoration: underline; }
+
+    .map-area {
+      background: var(--mp-white);
+      border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      min-height: 380px;
+    }
+    .map-area__tabs {
+      display: flex; gap: 6px; padding: 10px 10px 0;
+    }
+    .map-tab {
+      flex: 1; border: 1px solid var(--mp-border); background: var(--mp-bg);
+      border-radius: 10px; padding: 9px 12px; cursor: pointer;
+      font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--mp-muted);
+    }
+    .map-tab:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .map-tab.is-active {
+      background: var(--mp-primary); border-color: var(--mp-primary); color: #fff;
+    }
+    .map-area__canvas {
+      flex: 1; min-height: 320px;
+      margin: 10px; border-radius: 12px; overflow: hidden;
+      background: repeating-linear-gradient(45deg, #eef2f6 0 14px, #e6edf4 14px 28px);
+    }
+    .map-area__canvas iframe { display: block; width: 100%; height: 100%; min-height: 320px; border: 0; }
+    .map-area__foot {
+      display: flex; flex-wrap: wrap; gap: 10px 20px;
+      padding: 14px 18px; border-top: 1px solid var(--mp-border);
+    }
+    .map-area__foot a {
+      font-size: 0.9rem; font-weight: 600;
+      color: var(--mp-primary); text-decoration: none;
+    }
+    .map-area__foot a:hover { text-decoration: underline; }
+
+    .site-footer {
+      background: var(--mp-primary-dark);
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+      padding: 40px 0 32px;
+      margin-top: 8px;
+    }
+    .site-footer a { color: rgba(255, 255, 255, 0.75); text-decoration: none; }
+    .site-footer a:hover { color: #fff; }
+    .site-footer a.btn--primary { color: #fff; }
+    .footer-cta {
+      display: grid; gap: 16px; align-items: center;
+      padding-bottom: 28px; margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    @media (min-width: 800px) {
+      .footer-cta { grid-template-columns: 1fr auto; }
+    }
+    .footer-cta strong { display: block; color: #fff; font-size: 1.15rem; margin-bottom: 4px; }
+    .footer-cta p { margin: 0; }
+    .footer-cols {
+      display: grid; gap: 26px 24px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 900px) {
+      .footer-cols { grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    }
+    .footer-cols h3 {
+      margin: 0 0 12px; font-size: 0.82rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; color: #fff;
+    }
+    .footer-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .footer-cols li { line-height: 1.4; }
+    .footer-phone {
+      display: inline-block; margin-bottom: 6px;
+      font-size: 1.15rem; font-weight: 800; color: #fff !important;
+      letter-spacing: -0.02em;
+    }
+    .footer-social { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .footer-social a {
+      border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 9px;
+      padding: 7px 11px; font-size: 0.84rem; font-weight: 600;
+    }
+    .footer-social a:hover { border-color: #fff; }
+    .footer-legal {
+      margin-top: 30px; padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      display: grid; gap: 10px;
+      font-size: 0.82rem; line-height: 1.5;
+    }
+    .footer-legal__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+    .site-footer .req { background: rgba(255, 243, 205, 0.9); color: #6b5500; }
+
+    /* ——— Формы записи ——— */
+    .lead-form { display: grid; gap: 10px; }
+    .lead-form__row { display: grid; gap: 10px; }
+    @media (min-width: 560px) {
+      .lead-form__row { grid-template-columns: 1fr 1fr; }
+    }
+    .lead-form input[type="text"],
+    .lead-form input[type="tel"] {
+      width: 100%; box-sizing: border-box;
+      padding: 13px 14px; border-radius: 12px;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      font: inherit; font-size: 0.95rem; color: var(--mp-text);
+    }
+    .lead-form input::placeholder { color: #9aa4b0; }
+    .lead-form input:focus {
+      outline: none; border-color: var(--mp-primary);
+      box-shadow: 0 0 0 3px rgba(33, 84, 178, 0.15);
+    }
+    .lead-form .btn { width: 100%; }
+    .lead-form__agree {
+      display: flex; gap: 9px; align-items: flex-start;
+      font-size: 0.78rem; line-height: 1.4; color: var(--mp-muted);
+    }
+    .lead-form__agree input { margin-top: 2px; width: 16px; height: 16px; flex: none; }
+    .lead-form__agree a { color: inherit; text-decoration: underline; }
+    .lead-form__note { margin: 0; font-size: 0.8rem; color: var(--mp-muted); }
+    .lead-form__done {
+      display: none; padding: 16px; border-radius: 12px;
+      background: rgba(98, 197, 132, 0.14); border: 1px solid #62c584;
+      color: #1c6b3a; font-size: 0.92rem; line-height: 1.45;
+    }
+    .lead-form.is-sent .lead-form__done { display: block; }
+    .lead-form.is-sent .lead-form__row,
+    .lead-form.is-sent .lead-form__agree,
+    .lead-form.is-sent .lead-form__note,
+    .lead-form.is-sent .btn { display: none; }
+
+    /* форма внутри тёмной CTA-полосы */
+    .cta-band .lead-form__agree { color: rgba(255, 255, 255, 0.8); }
+    .cta-band .lead-form__note { color: rgba(255, 255, 255, 0.7); }
+    .cta-band .lead-form__agree a { color: #fff; }
+    .cta-form {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 16px; padding: 20px;
+    }
+
+    /* ——— Модальное окно ——— */
+    .modal {
+      position: fixed; inset: 0; z-index: 300;
+      display: none; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .modal.is-open { display: flex; }
+    .modal__overlay { position: absolute; inset: 0; background: rgba(12, 22, 40, 0.6); }
+    .modal__dialog {
+      position: relative; z-index: 1;
+      width: min(440px, 100%); max-height: 90vh; overflow-y: auto;
+      background: var(--mp-white); border-radius: 18px;
+      box-shadow: var(--mp-shadow-lg); padding: 28px 24px 24px;
+    }
+    .modal__close {
+      position: absolute; top: 12px; right: 12px;
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid var(--mp-border); background: var(--mp-white);
+      cursor: pointer; font-size: 1.1rem; line-height: 1; color: var(--mp-muted);
+    }
+    .modal__close:hover { color: var(--mp-primary); border-color: var(--mp-primary); }
+    .modal__dialog h2 { margin: 0 0 8px; font-size: 1.3rem; letter-spacing: -0.02em; }
+    .modal__lead { margin: 0 0 18px; color: var(--mp-muted); font-size: 0.92rem; line-height: 1.5; }
+    .modal__alt {
+      margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--mp-border);
+      font-size: 0.85rem; color: var(--mp-muted); line-height: 1.5;
+    }
+    .modal__alt a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    body.is-locked { overflow: hidden; }
+
+    .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  
+  </style>
+  <style>
+    /* Дополнения для /rnr */
+    .nav-link.is-active { color: var(--mp-primary); position: relative; }
+    .nav-link.is-active::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 2px; background: var(--mp-accent); border-radius: 2px; }
+
+    /* H1 в три строки: 24ch держит перенос «Разрешение на работу и / ввоз иностранных / сотрудников для компаний» */
+    .hero h1 { max-width: 24ch; }
+
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.22); }
+    .hero__facts div { display: flex; flex-direction: column; }
+    .hero__facts strong { font-size: 1.15rem; letter-spacing: -0.02em; }
+    .hero__facts span { font-size: 0.85rem; opacity: 0.85; }
+
+    .divert { background: var(--mp-primary-light); border-bottom: 1px solid var(--mp-border); padding: 14px 0; }
+    .divert__inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-size: 0.95rem; color: var(--mp-muted); }
+    .divert__inner strong { color: var(--mp-text); font-weight: 600; }
+    .divert__inner a { font-weight: 700; }
+
+    .panel { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .panel h3 { margin: 0 0 12px; font-size: 1.05rem; }
+    .panel ul { margin: 0; padding-left: 20px; color: var(--mp-muted); }
+    .panel ul li { margin-bottom: 7px; }
+    .panel ul li:last-child { margin-bottom: 0; }
+    .duo { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 800px) { .duo { grid-template-columns: 1fr 1fr; } }
+
+    .facts-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .facts-row div { background: var(--mp-primary-light); border-radius: 10px; padding: 12px 16px; font-size: 0.92rem; }
+    .facts-row strong { display: block; font-size: 1.08rem; color: var(--mp-primary); }
+
+    .block-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; align-items: center; }
+    .block-actions span { color: var(--mp-muted); font-size: 0.9rem; }
+
+    .checklist { display: grid; gap: 10px 24px; grid-template-columns: 1fr; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 760px) { .checklist { grid-template-columns: 1fr 1fr; } }
+    .checklist li { position: relative; padding-left: 28px; color: var(--mp-text); font-size: 0.97rem; }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 20px; height: 20px; border-radius: 50%; background: #e8f6ed; color: #2f9e5b; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    .risk { margin-top: 20px; padding: 18px 20px; border-left: 4px solid var(--mp-accent); background: #fff5f5; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; font-size: 0.95rem; }
+    .risk strong { color: var(--mp-accent); }
+
+    .ptable-wrap { overflow-x: auto; border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); background: var(--mp-white); }
+    .ptable { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 0.95rem; }
+    .ptable th, .ptable td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--mp-border); vertical-align: top; }
+    .ptable thead th { background: var(--mp-primary-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mp-primary); }
+    .ptable tbody tr:last-child td { border-bottom: none; }
+    .ptable td:first-child { font-weight: 600; }
+    .ptable td small { display: block; color: var(--mp-muted); font-weight: 400; font-size: 0.86rem; margin-top: 3px; }
+    .ptable td.price { white-space: nowrap; font-weight: 700; color: var(--mp-primary); }
+
+    .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mp-primary); background: var(--mp-primary-light); border-radius: 999px; padding: 5px 12px; margin-bottom: 12px; }
+    .why { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .why { grid-template-columns: repeat(3, 1fr); } }
+    .why div { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 22px; }
+    .why strong { display: block; margin-bottom: 6px; }
+    .why span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .industries { margin: -12px 0 22px; color: var(--mp-muted); font-size: 0.95rem; line-height: 1.5; }
+    .industries span { color: var(--mp-text); font-weight: 600; }
+
+    .magnet { margin-top: 16px; display: grid; gap: 14px; align-items: center; background: var(--mp-white); border: 1px dashed var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    @media (min-width: 800px) { .magnet { grid-template-columns: 1fr auto; gap: 24px; } }
+    .magnet strong { display: block; margin-bottom: 5px; }
+    .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .calendar { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-top: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .calendar h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .calendar > p { margin: 0 0 16px; color: var(--mp-muted); font-size: 0.95rem; }
+    .calendar .panel { background: var(--mp-primary-light); border-color: transparent; }
+    .calendar__note { margin: 16px 0 0 !important; }
+
+    .quiz { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 28px; box-shadow: var(--mp-shadow); max-width: 44rem; }
+    .quiz__step strong, .quiz__result strong { display: block; margin-bottom: 16px; font-size: 1.05rem; }
+    .quiz__opts { display: grid; gap: 10px; }
+    .quiz__opts button { text-align: left; padding: 16px 18px; border-radius: var(--mp-radius-sm); border: 1px solid var(--mp-border); background: var(--mp-white); font: inherit; font-size: 0.98rem; cursor: pointer; transition: 0.15s ease; }
+    .quiz__opts button:hover { border-color: var(--mp-primary); background: var(--mp-primary-light); }
+    .quiz__result p { margin: 0 0 18px; color: var(--mp-text); }
+    .quiz__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .quiz__note { margin: 16px 0 0 !important; color: var(--mp-muted); font-size: 0.88rem; }
+
+    .case { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .case h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .case p { margin: 0 0 10px; color: var(--mp-muted); font-size: 0.95rem; }
+    .case p strong { color: var(--mp-text); }
+    .case details { border-top: 1px solid var(--mp-border); margin-top: 12px; padding-top: 12px; }
+    .case summary { cursor: pointer; font-weight: 700; font-size: 0.95rem; color: var(--mp-primary); list-style: none; }
+    .case summary::-webkit-details-marker { display: none; }
+    .case details p:last-child { margin-bottom: 0; }
+
+    .estimate { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .estimate h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .estimate .checklist li { padding-left: 30px; margin-bottom: 6px; }
+    .estimate > p { margin: 16px 0 18px; color: var(--mp-muted); font-size: 0.95rem; }
+
+    .guarantee { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid #2f9e5b; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .guarantee h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .guarantee .checklist li { padding-left: 30px; margin-bottom: 4px; }
+    .guarantee .checklist li strong { color: var(--mp-text); }
+    .guarantee > p { margin: 16px 0 0; color: var(--mp-muted); font-size: 0.93rem; }
+  </style>
+  <style>
+    .crumbs { font-size: 14px; color: var(--mp-muted); margin: 0 0 18px; }
+    .crumbs a { color: var(--mp-muted); text-decoration: none; }
+    .crumbs a:hover { color: var(--mp-primary); }
+    .ico { width: 20px; height: 20px; flex: 0 0 20px; }
+
+    .qa-head { padding: 28px 0 4px; }
+    .qa-head h1 { font-size: clamp(30px, 4.2vw, 42px); line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.02em; }
+    .qa-lead { max-width: 78ch; }
+    .qa-lead p { font-size: 18px; line-height: 1.65; margin: 0 0 12px; }
+    .qa-lead p:last-child { margin-bottom: 0; }
+
+    /* Переключатель разделов и поиск держатся вместе: это панель управления страницей */
+    .qa-nav { padding: 24px 0 8px; position: sticky; top: 0; z-index: 40; background: var(--mp-white); }
+    .qa-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .qa-tab { display: inline-flex; align-items: center; padding: 9px 16px; border: 1px solid var(--mp-border);
+              border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none;
+              color: var(--mp-text); background: var(--mp-white); }
+    .qa-tab:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+    .qa-tab.is-active { background: var(--mp-primary); border-color: var(--mp-primary); color: #fff; }
+    .qa-finder { margin-top: 16px; padding: 18px 20px; background: var(--mp-bg);
+                 border: 1px solid var(--mp-border); border-radius: var(--mp-radius); }
+    .qa-search { display: flex; align-items: center; gap: 10px; padding: 12px 16px;
+                 background: var(--mp-white); border: 1px solid var(--mp-border);
+                 border-radius: var(--mp-radius-sm); color: var(--mp-muted); }
+    .qa-search:focus-within { border-color: var(--mp-primary); box-shadow: 0 0 0 3px rgba(26, 79, 176, .12); }
+    .qa-search input { flex: 1; border: 0; outline: none; font-family: inherit; font-size: 16px;
+                       color: var(--mp-text); background: transparent; }
+    .qa-found { margin: 10px 0 0; font-size: 14px; color: var(--mp-primary); font-weight: 600; }
+    .qa-toc { list-style: none; margin: 14px 0 0; padding: 0;
+              display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 20px; }
+    .qa-toc a { display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
+                padding: 6px 0; font-size: 15px; color: var(--mp-text); text-decoration: none;
+                border-bottom: 1px solid transparent; }
+    .qa-toc a:hover { color: var(--mp-primary); border-bottom-color: var(--mp-border); }
+    .qa-toc span { font-size: 13px; color: var(--mp-muted); font-variant-numeric: tabular-nums; }
+
+    .qa-body { padding: 24px 0 0; }
+    .qa-group { margin: 0 0 40px; scroll-margin-top: 180px; }
+    .qa-group h2 { display: flex; align-items: baseline; gap: 12px;
+                   font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; margin: 0 0 14px; }
+    .qa-group__count { font-size: 14px; font-weight: 500; color: var(--mp-muted);
+                       background: var(--mp-bg); border-radius: 999px; padding: 3px 10px; }
+    .qa-item { border-bottom: 1px solid var(--mp-border); }
+    .qa-item:first-of-type { border-top: 1px solid var(--mp-border); }
+    .qa-item summary { list-style: none; cursor: pointer; padding: 16px 44px 16px 0; position: relative;
+                       font-size: 17px; font-weight: 600; line-height: 1.45; }
+    .qa-item summary::-webkit-details-marker { display: none; }
+    .qa-item summary::after { content: ""; position: absolute; right: 12px; top: 22px;
+                              width: 10px; height: 10px; border-right: 2px solid var(--mp-primary);
+                              border-bottom: 2px solid var(--mp-primary); transform: rotate(45deg);
+                              transition: transform .15s; }
+    .qa-item[open] summary::after { transform: rotate(225deg); top: 26px; }
+    .qa-item summary:hover { color: var(--mp-primary); }
+    .qa-answer { padding: 0 44px 18px 0; }
+    .qa-answer p { margin: 0 0 10px; font-size: 16px; line-height: 1.65; color: var(--mp-text); }
+    .qa-answer p:last-child { margin-bottom: 0; }
+    /* Витринный ответ: тема раскрыта в статье, здесь остаётся суть */
+    .qa-item--vitrina .qa-answer { border-left: 3px solid var(--mp-border); padding-left: 16px; }
+    .qa-vitrina-note { font-size: 13px; color: var(--mp-muted); }
+    .qa-answer__list { margin: 0 0 10px; padding-left: 22px; }
+    .qa-answer__list li { font-size: 16px; line-height: 1.65; margin: 0 0 6px; }
+    /* Строка-основание: реквизит нормы под ответом или под разделом (раздел 3 ТЗ) */
+    .osnovanie { font-size: 0.9em; color: var(--mp-muted); font-style: italic; margin: 8px 0 0; }
+    .qa-lead__more { margin: 10px 0 0; }
+    .qa-lead__more a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    .qa-lead__more a:hover { text-decoration: underline; }
+    /* Определительный раздел: понятия статуса, вводится перед тематическими группами */
+    .qa-terms { margin: 0 0 40px; scroll-margin-top: 180px; }
+    .qa-terms h2 { font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; margin: 0 0 14px; }
+    /* Навигация по разделам вопросов соседних статусов */
+    .qa-sections { margin: 0 0 40px; padding: 20px 24px; background: var(--mp-bg);
+                   border: 1px solid var(--mp-border); border-radius: var(--mp-radius); }
+    .qa-sections h2 { font-size: 20px; line-height: 1.3; margin: 0 0 12px; }
+    .qa-sections__list { list-style: none; margin: 0; padding: 0;
+                         display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; }
+    .qa-sections__list a { color: var(--mp-primary); font-weight: 600; font-size: 16px; text-decoration: none; }
+    .qa-sections__list a:hover { text-decoration: underline; }
+    .qa-group__more { margin: 16px 0 0; padding: 14px 18px; background: var(--mp-primary-light);
+                      border-radius: var(--mp-radius-sm); }
+    .qa-group__more a { color: var(--mp-primary); font-weight: 600; font-size: 16px; text-decoration: none; }
+    .qa-group__more a:hover { text-decoration: underline; }
+
+    .qa-capture { padding: 32px 0 56px; }
+    .qa-capture__grid { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 40px;
+                        align-items: start; background: var(--mp-bg); border: 1px solid var(--mp-border);
+                        border-radius: var(--mp-radius); padding: 32px 36px;
+                        width: min(100% - 40px, var(--mp-max)); }
+    .qa-capture h2 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.25; margin: 0 0 12px; }
+    .qa-capture__text p { margin: 0 0 16px; font-size: 17px; line-height: 1.6; }
+    .qa-capture__links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+                         font-size: 16px; line-height: 1.5; color: var(--mp-muted); }
+    .qa-capture__links a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    .qa-capture__links a:hover { text-decoration: underline; }
+    .qa-capture__form { background: var(--mp-white); border: 1px solid var(--mp-border);
+                        border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    .qa-capture__note { margin: 10px 0 0; font-size: 13px; color: var(--mp-muted); }
+    .lead-form--inline label { display: block; font-size: 14px; color: var(--mp-muted); }
+    .lead-form__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .lead-form--inline input, .lead-form--inline textarea {
+      width: 100%; margin-top: 4px; padding: 11px 13px; font-family: inherit; font-size: 16px;
+      color: var(--mp-text); background: var(--mp-white);
+      border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); }
+    .lead-form--inline textarea { resize: vertical; }
+    .lead-form--inline input:focus, .lead-form--inline textarea:focus {
+      outline: none; border-color: var(--mp-primary); box-shadow: 0 0 0 3px rgba(26, 79, 176, .12); }
+    .lead-form--inline .btn { width: auto; margin-top: 14px; }
+    .btn--brand { background: var(--mp-primary); color: #fff; }
+    .btn--brand:hover { background: var(--mp-primary-dark); }
+
+    @media (max-width: 1080px) {
+      .qa-nav { position: static; }
+      .qa-capture__grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 720px) {
+      .qa-toc { grid-template-columns: 1fr; }
+      .qa-sections__list { grid-template-columns: 1fr; }
+      .lead-form__pair { grid-template-columns: 1fr; }
+      .qa-capture__grid { padding: 22px 18px; }
+      .qa-item summary { font-size: 16px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Чем отличается РВП от ВНЖ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "РВП — временное проживание на три года, вид на жительство — постоянное и в большинстве случаев бессрочное. Различия, которые видны на практике: Срок. РВП выдаётся на три года и продлению не подлежит: по окончании оформляется заново либо оформляется вид на жительство. Регион. С РВП по общему правилу нельзя работать вне субъекта, где вам разрешено временное проживание; вид на жительство такого ограничения не ставит. Подтверждение. РВП подтверждать не нужно, но раз в год подаётся уведомление о проживании; вид на жительство бессрочный и тоже требует ежегодного уведомления. Пошлина. За выдачу РВП — 15 000 ₽, за вид на жительство — 30 000 ₽. Общего у статусов тоже много: и с РВП, и с видом на жительство можно работать без патента и разрешения на работу, оба статуса дают право на медицинскую помощь по полису ОМС. Основание: пункт 1 статьи 6, подпункт 1 пункта 4 и пункт 5 статьи 13, пункт 9 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; подпункты 18 и 22 пункта 1 статьи 333.28 Налогового кодекса РФ." } },
+      { "@type": "Question", "name": "Можно ли открыть ИП с РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да. РВП подтверждает право временно проживать в России, а такой документ прямо назван в перечне для регистрации ИП — подпункт «е» пункта 1 статьи 22.1 закона № 129-ФЗ. Регистрация идёт в том субъекте, где выдано РВП, и прекращается вместе с окончанием или аннулированием статуса." } },
+      { "@type": "Question", "name": "На сколько лет дают РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "На три года. Продлению РВП не подлежит — по истечении срока нужно либо перейти к виду на жительство, либо выехать. Это пункт 1 статьи 6 закона № 115-ФЗ." } },
+      { "@type": "Question", "name": "Что такое РВП простыми словами?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Это разрешение на временное проживание — статус, который позволяет иностранцу законно жить в России три года, работать без патента в том регионе, где статус выдан, и потом подать на вид на жительство. Подтверждается отметкой в документе, удостоверяющем личность." } },
+      { "@type": "Question", "name": "РВП — это временное гражданство?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Это разрешение на проживание: паспорта России оно не даёт, право голосовать на выборах не предоставляет. Гражданство оформляется отдельно и, как правило, после вида на жительство." } },
+      { "@type": "Question", "name": "Даёт ли РВП право на бесплатную медицину?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да. Временно проживающие иностранные граждане отнесены к застрахованным лицам в системе ОМС — пункт 1 статьи 10 закона № 326-ФЗ. Исключения названы в самой норме: неработающие члены семей высококвалифицированных специалистов и работающие по статье 13.5 закона № 115-ФЗ." } },
+      { "@type": "Question", "name": "Как расшифровывается РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Разрешение на временное проживание. Не путать с РВПО — разрешением на временное проживание в целях получения образования: это отдельный статус для студентов очной формы." } },
+      { "@type": "Question", "name": "Какие основания являются самыми распространенными для получения РВП в России?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Перечень оснований, по которым РВП выдаётся без учёта квоты, закрытый — в нём двенадцать пунктов. Сгруппировать их можно так: Гражданство Казахстана, Молдовы или Украины — основание само по себе, ничего дополнительно подтверждать не нужно. Семья: брак с гражданином России не менее трёх лет до дня обращения либо общий ребёнок, рождённый или усыновлённый в этом браке; несовершеннолетние и недееспособные — вместе с родителем или на срок статуса родителя. Программа переселения соотечественников — участник и члены его семьи. Учёба и служба: профессиональное образование, полученное в российском вузе или научной организации гражданином страны бывшего СССР; военная служба по контракту. Переселение по международному договору и отдельные случаи для лиц без гражданства. Если ни один пункт не подходит, остаётся путь через квоту. Основание: пункт 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; редакции — Федеральный закон от 26.10.2024 № 358-ФЗ (брак), от 08.08.2024 № 253-ФЗ (Госпрограмма), от 01.07.2021 № 274-ФЗ (Казахстан, Молдова, Украина), от 14.07.2022 № 357-ФЗ (образование)." } },
+      { "@type": "Question", "name": "Существуют ли особые основания для получения РВП для талантливых специалистов и инвесторов?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Перечень оснований для РВП без квоты закрытый, и ни инвестиций, ни выдающихся достижений в нём нет. Тексты в интернете, обещающие «РВП за инвестиции», опираются на устаревшие редакции закона. Высококвалифицированным специалистам закон даёт другой путь — вид на жительство, минуя РВП. А если основания из перечня нет, остаётся квота: там профессия, образование, источник средств и наличие жилья учитываются как критерии комиссии, но выделение места не гарантируют. Основание: пункт 3 статьи 6 и пункт 2 статьи 8 Федерального закона от 25.07.2002 № 115-ФЗ; пункт 4 Правил распределения квоты, утверждённых постановлением Правительства РФ от 29.12.2020 № 2345." } },
+      { "@type": "Question", "name": "Можно ли получить РВП, если несколько оснований могут быть применимы одновременно?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, но в заявлении указывается одно основание — то, по которому вы подаёте. Когда подходят два, выбирают то, которое проще подтвердить документами. Пример: брак меньше трёх лет, но есть общий ребёнок, рождённый в этом браке — основанием служит ребёнок, а не стаж брака. Собирать документы «на все случаи» не нужно: комплект подтверждает выбранное основание. Выбрать его стоит до подачи, а не в подразделении: если по заявленному основанию откажут, повторно подать можно не ранее чем через год со дня отказа. Основание: пункт 3 и пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Каковы основные категории заявителей, которым предоставляется упрощенное оформление РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "«Упрощённого оформления» как отдельной процедуры в законе нет. Есть выдача РВП без учёта квоты: порядок подачи и перечень документов те же, отличие одно — не нужно ждать решения комиссии о выделении квоты. Право подать без квоты дают только пункты закрытого перечня: гражданство Казахстана, Молдовы или Украины; брак с гражданином России; участие в программе переселения соотечественников; несовершеннолетие или недееспособность при родителе с российским статусом; военная служба по контракту; профессиональное образование в российском вузе для граждан стран бывшего СССР; переселение по международному договору. Гражданство любой другой страны СНГ само по себе основанием не является — это частое заблуждение. Основание: пункт 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Что делает процедуру получения РВП для граждан СНГ более упрощенной?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Само гражданство страны СНГ процедуру не упрощает — такого признака в законе нет. Работают два других обстоятельства, которые часто принимают за «упрощение для СНГ». Первое: гражданам Казахстана, Молдовы и Украины РВП выдаётся без учёта квоты. Это отдельный пункт перечня оснований, и он назван по конкретным странам, а не по СНГ в целом. Второе: для граждан безвизовых стран решение принимается за 60 суток со дня принятия заявления, для визовых — четыре месяца. Здесь имеет значение визовый режим, а не участие страны в СНГ. Основание: подпункт 11 пункта 3 статьи 6 и пункт 4 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "У меня ребёнок — гражданин России. Мне подавать на РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Скорее всего нет: при ребёнке — гражданине России, постоянно проживающем в стране, вид на жительство выдаётся без получения РВП. Это пункт 2 статьи 8 закона № 115-ФЗ, и подавать на промежуточный статус не нужно." } },
+      { "@type": "Question", "name": "Даёт ли работа в России основание для РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Ни трудовой договор, ни приглашение работодателя в перечне не названы. С трудовым договором оформляют патент или разрешение на работу, а РВП получают по квоте — если нет другого основания." } },
+      { "@type": "Question", "name": "Я студент российского вуза. Какое у меня основание?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Для очных студентов государственных вузов действует не РВП, а разрешение на временное проживание в целях получения образования по статье 6.2 закона № 115-ФЗ: квота не нужна, срок — обучение плюс 180 календарных дней. Заочная и вечерняя формы этого статуса не дают." } },
+      { "@type": "Question", "name": "Дают ли РВП по работе или по инвестициям?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Работы по приглашению, предпринимательства и инвестиций в перечне оснований без квоты нет. Если оснований из перечня нет, путь идёт через квоту." } },
+      { "@type": "Question", "name": "Какие ошибки чаще всего приводят к отказу в рамках квотной системы?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Сначала важное различие: невыделение квоты — это не отказ в РВП. Основания статьи 7 здесь не применяются, и годичный запрет на повторное обращение не действует. Типовые причины, по которым заявка не проходит: заявка-анкета заполнена не по форме — исправления, пропущенные пункты, дата не в формате 00.00.0000; критерии комиссии не подтверждены документами: заявлена работа, но нет договора; заявлено жильё, но нет выписки; иностранный диплом приложен без свидетельства о признании; обращение, когда квота региона уже исчерпана. Последний случай стоит отдельно: на 2026 год по стране выделено 3 802 места и резерв 1 140, и при исчерпании квоты решение зависит не от качества документов, а от остатка мест. Основание: пункты 3–9 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345); распоряжение Правительства РФ от 06.10.2025 № 2792-р." } },
+      { "@type": "Question", "name": "Какие документы особенно важны для участия в квотной системе?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Федерального закрытого перечня приложений к заявке-анкете нет: комиссия оценивает заявителя по девяти критериям, и каждый критерий подтверждается своим документом. Поэтому важны те документы, что закрывают именно ваши критерии: работа — трудовой договор или справка с места работы; образование и специальность — диплом, а при иностранном документе ещё и свидетельство о его признании; источник средств — справка о доходах или выписка со счёта; жильё — выписка из ЕГРН либо договор найма; родственники в России — документы, подтверждающие родство. Отдельно к самой заявке-анкете: она заполняется на бланке установленной формы, русским языком, печатными буквами, без исправлений, дата в формате 00.00.0000, один лист — одна сторона, для дополнений предусмотрен отдельный лист. Основание: пункты 2 и 4 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345); форма заявки-анкеты — приказ МВД России от 28.05.2021 № 317." } },
+      { "@type": "Question", "name": "Можно ли повысить шансы на получение квоты, если заявка отклонена?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да. Годичное ожидание к квоте не относится — оно установлено для отказа в самом РВП, а решение комиссии это другое. Работать нужно с критериями: добавить подтверждение работы или дохода, получить свидетельство о признании иностранного диплома, подтвердить наличие жилья. Второй рычаг — момент обращения. Остаток квоты публикуется после каждого заседания комиссии, в течение трёх рабочих дней со дня утверждения протокола. Подавать имеет смысл, пока места есть. Отдельно распределяется резерв: к нему критерии комиссии и приглашение на заседание не применяются. Основание: пункты 4 и 7–9 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345); пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Что такое квоты на РВП и как они работают?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Квота — это число разрешений на временное проживание, которое Правительство распределяет на год по регионам. Если основания из закрытого перечня у вас нет, РВП выдаётся только в пределах квоты. Порядок такой: вы подаёте заявку-анкету о выделении квоты в подразделение по вопросам миграции по своему региону. Комиссия рассматривает её 30 рабочих дней и оценивает по девяти критериям — работа, учёба, специальность, источник средств, признание образования, родственники, жильё, судимость, административная ответственность. Протокол заседания оформляется в течение трёх рабочих дней, после чего публикуется остаток квоты. На 2026 год по стране выделено 3 802 места и резерв 1 140: Москве — 500, Московской области — 250, Санкт-Петербургу — 100. Отдельной пошлины за квоту нет; 15 000 ₽ платятся позже, за выдачу самого РВП. Основание: пункт 1 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; распоряжение Правительства РФ от 06.10.2025 № 2792-р; Правила распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345); приказ МВД России от 28.05.2021 № 317." } },
+      { "@type": "Question", "name": "Сколько действует решение о выделении квоты?",
+        "acceptedAnswer": { "@type": "Answer", "text": "До конца того календарного года, в котором оно принято. Если квоту выделили в марте, документы на само РВП нужно подать до 31 декабря того же года, иначе право на неё теряется и процедуру придётся проходить заново." } },
+      { "@type": "Question", "name": "Сколько квот выделено Московской области на 2026 год?",
+        "acceptedAnswer": { "@type": "Answer", "text": "250 разрешений — второй результат по стране после Москвы с её 500. В 2025 году области выделяли 350 мест." } },
+      { "@type": "Question", "name": "Сколько квот выделено на 2026 год?",
+        "acceptedAnswer": { "@type": "Answer", "text": "3 802 разрешения на всю страну плюс резерв в 1 140 разрешений — распоряжение Правительства от 06.10.2025 № 2792-р. Москве выделено 500 мест, Московской области — 250, Санкт-Петербургу — 100. Это почти вдвое меньше, чем в 2025 году." } },
+      { "@type": "Question", "name": "Почему в 2026 году квот меньше, чем в 2025?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Общий лимит сокращён с 5 500 до 3 802 разрешений, по Москве и Санкт-Петербургу — ровно вдвое. Причины сокращения Правительство в распоряжении не объясняет; практический вывод один — подавать в первые недели приёма." } },
+      { "@type": "Question", "name": "Правда ли, что гражданам Казахстана, Молдовы и Украины квота не нужна?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да. Основание действует по самому факту гражданства — подпункт 11 пункта 3 статьи 6 закона № 115-ФЗ. Дополнительных условий норма не устанавливает." } },
+      { "@type": "Question", "name": "Сколько всего оснований для РВП без квоты?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Двенадцать, и перечень закрытый: он установлен пунктом 3 статьи 6 закона № 115-ФЗ, плюс отдельный пункт 3.1 для лиц без гражданства. Подпункт 7 прежней редакции утратил силу в 2022 году." } },
+      { "@type": "Question", "name": "Увеличит ли собственное жильё в России шансы на квоту?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, это один из девяти критериев комиссии — наличие жилого помещения на праве собственности в том субъекте, где вы просите квоту. Подтверждается выпиской из ЕГРН. Гарантии это не даёт: решение принимается по совокупности критериев." } },
+      { "@type": "Question", "name": "Что такое резерв квоты?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Запас в 1 140 разрешений, который Правительство распределяет отдельно и передаёт региону в течение года, если основной лимит закончился. К резерву девять критериев оценки заявителя не применяются — комиссия руководствуется актом Правительства о целях использования резерва." } },
+      { "@type": "Question", "name": "Сколько ждать решения по заявке-анкете?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Комиссия рассматривает заявку-анкету в течение 30 рабочих дней со дня её регистрации территориальным органом МВД. Затем 3 рабочих дня на протокол и ещё 3 рабочих дня на уведомление — оно приходит на электронную почту, указанную в анкете." } },
+      { "@type": "Question", "name": "Сколько квот у Свердловской области?",
+        "acceptedAnswer": { "@type": "Answer", "text": "75 разрешений на 2026 год. Это 39% всей квоты Уральского федерального округа, которому выделено 192 места." } },
+      { "@type": "Question", "name": "Сколько стоит квота?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Рассмотрение заявления о выделении квоты пошлиной не облагается. Пошлина возникает на следующем шаге — за выдачу самого РВП она составляет 15 000 ₽ с 26 июля 2026 года, до этой даты была 1 920 ₽." } },
+      { "@type": "Question", "name": "Сколько фотографий нужно на квоту?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Обычно от двух до четырёх, точное число зависит от подразделения. Формат 35×45 мм, матовые, светлый фон." } },
+      { "@type": "Question", "name": "Гарантирует ли наличие родственников-граждан РФ получение квоты?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Если у вас есть супруг, ребёнок или родитель с российским гражданством, вам, скорее всего, квота не нужна вовсе — подавайте сразу на РВП по своему основанию. Другие родственники квоту не гарантируют, но учитываются комиссией как связь с регионом." } },
+      { "@type": "Question", "name": "Где посмотреть список тех, кому выделили квоту?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Территориальный орган МВД публикует на своём сайте дату проведённого заседания комиссии, размер выделенной по его итогам квоты и остаток мест на текущую дату. Персональное решение приходит вам уведомлением на адрес из анкеты, а не публикуется списком с именами." } },
+      { "@type": "Question", "name": "Как узнать, что мне выделили квоту?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Списки публикуются на сайте регионального управления по вопросам миграции и вывешиваются на стендах в подразделении. Персональные уведомления обычно не рассылают, поэтому результат проверяют самостоятельно по номеру справки о приёме документов." } },
+      { "@type": "Question", "name": "Влияет ли страна гражданства на шансы получить квоту?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Официально нет: страна исхода в критериях не значится. На практике для граждан ряда стран квота вообще не нужна — например, у граждан Белоруссии свой порядок." } },
+      { "@type": "Question", "name": "Влияет ли регион на скорость рассмотрения заявки?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Срок установлен нормой и одинаков для всех субъектов: комиссия рассматривает заявку-анкету в течение 30 рабочих дней со дня её регистрации территориальным органом МВД. Различается не срок, а частота заседаний комиссии и график приёма заявок." } },
+      { "@type": "Question", "name": "Как узнать, остались ли места в моём регионе?",
+        "acceptedAnswer": { "@type": "Answer", "text": "На сайте территориального органа МВД: после каждого заседания комиссии он публикует дату заседания, размер выделенной квоты и остаток на текущую дату. Это его обязанность по пункту 7 Правил распределения квоты." } },
+      { "@type": "Question", "name": "В каком регионе проще всего получить квоту на РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Проще там, где выполняется больше требований комиссии именно к вам, — а не там, где выделено больше мест. Пять из девяти оснований привязаны к конкретному субъекту: работа, учёба, востребованная специальность, родственники, жильё в собственности. Поэтому «свой» регион считается так: смотрите, где у вас есть эти связи, затем проверяете остаток мест на сайте территориального органа МВД и подаёте в первые недели приёма. Сравнить регионы по вероятности одобрения нельзя — число поданных заявок по субъектам не публикуется." } },
+      { "@type": "Question", "name": "Кому дают РВП без квоты?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Перечень закрытый: брак с гражданином РФ не менее трёх лет, родитель — гражданин РФ, рождение в РСФСР с гражданством СССР, участие в Госпрограмме переселения, гражданство Казахстана, Молдовы или Украины, диплом российского вуза, военная служба и ещё несколько оснований. Полный перечень — в разделе об основаниях выше." } },
+      { "@type": "Question", "name": "Нужна ли медицинская справка для подачи на квоту?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Медицинское обследование и сертификат об отсутствии ВИЧ на этапе квоты не нужны — их проходят позже, когда квота выделена и вы подаёте документы на само разрешение на временное проживание. Проходить медкомиссию заранее невыгодно: у справок есть срок действия, а между двумя подачами проходят месяцы." } },
+      { "@type": "Question", "name": "Нужна ли мне квота?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Квота нужна, если у вас нет основания для подачи без неё. Основания перечислены выше в блоке «Кому подходит». Ссылка: `/blog/kvota-rvp/rvp-bez-kvoty`" } },
+      { "@type": "Question", "name": "Нужно ли сдавать экзамен по русскому языку для квоты?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Подтверждение владения русским языком, знания истории России и основ законодательства требуется при подаче на само РВП, а не на квоту." } },
+      { "@type": "Question", "name": "Можно ли подать на квоту через Госуслуги?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет, заявление подаётся лично в подразделении по вопросам миграции. Через Госуслуги можно записаться на приём и встать на миграционный учёт, но не подать само заявление о квоте." } },
+      { "@type": "Question", "name": "Можно ли подать документы на квоту через представителя или из-за границы?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Заявка-анкета подаётся лично, на территории России, в том субъекте, где вы планируете проживать и где у вас действует регистрация по месту пребывания." } },
+      { "@type": "Question", "name": "Можно ли подать заявку на квоту в регионе, где больше мест?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет, если у вас там нет регистрации по месту пребывания. Заявка-анкета подаётся в том субъекте, где вы законно находитесь и планируете жить; адрес регистрации проверяют при приёме документов." } },
+      { "@type": "Question", "name": "Можно ли подать заявление на квоту сразу в нескольких регионах?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Заявление подаётся только в одном субъекте России — том, где вы планируете жить и оформлять РВП. Подача в нескольких регионах выявляется и приводит к отказу по всем заявлениям сразу." } },
+      { "@type": "Question", "name": "Как получить РВП по браку с гражданином России?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Брак с гражданином России даёт право подать без квоты, но с 25 января 2025 года нужен стаж брака не менее трёх лет до дня обращения. Исключение — общий ребёнок, рождённый или усыновлённый в этом браке: тогда срок не требуется. Заявление подаётся в том субъекте России, где живёт супруг — гражданин РФ. Основание: подпункт 4 пункта 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ в редакции Федерального закона от 26.10.2024 № 358-ФЗ." } },
+      { "@type": "Question", "name": "Даёт ли РВП по браку ускоренный путь к гражданству?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Условия приёма в гражданство для супругов граждан России регулируются отдельным законом и не зависят от того, по какому основанию было получено РВП. Из наличия РВП по браку право на гражданство автоматически не следует." } },
+      { "@type": "Question", "name": "Что будет с РВП при разводе?",
+        "acceptedAnswer": { "@type": "Answer", "text": "РВП аннулируется: основание, по которому оно выдано, перестало существовать. Если появилось другое основание из перечня пункта 3 статьи 6, можно подавать по нему; иначе остаётся путь через квоту." } },
+      { "@type": "Question", "name": "Считается ли гражданский брак основанием для РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Закон считает только брак, зарегистрированный в установленном порядке; совместное проживание без регистрации основанием не является." } },
+      { "@type": "Question", "name": "С какой даты считаются три года?",
+        "acceptedAnswer": { "@type": "Answer", "text": "От даты заключения брака, указанной в свидетельстве, и до дня обращения с заявлением. Совместное проживание до регистрации брака в этот срок не входит." } },
+      { "@type": "Question", "name": "Можно ли получить РВП сразу после свадьбы?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет, если в браке нет общего ребёнка. С 25 января 2025 года основание «брак с гражданином РФ» требует стажа не менее трёх лет до дня обращения с заявлением. Если общий ребёнок, рождённый или усыновлённый в этом браке, есть — подавать можно сразу." } },
+      { "@type": "Question", "name": "Какие документы нужны для РВП по браку?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Заявление, документ, удостоверяющий личность, с нотариально заверенным переводом, свидетельство о браке, паспорт супруга, две фотографии, медицинские справки, сертификат об экзамене или документ об освобождении, квитанция об уплате пошлины 15 000 ₽, документы о законности пребывания. Если подача идёт по исключению — свидетельство о рождении общего ребёнка." } },
+      { "@type": "Question", "name": "Можно ли получить РВП по браку, если женаты меньше трёх лет?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Только если в этом браке есть общий ребёнок — рождённый или усыновлённый. Иначе основание не действует: трёхлетний стаж введён Федеральным законом от 26.10.2024 № 358-ФЗ и считается до дня обращения с заявлением." } },
+      { "@type": "Question", "name": "Можно ли подать по браку?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Можно. С 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения, кроме случая с общим ребёнком `[REQ]`. Ссылка: `/blog/rvp/rvp-po-braku-s-grazhdaninom-rf`" } },
+      { "@type": "Question", "name": "Где подавать документы, если супруг прописан в другом регионе?",
+        "acceptedAnswer": { "@type": "Answer", "text": "В том субъекте, где находится место жительства супруга — гражданина России. Это часть нормы, а не рекомендация: выбрать регион по своему удобству нельзя." } },
+      { "@type": "Question", "name": "Сколько делается РВП по браку?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Четыре месяца со дня поступления заявления, а для прибывших в Россию без визы — 60 суток. Приостановление этого срока законом не предусмотрено." } },
+      { "@type": "Question", "name": "Нужно ли сдавать экзамен, если подаёшь по браку?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да. Брак от экзамена не освобождает: перечень освобождений закрытый, и основания «брак» в нём нет. Освобождены восемь категорий по пункту 5 статьи 15.1 — среди них не достигшие 18 лет, мужчины от 65 лет, женщины от 60 лет, граждане Союзного государства России и Беларуси, граждане Украины." } },
+      { "@type": "Question", "name": "Нужна ли квота при подаче по браку?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Брак при соблюдении условия о стаже либо при наличии общего ребёнка — основание для выдачи РВП **без учёта квоты**." } },
+      { "@type": "Question", "name": "Сколько времени занимает подготовка полного пакета документов для РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Самая долгая часть — не бумаги, а медкомиссия и экзамен: сроки здесь зависят от загрузки медицинского центра и от даты ближайшего тестирования, а не от вашей скорости. Переводы делаются быстро, но их нельзя заказать раньше, чем на руках оригиналы. Самая непредсказуемая позиция — признание иностранного диплома, если он нужен для вашего основания или для критериев комиссии по квоте: с неё стоит начинать." } },
+      { "@type": "Question", "name": "Какие документы необходимо подготовить для подтверждения семейных связей при воссоединении?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Родство подтверждается документами о его возникновении, и цепочка должна быть непрерывной. Для брака — свидетельство о браке и паспорт супруга, гражданина России; если брак зарегистрирован за границей, свидетельство нужно с переводом на русский. Для ребёнка или родителя — свидетельство о рождении; если фамилия менялась, дополнительно документ о её смене, иначе цепочка родства обрывается. Когда требование трёхлетнего стажа брака снимает общий ребёнок, в комплект входит и его свидетельство о рождении, где указаны оба супруга. Основание: подпункт 4 пункта 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Насколько важна корректность переводов документов?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Перевод — самое частое место возврата комплекта. Документ на иностранном языке принимается только вместе с переводом на русский язык. Отдельно проверьте написание имени и фамилии: в переводе оно должно совпадать с написанием в вашем документе, удостоверяющем личность, и во всех остальных бумагах комплекта. Расхождение в одной букве читается как другой человек, и подтверждать родство или стаж придётся заново." } },
+      { "@type": "Question", "name": "Можно ли рассчитывать на сокращенные сроки рассмотрения заявления на РВП для граждан СНГ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Срок зависит не от гражданства СНГ, а от визового режима: для граждан безвизовых стран решение принимается за 60 суток со дня принятия заявления, для визовых — четыре месяца. Ускорить рассмотрение внутри установленного срока нельзя ни платно, ни по заявлению. Реально сокращает путь другое — отсутствие этапа квоты. Гражданам Казахстана, Молдовы и Украины РВП выдаётся без учёта квоты, и они не ждут решения комиссии: это 30 рабочих дней плюс само заседание. Основание: пункт 4 статьи 6 и подпункт 11 пункта 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; пункт 3 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345)." } },
+      { "@type": "Question", "name": "Как избежать ошибок при подготовке пакета документов?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Три места, где ошибки повторяются. Перевод. Любой документ на иностранном языке нужен с переводом на русский, и написание имени в переводе должно совпадать с паспортом до буквы. Основание. Комплект подтверждает то основание, которое указано в заявлении, а не «все подходящие сразу». Заявление. Заполняется без исправлений, данные сверяются с документом, а не по памяти. Проверять комплект стоит до записи на приём: переделать перевод или справку за день до подачи обычно не получается." } },
+      { "@type": "Question", "name": "Что делать, если в процессе оформления РВП возникли ошибки или недочеты в документах?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Зависит от того, когда ошибку нашли. До подачи переделывается сам документ: перевод, справка, заявление. На приёме в подразделении дефектный комплект чаще возвращают сразу — и это не отказ в РВП: подать заново можно хоть на следующий день, годичное ожидание здесь не действует. Если ошибка обнаружилась после того, как заявление приняли, сообщите о ней в то же подразделение, не дожидаясь решения. Отказ выносится только по основаниям закрытого перечня статьи 7, и технической неточности в этом перечне нет. Но представление недостоверных сведений в перечне есть, и границу между опечаткой и недостоверностью оценивает орган — поэтому молчать о найденной ошибке невыгодно. Основание: пункт 1 статьи 7 и пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Какие дополнительные документы могут потребоваться для успешного оформления РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Сверх базовой части просят то, что закрывает вашу ситуацию: документ о смене фамилии, если она менялась; свидетельство о признании иностранного диплома; документы о законном пребывании — миграционная карта и уведомление о постановке на учёт; при подаче за ребёнка — согласие второго родителя. Если идёте через квоту, добавляются документы под критерии комиссии: трудовой договор, справка о доходах, выписка на жильё. Закрытого федерального списка приложений к заявке-анкете нет — состав определяется тем, что вы заявляете о себе. Основание: пункты 2 и 4 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345)." } },
+      { "@type": "Question", "name": "Как избежать несвоевременной подачи документов?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Считайте срок от самого короткого документа, а не от удобной вам даты. Медицинские документы и сертификат о владении русским языком действуют ограниченное время, и просроченная справка — причина вернуть комплект на приёме. Порядок, который снимает риск: сначала запись на приём в подразделение МВД, затем медкомиссия под эту дату, затем всё остальное. Если запись сдвигается, справки успевают устареть — тогда дешевле пройти медкомиссию заново, чем идти на приём с просроченным документом." } },
+      { "@type": "Question", "name": "Какие документы подтверждают знание русского языка при подаче на РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Основной документ — сертификат о владении русским языком, знании истории России и основ законодательства; он выдаётся после экзамена. Вместо сертификата принимается документ об образовании: выданный в СССР до 1 сентября 1991 года либо выданный в России документ об образовании с указанием, что обучение шло на русском языке. От экзамена освобождены отдельные категории: недееспособные и ограниченные в дееспособности; лица младше 18 лет; мужчины, достигшие 65 лет, и женщины, достигшие 60 лет; участники программы переселения соотечественников и члены их семей; граждане Союзного государства России и Беларуси; граждане Украины. Основание: пункт 5 статьи 15.1 Федерального закона от 25.07.2002 № 115-ФЗ; порядок проведения экзамена — постановление Правительства РФ от 31.05.2021 № 824; форма сертификата — приказ Минобрнауки России от 14.11.2024 № 763." } },
+      { "@type": "Question", "name": "Можно ли подать заявление на РВП онлайн?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Частично. Административный регламент допускает подачу заявления через портал Госуслуг: после этого вам приходит уведомление с перечнем документов и сроком, в который их нужно представить. Но личный визит в подразделение всё равно нужен — там сверяют оригиналы и проводят дактилоскопию. Через Госуслуги решается и запись на приём, и — позже, после получения РВП — ежегодное уведомление о проживании. Основание: пункт 9 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; Административный регламент, утверждённый приказом МВД России от 08.06.2020 № 407 (пункт 178)." } },
+      { "@type": "Question", "name": "Какие основные документы требуются для оформления РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Базовая часть комплекта одинакова при любом основании: заявление, документ, удостоверяющий личность, фотографии, медицинские документы об отсутствии опасных заболеваний и наркозависимости, сертификат о владении русским языком, знании истории России и основ законодательства, квитанция об уплате пошлины 15 000 ₽. К ней добавляется документ, подтверждающий именно ваше основание: свидетельство о браке, свидетельство участника Госпрограммы, диплом российского вуза. Основание: статья 6 и пункт 5 статьи 15.1 Федерального закона от 25.07.2002 № 115-ФЗ; подпункт 22 пункта 1 статьи 333.28 Налогового кодекса РФ; перечень документов и форма заявления — Административный регламент, утверждённый приказом МВД России от 08.06.2020 № 407." } },
+      { "@type": "Question", "name": "Что делать, если в паспорте нет данных на русском языке?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Сделать нотариально заверенный перевод всех страниц с записями и отметками. Перевод выполняется в России, заверяется российским нотариусом и сшивается с копией страниц паспорта." } },
+      { "@type": "Question", "name": "Обязательно ли сдавать экзамен по русскому языку?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Сертификат входит в пакет документов, но при подаче на РВП от экзамена освобождены восемь категорий по пункту 5 статьи 15.1 закона № 115-ФЗ: недееспособные и ограниченные в дееспособности, не достигшие 18 лет, мужчины от 65 лет, женщины от 60 лет, участники Госпрограммы переселения и члены их семей, граждане Союзного государства России и Беларуси, граждане Украины и лица, названные в подпункте 8 пункта 3 статьи 6. Если освобождение есть, в пакет идёт подтверждающий документ вместо сертификата." } },
+      { "@type": "Question", "name": "Можно ли ускорить процесс оформления РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Сроки рассмотрения установлены и не сокращаются ни за плату, ни по просьбе: для граждан безвизовых стран это 60 суток со дня принятия заявления, для визовых — четыре месяца. Ускорить можно только то, что происходит до подачи и после решения. До подачи: не терять недели на переделку перевода, вовремя пройти медкомиссию и экзамен, заранее записаться на приём. После решения: следить за готовностью, чтобы не пропустить дату получения. Если срок рассмотрения вышел, а решения нет, это повод обратиться в подразделение с письменным запросом. Основание: пункт 4 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Нужен ли юрист, чтобы оформить РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Закон этого не требует: подать документы можно самостоятельно, и часть пути проходится своими силами. Понять, есть ли у вас основание из перечня, можно по статьям этого раздела; экзамен вы в любом случае сдаёте лично; заявление подаётся лично, и отпечатки пальцев за вас никто не сдаст. Юрист нужен там, где цена ошибки высока: выбор основания, когда подходят несколько; проверка каждого документа и перевода — это самое частое место возврата комплекта; подача по квоте, где девять критериев комиссии нужно закрыть документами; разбор причины после отказа, потому что повторно подать можно не ранее чем через год. На само решение органа не влияет ни заявитель, ни юрист — влияет только полнота и достоверность того, что подано. Основание: пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Сколько стоит купить РВП в России?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Купить РВП нельзя: разрешение выдаёт МВД по установленной процедуре, а «оформление за деньги без процедуры» — это поддельный документ, за который отвечает и тот, кто его изготовил, и тот, кто им пользуется. Государственная пошлина за выдачу РВП — 15 000 ₽ с 26 июля 2026 года; остальные расходы — медкомиссия, экзамен, переводы и, если нужно, работа представителя. Основание: подпункт 22 пункта 1 статьи 333.28 Налогового кодекса РФ в редакции Федерального закона от 26.06.2026 № 190-ФЗ." } },
+      { "@type": "Question", "name": "Сколько времени делают РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Четыре месяца со дня поступления заявления. Для тех, кто прибыл в Россию без визы, — 60 суток. Приостановление этого срока законом не предусмотрено." } },
+      { "@type": "Question", "name": "Срок рассмотрения вышел, а решения нет — что делать?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Подайте письменное обращение в подразделение подачи с просьбой сообщить о результате, указав дату подачи и номер расписки, и сохраните копию с отметкой о приёме. Приостановление срока рассмотрения законом не предусмотрено (пункт 26 регламента). Если ответа нет — жалоба руководителю территориального органа, затем вышестоящее управление или прокуратура." } },
+      { "@type": "Question", "name": "Сколько стоит РВП в 2026 году?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Государственная пошлина за выдачу — 15 000 ₽ с 26 июля 2026 года. Если заявление подано и пошлина оплачена до этой даты, применяется прежний тариф. Разрешение для студентов по статье 6.2 стоит 8 000 ₽." } },
+      { "@type": "Question", "name": "Чем проверка готовности квоты отличается от проверки РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "320|Это разные процедуры. Заявку-анкету на квоту рассматривает комиссия 30 рабочих дней, а сведения о выделенной квоте публикуют региональные управления по вопросам миграции — единого сервиса нет (постановление Правительства РФ от 29.12.2020 № 2345). Проверка готовности самого разрешения идёт через сервис МВД, телефон или личный приём." } },
+      { "@type": "Question", "name": "Что значит «данные о готовности разрешения на временное проживание отсутствуют»?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Это значит, что сведений о решении в сервисе сейчас нет, и отказом такой ответ не является. Причины бывают разные: решение ещё не принято, данные не выгружены, выбран не тот регион, опечатка в номере документа. Сверьте данные с распиской, повторите запрос через несколько рабочих дней, параллельно позвоните в подразделение подачи." } },
+      { "@type": "Question", "name": "Обязаны ли меня уведомить о решении?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да. Уведомление о результате рассмотрения с датой и номером решения направляется в течение рабочего дня, следующего за днём поступления решения (пункт 139 регламента). Уведомление об отказе — не позднее окончания рабочего дня, следующего за днём принятия решения (пункт 27). Отсутствие уведомления при вышедшем сроке — основание для письменного обращения. 310|**10. Что делать, если в отметке о РВП ошибка?** Подайте заявление об исправлении ошибок в подразделение. Факт технического брака или опечатки устанавливается не позднее следующего рабочего дня, решение об оформлении нового документа либо новой отметки — тоже не позднее следующего рабочего дня (пункты 189–191 регламента). Проверять отметку лучше сразу при получении." } },
+      { "@type": "Question", "name": "Как проверить, действует ли уже выданное РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Отдельного онлайн-сервиса для проверки действующего разрешения у МВД нет. Действительность подтверждает отметка в документе, удостоверяющем личность: сверьте данные владельца, номер и дату решения, срок и субъект, где разрешено проживание. Для юридически значимого подтверждения нужен письменный запрос в подразделение или личное обращение с паспортом." } },
+      { "@type": "Question", "name": "Помогает ли Migra-Pro узнать статус заявления?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Доступа к закрытой базе ведомства нет ни у одной частной компании, и проверять статус «за вас» мы не можем. Чем помогаем: разбираем ситуацию, когда срок вышел, а ответа нет, готовим письменные обращения и жалобы, проверяем пакет документов перед подачей и после отказа." } },
+      { "@type": "Question", "name": "Как проверить готовность РВП в Москве и в Сахарово?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Онлайн — на том же федеральном сервисе, выбрав регион Москвы. Лично — в миграционном центре в Сахарово, если документы подавали туда. Если подавали в Московской области, это другой субъект: и регион в форме, и подразделение будут другими." } },
+      { "@type": "Question", "name": "Виден ли статус заявления на Госуслугах?",
+        "acceptedAnswer": { "@type": "Answer", "text": "300|Если заявление подавали через портал — да: заявлению присваивается уникальный номер, а после принятия решения вас информируют в течение рабочего дня, и заявление получает статус «Готово» (подпункты 178.6.2, 183.1, 183.2 регламента). При подаче в окно заявления в личном кабинете не будет." } },
+      { "@type": "Question", "name": "Можно ли узнать готовность РВП по фамилии?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Форма запрашивает регион подачи, дату рождения и реквизиты документа, удостоверяющего личность. Поиск по одной фамилии закрыт: иначе статус любого человека мог бы посмотреть посторонний. По телефону в подразделении тоже назовут не только фамилию, но и дату подачи с номером расписки. 290|**5. Можно ли узнать статус заявления по телефону?** Да. Право получать сведения о ходе рассмотрения по телефону, на личном приёме и через портал Госуслуг закреплено пунктом 4 административного регламента МВД (приказ от 08.06.2020 № 407). Звонить нужно в то подразделение, куда подавали документы, и назвать ФИО, дату подачи, номер расписки и паспортные данные." } },
+      { "@type": "Question", "name": "Как проверить готовность РВП онлайн?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Откройте сервис проверки на сайте ГУВМ МВД России, выберите регион, в котором подавали заявление, укажите дату рождения и номер документа, по которому подавали, пройдите проверку «я не робот» и отправьте форму. Сервис покажет либо сведения о принятом решении, либо сообщение, что данных нет. Ответ сервиса информационный: он не заменяет официального уведомления о решении." } },
+      { "@type": "Question", "name": "Может ли неправильное оформление документов стать причиной отказа в выдаче РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Прямо — нет: перечень оснований для отказа закрытый, и «неправильного оформления» в нём нет. Но рядом стоят два пункта перечня, которые работают именно здесь: представление недостоверных сведений и подложных документов. Опечатка и недостоверность — разные вещи, и разницу оценивает подразделение МВД. На практике дефектный комплект чаще ведёт к возврату документов на приёме, а не к решению об отказе. Разница существенная: после возврата вы подаёте заново сразу, после отказа — не ранее чем через год со дня решения. Основание: пункт 1 статьи 7 и пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Какие основные ошибки приводят к отказу в выдаче РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Здесь нужно разделить две разные вещи. Отказ выносится только по основаниям закрытого перечня статьи 7: судимость, выдворение или депортация в прошлом, заболевание, опасное для окружающих, недостоверные сведения, расторжение брака, если он был основанием, длительное пребывание за пределами России и другие пункты перечня. Ошибки в документах самой по себе в этом перечне нет. Что реально происходит из-за ошибок: комплект возвращают на приёме либо запрашивают уточнения. Это не отказ, и годичный запрет на повторное обращение не применяется. Повторяются три ошибки — перевод с другим написанием имени, просроченные медицинские документы и документы не под то основание, которое указано в заявлении. Основание: пункт 1 статьи 7 и пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Можно ли оспорить отказ в выдаче РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да. На жалобу в МВД России отведено три рабочих дня со дня получения уведомления о решении, на обращение в суд — три месяца; пропуск трёхдневного срока права на суд не лишает. Если решение отменят, РВП выдают или восстанавливают в течение трёх рабочих дней со дня отмены. Основание: пункты 4 и 5 статьи 7 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Сколько можно быть за границей, чтобы не потерять РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Менее шести месяцев суммарно в течение календарного года. Считается сумма всех поездок, а не одна — подпункт 11 пункта 1 статьи 7. Исключения: экстренное лечение, тяжёлая болезнь, смерть близкого родственника за границей и служебная необходимость." } },
+      { "@type": "Question", "name": "Что будет, если решение отменят?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Территориальный орган МВД в течение трёх рабочих дней со дня отмены выдаёт или восстанавливает РВП — пункт 5 статьи 7." } },
+      { "@type": "Question", "name": "Когда можно подать на РВП после отказа?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Не ранее чем через год со дня отказа или аннулирования — пункт 6 статьи 6 закона № 115-ФЗ. Год считается от даты решения, и подавать заново стоит только если причина устранена." } },
+      { "@type": "Question", "name": "Что делать, если в РВП отказали?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Выяснить основание отказа по статье 7, при несогласии обжаловать решение, а при подготовке новой подачи учесть, что повторно подать заявление можно не ранее чем через год со дня отказа." } },
+      { "@type": "Question", "name": "В какой срок можно обжаловать отказ или аннулирование?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Три рабочих дня на жалобу в МВД России либо три месяца на обращение в суд — оба срока считаются со дня получения уведомления о решении, пункт 4 статьи 7. Пропуск трёхдневного срока права на суд не лишает." } },
+      { "@type": "Question", "name": "Аннулируют ли РВП, если я потерял работу?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Не сразу: если вы трудоустроились к новому работодателю в течение трёх месяцев и доход за фактический период работы соответствует требованиям, основание по доходу не применяется — пункт 1.9 статьи 7 в редакции закона от 26.07.2026 № 241-ФЗ." } },
+      { "@type": "Question", "name": "Как самому аннулировать РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Подать заявление об аннулировании в территориальный орган МВД, который выдавал разрешение: такое основание прямо предусмотрено подпунктом 15 пункта 1 статьи 7. Но если вы получили вид на жительство или гражданство России, прежнее РВП считается недействительным без всякого заявления — пункт 1.8 статьи 7." } },
+      { "@type": "Question", "name": "Причины отказа и причины аннулирования — разные?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет, перечень один и тот же. Разница во времени: если основание нашли при рассмотрении заявления — это отказ, если после выдачи — аннулирование." } },
+      { "@type": "Question", "name": "По каким причинам могут отказать в РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Только по основаниям из статьи 7 закона № 115-ФЗ — их шестнадцать, и перечень закрытый. Плюс отдельное основание пункта 1.2: решение о нежелательности пребывания или о неразрешении въезда. По другим причинам отказать нельзя." } },
+      { "@type": "Question", "name": "Как иностранцу с РВП можно повысить свои шансы на успешное трудоустройство?",
+        "acceptedAnswer": { "@type": "Answer", "text": "С точки зрения документов РВП уже снимает главные барьеры: патент и разрешение на работу не нужны, работодателю не нужно разрешение на привлечение иностранного работника. Значит вопрос переходит в обычную плоскость — резюме, подтверждённая квалификация, признание иностранного диплома, если работа требует профильного образования. Одно ограничение держите в виду при поиске вакансий: по общему правилу работать вне субъекта, где вам разрешено временное проживание, нельзя. Исключения узкие — служебная командировка и разъездной характер работы, и только для профессий из закрытого перечня. Основание: подпункт 1 пункта 4 статьи 13, пункты 5 и 6 статьи 13 Федерального закона от 25.07.2002 № 115-ФЗ; перечень профессий — приказ Минздравсоцразвития России от 28.07.2010 № 564н." } },
+      { "@type": "Question", "name": "Какие основные юридические аспекты следует учитывать при заключении трудового договора с иностранцем?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Договор с иностранцем, у которого есть РВП, заключается по общим правилам Трудового кодекса, с несколькими дополнениями. В договор вносятся сведения о разрешении на временное проживание. Патент и разрешение на работу не требуются — ни работнику, ни работодателю. Место работы должно находиться в том субъекте, где работнику разрешено временное проживание; исключения по командировкам и разъездной работе действуют только для профессий из закрытого перечня. О заключении и о прекращении договора работодатель уведомляет территориальный орган МВД. Основание: подпункт 1 пункта 4 статьи 13, пункты 5 и 6 статьи 13 Федерального закона от 25.07.2002 № 115-ФЗ; перечень профессий — приказ Минздравсоцразвития России от 28.07.2010 № 564н." } },
+      { "@type": "Question", "name": "Нужно ли что-то подавать после получения РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, дважды. Сначала встать на регистрационный учёт по месту жительства. Затем каждый год подавать уведомление о проживании — в течение двух месяцев со дня истечения очередного года со дня выдачи РВП, с приложением сведений о доходах. Уведомление можно подать через Госуслуги." } },
+      { "@type": "Question", "name": "Можно ли работать с РВП без патента?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да, патент и разрешение на работу не нужны. Но работать можно только в том субъекте Российской Федерации, где выдано РВП." } },
+      { "@type": "Question", "name": "Можно ли выезжать из России с РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Выезжать можно, но выезд за пределы России более чем на шесть месяцев суммарно за календарный год является основанием для аннулирования РВП. У этого правила есть исключения, они разобраны в статье об отказе и аннулировании." } },
+      { "@type": "Question", "name": "Можно ли с РВП работать в другом регионе?",
+        "acceptedAnswer": { "@type": "Answer", "text": "По общему правилу нет: временно проживающий не вправе работать вне субъекта, где ему разрешено временное проживание — пункт 5 статьи 13 закона № 115-ФЗ. Исключения три: служебная командировка не более 40 календарных дней в году, разъездной характер работы не более 90 календарных дней в году — оба только по перечню профессий из приказа Минздравсоцразвития № 564н — и статус высококвалифицированного специалиста." } },
+      { "@type": "Question", "name": "Можно ли с РВП переехать в другой регион?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. РВП привязано к субъекту, где выдано: и проживание, и работа ограничены его территорией." } },
+      { "@type": "Question", "name": "Нужно ли менять водительские права при получении РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Правило, по которому иностранные права становятся недействительными через год, отсчитывается от получения вида на жительство или гражданства России — пункт 12.1 статьи 25 закона № 196-ФЗ в редакции закона № 313-ФЗ. РВП в этой норме не назван." } },
+      { "@type": "Question", "name": "Нужен ли патент, если есть РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Ни патент, ни разрешение на работу не требуются — подпункт 1 пункта 4 статьи 13 закона № 115-ФЗ. Работодателю тоже не нужно разрешение на привлечение иностранного работника." } },
+      { "@type": "Question", "name": "Можно ли продлить РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Разрешение на временное проживание выдаётся на три года и продлению не подлежит — это прямо записано в законе. Когда срок заканчивается, статус либо меняется на вид на жительство, либо РВП оформляется заново с самого начала. Отдельно стоит разрешение на временное проживание в целях получения образования: это другой статус со своим сроком — период обучения плюс 180 календарных дней после его окончания. Его не нужно путать с обычным РВП: основания, пошлина и порядок у них разные. Основание: пункт 1 статьи 6 и статья 6.2 Федерального закона от 25.07.2002 № 115-ФЗ; приказ МВД России от 14.12.2022 № 949." } },
+      { "@type": "Question", "name": "Что делать, когда срок РВП заканчивается?",
+        "acceptedAnswer": { "@type": "Answer", "text": "РВП продлить нельзя, поэтому решать нужно заранее — примерно за четыре месяца до окончания срока. Есть три пути. Оформить вид на жительство. Заявление подаётся, пока РВП ещё действует. Это основной путь для тех, кто остаётся в России. Получить РВП заново. Придётся выехать из России, вернуться, встать на миграционный учёт и подать документы с самого начала. Если основанием была квота, нужно новое квотоместо: прежнее решение о выделении квоты не действует. Выехать из России до окончания срока РВП. Отдельно держите в виду: регистрация по месту жительства заканчивается вместе с РВП. Это самостоятельная причина не откладывать решение на последние недели. Основание: пункт 1 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ." } },
+      { "@type": "Question", "name": "Какие основные основания позволяют перейти от РВП к ВНЖ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Само РВП и есть путь к виду на жительство: заявление подаётся, пока разрешение действует, и закон устанавливает минимальный срок проживания по РВП до подачи. ⚖️ Точную величину этого срока и порядок его подсчёта при выездах уточните у юриста на дату подачи. Отдельно закон перечисляет категории, которым вид на жительство выдаётся вообще без предварительного РВП: среди них носители русского языка, высококвалифицированные специалисты и члены их семей, родственники по прямой восходящей линии граждан России. Проверять нужно именно свою категорию: перечень оснований для РВП без квоты и перечень категорий для вида на жительство без РВП — два разных списка, и смешивать их нельзя. Основание: пункты 1 и 2 статьи 8 Федерального закона от 25.07.2002 № 115-ФЗ; подпункт 7.1 пункта 2 статьи 8 введён Федеральным законом от 28.12.2024 № 517-ФЗ." } },
+      { "@type": "Question", "name": "Когда можно подавать на вид на жительство после РВП?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Через восемь месяцев со дня получения РВП. Ждать окончания трёхлетнего срока не нужно и невыгодно: РВП не продлевается, а на рассмотрение заявления о виде на жительство нужен запас времени." } },
+      { "@type": "Question", "name": "Даёт ли РВП право на гражданство сразу?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. РВП — ступень к виду на жительство, а гражданство оформляется уже после получения вида на жительство. Исключения есть для отдельных категорий, и они разобраны в статьях кластера о гражданстве." } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://migra-pro.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Вопросы", "item": "https://migra-pro.com/questions" },
+      { "@type": "ListItem", "position": 3, "name": "РВП" }
+    ]
+  }
+  </script></head>
+<body>
+
+<header class="site-header">
+    <div class="header-top">
+      <div class="wrap header-top__inner">
+        <a class="brand" href="https://migra-pro.com/">
+          <img class="brand__img" src="logo-migrapro.png" alt="МиграПро — российское миграционное агентство" width="316" height="74">
+        </a>
+        <div class="header-meta">
+          <div class="header-rating" aria-label="Рейтинг на основе Яндекс">
+            <span class="header-rating__stars">★★★★★</span>
+            <span>Наш рейтинг на основе Яндекс</span>
+          </div>
+          <div class="header-messengers" aria-label="Мессенджеры">
+            <a href="#" title="MAX" aria-label="MAX">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-1.2 4.4L21 21l-5.2-1.1A8.5 8.5 0 1 1 21 11.5z"/><path d="m8 14 2.6-4 2.4 2.6L15.9 9"/></svg>
+            </a>
+            <a href="#" title="Telegram" aria-label="Telegram">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M22 3 2.5 11.2c-.7.3-.7.8-.1 1l4.8 1.5 1.9 5.8c.2.7.6.8 1.1.5l2.7-2.3 4.8 3.5c.6.3 1 .1 1.1-.5L22.8 4c.2-.8-.3-1.2-.8-1z"/><path d="m9.3 14.1 9.2-7.2"/></svg>
+            </a>
+          </div>
+          <div class="header-phone-block">
+            <a href="tel:+74958590051">+7 (495) 859-00-51</a>
+            <span>Пн–Пт: 09:00–18:00</span>
+          </div>
+        </div>
+        <div class="header-top__cta">
+          <a class="btn btn--primary btn--sm" href="#cta" data-modal-open data-modal-source="Шапка">Бесплатная консультация</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-nav-wrap">
+      <div class="wrap">
+        <nav class="header-nav" aria-label="Основное меню">
+          <div class="nav-item nav-item--split" data-dropdown>
+            <a class="nav-link nav-link--label" href="#uslugi">Услуги</a>
+            <button class="nav-link nav-chev" type="button" aria-expanded="false" aria-controls="dropdown-uslugi" aria-label="Открыть список услуг">
+              <svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+            <div class="dropdown" id="dropdown-uslugi" role="menu" hidden>
+              <a href="https://migra-pro.com/rvp"><span>РВП</span><em>Разрешение на временное проживание</em></a>
+              <a href="https://migra-pro.com/vnj"><span>ВНЖ</span><em>Вид на жительство, бессрочный</em></a>
+              <a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf"><span>Гражданство РФ</span><em>Общий и упрощённый порядок</em></a>
+              <a href="https://migra-pro.com/uslugi"><span>Репатриация</span><em>Программа возвращения соотечественников</em></a>
+              <a href="https://migra-pro.com/cancellationofinter"><span>Запрет на въезд и депортация</span><em>Обжалование и снятие ограничений</em></a>
+              <a href="https://migra-pro.com/online_consult"><span>Консультация миграционного юриста</span><em>Разбор ситуации и план действий</em></a>
+              <a class="dropdown__all" href="https://migra-pro.com/uslugi">Все услуги и цены →</a>
+            </div>
+          </div>
+          <a class="nav-link is-active" href="#top" aria-current="page">Работодателям</a>
+          <a class="nav-link" href="https://migra-pro.com/about">О нас</a>
+          <a class="nav-link" href="https://migra-pro.com/informaciya">База знаний</a>
+          <a class="nav-link" href="#otzyvy">Отзывы</a>
+          <a class="nav-link" href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<main id="top">
+
+  <section class="qa-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки">
+        <a href="https://migra-pro.com/">Главная</a> <span>&rarr;</span>
+        <a href="https://migra-pro.com/questions">Вопросы</a> <span>&rarr;</span>
+        <span>РВП</span>
+      </nav>
+      <h1>Вопросы и ответы о РВП</h1>
+      <div class="qa-lead">
+        <p>Здесь собраны вопросы о разрешении на временное проживание: что даёт статус, кому он положен без квоты, как получить квоту, что нужно из документов, сколько ждать решения, что делать при отказе и как перейти к виду на жительство. Вопросы разложены по десяти темам — начните с той, что ближе к вашей ситуации.</p>
+        <p>Ответы сверены с действующими редакциями закона, у каждого указано основание. Если тема разобрана подробно в статье, ссылка на полный разбор стоит в конце группы. Когда вашего случая в списке нет, опишите ситуацию в форме внизу страницы.</p>
+        <p class="qa-lead__more"><a href="https://migra-pro.com/blog/rvp/kak-oformit-rvp-v-rossii">как оформить РВП: полный порядок →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="qa-nav">
+    <div class="wrap">
+      <nav class="qa-tabs" aria-label="Разделы вопросов">
+        <a class="qa-tab" href="https://migra-pro.com/questions/repatriacia">Репатриация</a>
+        <a class="qa-tab is-active" href="https://migra-pro.com/questions/rvp" aria-current="page">РВП</a>
+        <a class="qa-tab" href="https://migra-pro.com/questions/vnj">Вид на жительство</a>
+        <a class="qa-tab" href="https://migra-pro.com/questions/grajdanstvo">Гражданство РФ</a>
+        <a class="qa-tab" href="https://migra-pro.com/questions/rnr">Разрешение на работу</a>
+      </nav>
+
+      <div class="qa-finder">
+        <label class="qa-search">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16.5 16.5 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input type="search" id="qa-search-input" placeholder="Найти вопрос: квота, брак, пошлина, экзамен…" autocomplete="off">
+        </label>
+        <p class="qa-found" id="qa-found" hidden></p>
+        <ul class="qa-toc">
+          <li><a href="#chto-daet">Что такое РВП и что он даёт<span>7</span></a></li>
+          <li><a href="#osnovaniya">Основания: кому положено без квоты<span>9</span></a></li>
+          <li><a href="#kvota">Квота: как получить и что при отказе<span>31</span></a></li>
+          <li><a href="#brak">РВП по браку<span>13</span></a></li>
+          <li><a href="#dokumenty">Документы, экзамен, медкомиссия<span>13</span></a></li>
+          <li><a href="#sroki">Подача, сроки и пошлина<span>6</span></a></li>
+          <li><a href="#gotovnost">Готовность и статус заявления<span>9</span></a></li>
+          <li><a href="#otkaz">Отказ и аннулирование<span>12</span></a></li>
+          <li><a href="#zhizn">Жизнь с РВП: работа, регион, уведомление<span>9</span></a></li>
+          <li><a href="#posle">После РВП: ВНЖ и гражданство<span>5</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="qa-body"><div class="wrap">
+    <section class="qa-group" id="chto-daet">
+      <h2>Что такое РВП и что он даёт<span class="qa-group__count">7</span></h2>
+      <details class="qa-item" open>
+        <summary>Чем отличается РВП от ВНЖ?</summary>
+        <div class="qa-answer">
+          <p>РВП — временное проживание на три года, вид на жительство — постоянное и в большинстве случаев бессрочное. Различия, которые видны на практике:</p>
+          <ol class="qa-answer__list">
+            <li>Срок. РВП выдаётся на три года и продлению не подлежит: по окончании оформляется заново либо оформляется вид на жительство.</li>
+            <li>Регион. С РВП по общему правилу нельзя работать вне субъекта, где вам разрешено временное проживание; вид на жительство такого ограничения не ставит.</li>
+            <li>Подтверждение. РВП подтверждать не нужно, но раз в год подаётся уведомление о проживании; вид на жительство бессрочный и тоже требует ежегодного уведомления.</li>
+            <li>Пошлина. За выдачу РВП — 15 000 ₽, за вид на жительство — 30 000 ₽.</li>
+          </ol>
+          <p>Общего у статусов тоже много: и с РВП, и с видом на жительство можно работать без патента и разрешения на работу, оба статуса дают право на медицинскую помощь по полису ОМС.</p>
+          <p class="osnovanie">Основание: пункт 1 статьи 6, подпункт 1 пункта 4 и пункт 5 статьи 13, пункт 9 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; подпункты 18 и 22 пункта 1 статьи 333.28 Налогового кодекса РФ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли открыть ИП с РВП?</summary>
+        <div class="qa-answer">
+          <p>Да. РВП подтверждает право временно проживать в России, а такой документ прямо назван в перечне для регистрации ИП — подпункт «е» пункта 1 статьи 22.1 закона № 129-ФЗ. Регистрация идёт в том субъекте, где выдано РВП, и прекращается вместе с окончанием или аннулированием статуса.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>На сколько лет дают РВП?</summary>
+        <div class="qa-answer">
+          <p>На три года. Продлению РВП не подлежит — по истечении срока нужно либо перейти к виду на жительство, либо выехать. Это пункт 1 статьи 6 закона № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что такое РВП простыми словами?</summary>
+        <div class="qa-answer">
+          <p>Это разрешение на временное проживание — статус, который позволяет иностранцу законно жить в России три года, работать без патента в том регионе, где статус выдан, и потом подать на вид на жительство. Подтверждается отметкой в документе, удостоверяющем личность.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>РВП — это временное гражданство?</summary>
+        <div class="qa-answer">
+          <p>Нет. Это разрешение на проживание: паспорта России оно не даёт, право голосовать на выборах не предоставляет. Гражданство оформляется отдельно и, как правило, после вида на жительство.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Даёт ли РВП право на бесплатную медицину?</summary>
+        <div class="qa-answer">
+          <p>Да. Временно проживающие иностранные граждане отнесены к застрахованным лицам в системе ОМС — пункт 1 статьи 10 закона № 326-ФЗ. Исключения названы в самой норме: неработающие члены семей высококвалифицированных специалистов и работающие по статье 13.5 закона № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Как расшифровывается РВП?</summary>
+        <div class="qa-answer">
+          <p>Разрешение на временное проживание. Не путать с РВПО — разрешением на временное проживание в целях получения образования: это отдельный статус для студентов очной формы.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/rvp/rvp-v-rossii-preimushchestva">Разбор темы: что даёт РВП и какие права открывает</a>
+      </p>
+    </section>
+    <section class="qa-group" id="osnovaniya">
+      <h2>Основания: кому положено без квоты<span class="qa-group__count">9</span></h2>
+      <details class="qa-item" open>
+        <summary>Какие основания являются самыми распространенными для получения РВП в России?</summary>
+        <div class="qa-answer">
+          <p>Перечень оснований, по которым РВП выдаётся без учёта квоты, закрытый — в нём двенадцать пунктов. Сгруппировать их можно так:</p>
+          <ol class="qa-answer__list">
+            <li>Гражданство Казахстана, Молдовы или Украины — основание само по себе, ничего дополнительно подтверждать не нужно.</li>
+            <li>Семья: брак с гражданином России не менее трёх лет до дня обращения либо общий ребёнок, рождённый или усыновлённый в этом браке; несовершеннолетние и недееспособные — вместе с родителем или на срок статуса родителя.</li>
+            <li>Программа переселения соотечественников — участник и члены его семьи.</li>
+            <li>Учёба и служба: профессиональное образование, полученное в российском вузе или научной организации гражданином страны бывшего СССР; военная служба по контракту.</li>
+            <li>Переселение по международному договору и отдельные случаи для лиц без гражданства.</li>
+          </ol>
+          <p>Если ни один пункт не подходит, остаётся путь через квоту.</p>
+          <p class="osnovanie">Основание: пункт 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; редакции — Федеральный закон от 26.10.2024 № 358-ФЗ (брак), от 08.08.2024 № 253-ФЗ (Госпрограмма), от 01.07.2021 № 274-ФЗ (Казахстан, Молдова, Украина), от 14.07.2022 № 357-ФЗ (образование).</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Существуют ли особые основания для получения РВП для талантливых специалистов и инвесторов?</summary>
+        <div class="qa-answer">
+          <p>Нет. Перечень оснований для РВП без квоты закрытый, и ни инвестиций, ни выдающихся достижений в нём нет. Тексты в интернете, обещающие «РВП за инвестиции», опираются на устаревшие редакции закона.</p>
+          <p>Высококвалифицированным специалистам закон даёт другой путь — вид на жительство, минуя РВП. А если основания из перечня нет, остаётся квота: там профессия, образование, источник средств и наличие жилья учитываются как критерии комиссии, но выделение места не гарантируют.</p>
+          <p class="osnovanie">Основание: пункт 3 статьи 6 и пункт 2 статьи 8 Федерального закона от 25.07.2002 № 115-ФЗ; пункт 4 Правил распределения квоты, утверждённых постановлением Правительства РФ от 29.12.2020 № 2345.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли получить РВП, если несколько оснований могут быть применимы одновременно?</summary>
+        <div class="qa-answer">
+          <p>Да, но в заявлении указывается одно основание — то, по которому вы подаёте. Когда подходят два, выбирают то, которое проще подтвердить документами. Пример: брак меньше трёх лет, но есть общий ребёнок, рождённый в этом браке — основанием служит ребёнок, а не стаж брака.</p>
+          <p>Собирать документы «на все случаи» не нужно: комплект подтверждает выбранное основание. Выбрать его стоит до подачи, а не в подразделении: если по заявленному основанию откажут, повторно подать можно не ранее чем через год со дня отказа.</p>
+          <p class="osnovanie">Основание: пункт 3 и пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Каковы основные категории заявителей, которым предоставляется упрощенное оформление РВП?</summary>
+        <div class="qa-answer">
+          <p>«Упрощённого оформления» как отдельной процедуры в законе нет. Есть выдача РВП без учёта квоты: порядок подачи и перечень документов те же, отличие одно — не нужно ждать решения комиссии о выделении квоты.</p>
+          <p>Право подать без квоты дают только пункты закрытого перечня: гражданство Казахстана, Молдовы или Украины; брак с гражданином России; участие в программе переселения соотечественников; несовершеннолетие или недееспособность при родителе с российским статусом; военная служба по контракту; профессиональное образование в российском вузе для граждан стран бывшего СССР; переселение по международному договору.</p>
+          <p>Гражданство любой другой страны СНГ само по себе основанием не является — это частое заблуждение.</p>
+          <p class="osnovanie">Основание: пункт 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что делает процедуру получения РВП для граждан СНГ более упрощенной?</summary>
+        <div class="qa-answer">
+          <p>Само гражданство страны СНГ процедуру не упрощает — такого признака в законе нет. Работают два других обстоятельства, которые часто принимают за «упрощение для СНГ».</p>
+          <p>Первое: гражданам Казахстана, Молдовы и Украины РВП выдаётся без учёта квоты. Это отдельный пункт перечня оснований, и он назван по конкретным странам, а не по СНГ в целом.</p>
+          <p>Второе: для граждан безвизовых стран решение принимается за 60 суток со дня принятия заявления, для визовых — четыре месяца. Здесь имеет значение визовый режим, а не участие страны в СНГ.</p>
+          <p class="osnovanie">Основание: подпункт 11 пункта 3 статьи 6 и пункт 4 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>У меня ребёнок — гражданин России. Мне подавать на РВП?</summary>
+        <div class="qa-answer">
+          <p>Скорее всего нет: при ребёнке — гражданине России, постоянно проживающем в стране, вид на жительство выдаётся без получения РВП. Это пункт 2 статьи 8 закона № 115-ФЗ, и подавать на промежуточный статус не нужно.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Даёт ли работа в России основание для РВП?</summary>
+        <div class="qa-answer">
+          <p>Нет. Ни трудовой договор, ни приглашение работодателя в перечне не названы. С трудовым договором оформляют патент или разрешение на работу, а РВП получают по квоте — если нет другого основания.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Я студент российского вуза. Какое у меня основание?</summary>
+        <div class="qa-answer">
+          <p>Для очных студентов государственных вузов действует не РВП, а разрешение на временное проживание в целях получения образования по статье 6.2 закона № 115-ФЗ: квота не нужна, срок — обучение плюс 180 календарных дней. Заочная и вечерняя формы этого статуса не дают.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Дают ли РВП по работе или по инвестициям?</summary>
+        <div class="qa-answer">
+          <p>Нет. Работы по приглашению, предпринимательства и инвестиций в перечне оснований без квоты нет. Если оснований из перечня нет, путь идёт через квоту.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/rvp/osnovaniya-dlya-polucheniya-rvp">Разбор темы: двенадцать оснований для РВП без квоты</a>
+      </p>
+    </section>
+    <section class="qa-group" id="kvota">
+      <h2>Квота: как получить и что при отказе<span class="qa-group__count">31</span></h2>
+      <details class="qa-item" open>
+        <summary>Какие ошибки чаще всего приводят к отказу в рамках квотной системы?</summary>
+        <div class="qa-answer">
+          <p>Сначала важное различие: невыделение квоты — это не отказ в РВП. Основания статьи 7 здесь не применяются, и годичный запрет на повторное обращение не действует.</p>
+          <p>Типовые причины, по которым заявка не проходит:</p>
+          <ol class="qa-answer__list">
+            <li>заявка-анкета заполнена не по форме — исправления, пропущенные пункты, дата не в формате 00.00.0000;</li>
+            <li>критерии комиссии не подтверждены документами: заявлена работа, но нет договора; заявлено жильё, но нет выписки;</li>
+            <li>иностранный диплом приложен без свидетельства о признании;</li>
+            <li>обращение, когда квота региона уже исчерпана.</li>
+          </ol>
+          <p>Последний случай стоит отдельно: на 2026 год по стране выделено 3 802 места и резерв 1 140, и при исчерпании квоты решение зависит не от качества документов, а от остатка мест.</p>
+          <p class="osnovanie">Основание: пункты 3–9 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345); распоряжение Правительства РФ от 06.10.2025 № 2792-р.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Какие документы особенно важны для участия в квотной системе?</summary>
+        <div class="qa-answer">
+          <p>Федерального закрытого перечня приложений к заявке-анкете нет: комиссия оценивает заявителя по девяти критериям, и каждый критерий подтверждается своим документом. Поэтому важны те документы, что закрывают именно ваши критерии:</p>
+          <ol class="qa-answer__list">
+            <li>работа — трудовой договор или справка с места работы;</li>
+            <li>образование и специальность — диплом, а при иностранном документе ещё и свидетельство о его признании;</li>
+            <li>источник средств — справка о доходах или выписка со счёта;</li>
+            <li>жильё — выписка из ЕГРН либо договор найма;</li>
+            <li>родственники в России — документы, подтверждающие родство.</li>
+          </ol>
+          <p>Отдельно к самой заявке-анкете: она заполняется на бланке установленной формы, русским языком, печатными буквами, без исправлений, дата в формате 00.00.0000, один лист — одна сторона, для дополнений предусмотрен отдельный лист.</p>
+          <p class="osnovanie">Основание: пункты 2 и 4 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345); форма заявки-анкеты — приказ МВД России от 28.05.2021 № 317.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли повысить шансы на получение квоты, если заявка отклонена?</summary>
+        <div class="qa-answer">
+          <p>Да. Годичное ожидание к квоте не относится — оно установлено для отказа в самом РВП, а решение комиссии это другое. Работать нужно с критериями: добавить подтверждение работы или дохода, получить свидетельство о признании иностранного диплома, подтвердить наличие жилья.</p>
+          <p>Второй рычаг — момент обращения. Остаток квоты публикуется после каждого заседания комиссии, в течение трёх рабочих дней со дня утверждения протокола. Подавать имеет смысл, пока места есть. Отдельно распределяется резерв: к нему критерии комиссии и приглашение на заседание не применяются.</p>
+          <p class="osnovanie">Основание: пункты 4 и 7–9 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345); пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что такое квоты на РВП и как они работают?</summary>
+        <div class="qa-answer">
+          <p>Квота — это число разрешений на временное проживание, которое Правительство распределяет на год по регионам. Если основания из закрытого перечня у вас нет, РВП выдаётся только в пределах квоты.</p>
+          <p>Порядок такой: вы подаёте заявку-анкету о выделении квоты в подразделение по вопросам миграции по своему региону. Комиссия рассматривает её 30 рабочих дней и оценивает по девяти критериям — работа, учёба, специальность, источник средств, признание образования, родственники, жильё, судимость, административная ответственность. Протокол заседания оформляется в течение трёх рабочих дней, после чего публикуется остаток квоты.</p>
+          <p>На 2026 год по стране выделено 3 802 места и резерв 1 140: Москве — 500, Московской области — 250, Санкт-Петербургу — 100. Отдельной пошлины за квоту нет; 15 000 ₽ платятся позже, за выдачу самого РВП.</p>
+          <p class="osnovanie">Основание: пункт 1 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; распоряжение Правительства РФ от 06.10.2025 № 2792-р; Правила распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345); приказ МВД России от 28.05.2021 № 317.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько действует решение о выделении квоты?</summary>
+        <div class="qa-answer">
+          <p>До конца того календарного года, в котором оно принято. Если квоту выделили в марте, документы на само РВП нужно подать до 31 декабря того же года, иначе право на неё теряется и процедуру придётся проходить заново.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько квот выделено Московской области на 2026 год?</summary>
+        <div class="qa-answer">
+          <p>250 разрешений — второй результат по стране после Москвы с её 500. В 2025 году области выделяли 350 мест.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько квот выделено на 2026 год?</summary>
+        <div class="qa-answer">
+          <p>3 802 разрешения на всю страну плюс резерв в 1 140 разрешений — распоряжение Правительства от 06.10.2025 № 2792-р. Москве выделено 500 мест, Московской области — 250, Санкт-Петербургу — 100. Это почти вдвое меньше, чем в 2025 году.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Почему в 2026 году квот меньше, чем в 2025?</summary>
+        <div class="qa-answer">
+          <p>Общий лимит сокращён с 5 500 до 3 802 разрешений, по Москве и Санкт-Петербургу — ровно вдвое. Причины сокращения Правительство в распоряжении не объясняет; практический вывод один — подавать в первые недели приёма.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Правда ли, что гражданам Казахстана, Молдовы и Украины квота не нужна?</summary>
+        <div class="qa-answer">
+          <p>Да. Основание действует по самому факту гражданства — подпункт 11 пункта 3 статьи 6 закона № 115-ФЗ. Дополнительных условий норма не устанавливает.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько всего оснований для РВП без квоты?</summary>
+        <div class="qa-answer">
+          <p>Двенадцать, и перечень закрытый: он установлен пунктом 3 статьи 6 закона № 115-ФЗ, плюс отдельный пункт 3.1 для лиц без гражданства. Подпункт 7 прежней редакции утратил силу в 2022 году.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Увеличит ли собственное жильё в России шансы на квоту?</summary>
+        <div class="qa-answer">
+          <p>Да, это один из девяти критериев комиссии — наличие жилого помещения на праве собственности в том субъекте, где вы просите квоту. Подтверждается выпиской из ЕГРН. Гарантии это не даёт: решение принимается по совокупности критериев.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что такое резерв квоты?</summary>
+        <div class="qa-answer">
+          <p>Запас в 1 140 разрешений, который Правительство распределяет отдельно и передаёт региону в течение года, если основной лимит закончился. К резерву девять критериев оценки заявителя не применяются — комиссия руководствуется актом Правительства о целях использования резерва.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько ждать решения по заявке-анкете?</summary>
+        <div class="qa-answer">
+          <p>Комиссия рассматривает заявку-анкету в течение 30 рабочих дней со дня её регистрации территориальным органом МВД. Затем 3 рабочих дня на протокол и ещё 3 рабочих дня на уведомление — оно приходит на электронную почту, указанную в анкете.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько квот у Свердловской области?</summary>
+        <div class="qa-answer">
+          <p>75 разрешений на 2026 год. Это 39% всей квоты Уральского федерального округа, которому выделено 192 места.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько стоит квота?</summary>
+        <div class="qa-answer">
+          <p>Рассмотрение заявления о выделении квоты пошлиной не облагается. Пошлина возникает на следующем шаге — за выдачу самого РВП она составляет 15 000 ₽ с 26 июля 2026 года, до этой даты была 1 920 ₽.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько фотографий нужно на квоту?</summary>
+        <div class="qa-answer">
+          <p>Обычно от двух до четырёх, точное число зависит от подразделения. Формат 35×45 мм, матовые, светлый фон.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Гарантирует ли наличие родственников-граждан РФ получение квоты?</summary>
+        <div class="qa-answer">
+          <p>Если у вас есть супруг, ребёнок или родитель с российским гражданством, вам, скорее всего, квота не нужна вовсе — подавайте сразу на РВП по своему основанию. Другие родственники квоту не гарантируют, но учитываются комиссией как связь с регионом.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Где посмотреть список тех, кому выделили квоту?</summary>
+        <div class="qa-answer">
+          <p>Территориальный орган МВД публикует на своём сайте дату проведённого заседания комиссии, размер выделенной по его итогам квоты и остаток мест на текущую дату. Персональное решение приходит вам уведомлением на адрес из анкеты, а не публикуется списком с именами.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Как узнать, что мне выделили квоту?</summary>
+        <div class="qa-answer">
+          <p>Списки публикуются на сайте регионального управления по вопросам миграции и вывешиваются на стендах в подразделении. Персональные уведомления обычно не рассылают, поэтому результат проверяют самостоятельно по номеру справки о приёме документов.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Влияет ли страна гражданства на шансы получить квоту?</summary>
+        <div class="qa-answer">
+          <p>Официально нет: страна исхода в критериях не значится. На практике для граждан ряда стран квота вообще не нужна — например, у граждан Белоруссии свой порядок.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Влияет ли регион на скорость рассмотрения заявки?</summary>
+        <div class="qa-answer">
+          <p>Срок установлен нормой и одинаков для всех субъектов: комиссия рассматривает заявку-анкету в течение 30 рабочих дней со дня её регистрации территориальным органом МВД. Различается не срок, а частота заседаний комиссии и график приёма заявок.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Как узнать, остались ли места в моём регионе?</summary>
+        <div class="qa-answer">
+          <p>На сайте территориального органа МВД: после каждого заседания комиссии он публикует дату заседания, размер выделенной квоты и остаток на текущую дату. Это его обязанность по пункту 7 Правил распределения квоты.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>В каком регионе проще всего получить квоту на РВП?</summary>
+        <div class="qa-answer">
+          <p>Проще там, где выполняется больше требований комиссии именно к вам, — а не там, где выделено больше мест. Пять из девяти оснований привязаны к конкретному субъекту: работа, учёба, востребованная специальность, родственники, жильё в собственности. Поэтому «свой» регион считается так: смотрите, где у вас есть эти связи, затем проверяете остаток мест на сайте территориального органа МВД и подаёте в первые недели приёма. Сравнить регионы по вероятности одобрения нельзя — число поданных заявок по субъектам не публикуется.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Кому дают РВП без квоты?</summary>
+        <div class="qa-answer">
+          <p>Перечень закрытый: брак с гражданином РФ не менее трёх лет, родитель — гражданин РФ, рождение в РСФСР с гражданством СССР, участие в Госпрограмме переселения, гражданство Казахстана, Молдовы или Украины, диплом российского вуза, военная служба и ещё несколько оснований. Полный перечень — в разделе об основаниях выше.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Нужна ли медицинская справка для подачи на квоту?</summary>
+        <div class="qa-answer">
+          <p>Нет. Медицинское обследование и сертификат об отсутствии ВИЧ на этапе квоты не нужны — их проходят позже, когда квота выделена и вы подаёте документы на само разрешение на временное проживание. Проходить медкомиссию заранее невыгодно: у справок есть срок действия, а между двумя подачами проходят месяцы.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Нужна ли мне квота?</summary>
+        <div class="qa-answer">
+          <p>Квота нужна, если у вас нет основания для подачи без неё. Основания перечислены выше в блоке «Кому подходит».</p>
+          <p>Ссылка: `/blog/kvota-rvp/rvp-bez-kvoty`</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Нужно ли сдавать экзамен по русскому языку для квоты?</summary>
+        <div class="qa-answer">
+          <p>Нет. Подтверждение владения русским языком, знания истории России и основ законодательства требуется при подаче на само РВП, а не на квоту.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли подать на квоту через Госуслуги?</summary>
+        <div class="qa-answer">
+          <p>Нет, заявление подаётся лично в подразделении по вопросам миграции. Через Госуслуги можно записаться на приём и встать на миграционный учёт, но не подать само заявление о квоте.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли подать документы на квоту через представителя или из-за границы?</summary>
+        <div class="qa-answer">
+          <p>Нет. Заявка-анкета подаётся лично, на территории России, в том субъекте, где вы планируете проживать и где у вас действует регистрация по месту пребывания.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли подать заявку на квоту в регионе, где больше мест?</summary>
+        <div class="qa-answer">
+          <p>Нет, если у вас там нет регистрации по месту пребывания. Заявка-анкета подаётся в том субъекте, где вы законно находитесь и планируете жить; адрес регистрации проверяют при приёме документов.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли подать заявление на квоту сразу в нескольких регионах?</summary>
+        <div class="qa-answer">
+          <p>Нет. Заявление подаётся только в одном субъекте России — том, где вы планируете жить и оформлять РВП. Подача в нескольких регионах выявляется и приводит к отказу по всем заявлениям сразу.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/kvota-rvp/kvota-na-rvp-2025">Разбор темы: квота на РВП, заявка-анкета и критерии комиссии</a>
+      </p>
+    </section>
+    <section class="qa-group" id="brak">
+      <h2>РВП по браку<span class="qa-group__count">13</span></h2>
+      <details class="qa-item" open>
+        <summary>Как получить РВП по браку с гражданином России?</summary>
+        <div class="qa-answer">
+          <p>Брак с гражданином России даёт право подать без квоты, но с 25 января 2025 года нужен стаж брака не менее трёх лет до дня обращения. Исключение — общий ребёнок, рождённый или усыновлённый в этом браке: тогда срок не требуется. Заявление подаётся в том субъекте России, где живёт супруг — гражданин РФ.</p>
+          <p class="osnovanie">Основание: подпункт 4 пункта 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ в редакции Федерального закона от 26.10.2024 № 358-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Даёт ли РВП по браку ускоренный путь к гражданству?</summary>
+        <div class="qa-answer">
+          <p>Нет. Условия приёма в гражданство для супругов граждан России регулируются отдельным законом и не зависят от того, по какому основанию было получено РВП. Из наличия РВП по браку право на гражданство автоматически не следует.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что будет с РВП при разводе?</summary>
+        <div class="qa-answer">
+          <p>РВП аннулируется: основание, по которому оно выдано, перестало существовать. Если появилось другое основание из перечня пункта 3 статьи 6, можно подавать по нему; иначе остаётся путь через квоту.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Считается ли гражданский брак основанием для РВП?</summary>
+        <div class="qa-answer">
+          <p>Нет. Закон считает только брак, зарегистрированный в установленном порядке; совместное проживание без регистрации основанием не является.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>С какой даты считаются три года?</summary>
+        <div class="qa-answer">
+          <p>От даты заключения брака, указанной в свидетельстве, и до дня обращения с заявлением. Совместное проживание до регистрации брака в этот срок не входит.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли получить РВП сразу после свадьбы?</summary>
+        <div class="qa-answer">
+          <p>Нет, если в браке нет общего ребёнка. С 25 января 2025 года основание «брак с гражданином РФ» требует стажа не менее трёх лет до дня обращения с заявлением. Если общий ребёнок, рождённый или усыновлённый в этом браке, есть — подавать можно сразу.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Какие документы нужны для РВП по браку?</summary>
+        <div class="qa-answer">
+          <p>Заявление, документ, удостоверяющий личность, с нотариально заверенным переводом, свидетельство о браке, паспорт супруга, две фотографии, медицинские справки, сертификат об экзамене или документ об освобождении, квитанция об уплате пошлины 15 000 ₽, документы о законности пребывания. Если подача идёт по исключению — свидетельство о рождении общего ребёнка.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли получить РВП по браку, если женаты меньше трёх лет?</summary>
+        <div class="qa-answer">
+          <p>Только если в этом браке есть общий ребёнок — рождённый или усыновлённый. Иначе основание не действует: трёхлетний стаж введён Федеральным законом от 26.10.2024 № 358-ФЗ и считается до дня обращения с заявлением.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли подать по браку?</summary>
+        <div class="qa-answer">
+          <p>Можно. С 25 января 2025 года требуется стаж брака не менее трёх лет на день обращения, кроме случая с общим ребёнком `[REQ]`.</p>
+          <p>Ссылка: `/blog/rvp/rvp-po-braku-s-grazhdaninom-rf`</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Где подавать документы, если супруг прописан в другом регионе?</summary>
+        <div class="qa-answer">
+          <p>В том субъекте, где находится место жительства супруга — гражданина России. Это часть нормы, а не рекомендация: выбрать регион по своему удобству нельзя.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько делается РВП по браку?</summary>
+        <div class="qa-answer">
+          <p>Четыре месяца со дня поступления заявления, а для прибывших в Россию без визы — 60 суток. Приостановление этого срока законом не предусмотрено.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Нужно ли сдавать экзамен, если подаёшь по браку?</summary>
+        <div class="qa-answer">
+          <p>Да. Брак от экзамена не освобождает: перечень освобождений закрытый, и основания «брак» в нём нет. Освобождены восемь категорий по пункту 5 статьи 15.1 — среди них не достигшие 18 лет, мужчины от 65 лет, женщины от 60 лет, граждане Союзного государства России и Беларуси, граждане Украины.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Нужна ли квота при подаче по браку?</summary>
+        <div class="qa-answer">
+          <p>Нет. Брак при соблюдении условия о стаже либо при наличии общего ребёнка — основание для выдачи РВП **без учёта квоты**.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/rvp/rvp-po-braku-s-grazhdaninom-rf">Разбор темы: РВП по браку с гражданином России</a>
+      </p>
+    </section>
+    <section class="qa-group" id="dokumenty">
+      <h2>Документы, экзамен, медкомиссия<span class="qa-group__count">13</span></h2>
+      <details class="qa-item" open>
+        <summary>Сколько времени занимает подготовка полного пакета документов для РВП?</summary>
+        <div class="qa-answer">
+          <p>Самая долгая часть — не бумаги, а медкомиссия и экзамен: сроки здесь зависят от загрузки медицинского центра и от даты ближайшего тестирования, а не от вашей скорости.</p>
+          <p>Переводы делаются быстро, но их нельзя заказать раньше, чем на руках оригиналы. Самая непредсказуемая позиция — признание иностранного диплома, если он нужен для вашего основания или для критериев комиссии по квоте: с неё стоит начинать.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Какие документы необходимо подготовить для подтверждения семейных связей при воссоединении?</summary>
+        <div class="qa-answer">
+          <p>Родство подтверждается документами о его возникновении, и цепочка должна быть непрерывной.</p>
+          <p>Для брака — свидетельство о браке и паспорт супруга, гражданина России; если брак зарегистрирован за границей, свидетельство нужно с переводом на русский. Для ребёнка или родителя — свидетельство о рождении; если фамилия менялась, дополнительно документ о её смене, иначе цепочка родства обрывается.</p>
+          <p>Когда требование трёхлетнего стажа брака снимает общий ребёнок, в комплект входит и его свидетельство о рождении, где указаны оба супруга.</p>
+          <p class="osnovanie">Основание: подпункт 4 пункта 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Насколько важна корректность переводов документов?</summary>
+        <div class="qa-answer">
+          <p>Перевод — самое частое место возврата комплекта. Документ на иностранном языке принимается только вместе с переводом на русский язык.</p>
+          <p>Отдельно проверьте написание имени и фамилии: в переводе оно должно совпадать с написанием в вашем документе, удостоверяющем личность, и во всех остальных бумагах комплекта. Расхождение в одной букве читается как другой человек, и подтверждать родство или стаж придётся заново.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли рассчитывать на сокращенные сроки рассмотрения заявления на РВП для граждан СНГ?</summary>
+        <div class="qa-answer">
+          <p>Срок зависит не от гражданства СНГ, а от визового режима: для граждан безвизовых стран решение принимается за 60 суток со дня принятия заявления, для визовых — четыре месяца. Ускорить рассмотрение внутри установленного срока нельзя ни платно, ни по заявлению.</p>
+          <p>Реально сокращает путь другое — отсутствие этапа квоты. Гражданам Казахстана, Молдовы и Украины РВП выдаётся без учёта квоты, и они не ждут решения комиссии: это 30 рабочих дней плюс само заседание.</p>
+          <p class="osnovanie">Основание: пункт 4 статьи 6 и подпункт 11 пункта 3 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; пункт 3 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345).</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Как избежать ошибок при подготовке пакета документов?</summary>
+        <div class="qa-answer">
+          <p>Три места, где ошибки повторяются.</p>
+          <ol class="qa-answer__list">
+            <li>Перевод. Любой документ на иностранном языке нужен с переводом на русский, и написание имени в переводе должно совпадать с паспортом до буквы.</li>
+            <li>Основание. Комплект подтверждает то основание, которое указано в заявлении, а не «все подходящие сразу».</li>
+            <li>Заявление. Заполняется без исправлений, данные сверяются с документом, а не по памяти.</li>
+          </ol>
+          <p>Проверять комплект стоит до записи на приём: переделать перевод или справку за день до подачи обычно не получается.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что делать, если в процессе оформления РВП возникли ошибки или недочеты в документах?</summary>
+        <div class="qa-answer">
+          <p>Зависит от того, когда ошибку нашли. До подачи переделывается сам документ: перевод, справка, заявление. На приёме в подразделении дефектный комплект чаще возвращают сразу — и это не отказ в РВП: подать заново можно хоть на следующий день, годичное ожидание здесь не действует.</p>
+          <p>Если ошибка обнаружилась после того, как заявление приняли, сообщите о ней в то же подразделение, не дожидаясь решения. Отказ выносится только по основаниям закрытого перечня статьи 7, и технической неточности в этом перечне нет. Но представление недостоверных сведений в перечне есть, и границу между опечаткой и недостоверностью оценивает орган — поэтому молчать о найденной ошибке невыгодно.</p>
+          <p class="osnovanie">Основание: пункт 1 статьи 7 и пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Какие дополнительные документы могут потребоваться для успешного оформления РВП?</summary>
+        <div class="qa-answer">
+          <p>Сверх базовой части просят то, что закрывает вашу ситуацию: документ о смене фамилии, если она менялась; свидетельство о признании иностранного диплома; документы о законном пребывании — миграционная карта и уведомление о постановке на учёт; при подаче за ребёнка — согласие второго родителя.</p>
+          <p>Если идёте через квоту, добавляются документы под критерии комиссии: трудовой договор, справка о доходах, выписка на жильё. Закрытого федерального списка приложений к заявке-анкете нет — состав определяется тем, что вы заявляете о себе.</p>
+          <p class="osnovanie">Основание: пункты 2 и 4 Правил распределения квоты (постановление Правительства РФ от 29.12.2020 № 2345).</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Как избежать несвоевременной подачи документов?</summary>
+        <div class="qa-answer">
+          <p>Считайте срок от самого короткого документа, а не от удобной вам даты. Медицинские документы и сертификат о владении русским языком действуют ограниченное время, и просроченная справка — причина вернуть комплект на приёме.</p>
+          <p>Порядок, который снимает риск: сначала запись на приём в подразделение МВД, затем медкомиссия под эту дату, затем всё остальное. Если запись сдвигается, справки успевают устареть — тогда дешевле пройти медкомиссию заново, чем идти на приём с просроченным документом.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Какие документы подтверждают знание русского языка при подаче на РВП?</summary>
+        <div class="qa-answer">
+          <p>Основной документ — сертификат о владении русским языком, знании истории России и основ законодательства; он выдаётся после экзамена. Вместо сертификата принимается документ об образовании: выданный в СССР до 1 сентября 1991 года либо выданный в России документ об образовании с указанием, что обучение шло на русском языке.</p>
+          <p>От экзамена освобождены отдельные категории: недееспособные и ограниченные в дееспособности; лица младше 18 лет; мужчины, достигшие 65 лет, и женщины, достигшие 60 лет; участники программы переселения соотечественников и члены их семей; граждане Союзного государства России и Беларуси; граждане Украины.</p>
+          <p class="osnovanie">Основание: пункт 5 статьи 15.1 Федерального закона от 25.07.2002 № 115-ФЗ; порядок проведения экзамена — постановление Правительства РФ от 31.05.2021 № 824; форма сертификата — приказ Минобрнауки России от 14.11.2024 № 763.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли подать заявление на РВП онлайн?</summary>
+        <div class="qa-answer">
+          <p>Частично. Административный регламент допускает подачу заявления через портал Госуслуг: после этого вам приходит уведомление с перечнем документов и сроком, в который их нужно представить. Но личный визит в подразделение всё равно нужен — там сверяют оригиналы и проводят дактилоскопию. Через Госуслуги решается и запись на приём, и — позже, после получения РВП — ежегодное уведомление о проживании.</p>
+          <p class="osnovanie">Основание: пункт 9 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ; Административный регламент, утверждённый приказом МВД России от 08.06.2020 № 407 (пункт 178).</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Какие основные документы требуются для оформления РВП?</summary>
+        <div class="qa-answer">
+          <p>Базовая часть комплекта одинакова при любом основании: заявление, документ, удостоверяющий личность, фотографии, медицинские документы об отсутствии опасных заболеваний и наркозависимости, сертификат о владении русским языком, знании истории России и основ законодательства, квитанция об уплате пошлины 15 000 ₽. К ней добавляется документ, подтверждающий именно ваше основание: свидетельство о браке, свидетельство участника Госпрограммы, диплом российского вуза.</p>
+          <p class="osnovanie">Основание: статья 6 и пункт 5 статьи 15.1 Федерального закона от 25.07.2002 № 115-ФЗ; подпункт 22 пункта 1 статьи 333.28 Налогового кодекса РФ; перечень документов и форма заявления — Административный регламент, утверждённый приказом МВД России от 08.06.2020 № 407.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что делать, если в паспорте нет данных на русском языке?</summary>
+        <div class="qa-answer">
+          <p>Сделать нотариально заверенный перевод всех страниц с записями и отметками. Перевод выполняется в России, заверяется российским нотариусом и сшивается с копией страниц паспорта.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Обязательно ли сдавать экзамен по русскому языку?</summary>
+        <div class="qa-answer">
+          <p>Сертификат входит в пакет документов, но при подаче на РВП от экзамена освобождены восемь категорий по пункту 5 статьи 15.1 закона № 115-ФЗ: недееспособные и ограниченные в дееспособности, не достигшие 18 лет, мужчины от 65 лет, женщины от 60 лет, участники Госпрограммы переселения и члены их семей, граждане Союзного государства России и Беларуси, граждане Украины и лица, названные в подпункте 8 пункта 3 статьи 6. Если освобождение есть, в пакет идёт подтверждающий документ вместо сертификата.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/rvp/oformlenie-rvp-dokumenty">Разбор темы: документы на РВП, экзамен и медкомиссия</a>
+      </p>
+    </section>
+    <section class="qa-group" id="sroki">
+      <h2>Подача, сроки и пошлина<span class="qa-group__count">6</span></h2>
+      <details class="qa-item" open>
+        <summary>Можно ли ускорить процесс оформления РВП?</summary>
+        <div class="qa-answer">
+          <p>Сроки рассмотрения установлены и не сокращаются ни за плату, ни по просьбе: для граждан безвизовых стран это 60 суток со дня принятия заявления, для визовых — четыре месяца. Ускорить можно только то, что происходит до подачи и после решения.</p>
+          <p>До подачи: не терять недели на переделку перевода, вовремя пройти медкомиссию и экзамен, заранее записаться на приём. После решения: следить за готовностью, чтобы не пропустить дату получения. Если срок рассмотрения вышел, а решения нет, это повод обратиться в подразделение с письменным запросом.</p>
+          <p class="osnovanie">Основание: пункт 4 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Нужен ли юрист, чтобы оформить РВП?</summary>
+        <div class="qa-answer">
+          <p>Закон этого не требует: подать документы можно самостоятельно, и часть пути проходится своими силами. Понять, есть ли у вас основание из перечня, можно по статьям этого раздела; экзамен вы в любом случае сдаёте лично; заявление подаётся лично, и отпечатки пальцев за вас никто не сдаст.</p>
+          <p>Юрист нужен там, где цена ошибки высока: выбор основания, когда подходят несколько; проверка каждого документа и перевода — это самое частое место возврата комплекта; подача по квоте, где девять критериев комиссии нужно закрыть документами; разбор причины после отказа, потому что повторно подать можно не ранее чем через год.</p>
+          <p>На само решение органа не влияет ни заявитель, ни юрист — влияет только полнота и достоверность того, что подано.</p>
+          <p class="osnovanie">Основание: пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько стоит купить РВП в России?</summary>
+        <div class="qa-answer">
+          <p>Купить РВП нельзя: разрешение выдаёт МВД по установленной процедуре, а «оформление за деньги без процедуры» — это поддельный документ, за который отвечает и тот, кто его изготовил, и тот, кто им пользуется. Государственная пошлина за выдачу РВП — 15 000 ₽ с 26 июля 2026 года; остальные расходы — медкомиссия, экзамен, переводы и, если нужно, работа представителя.</p>
+          <p class="osnovanie">Основание: подпункт 22 пункта 1 статьи 333.28 Налогового кодекса РФ в редакции Федерального закона от 26.06.2026 № 190-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько времени делают РВП?</summary>
+        <div class="qa-answer">
+          <p>Четыре месяца со дня поступления заявления. Для тех, кто прибыл в Россию без визы, — 60 суток. Приостановление этого срока законом не предусмотрено.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Срок рассмотрения вышел, а решения нет — что делать?</summary>
+        <div class="qa-answer">
+          <p>Подайте письменное обращение в подразделение подачи с просьбой сообщить о результате, указав дату подачи и номер расписки, и сохраните копию с отметкой о приёме. Приостановление срока рассмотрения законом не предусмотрено (пункт 26 регламента). Если ответа нет — жалоба руководителю территориального органа, затем вышестоящее управление или прокуратура.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько стоит РВП в 2026 году?</summary>
+        <div class="qa-answer">
+          <p>Государственная пошлина за выдачу — 15 000 ₽ с 26 июля 2026 года. Если заявление подано и пошлина оплачена до этой даты, применяется прежний тариф. Разрешение для студентов по статье 6.2 стоит 8 000 ₽.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/rvp/sroki-oformleniya-rvp-v-rossii">Разбор темы: сроки оформления РВП и госпошлина</a>
+      </p>
+    </section>
+    <section class="qa-group" id="gotovnost">
+      <h2>Готовность и статус заявления<span class="qa-group__count">9</span></h2>
+      <details class="qa-item" open>
+        <summary>Чем проверка готовности квоты отличается от проверки РВП?</summary>
+        <div class="qa-answer">
+          <p>320|Это разные процедуры. Заявку-анкету на квоту рассматривает комиссия 30 рабочих дней, а сведения о выделенной квоте публикуют региональные управления по вопросам миграции — единого сервиса нет (постановление Правительства РФ от 29.12.2020 № 2345). Проверка готовности самого разрешения идёт через сервис МВД, телефон или личный приём.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что значит «данные о готовности разрешения на временное проживание отсутствуют»?</summary>
+        <div class="qa-answer">
+          <p>Это значит, что сведений о решении в сервисе сейчас нет, и отказом такой ответ не является. Причины бывают разные: решение ещё не принято, данные не выгружены, выбран не тот регион, опечатка в номере документа. Сверьте данные с распиской, повторите запрос через несколько рабочих дней, параллельно позвоните в подразделение подачи.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Обязаны ли меня уведомить о решении?</summary>
+        <div class="qa-answer">
+          <p>Да. Уведомление о результате рассмотрения с датой и номером решения направляется в течение рабочего дня, следующего за днём поступления решения (пункт 139 регламента). Уведомление об отказе — не позднее окончания рабочего дня, следующего за днём принятия решения (пункт 27). Отсутствие уведомления при вышедшем сроке — основание для письменного обращения.</p>
+          <p>310|**10. Что делать, если в отметке о РВП ошибка?**</p>
+          <p>Подайте заявление об исправлении ошибок в подразделение. Факт технического брака или опечатки устанавливается не позднее следующего рабочего дня, решение об оформлении нового документа либо новой отметки — тоже не позднее следующего рабочего дня (пункты 189–191 регламента). Проверять отметку лучше сразу при получении.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Как проверить, действует ли уже выданное РВП?</summary>
+        <div class="qa-answer">
+          <p>Отдельного онлайн-сервиса для проверки действующего разрешения у МВД нет. Действительность подтверждает отметка в документе, удостоверяющем личность: сверьте данные владельца, номер и дату решения, срок и субъект, где разрешено проживание. Для юридически значимого подтверждения нужен письменный запрос в подразделение или личное обращение с паспортом.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Помогает ли Migra-Pro узнать статус заявления?</summary>
+        <div class="qa-answer">
+          <p>Доступа к закрытой базе ведомства нет ни у одной частной компании, и проверять статус «за вас» мы не можем. Чем помогаем: разбираем ситуацию, когда срок вышел, а ответа нет, готовим письменные обращения и жалобы, проверяем пакет документов перед подачей и после отказа.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Как проверить готовность РВП в Москве и в Сахарово?</summary>
+        <div class="qa-answer">
+          <p>Онлайн — на том же федеральном сервисе, выбрав регион Москвы. Лично — в миграционном центре в Сахарово, если документы подавали туда. Если подавали в Московской области, это другой субъект: и регион в форме, и подразделение будут другими.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Виден ли статус заявления на Госуслугах?</summary>
+        <div class="qa-answer">
+          <p>300|Если заявление подавали через портал — да: заявлению присваивается уникальный номер, а после принятия решения вас информируют в течение рабочего дня, и заявление получает статус «Готово» (подпункты 178.6.2, 183.1, 183.2 регламента). При подаче в окно заявления в личном кабинете не будет.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли узнать готовность РВП по фамилии?</summary>
+        <div class="qa-answer">
+          <p>Нет. Форма запрашивает регион подачи, дату рождения и реквизиты документа, удостоверяющего личность. Поиск по одной фамилии закрыт: иначе статус любого человека мог бы посмотреть посторонний. По телефону в подразделении тоже назовут не только фамилию, но и дату подачи с номером расписки.</p>
+          <p>290|**5. Можно ли узнать статус заявления по телефону?**</p>
+          <p>Да. Право получать сведения о ходе рассмотрения по телефону, на личном приёме и через портал Госуслуг закреплено пунктом 4 административного регламента МВД (приказ от 08.06.2020 № 407). Звонить нужно в то подразделение, куда подавали документы, и назвать ФИО, дату подачи, номер расписки и паспортные данные.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Как проверить готовность РВП онлайн?</summary>
+        <div class="qa-answer">
+          <p>Откройте сервис проверки на сайте ГУВМ МВД России, выберите регион, в котором подавали заявление, укажите дату рождения и номер документа, по которому подавали, пройдите проверку «я не робот» и отправьте форму. Сервис покажет либо сведения о принятом решении, либо сообщение, что данных нет. Ответ сервиса информационный: он не заменяет официального уведомления о решении.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/rvp/proverka-gotovnosti-rvp">Разбор темы: как проверить готовность РВП</a>
+      </p>
+    </section>
+    <section class="qa-group" id="otkaz">
+      <h2>Отказ и аннулирование<span class="qa-group__count">12</span></h2>
+      <details class="qa-item" open>
+        <summary>Может ли неправильное оформление документов стать причиной отказа в выдаче РВП?</summary>
+        <div class="qa-answer">
+          <p>Прямо — нет: перечень оснований для отказа закрытый, и «неправильного оформления» в нём нет. Но рядом стоят два пункта перечня, которые работают именно здесь: представление недостоверных сведений и подложных документов. Опечатка и недостоверность — разные вещи, и разницу оценивает подразделение МВД.</p>
+          <p>На практике дефектный комплект чаще ведёт к возврату документов на приёме, а не к решению об отказе. Разница существенная: после возврата вы подаёте заново сразу, после отказа — не ранее чем через год со дня решения.</p>
+          <p class="osnovanie">Основание: пункт 1 статьи 7 и пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Какие основные ошибки приводят к отказу в выдаче РВП?</summary>
+        <div class="qa-answer">
+          <p>Здесь нужно разделить две разные вещи. Отказ выносится только по основаниям закрытого перечня статьи 7: судимость, выдворение или депортация в прошлом, заболевание, опасное для окружающих, недостоверные сведения, расторжение брака, если он был основанием, длительное пребывание за пределами России и другие пункты перечня. Ошибки в документах самой по себе в этом перечне нет.</p>
+          <p>Что реально происходит из-за ошибок: комплект возвращают на приёме либо запрашивают уточнения. Это не отказ, и годичный запрет на повторное обращение не применяется. Повторяются три ошибки — перевод с другим написанием имени, просроченные медицинские документы и документы не под то основание, которое указано в заявлении.</p>
+          <p class="osnovanie">Основание: пункт 1 статьи 7 и пункт 6 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли оспорить отказ в выдаче РВП?</summary>
+        <div class="qa-answer">
+          <p>Да. На жалобу в МВД России отведено три рабочих дня со дня получения уведомления о решении, на обращение в суд — три месяца; пропуск трёхдневного срока права на суд не лишает. Если решение отменят, РВП выдают или восстанавливают в течение трёх рабочих дней со дня отмены.</p>
+          <p class="osnovanie">Основание: пункты 4 и 5 статьи 7 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Сколько можно быть за границей, чтобы не потерять РВП?</summary>
+        <div class="qa-answer">
+          <p>Менее шести месяцев суммарно в течение календарного года. Считается сумма всех поездок, а не одна — подпункт 11 пункта 1 статьи 7. Исключения: экстренное лечение, тяжёлая болезнь, смерть близкого родственника за границей и служебная необходимость.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что будет, если решение отменят?</summary>
+        <div class="qa-answer">
+          <p>Территориальный орган МВД в течение трёх рабочих дней со дня отмены выдаёт или восстанавливает РВП — пункт 5 статьи 7.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Когда можно подать на РВП после отказа?</summary>
+        <div class="qa-answer">
+          <p>Не ранее чем через год со дня отказа или аннулирования — пункт 6 статьи 6 закона № 115-ФЗ. Год считается от даты решения, и подавать заново стоит только если причина устранена.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что делать, если в РВП отказали?</summary>
+        <div class="qa-answer">
+          <p>Выяснить основание отказа по статье 7, при несогласии обжаловать решение, а при подготовке новой подачи учесть, что повторно подать заявление можно не ранее чем через год со дня отказа.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>В какой срок можно обжаловать отказ или аннулирование?</summary>
+        <div class="qa-answer">
+          <p>Три рабочих дня на жалобу в МВД России либо три месяца на обращение в суд — оба срока считаются со дня получения уведомления о решении, пункт 4 статьи 7. Пропуск трёхдневного срока права на суд не лишает.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Аннулируют ли РВП, если я потерял работу?</summary>
+        <div class="qa-answer">
+          <p>Не сразу: если вы трудоустроились к новому работодателю в течение трёх месяцев и доход за фактический период работы соответствует требованиям, основание по доходу не применяется — пункт 1.9 статьи 7 в редакции закона от 26.07.2026 № 241-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Как самому аннулировать РВП?</summary>
+        <div class="qa-answer">
+          <p>Подать заявление об аннулировании в территориальный орган МВД, который выдавал разрешение: такое основание прямо предусмотрено подпунктом 15 пункта 1 статьи 7. Но если вы получили вид на жительство или гражданство России, прежнее РВП считается недействительным без всякого заявления — пункт 1.8 статьи 7.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Причины отказа и причины аннулирования — разные?</summary>
+        <div class="qa-answer">
+          <p>Нет, перечень один и тот же. Разница во времени: если основание нашли при рассмотрении заявления — это отказ, если после выдачи — аннулирование.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>По каким причинам могут отказать в РВП?</summary>
+        <div class="qa-answer">
+          <p>Только по основаниям из статьи 7 закона № 115-ФЗ — их шестнадцать, и перечень закрытый. Плюс отдельное основание пункта 1.2: решение о нежелательности пребывания или о неразрешении въезда. По другим причинам отказать нельзя.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/rvp/oshibki-pri-oformlenii-rvp">Разбор темы: отказ в РВП и аннулирование разрешения</a>
+      </p>
+    </section>
+    <section class="qa-group" id="zhizn">
+      <h2>Жизнь с РВП: работа, регион, уведомление<span class="qa-group__count">9</span></h2>
+      <details class="qa-item" open>
+        <summary>Как иностранцу с РВП можно повысить свои шансы на успешное трудоустройство?</summary>
+        <div class="qa-answer">
+          <p>С точки зрения документов РВП уже снимает главные барьеры: патент и разрешение на работу не нужны, работодателю не нужно разрешение на привлечение иностранного работника. Значит вопрос переходит в обычную плоскость — резюме, подтверждённая квалификация, признание иностранного диплома, если работа требует профильного образования.</p>
+          <p>Одно ограничение держите в виду при поиске вакансий: по общему правилу работать вне субъекта, где вам разрешено временное проживание, нельзя. Исключения узкие — служебная командировка и разъездной характер работы, и только для профессий из закрытого перечня.</p>
+          <p class="osnovanie">Основание: подпункт 1 пункта 4 статьи 13, пункты 5 и 6 статьи 13 Федерального закона от 25.07.2002 № 115-ФЗ; перечень профессий — приказ Минздравсоцразвития России от 28.07.2010 № 564н.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Какие основные юридические аспекты следует учитывать при заключении трудового договора с иностранцем?</summary>
+        <div class="qa-answer">
+          <p>Договор с иностранцем, у которого есть РВП, заключается по общим правилам Трудового кодекса, с несколькими дополнениями.</p>
+          <ol class="qa-answer__list">
+            <li>В договор вносятся сведения о разрешении на временное проживание.</li>
+            <li>Патент и разрешение на работу не требуются — ни работнику, ни работодателю.</li>
+            <li>Место работы должно находиться в том субъекте, где работнику разрешено временное проживание; исключения по командировкам и разъездной работе действуют только для профессий из закрытого перечня.</li>
+            <li>О заключении и о прекращении договора работодатель уведомляет территориальный орган МВД.</li>
+          </ol>
+          <p class="osnovanie">Основание: подпункт 1 пункта 4 статьи 13, пункты 5 и 6 статьи 13 Федерального закона от 25.07.2002 № 115-ФЗ; перечень профессий — приказ Минздравсоцразвития России от 28.07.2010 № 564н.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Нужно ли что-то подавать после получения РВП?</summary>
+        <div class="qa-answer">
+          <p>Да, дважды. Сначала встать на регистрационный учёт по месту жительства. Затем каждый год подавать уведомление о проживании — в течение двух месяцев со дня истечения очередного года со дня выдачи РВП, с приложением сведений о доходах. Уведомление можно подать через Госуслуги.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли работать с РВП без патента?</summary>
+        <div class="qa-answer">
+          <p>Да, патент и разрешение на работу не нужны. Но работать можно только в том субъекте Российской Федерации, где выдано РВП.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли выезжать из России с РВП?</summary>
+        <div class="qa-answer">
+          <p>Выезжать можно, но выезд за пределы России более чем на шесть месяцев суммарно за календарный год является основанием для аннулирования РВП. У этого правила есть исключения, они разобраны в статье об отказе и аннулировании.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли с РВП работать в другом регионе?</summary>
+        <div class="qa-answer">
+          <p>По общему правилу нет: временно проживающий не вправе работать вне субъекта, где ему разрешено временное проживание — пункт 5 статьи 13 закона № 115-ФЗ. Исключения три: служебная командировка не более 40 календарных дней в году, разъездной характер работы не более 90 календарных дней в году — оба только по перечню профессий из приказа Минздравсоцразвития № 564н — и статус высококвалифицированного специалиста.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Можно ли с РВП переехать в другой регион?</summary>
+        <div class="qa-answer">
+          <p>Нет. РВП привязано к субъекту, где выдано: и проживание, и работа ограничены его территорией.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Нужно ли менять водительские права при получении РВП?</summary>
+        <div class="qa-answer">
+          <p>Нет. Правило, по которому иностранные права становятся недействительными через год, отсчитывается от получения вида на жительство или гражданства России — пункт 12.1 статьи 25 закона № 196-ФЗ в редакции закона № 313-ФЗ. РВП в этой норме не назван.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Нужен ли патент, если есть РВП?</summary>
+        <div class="qa-answer">
+          <p>Нет. Ни патент, ни разрешение на работу не требуются — подпункт 1 пункта 4 статьи 13 закона № 115-ФЗ. Работодателю тоже не нужно разрешение на привлечение иностранного работника.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/rvp/trudoustrojstvo-inostrancev-s-rvp">Разбор темы: работа с РВП, регион и ежегодное уведомление</a>
+      </p>
+    </section>
+    <section class="qa-group" id="posle">
+      <h2>После РВП: ВНЖ и гражданство<span class="qa-group__count">5</span></h2>
+      <details class="qa-item" open>
+        <summary>Можно ли продлить РВП?</summary>
+        <div class="qa-answer">
+          <p>Нет. Разрешение на временное проживание выдаётся на три года и продлению не подлежит — это прямо записано в законе. Когда срок заканчивается, статус либо меняется на вид на жительство, либо РВП оформляется заново с самого начала.</p>
+          <p>Отдельно стоит разрешение на временное проживание в целях получения образования: это другой статус со своим сроком — период обучения плюс 180 календарных дней после его окончания. Его не нужно путать с обычным РВП: основания, пошлина и порядок у них разные.</p>
+          <p class="osnovanie">Основание: пункт 1 статьи 6 и статья 6.2 Федерального закона от 25.07.2002 № 115-ФЗ; приказ МВД России от 14.12.2022 № 949.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Что делать, когда срок РВП заканчивается?</summary>
+        <div class="qa-answer">
+          <p>РВП продлить нельзя, поэтому решать нужно заранее — примерно за четыре месяца до окончания срока. Есть три пути.</p>
+          <ol class="qa-answer__list">
+            <li>Оформить вид на жительство. Заявление подаётся, пока РВП ещё действует. Это основной путь для тех, кто остаётся в России.</li>
+            <li>Получить РВП заново. Придётся выехать из России, вернуться, встать на миграционный учёт и подать документы с самого начала. Если основанием была квота, нужно новое квотоместо: прежнее решение о выделении квоты не действует.</li>
+            <li>Выехать из России до окончания срока РВП.</li>
+          </ol>
+          <p>Отдельно держите в виду: регистрация по месту жительства заканчивается вместе с РВП. Это самостоятельная причина не откладывать решение на последние недели.</p>
+          <p class="osnovanie">Основание: пункт 1 статьи 6 Федерального закона от 25.07.2002 № 115-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Какие основные основания позволяют перейти от РВП к ВНЖ?</summary>
+        <div class="qa-answer">
+          <p>Само РВП и есть путь к виду на жительство: заявление подаётся, пока разрешение действует, и закон устанавливает минимальный срок проживания по РВП до подачи. ⚖️ Точную величину этого срока и порядок его подсчёта при выездах уточните у юриста на дату подачи.</p>
+          <p>Отдельно закон перечисляет категории, которым вид на жительство выдаётся вообще без предварительного РВП: среди них носители русского языка, высококвалифицированные специалисты и члены их семей, родственники по прямой восходящей линии граждан России.</p>
+          <p>Проверять нужно именно свою категорию: перечень оснований для РВП без квоты и перечень категорий для вида на жительство без РВП — два разных списка, и смешивать их нельзя.</p>
+          <p class="osnovanie">Основание: пункты 1 и 2 статьи 8 Федерального закона от 25.07.2002 № 115-ФЗ; подпункт 7.1 пункта 2 статьи 8 введён Федеральным законом от 28.12.2024 № 517-ФЗ.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Когда можно подавать на вид на жительство после РВП?</summary>
+        <div class="qa-answer">
+          <p>Через восемь месяцев со дня получения РВП. Ждать окончания трёхлетнего срока не нужно и невыгодно: РВП не продлевается, а на рассмотрение заявления о виде на жительство нужен запас времени.</p>
+        </div>
+      </details>
+      <details class="qa-item">
+        <summary>Даёт ли РВП право на гражданство сразу?</summary>
+        <div class="qa-answer">
+          <p>Нет. РВП — ступень к виду на жительство, а гражданство оформляется уже после получения вида на жительство. Исключения есть для отдельных категорий, и они разобраны в статьях кластера о гражданстве.</p>
+        </div>
+      </details>
+      <p class="qa-group__more">
+        <a href="https://migra-pro.com/blog/rvp/poluchenie-vnj-posle-rvp">Разбор темы: вид на жительство после РВП</a>
+      </p>
+    </section>
+  </div></div>
+
+<section class="qa-capture" id="pomoshch">
+    <div class="wrap qa-capture__grid">
+      <div class="qa-capture__text">
+        <h2>Вашего случая нет в списке</h2>
+        <p>Раздел закрывает типовые ситуации. Если у вас отказ по прежнему заявлению, брак меньше трёх лет без общего ребёнка, иностранный диплом без свидетельства о признании, квота исчерпана в вашем регионе или РВП заканчивается через месяц — опишите случай, разберём отдельно.</p>
+        <ul class="qa-capture__links">
+          <li><a href="https://migra-pro.com/rvp">оформление РВП под ведение юриста</a> — когда нужна не консультация, а работа с документами</li>
+          <li><a href="https://migra-pro.com/blog/rvp/oformlenie-rvp-dokumenty" data-goal="dokumenty_rvp">какие документы нужны на РВП</a> — перечень по вашему основанию</li>
+        </ul>
+      </div>
+      <div class="qa-capture__form">
+        <form class="lead-form lead-form--inline" data-goal="questions_lead">
+          <div class="lead-form__pair">
+            <label>Как к вам обращаться
+              <input type="text" name="name" autocomplete="name" placeholder="Имя">
+            </label>
+            <label>Телефон или мессенджер
+              <input type="tel" name="phone" autocomplete="tel" placeholder="+7 ___ ___-__-__">
+            </label>
+          </div>
+          <label>В чём ваш случай
+            <textarea name="task" rows="3" placeholder="Например: подал на квоту в Московской области, комиссия отказала, работаю по трудовому договору, диплом узбекский"></textarea>
+          </label>
+          <button class="btn btn--brand" type="submit">Разобрать мой случай</button>
+          <p class="qa-capture__note">Отвечает юрист по миграционному праву. Обычно в течение рабочего дня.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    var input = document.getElementById("qa-search-input");
+    var found = document.getElementById("qa-found");
+    if (!input) return;
+    var items = Array.prototype.slice.call(document.querySelectorAll(".qa-item"));
+    var groups = Array.prototype.slice.call(document.querySelectorAll(".qa-group, .qa-terms"));
+    input.addEventListener("input", function () {
+      var q = input.value.trim().toLowerCase();
+      if (!q) {
+        items.forEach(function (i) { i.hidden = false; });
+        groups.forEach(function (g) { g.hidden = false; });
+        found.hidden = true;
+        return;
+      }
+      var n = 0;
+      items.forEach(function (i) {
+        var t = i.querySelector("summary").textContent.toLowerCase();
+        var hit = t.indexOf(q) !== -1;
+        i.hidden = !hit;
+        if (hit) { n++; }
+      });
+      groups.forEach(function (g) {
+        g.hidden = g.querySelectorAll(".qa-item:not([hidden])").length === 0;
+      });
+      found.hidden = false;
+      found.textContent = n ? ("Найдено вопросов: " + n) : "Ничего не нашлось — опишите свой случай в форме внизу страницы";
+    });
+  })();
+  </script>
+
+</main>
+
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-cta">
+      <div>
+        <strong>Оформляете иностранных сотрудников?</strong>
+        <p>Разберём задачу на бесплатной консультации и назовём сроки и стоимость.</p>
+      </div>
+      <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Подвал">Бесплатная консультация</a>
+    </div>
+
+    <div class="footer-cols">
+      <div>
+        <h3>Работодателям</h3>
+        <ul>
+          <li><a href="#vks">Оформление ВКС</a></li>
+          <li><a href="#viza">Визовый персонал и квота</a></li>
+          <li><a href="#viza">Приглашение и рабочая виза</a></li>
+          <li><a href="#audit">Аудит документов сотрудников</a></li>
+          <li><a href="#audit">Сопровождение миграционного учёта</a></li>
+          <li><a href="#ceny">Цены и сроки</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Частным лицам</h3>
+        <ul>
+          <li><a href="https://migra-pro.com/">Оформление статуса себе и семье</a></li>
+          <li><a href="https://migra-pro.com/rvp">РВП</a></li>
+          <li><a href="https://migra-pro.com/vnj">ВНЖ</a></li>
+          <li><a href="https://migra-pro.com/pomosh-v-poluchenii-grajdanstva-rf">Гражданство РФ</a></li>
+          <li><a href="https://migra-pro.com/online_consult">Консультация миграционного юриста</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <ul>
+          <li><a class="footer-phone" href="tel:+74958590051">+7 (495) 859-00-51</a></li>
+          <li>Пн–Пт, 09:00–18:00</li>
+          <li>Подольск, ул. Профсоюзная, 4</li>
+          <li>Одинцово, п. Новоивановское, ул. Калинина, 8</li>
+          <li><a href="#contacts">Показать контакты →</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#" rel="nofollow">MAX</a>
+          <a href="#" rel="nofollow">Telegram</a>
+        </div>
+      </div>
+      <div>
+        <h3>Компания</h3>
+        <ul>
+          <li><a href="https://migra-pro.com/about">О нас</a></li>
+          <li><a href="https://migra-pro.com/informaciya">База знаний</a></li>
+          <li><a href="https://migra-pro.com/questions">Вопросы и ответы</a></li>
+          <li><a href="https://migra-pro.com/">На главную</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div><span class="req">[REQ: юридическое название, ИНН, ОГРН]</span> · Оказываем юридические и консультационные услуги в сфере миграционного права. Решение по документам принимают государственные органы. ⚖️</div>
+      <div class="footer-legal__links">
+        <a href="#">Политика конфиденциальности <span class="req">[REQ]</span></a>
+        <a href="#">Согласие на обработку персональных данных <span class="req">[REQ]</span></a>
+      </div>
+      <div>© 2026 Migra-Pro · концепт страницы «Работодателям» (/rnr), не рабочая версия сайта</div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal-consult" role="dialog" aria-modal="true" aria-labelledby="modal-consult-title" hidden>
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal__dialog">
+    <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">✕</button>
+    <h2 id="modal-consult-title">Бесплатная консультация для компании</h2>
+    <p class="modal__lead">Оставьте имя и телефон — перезвоним, уточним задачу по сотрудникам и назовём порядок действий.</p>
+    <form class="lead-form" data-lead-form novalidate>
+      <input type="hidden" name="source" value="">
+      <div class="lead-form__row" style="grid-template-columns:1fr;">
+        <input type="text" name="name" placeholder="Имя" autocomplete="given-name" required>
+        <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+      </div>
+      <button class="btn btn--primary" type="submit">Получить консультацию</button>
+      <label class="lead-form__agree">
+        <input type="checkbox" name="agree" required>
+        <span>Согласен на обработку персональных данных и принимаю <a href="#">политику конфиденциальности</a></span>
+      </label>
+      <p class="lead-form__note">Перезваниваем Пн–Пт с 09:00 до 18:00.</p>
+      <div class="lead-form__done" role="status">Заявка отправлена. Юрист перезвонит по указанному номеру. <em>(в концепте форма ничего не отправляет)</em></div>
+    </form>
+    <p class="modal__alt">Нужен ответ прямо сейчас — напишите в <a href="#" rel="nofollow">MAX</a> или <a href="#" rel="nofollow">Telegram</a>.</p>
+  </div>
+</div>
+
+<div class="mobile-bar">
+  <a class="btn btn--secondary" href="tel:+74958590051">Позвонить</a>
+  <a class="btn btn--primary" href="#cta" data-modal-open data-modal-source="Мобильная панель">Консультация</a>
+</div>
+
+<script>
+  /* Квиз квалификации: три шага → предварительный путь оформления */
+  (function () {
+    var quiz = document.querySelector('[data-quiz]');
+    if (!quiz) return;
+    var steps = quiz.querySelectorAll('.quiz__step');
+    var result = quiz.querySelector('[data-quiz-result]');
+    var text = quiz.querySelector('[data-quiz-text]');
+    var answers = {};
+
+    var byTask = {
+      privezti: 'Ваш путь — ввоз по квоте: заявка о потребности, разрешение на привлечение, приглашение, рабочая виза и разрешение на работу на каждого сотрудника. Подбор ведём в Индии, Вьетнаме или Бангладеш.',
+      vks: 'Ваш путь — статус ВКС: квота не нужна, разрешение на работу выдаётся на срок договора до трёх лет, семья специалиста может получить визы. Сначала проверим, проходит ли специалист по требованиям к ВКС.',
+      uzhe: 'Начинаем с бесплатного аудита: проверим разрешительные документы, уведомления в МВД, договоры и патенты, отдадим перечень несоответствий и план устранения. Дальше — сопровождение учёта, если оно нужно.'
+    };
+    var byCount = {
+      one: ' Задача точечная — берём такие без минимального объёма.',
+      few: ' Для группы до десяти человек считаем смету по каждой позиции и согласуем график.',
+      many: ' Для объёма больше десяти человек делаем индивидуальный расчёт и график по партиям.'
+    };
+    var byWhen = {
+      urgent: ' По срокам: месяц — мало для квотного пути, поэтому в приоритете рассмотрим внеквотные должности, ВКС или легализацию тех, кто уже в России.',
+      normal: ' По срокам: два-три месяца — рабочий горизонт для оформления, но заявку на квоту нужно успеть подать в установленный срок.',
+      plan: ' По срокам: заранее — лучший вариант, успеваем в окно подачи заявки на квоту и планируем выход сотрудников к нужной дате.'
+    };
+
+    function show(n) {
+      Array.prototype.forEach.call(steps, function (s) {
+        if (s.getAttribute('data-step') === String(n)) s.removeAttribute('hidden');
+        else s.setAttribute('hidden', '');
+      });
+    }
+
+    quiz.addEventListener('click', function (e) {
+      var opt = e.target.closest('[data-q]');
+      if (opt) {
+        answers[opt.getAttribute('data-q')] = opt.getAttribute('data-val');
+        if (!answers.task) { show(1); return; }
+        if (!answers.count) { show(2); return; }
+        if (!answers.when) { show(3); return; }
+        Array.prototype.forEach.call(steps, function (s) { s.setAttribute('hidden', ''); });
+        text.textContent = (byTask[answers.task] || '') + (byCount[answers.count] || '') + (byWhen[answers.when] || '');
+        result.removeAttribute('hidden');
+        var hidden = document.querySelector('#modal-consult input[name="source"]');
+        if (hidden) hidden.value = 'Квиз: ' + answers.task + '/' + answers.count + '/' + answers.when;
+        return;
+      }
+      if (e.target.closest('[data-quiz-reset]')) {
+        answers = {};
+        result.setAttribute('hidden', '');
+        show(1);
+      }
+    });
+  })();
+</script>
+
+<script>
+    (function () {
+      var root = document.querySelector('[data-dropdown]');
+      if (!root) return;
+      var btn = root.querySelector('.nav-chev');
+      var panel = root.querySelector('.dropdown');
+      function setOpen(open) {
+        root.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) panel.removeAttribute('hidden');
+        else panel.setAttribute('hidden', '');
+      }
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setOpen(!root.classList.contains('is-open'));
+      });
+      document.addEventListener('click', function (e) {
+        if (!root.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+    })();
+
+    (function () {
+      var map = document.querySelector('[data-map]');
+      if (!map) return;
+      var frame = map.querySelector('[data-map-frame]');
+      var tabs = map.querySelectorAll('.map-tab');
+      Array.prototype.forEach.call(tabs, function (tab) {
+        tab.addEventListener('click', function () {
+          Array.prototype.forEach.call(tabs, function (t) {
+            t.classList.remove('is-active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('is-active');
+          tab.setAttribute('aria-selected', 'true');
+          var q = tab.getAttribute('data-map-query');
+          frame.src = 'https://yandex.ru/map-widget/v1/?text=' + encodeURIComponent(q) + '&z=16';
+          frame.title = 'Карта: ' + tab.textContent.trim();
+        });
+      });
+    })();
+
+    (function () {
+      var modal = document.getElementById('modal-consult');
+      if (!modal) return;
+      var sourceField = modal.querySelector('input[name="source"]');
+      var lastFocused = null;
+
+      function open(source) {
+        lastFocused = document.activeElement;
+        if (sourceField) sourceField.value = source || '';
+        modal.removeAttribute('hidden');
+        modal.classList.add('is-open');
+        document.body.classList.add('is-locked');
+        var first = modal.querySelector('input[name="name"]');
+        if (first) first.focus();
+      }
+      function close() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('hidden', '');
+        document.body.classList.remove('is-locked');
+        if (lastFocused) lastFocused.focus();
+      }
+
+      document.addEventListener('click', function (e) {
+        var opener = e.target.closest('[data-modal-open]');
+        if (opener) {
+          e.preventDefault();
+          open(opener.getAttribute('data-modal-source'));
+          return;
+        }
+        if (e.target.closest('[data-modal-close]')) {
+          e.preventDefault();
+          close();
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
+      });
+    })();
+
+    (function () {
+      Array.prototype.forEach.call(document.querySelectorAll('[data-lead-form]'), function (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name = form.querySelector('input[name="name"]');
+          var phone = form.querySelector('input[name="phone"]');
+          var agree = form.querySelector('input[name="agree"]');
+          var invalid = null;
+          if (!name.value.trim()) invalid = name;
+          else if (phone.value.replace(/\D/g, '').length < 10) invalid = phone;
+          else if (!agree.checked) invalid = agree;
+          if (invalid) { invalid.focus(); return; }
+          form.classList.add('is-sent');
+        });
+      });
+    })();
+  </script>
+
+
+</body>
+</html>
