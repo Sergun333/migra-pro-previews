@@ -897,6 +897,32 @@
       border-bottom: 1px solid transparent; }
     .card__link a:hover { border-bottom-color: var(--mp-primary); }
 
+    .card__count { margin: 0; font-size: 14px; font-weight: 600; color: var(--mp-text); }
+
+    .nav-popular, .nav-news, .nav-tools { padding: 30px 0 6px; }
+    .nav-popular h2, .nav-news h2, .nav-tools h2, .nav-sections h2 {
+      font-size: clamp(22px, 3vw, 28px); line-height: 1.25; margin: 0 0 8px; color: var(--mp-text); }
+    .nav-links { list-style: none; margin: 0; padding: 0; display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 10px 26px; }
+    .nav-links li { font-size: 16px; line-height: 1.55; }
+    .nav-links a, .nav-news__list a, .nav-sections__row a, .tool__link a {
+      color: var(--mp-primary); font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; }
+    .nav-links a:hover, .nav-news__list a:hover, .nav-sections__row a:hover, .tool__link a:hover {
+      border-bottom-color: var(--mp-primary); }
+    .nav-news__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .nav-news__list li { font-size: 16px; line-height: 1.55; }
+    .nav-news__list time { display: inline-block; min-width: 96px; color: var(--mp-muted); font-size: 15px; }
+
+    .nav-tools__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .tool { background: var(--mp-primary-light); border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius); padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+    .tool__title { margin: 0; font-size: 17px; line-height: 1.3; color: var(--mp-text); }
+    .tool__what { margin: 0; font-size: 15px; line-height: 1.5; color: var(--mp-muted); }
+    .tool__link { margin: auto 0 0; }
+
+    .nav-sections { padding: 30px 0 6px; }
+    .nav-sections__row { margin: 0; font-size: 16px; line-height: 1.7; color: var(--mp-muted); }
+
     .nav-exit { margin: 18px 0 0; font-size: 16px; line-height: 1.6; color: var(--mp-text); }
     .nav-exit a { color: var(--mp-primary); font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; }
     .nav-exit a:hover { border-bottom-color: var(--mp-primary); }
@@ -915,7 +941,10 @@
 
     @media (max-width: 640px) {
       .nav-grid { grid-template-columns: 1fr; }
+      .nav-links { grid-template-columns: 1fr; }
+      .nav-tools__grid { grid-template-columns: 1fr; }
       .nav-promises li { font-size: 15px; }
+      .nav-news__list time { display: block; min-width: 0; }
     }
   </style>
   <style>
@@ -991,55 +1020,156 @@
     <div class="wrap">
       <p class="nav-kicker">База знаний</p>
       <h1>База знаний: вопросы, статьи, чек-листы и новости</h1>
-      <p class="nav-sub">Выберите раздел — полный материал живёт в нём, не на этой странице.</p>
+      <p class="nav-sub">Выберите направление — статьи, ответы и чек-листы собраны по статусам.</p>
       <ul class="nav-promises">
-        <li><span class="ico" aria-hidden="true">&#10003;</span> Четыре раздела: вопросы, статьи, чек-листы, новости</li>
-        <li><span class="ico" aria-hidden="true">&#10003;</span> В каждом разделе — полный состав своего хаба</li>
+        <li><span class="ico" aria-hidden="true">&#10003;</span> Семь направлений: квота, РВП, ВНЖ, гражданство, репатриация, работа, запрет на въезд</li>
+        <li><span class="ico" aria-hidden="true">&#10003;</span> У каждого направления свои статьи, ответы на вопросы и чек-лист</li>
         <li><span class="ico" aria-hidden="true">&#10003;</span> Своего случая нет в списке — опишите его юристу</li>
       </ul>
     </div>
   </section>
 
-  <section class="nav-topics" id="razdely">
+  <section class="nav-topics" id="napravleniya">
     <div class="wrap">
-      <h2>Выберите раздел</h2>
-      <p class="nav-topics__sub">Откройте свой раздел — там собран материал целиком.</p>
+      <h2>Выберите направление</h2>
+      <p class="nav-topics__sub">Откройте своё направление — статьи, ответы и чек-лист собраны в нём.</p>
       <div class="nav-grid">
 
         <article class="card">
           <div class="card__body">
-            <h3 class="card__title">Вопросы и ответы</h3>
-            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> РВП, ВНЖ, гражданство, разрешение на работу, репатриация</p>
-            <p class="card__link"><a href="https://migra-pro.com/questions" data-goal="ENGAGE_Click_ReadMore" data-to="/questions">Вопросы и ответы</a></p>
+            <h3 class="card__title">Квота на РВП</h3>
+            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> как получить квоту, заполнить заявление, что делать при отказе</p>
+            <p class="card__count">12 статей</p>
+            <p class="card__link"><a href="https://migra-pro.com/blog/kvota-rvp/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/kvota-rvp/">Все материалы о квоте на РВП</a></p>
           </div>
         </article>
 
         <article class="card">
           <div class="card__body">
-            <h3 class="card__title">Статьи</h3>
-            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> разборы по статусам: от квоты до гражданства</p>
-            <p class="card__link"><a href="https://migra-pro.com/blog" data-goal="ENGAGE_Click_ReadMore" data-to="/blog">Статьи</a></p>
+            <h3 class="card__title">РВП</h3>
+            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> оформление, продление, документы, частые ошибки</p>
+            <p class="card__count">19 статей</p>
+            <p class="card__link"><a href="https://migra-pro.com/blog/rvp/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/rvp/">Все материалы о РВП</a> · <a href="https://migra-pro.com/questions/rvp/" data-goal="ENGAGE_Click_ReadMore" data-to="/questions/rvp/">Ответы на вопросы о РВП</a></p>
           </div>
         </article>
 
         <article class="card">
           <div class="card__body">
-            <h3 class="card__title">Чек-листы</h3>
-            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> пошаговые списки документов</p>
-            <p class="card__link"><a href="https://migra-pro.com/check-list" data-goal="ENGAGE_Click_ReadMore" data-to="/check-list">Чек-листы</a></p>
+            <h3 class="card__title">Вид на жительство</h3>
+            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> основания, подтверждение дохода, медкомиссия, продление</p>
+            <p class="card__count">23 статьи</p>
+            <p class="card__link"><a href="https://migra-pro.com/blog/vnj/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/vnj/">Все материалы о ВНЖ</a> · <a href="https://migra-pro.com/questions/vnj/" data-goal="ENGAGE_Click_ReadMore" data-to="/questions/vnj/">Ответы на вопросы о ВНЖ</a></p>
           </div>
         </article>
 
         <article class="card">
           <div class="card__body">
-            <h3 class="card__title">Новости</h3>
-            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> изменения миграционного законодательства</p>
-            <p class="card__link"><a href="https://migra-pro.com/news" data-goal="ENGAGE_Click_ReadMore" data-to="/news">Новости</a></p>
+            <h3 class="card__title">Гражданство РФ</h3>
+            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> основания, упрощённый порядок, брак, проверка готовности</p>
+            <p class="card__count">30 статей</p>
+            <p class="card__link"><a href="https://migra-pro.com/blog/grajdanstvo/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/grajdanstvo/">Все материалы о гражданстве РФ</a> · <a href="https://migra-pro.com/questions/grajdanstvo/" data-goal="ENGAGE_Click_ReadMore" data-to="/questions/grajdanstvo/">Ответы на вопросы о гражданстве</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body">
+            <h3 class="card__title">Репатриация и переселение</h3>
+            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> программа репатриации, госпрограмма переселения, выбор региона</p>
+            <p class="card__count">14 статей</p>
+            <p class="card__link"><a href="https://migra-pro.com/blog/repatriacia/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/repatriacia/">Все материалы о репатриации</a> · <a href="https://migra-pro.com/questions/repatriacia/" data-goal="ENGAGE_Click_ReadMore" data-to="/questions/repatriacia/">Ответы на вопросы о репатриации</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body">
+            <h3 class="card__title">Работа и разрешение на работу</h3>
+            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> разрешение на работу, патент, ВКС, аннулирование</p>
+            <p class="card__count">14 статей</p>
+            <p class="card__link"><a href="https://migra-pro.com/blog/rnr/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/rnr/">Все материалы о работе в России</a> · <a href="https://migra-pro.com/questions/rnr/" data-goal="ENGAGE_Click_ReadMore" data-to="/questions/rnr/">Ответы на вопросы о работе</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__body">
+            <h3 class="card__title">Запрет на въезд и депортация</h3>
+            <p class="card__inside"><span class="card__inside-label">Что внутри:</span> отмена запрета, снятие через брак, возвращение после запрета</p>
+            <p class="card__count">14 статей</p>
+            <p class="card__link"><a href="https://migra-pro.com/blog/deportacia/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/deportacia/">Все материалы о запрете на въезд</a></p>
           </div>
         </article>
 
       </div>
-      <p class="nav-exit">Нужен разбор документов, а не раздел — <a href="https://migra-pro.com/migracionii_urist" data-goal="ENGAGE_Click_Tool" data-tool="consult">бесплатная консультация юриста</a>.</p>
+      <p class="nav-exit">Нужен разбор документов, а не статья — <a href="https://migra-pro.com/migracionii_urist/" data-goal="ENGAGE_Click_Tool" data-tool="consult">бесплатная консультация юриста</a>.</p>
+    </div>
+  </section>
+
+  <section class="nav-popular" id="populyarnoe">
+    <div class="wrap">
+      <h2>Читают чаще всего</h2>
+      <p class="nav-topics__sub">Восемь разборов, которые открывают чаще остальных.</p>
+      <ul class="nav-links">
+        <li><a href="https://migra-pro.com/blog/grajdanstvo/kak-belorusu-poluchit-rossiyskoye-grazhdanstvo-uproshchenno/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/grajdanstvo/kak-belorusu-poluchit-rossiyskoye-grazhdanstvo-uproshchenno/">Гражданство РФ для граждан Беларуси в упрощённом порядке</a></li>
+        <li><a href="https://migra-pro.com/blog/grajdanstvo/proverka-gotovnosti-grazhdanstva-rf/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/grajdanstvo/proverka-gotovnosti-grazhdanstva-rf/">Как проверить готовность гражданства РФ</a></li>
+        <li><a href="https://migra-pro.com/blog/rvp/kak-prodlit-rvp/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/rvp/kak-prodlit-rvp/">Как продлить РВП</a></li>
+        <li><a href="https://migra-pro.com/blog/grajdanstvo/grazhdanstvo-rf-po-braku/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/grajdanstvo/grazhdanstvo-rf-po-braku/">Гражданство РФ по браку</a></li>
+        <li><a href="https://migra-pro.com/blog/vnj/kak-podtverdit-dohod-dlya-vnj/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/vnj/kak-podtverdit-dohod-dlya-vnj/">Как подтвердить доход для ВНЖ</a></li>
+        <li><a href="https://migra-pro.com/blog/deportaciya/snyatie-zapreta-na-vezd-cherez-brak/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/deportaciya/snyatie-zapreta-na-vezd-cherez-brak/">Снятие запрета на въезд через брак</a></li>
+        <li><a href="https://migra-pro.com/blog/repatriacia/repatriaciya-2025-programmy-dokumenty-sroki/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/repatriacia/repatriaciya-2025-programmy-dokumenty-sroki/">Репатриация: программы, документы, сроки</a></li>
+        <li><a href="https://migra-pro.com/blog/vnj/prodlenie-vnj-v-rossii/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/vnj/prodlenie-vnj-v-rossii/">Как продлить вид на жительство</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="nav-news" id="izmeneniya">
+    <div class="wrap">
+      <h2>Изменения закона</h2>
+      <p class="nav-topics__sub">Что изменилось в миграционном законодательстве.</p>
+      <ul class="nav-news__list">
+        <li><time datetime="2026-03-10">10.03.2026</time> <a href="https://migra-pro.com/news/10032026/1/" data-goal="ENGAGE_Click_ReadMore" data-to="/news/10032026/1/">Изменения миграционного законодательства 2026</a></li>
+        <li><time datetime="2026-01-22">22.01.2026</time> <a href="https://migra-pro.com/news/extension-of-stay-in-russia/" data-goal="ENGAGE_Click_ReadMore" data-to="/news/extension-of-stay-in-russia/">Новый порядок пребывания в России</a></li>
+        <li><time datetime="2026-01-14">14.01.2026</time> <a href="https://migra-pro.com/news/migration-reform-2025-2026/" data-goal="ENGAGE_Click_ReadMore" data-to="/news/migration-reform-2025-2026/">Миграционная реформа 2025–2026</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="nav-tools" id="instrumenty">
+    <div class="wrap">
+      <h2>Проверьте свой случай сами</h2>
+      <p class="nav-topics__sub">Чек-листы документов и два инструмента подбора.</p>
+      <div class="nav-tools__grid">
+
+        <article class="tool">
+          <h3 class="tool__title">Чек-лист оснований для ВНЖ</h3>
+          <p class="tool__what">Список документов по каждому основанию, отметки сохраняются.</p>
+          <p class="tool__link"><a href="https://migra-pro.com/check-list/osnovaniya-dlya-vnzh/" data-goal="ENGAGE_Click_ReadMore" data-to="/check-list/osnovaniya-dlya-vnzh/">Чек-лист оснований для ВНЖ</a></p>
+        </article>
+
+        <article class="tool">
+          <h3 class="tool__title">Чек-лист программы репатриации</h3>
+          <p class="tool__what">Путь от заявления до паспорта по шагам.</p>
+          <p class="tool__link"><a href="https://migra-pro.com/check-list/programma-repatriacii/" data-goal="ENGAGE_Click_ReadMore" data-to="/check-list/programma-repatriacii/">Чек-лист программы репатриации</a></p>
+        </article>
+
+        <article class="tool">
+          <h3 class="tool__title">Подбор основания</h3>
+          <p class="tool__what">Шесть вопросов — и видно, какой статус вам подходит.</p>
+          <p class="tool__link"><a href="https://migra-pro.com/quiz/" data-goal="ENGAGE_Click_Tool" data-tool="quiz">Подбор основания</a></p>
+        </article>
+
+        <article class="tool">
+          <h3 class="tool__title">Чат с ИИ-юристом</h3>
+          <p class="tool__what">Опишите ситуацию текстом и получите разбор сразу.</p>
+          <p class="tool__link"><a href="https://migra-pro.com/lawyerai/" data-goal="ENGAGE_Click_Tool" data-tool="ai">Чат с ИИ-юристом</a></p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="nav-sections" id="razdely">
+    <div class="wrap">
+      <h2>Все разделы сайта</h2>
+      <p class="nav-sections__row">Полные своды: <a href="https://migra-pro.com/questions/" data-goal="ENGAGE_Click_ReadMore" data-to="/questions/">Ответы на вопросы</a> · <a href="https://migra-pro.com/blog/" data-goal="ENGAGE_Click_ReadMore" data-to="/blog/">Статьи</a> · <a href="https://migra-pro.com/check-list/" data-goal="ENGAGE_Click_ReadMore" data-to="/check-list/">Чек-листы</a> · <a href="https://migra-pro.com/news/" data-goal="ENGAGE_Click_ReadMore" data-to="/news/">Новости</a></p>
     </div>
   </section>
 
@@ -1321,17 +1451,20 @@
   "@type": "CollectionPage",
   "name": "База знаний: вопросы, статьи, чек-листы и новости",
   "description": "Ответы на вопросы, статьи, чек-листы документов и новости миграционного законодательства. Выберите раздел — полный материал живёт в нём.",
-  "url": "https://migra-pro.com/informaciya",
+  "url": "https://migra-pro.com/informaciya/",
   "publisher": { "@type": "Organization", "name": "Migra-Pro" },
   "inLanguage": "ru-RU",
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 4,
+    "numberOfItems": 7,
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Вопросы и ответы", "url": "https://migra-pro.com/questions" },
-      { "@type": "ListItem", "position": 2, "name": "Статьи", "url": "https://migra-pro.com/blog" },
-      { "@type": "ListItem", "position": 3, "name": "Чек-листы", "url": "https://migra-pro.com/check-list" },
-      { "@type": "ListItem", "position": 4, "name": "Новости", "url": "https://migra-pro.com/news" }
+      { "@type": "ListItem", "position": 1, "name": "Квота на РВП", "url": "https://migra-pro.com/blog/kvota-rvp/" },
+      { "@type": "ListItem", "position": 2, "name": "РВП", "url": "https://migra-pro.com/blog/rvp/" },
+      { "@type": "ListItem", "position": 3, "name": "Вид на жительство", "url": "https://migra-pro.com/blog/vnj/" },
+      { "@type": "ListItem", "position": 4, "name": "Гражданство РФ", "url": "https://migra-pro.com/blog/grajdanstvo/" },
+      { "@type": "ListItem", "position": 5, "name": "Репатриация и переселение", "url": "https://migra-pro.com/blog/repatriacia/" },
+      { "@type": "ListItem", "position": 6, "name": "Работа и разрешение на работу", "url": "https://migra-pro.com/blog/rnr/" },
+      { "@type": "ListItem", "position": 7, "name": "Запрет на въезд и депортация", "url": "https://migra-pro.com/blog/deportacia/" }
     ]
   }
 }
