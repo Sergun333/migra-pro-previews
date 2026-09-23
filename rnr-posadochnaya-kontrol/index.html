@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Разрешение на работу в России для иностранцев — оформление</title>
+<title>Оформление иностранных сотрудников: ВКС, квота, аудит</title>
   <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Оформим разрешение на работу в России: проверим основание, подготовим документы, подадим и доведём до получения. Бесплатная консультация в день обращения.">
+<meta name="description" content="Оформляем иностранных сотрудников компаниям в Москве и области: статус ВКС, подбор и ввоз по квоте, аудит уже работающих. Бесплатная консультация и разбор.">
 <style>
 
     :root {
@@ -764,7 +764,232 @@
     body.is-locked { overflow: hidden; }
 
     .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-  
+
+/* Дополнения для /rnr */
+    .nav-link.is-active { color: var(--mp-primary); position: relative; }
+    .nav-link.is-active::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 2px; background: var(--mp-accent); border-radius: 2px; }
+
+    /* H1 в три строки: 24ch держит перенос «Разрешение на работу и / ввоз иностранных / сотрудников для компаний» */
+    .hero h1 { max-width: 24ch; }
+
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.22); }
+    .hero__facts div { display: flex; flex-direction: column; }
+    .hero__facts strong { font-size: 1.15rem; letter-spacing: -0.02em; }
+    .hero__facts span { font-size: 0.85rem; opacity: 0.85; }
+
+    .divert { background: var(--mp-primary-light); border-bottom: 1px solid var(--mp-border); padding: 14px 0; }
+    .divert__inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-size: 0.95rem; color: var(--mp-muted); }
+    .divert__inner strong { color: var(--mp-text); font-weight: 600; }
+    .divert__inner a { font-weight: 700; }
+
+    .panel { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .panel h3 { margin: 0 0 12px; font-size: 1.05rem; }
+    .panel ul { margin: 0; padding-left: 20px; color: var(--mp-muted); }
+    .panel ul li { margin-bottom: 7px; }
+    .panel ul li:last-child { margin-bottom: 0; }
+    .duo { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 800px) { .duo { grid-template-columns: 1fr 1fr; } }
+
+    .facts-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .facts-row div { background: var(--mp-primary-light); border-radius: 10px; padding: 12px 16px; font-size: 0.92rem; }
+    .facts-row strong { display: block; font-size: 1.08rem; color: var(--mp-primary); }
+
+    .block-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; align-items: center; }
+    .block-actions span { color: var(--mp-muted); font-size: 0.9rem; }
+
+    .checklist { display: grid; gap: 10px 24px; grid-template-columns: 1fr; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 760px) { .checklist { grid-template-columns: 1fr 1fr; } }
+    .checklist li { position: relative; padding-left: 28px; color: var(--mp-text); font-size: 0.97rem; }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 20px; height: 20px; border-radius: 50%; background: #e8f6ed; color: #2f9e5b; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    .risk { margin-top: 20px; padding: 18px 20px; border-left: 4px solid var(--mp-accent); background: #fff5f5; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; font-size: 0.95rem; }
+    .risk strong { color: var(--mp-accent); }
+
+    .ptable-wrap { overflow-x: auto; border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); background: var(--mp-white); }
+    .ptable { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 0.95rem; }
+    .ptable th, .ptable td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--mp-border); vertical-align: top; }
+    .ptable thead th { background: var(--mp-primary-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mp-primary); }
+    .ptable tbody tr:last-child td { border-bottom: none; }
+    .ptable td:first-child { font-weight: 600; }
+    .ptable td small { display: block; color: var(--mp-muted); font-weight: 400; font-size: 0.86rem; margin-top: 3px; }
+    .ptable td.price { white-space: nowrap; font-weight: 700; color: var(--mp-primary); }
+
+    .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mp-primary); background: var(--mp-primary-light); border-radius: 999px; padding: 5px 12px; margin-bottom: 12px; }
+    .why { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .why { grid-template-columns: repeat(3, 1fr); } }
+    .why div { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 22px; }
+    .why strong { display: block; margin-bottom: 6px; }
+    .why span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .industries { margin: -12px 0 22px; color: var(--mp-muted); font-size: 0.95rem; line-height: 1.5; }
+    .industries span { color: var(--mp-text); font-weight: 600; }
+
+    .magnet { margin-top: 16px; display: grid; gap: 14px; align-items: center; background: var(--mp-white); border: 1px dashed var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    @media (min-width: 800px) { .magnet { grid-template-columns: 1fr auto; gap: 24px; } }
+    .magnet strong { display: block; margin-bottom: 5px; }
+    .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .calendar { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-top: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .calendar h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .calendar > p { margin: 0 0 16px; color: var(--mp-muted); font-size: 0.95rem; }
+    .calendar .panel { background: var(--mp-primary-light); border-color: transparent; }
+    .calendar__note { margin: 16px 0 0 !important; }
+
+    .quiz { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 28px; box-shadow: var(--mp-shadow); max-width: 44rem; }
+    .quiz__step strong, .quiz__result strong { display: block; margin-bottom: 16px; font-size: 1.05rem; }
+    .quiz__opts { display: grid; gap: 10px; }
+    .quiz__opts button { text-align: left; padding: 16px 18px; border-radius: var(--mp-radius-sm); border: 1px solid var(--mp-border); background: var(--mp-white); font: inherit; font-size: 0.98rem; cursor: pointer; transition: 0.15s ease; }
+    .quiz__opts button:hover { border-color: var(--mp-primary); background: var(--mp-primary-light); }
+    .quiz__result p { margin: 0 0 18px; color: var(--mp-text); }
+    .quiz__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .quiz__note { margin: 16px 0 0 !important; color: var(--mp-muted); font-size: 0.88rem; }
+
+    .case { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .case h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .case p { margin: 0 0 10px; color: var(--mp-muted); font-size: 0.95rem; }
+    .case p strong { color: var(--mp-text); }
+    .case details { border-top: 1px solid var(--mp-border); margin-top: 12px; padding-top: 12px; }
+    .case summary { cursor: pointer; font-weight: 700; font-size: 0.95rem; color: var(--mp-primary); list-style: none; }
+    .case summary::-webkit-details-marker { display: none; }
+    .case details p:last-child { margin-bottom: 0; }
+
+    .estimate { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .estimate h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .estimate .checklist li { padding-left: 30px; margin-bottom: 6px; }
+    .estimate > p { margin: 16px 0 18px; color: var(--mp-muted); font-size: 0.95rem; }
+
+    .guarantee { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid #2f9e5b; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .guarantee h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .guarantee .checklist li { padding-left: 30px; margin-bottom: 4px; }
+    .guarantee .checklist li strong { color: var(--mp-text); }
+    .guarantee > p { margin: 16px 0 0; color: var(--mp-muted); font-size: 0.93rem; }
+
+/* --- C1, главное: в эталоне у метки .req стоит white-space: nowrap. Метка там была
+       короткой («[REQ: цена]»), а у нас в ней целый вопрос РОПу — строка не переносится и
+       растягивает страницу до 2103 px при вьюпорте 360. Поймано рендером, не глазами. --- */
+    .req { white-space: normal; }
+
+    /* --- C2: в эталоне девять селекторов с размером ниже 13 px, поднимаем до 13,1 px --- */
+    .hero__eyebrow { font-size: 0.85rem; }
+    .widget__slot small { font-size: 0.85rem; }
+    .brand__sub, .header-rating { font-size: 0.82rem; }
+    .header-phone-block span, .dropdown a em, .nav-mobile-note { font-size: 0.82rem; }
+    .path-card__tag, .badge { font-size: 0.82rem; }
+    .lead-form__agree { font-size: 0.85rem; }
+    .lead-form__note { font-size: 0.85rem; }
+
+    /* --- C3: подпись слота и плейсхолдер не проходили AA на светлом фоне --- */
+    .widget__slot small { color: var(--mp-muted); }
+    .lead-form input::placeholder { color: #6b7480; }
+
+    /* --- C2: поле формы от 48 px и 16 px шрифта, чтобы мобильный не зумил при фокусе --- */
+    .lead-form input[type="text"],
+    .lead-form input[type="tel"] { font-size: 16px; padding: 14px; }
+
+    /* --- блок 14: панель формы до 720 px, поля в одну колонку (ТЗ 3.3) --- */
+    #forma .lead-form {
+      max-width: 720px; margin: 0 auto;
+      background: var(--mp-white); border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm); padding: 24px;
+    }
+    #forma .lead-form__row { grid-template-columns: 1fr; display: grid; gap: 14px; }
+    #forma .lead-form button[type="submit"] { width: 100%; }
+
+    /* --- C7: подпись поля, состояние ошибки под конкретным полем --- */
+    .lead-form__row label { display: block; font-size: 0.9rem; font-weight: 600; color: var(--mp-text); }
+    .lead-form__row label input { margin-top: 6px; }
+    .field-error {
+      display: block; margin-top: 6px;
+      color: #b3261e; font-size: 0.85rem; line-height: 1.35;
+    }
+    .field-error[hidden] { display: none; }
+    .lead-form__row label.is-error input,
+    .lead-form input.is-error {
+      border-color: #b3261e;
+      box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.12);
+    }
+    .lead-form__agree.is-error span { color: #b3261e; }
+    .lead-form.is-sent .field-error { display: none; }
+    .lead-form.is-sent .lead-form__agree { display: none; }
+
+    /* --- первый экран: H2 «помощь + гео» — самая доходная формулировка страницы (ТЗ 2.3),
+       поэтому она подаётся крупно, сразу под H1, а не служебной подписью --- */
+    .hero__h2 {
+      margin: 10px 0 0; max-width: 44rem;
+      font-size: 1.28rem; line-height: 1.35; font-weight: 600;
+      letter-spacing: -0.01em; color: #ffffff; opacity: 0.96;
+    }
+    @media (min-width: 900px) { .hero__h2 { font-size: 1.5rem; } }
+    /* запрос РОПу внутри факта первого экрана не должен ломать полосу из трёх фактов */
+    .hero__facts .req { display: block; margin-top: 6px; max-width: 26rem; }
+
+    /* --- блок 7: навигатор «Что выбрать» над таблицей прайса (ТЗ 3.3) --- */
+    .panel--navigator { margin-bottom: 16px; }
+    .panel--navigator ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+    .panel--navigator li { font-size: 0.97rem; }
+
+    /* --- блок 16: правовой дисклеймер перед подвалом, приглушённо и мелко (ТЗ 3.3) --- */
+    .disclaimer {
+      margin: 0; padding: 18px 20px;
+      background: var(--mp-white); border: 1px solid var(--mp-border);
+      border-radius: var(--mp-radius-sm);
+      color: var(--mp-muted); font-size: 0.9rem; line-height: 1.6;
+    }
+
+    /* --- пять шагов в ряд на десктопе, чтобы пятый не оставался один в новой строке --- */
+    @media (min-width: 1000px) {
+      .steps { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    }
+    /* --- длинные перечни в две колонки на широком экране --- */
+    @media (min-width: 820px) {
+      .checklist--two { grid-template-columns: 1fr 1fr; }
+    }
+    /* Внутри половинной панели и панели гарантий две колонки эталона рвут строки с запросом
+       РОПу на 5–6 обрывков — поймано на фрагментах блоков 6 и 11, ставим одну колонку. */
+    .duo .checklist, .guarantee .checklist { grid-template-columns: 1fr; }
+
+    /* --- первый экран: три факта одной полосой, как задано ТЗ 3.3 --- */
+    @media (min-width: 900px) {
+      .hero__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
+    }
+
+    /* --- блок 7: колонка «Цена» по правому краю (ТЗ 3.3) --- */
+    .ptable:not(.ptable--compare) th:last-child, .ptable td.price { text-align: right; }
+    /* --- блок 11: колонка «С нами» выделена фоном (ТЗ 3.3) --- */
+    .ptable--compare td:last-child { background: #f5f9ff; }
+
+    /* --- C1: на узком экране таблицы становятся карточками, бокового скролла нет --- */
+    @media (max-width: 660px) {
+      .ptable-wrap { border: none; background: transparent; overflow: visible; }
+      .ptable { min-width: 0; display: block; }
+      .ptable thead { display: none; }
+      .ptable tbody, .ptable tr, .ptable td { display: block; width: auto; }
+      .ptable tr {
+        background: var(--mp-white);
+        border: 1px solid var(--mp-border);
+        border-radius: var(--mp-radius-sm);
+        margin-bottom: 12px; padding: 6px 0;
+      }
+      .ptable td { border-bottom: none; padding: 8px 16px; }
+      .ptable td::before {
+        content: attr(data-label);
+        display: block; margin-bottom: 3px;
+        font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+        letter-spacing: 0.04em; color: var(--mp-primary);
+      }
+      .ptable td:first-child { font-size: 1.02rem; }
+      /* название позиции говорит за себя — подпись «что делаем» над ним лишняя */
+      .ptable td:first-child::before { display: none; }
+      /* ТЗ 3.1: в карточке прайса цена — самый крупный элемент */
+      .ptable td.price { font-size: 1.4rem; text-align: left; padding-top: 2px; }
+      .ptable--compare td.price { font-size: inherit; }
+    }
+
+    /* --- C9: блоки на данных РОПа в двух состояниях --- */
+    body.bez-dannyh [data-dannye] { display: none; }
+    body.bez-dannyh [data-pusto] { display: block; }
+    [data-tumbler-dannyh] { white-space: normal; text-align: left; min-height: 44px; }
   </style>
   <style>
     .req{display:inline-block;background:#fff3bf;color:#7a4b00;border:1px solid #f0c000;
@@ -773,7 +998,7 @@
          padding:10px 16px;font-size:15px;text-align:center}
   </style>
 </head>
-<body><div class="kontrol-bar">Контрольная копия. Жёлтым отмечено то, что ещё требует уточнения — всего пометок: 13. Чистая версия для передачи подрядчику — без суффикса -kontrol в адресе.</div>
+<body><div class="kontrol-bar">Контрольная копия. Жёлтым отмечено то, что ещё требует уточнения — всего пометок: 20. Чистая версия для передачи подрядчику — без суффикса -kontrol в адресе.</div>
 <header class="site-header">
     <div class="header-top">
       <div class="wrap header-top__inner">
@@ -834,144 +1059,215 @@
 <main>
 <section class="hero">
   <div class="wrap">
-    <h1>Разрешение на работу в России для иностранных граждан</h1>
-    <p class="hero__lead">Разрешение нужно иностранцу, который приехал по визе. Для безвизового въезда действует патент — подскажем, что подходит в вашем случае.</p>
+    <h1>Оформление иностранных сотрудников для компаний</h1>
+    <p class="hero__lead">ВКС, визовый персонал по квоте и порядок в документах тех, кто уже работает. Москва и Московская область, дистанционно — по всей России.</p>
+    <p>Первый шаг — бесплатная консультация: разберём вашу ситуацию, назовём список документов, срок и стоимость до начала работы.</p>
     <a class="btn btn--primary" href="#zayavka" data-modal="zayavka">Получить бесплатную консультацию</a>
+    <ul class="checklist checklist--inline">
+      <li>более 10 лет работы</li><li>6 000+ оформлений</li><li>средний опыт специалиста 8 лет</li><li>рейтинг 4,9 на Яндекс.Картах</li>
+    </ul>
+    <p class="hero__note">Работаете сами и ищете разрешение или патент для себя? Этот документ оформляет работодатель — что делать вам, написано в разборе: <a href="/blog/rnr/kak-inostrancu-poluchit-razreshenie-na-rabotu">как иностранцу получить разрешение на работу</a>.</p>
   </div>
 </section>
-<section class="block" id="blok-3">
+
+<section class="block" id="polosy">
   <div class="wrap">
-    <h2>Кому нужно разрешение на работу, а кому патент</h2>
-    <table class="duo">
-<thead><tr><th>Ваша ситуация</th><th>Что оформляем</th></tr></thead>
-<tbody>
-<tr><td>Приехали по визе</td><td>Разрешение на работу</td></tr>
-<tr><td>Высококвалифицированный специалист</td><td>Разрешение для ВКС</td></tr>
-<tr><td>Безвизовый въезд (Узбекистан, Таджикистан и другие)</td><td>Патент на работу</td></tr>
-<tr><td>Гражданин страны ЕАЭС</td><td>Ничего: достаточно трудового договора</td></tr>
-<tr><td>Есть РВП или ВНЖ</td><td>Разрешение не требуется</td></tr>
-</tbody></table>
-<p class="req">[REQ] Перечень оснований и исключений — на вычитку юристу (волна П плана работ).</p>
+    <h2>Три задачи компании — три сценария работы</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Ценный специалист</p>
+          <h3 class="card__title">Статус ВКС</h3>
+          <p class="card__excerpt"><strong>Кому:</strong> Компания нанимает высококвалифицированного специалиста</p>
+          <p class="card__excerpt">Оформляем статус ВКС и разрешение на работу: ходатайство, квотное исключение, уведомления, постановка на учёт</p>
+          <p class="card__meta">от 54 000 ₽<span class="card__dot">·</span>срок 2 месяца</p>
+          <p class="req">[REQ: подтвердить цену ВКС 54 000 ₽ и срок 2 месяца — заказчик]</p>
+          <a class="btn btn--secondary" href="#zayavka" data-modal="zayavka">Разобрать мою ситуацию</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Персонал из-за рубежа</p>
+          <h3 class="card__title">Подбор и ввоз работников</h3>
+          <p class="card__excerpt"><strong>Кому:</strong> Нужны сотрудники из визовых стран под конкретный заказ</p>
+          <p class="card__excerpt">Ведём цепочку целиком: подбор в стране исхода, квота, разрешение на привлечение, приглашение, виза, разрешение на работу, учёт. Страны подбора: Индия, Вьетнам, Бангладеш. Минимального объёма нет</p>
+          <p class="card__meta">внеквотная должность от 74 000 ₽<span class="card__dot">·</span>срок 3 месяца</p>
+          <p class="req">[REQ: подтвердить цену внеквотной должности 74 000 ₽ и срок 3 месяца — заказчик]</p>
+          <a class="btn btn--secondary" href="#zayavka" data-modal="zayavka">Разобрать мою ситуацию</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Уже в штате</p>
+          <h3 class="card__title">Порядок в документах работающих</h3>
+          <p class="card__excerpt"><strong>Кому:</strong> Иностранцы уже работают, нужно не получить штраф</p>
+          <p class="card__excerpt">Проверяем документы и сроки, готовим уведомления в МВД, ведём учёт по каждому сотруднику. Первичный аудит до пяти сотрудников — бесплатно</p>
+          <p class="card__meta">аудит сотрудника 3 000 ₽ · аудит предприятия от 20 000 ₽ · уведомление 5 000 ₽ · мониторинг 1 500 ₽/мес · комплекс 6 500 ₽/мес<span class="card__dot">·</span>срок от 3 рабочих дней</p>
+          
+          <a class="btn btn--secondary" href="#zayavka" data-modal="zayavka">Разобрать мою ситуацию</a>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
-<section class="block" id="blok-4">
+
+<section class="block" id="vhod">
   <div class="wrap">
-    <h2>Бесплатная консультация: что вы получите</h2>
-    <ul class="checklist">
-<li>Проверим, нужно ли вам разрешение или достаточно патента</li>
-<li>Назовём перечень документов под вашу ситуацию</li>
-<li>Скажем срок и стоимость до начала работы</li>
-</ul>
-<p>Если оформление не требуется — так и скажем.</p>
+    <h2>Бесплатная консультация и материалы для входа</h2>
+    <div class="duo">
+      <div>
+        <h3>Чек-лист для тех, у кого иностранцы уже работают</h3>
+        <p>Что проверить у сотрудника до проверки МВД: документы, сроки, уведомления.</p>
+        <p class="req">[REQ: файл чек-листа «что проверить у иностранного сотрудника» — заказчик]</p>
+        <a class="btn btn--secondary" href="#zayavka" data-modal="zayavka">Получить чек-лист</a>
+      </div>
+      <div>
+        <h3>Структура сметы на ввоз персонала</h3>
+        <p>Из чего складывается стоимость: пошлины, медосвидетельствование, переводы, ДМС, перелёт, наша работа. Итог считаем под ваш заказ.</p>
+        <a class="btn btn--secondary" href="#zayavka" data-modal="zayavka">Запросить смету</a>
+      </div>
+    </div>
   </div>
 </section>
-<section class="block" id="blok-5">
+
+<section class="block" id="format">
   <div class="wrap">
-    <h2>Как проходит оформление</h2>
+    <h2>Как проходит работа</h2>
     <ol class="steps">
-<li>Заявка и бесплатная консультация</li>
-<li>Проверка основания и документов</li>
-<li>Подготовка пакета и запись на подачу</li>
-<li>Подача в ММЦ Сахарово и контроль рассмотрения</li>
-<li>Получение разрешения и уведомление работодателя</li>
-</ol>
-<p class="req">[REQ] Сроки этапов в рабочих днях — после ответов юриста.</p>
+      <li><strong>Заявка и бесплатная консультация.</strong> Разбираем ситуацию, называем основание и состав работ</li>
+      <li><strong>Коммерческое предложение.</strong> Цена, срок, что нужно от компании</li>
+      <li><strong>Договор.</strong> Обязательства сторон, в том числе условия замены работника</li>
+      <li><strong>Работа с документами.</strong> Пакет, подача, контроль рассмотрения, уведомления</li>
+      <li><strong>Результат.</strong> Документы на руках, сотрудник поставлен на учёт</li>
+    </ol>
+    <p class="req">[REQ: есть ли персональный менеджер у B2B-клиента и как он называется — РОП]</p>
   </div>
 </section>
-<section class="block" id="blok-6">
+
+<section class="block" id="sostav">
   <div class="wrap">
     <h2>Что входит в услугу и что оплачивается отдельно</h2>
     <div class="duo">
-<div><h3>Входит</h3><ul><li>Проверка основания</li><li>Комплектование пакета</li><li>Заполнение заявления</li><li>Запись на подачу</li><li>Сопровождение на подаче</li><li>Контроль решения</li><li>Уведомление работодателя</li></ul></div>
-<div><h3>Оплачивается отдельно</h3><ul><li>Государственная пошлина</li><li>Медицинские справки</li><li>Сертификат о знании русского языка</li><li>Нотариальные переводы</li></ul></div>
-</div>
+      <div><h3>Входит</h3><ul><li>Анализ основания и рисков</li><li>Комплектование пакета</li><li>Заявления и ходатайства</li><li>Запись и подача</li><li>Контроль рассмотрения</li><li>Уведомления в МВД</li></ul></div>
+      <div><h3>Оплачивается отдельно</h3><ul><li>Государственные пошлины</li><li>Медицинское освидетельствование и дактилоскопия</li><li>Полис ДМС</li><li>Переводы и нотариальное заверение</li><li>Перелёт и размещение при ввозе персонала</li></ul></div>
+    </div>
   </div>
 </section>
-<section class="block" id="blok-7">
+
+<section class="block" id="ceny">
   <div class="wrap">
-    <h2>Стоимость</h2>
+    <h2>Цены</h2>
     <table class="duo">
-<thead><tr><th>Услуга</th><th>Цена</th></tr></thead>
-<tbody>
-<tr><td>Разрешение на работу под ключ</td><td>[REQ] цена — запрос заказчику</td></tr>
-<tr><td>Разрешение для ВКС</td><td>[REQ] цена — запрос заказчику</td></tr>
-<tr><td>Государственная пошлина</td><td>по статье 333.28 Налогового кодекса</td></tr>
-</tbody></table>
+      <thead><tr><th>Услуга</th><th>Цена</th><th>Срок</th></tr></thead>
+      <tbody>
+        <tr><td>Статус ВКС и разрешение на работу</td><td>от 54 000 ₽</td><td>2 месяца</td></tr>
+        <tr><td>Внеквотная должность: подбор и ввоз</td><td>от 74 000 ₽</td><td>3 месяца</td></tr>
+        <tr><td>Аудит по одному сотруднику</td><td>3 000 ₽</td><td>1–2 дня</td></tr>
+        <tr><td>Полный аудит предприятия</td><td>от 20 000 ₽</td><td>от 5 дней</td></tr>
+        <tr><td>Уведомление в МВД</td><td>5 000 ₽</td><td>1 день</td></tr>
+        <tr><td>Мониторинг сроков</td><td>1 500 ₽ за сотрудника в месяц</td><td>—</td></tr>
+        <tr><td>Комплексное сопровождение</td><td>6 500 ₽ за сотрудника в месяц</td><td>—</td></tr>
+        <tr><td>Государственные пошлины</td><td class="req">[REQ: размеры госпошлин 2026 с реквизитом нормы — юрист]</td><td>—</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
-<section class="block" id="blok-8">
+
+<section class="block" id="otrasli">
   <div class="wrap">
-    <h2>Где подают документы и как записаться</h2>
-    <p>ММЦ Сахарово: Варшавское шоссе, 64-й километр, дом 1, строение 47. Только по предварительной записи; вход № 5 работает ежедневно 08:00–20:00.</p>
-<p>Представительство: 1-й Красногвардейский проезд, дом 21, строение 1, Пн–Пт 09:00–18:00. Источник — официальный сайт mc.mos.ru.</p>
+    <h2>Кому это обычно нужно</h2>
+    <p>Строительство и отделка · клининг · склады и логистика · производство · общепит и гостиницы · ЖКХ · ритейл и доставка · сельское хозяйство · транспорт.</p>
   </div>
 </section>
-<section class="block" id="blok-9">
+
+<section class="block" id="sroki">
   <div class="wrap">
-    <h2>Срок решения и как узнать готовность</h2>
-    <p class="req">[REQ] Срок рассмотрения и способ проверки готовности — после ответов юриста.</p>
+    <h2>Срок решения и готовность</h2>
+    <p>Сроки по сценариям A и B выше; на них влияют квотная кампания, сроки рассмотрения в МВД и готовность документов на стороне компании.</p>
+    <p class="req">[REQ: срок подготовки пакета по полосам A и B — РОП]</p>
+    <p class="req">[REQ: порог зарплаты ВКС и льготные категории на текущую дату — юрист]</p>
   </div>
 </section>
-<section class="block" id="blok-10">
+
+<section class="block" id="garantii">
   <div class="wrap">
-    <h2>Если отказали, аннулировали или вы попали в реестр контролируемых лиц</h2>
-    <p class="req">[REQ] Формулировки об отказе, аннулировании и реестре контролируемых лиц — на вычитку юристу. Механизм реестра ограничивает право работать, и работодатель проверяет сотрудника по нему.</p>
-<p><a href="/blog/rnr/annulirovali-razreshenie-na-rabotu">Что делать, если разрешение на работу аннулировали</a></p>
+    <h2>Если основание не подошло или отказали</h2>
+    <ul class="checklist">
+      <li>Не подошло выбранное основание — подбираем другой законный путь и ведём его без доплаты за повторный анализ</li>
+      <li>Отказ по формальным основаниям — дорабатываем пакет и подаём повторно за наш счёт</li>
+      <li>По заказам на подбор действует испытательный срок 30 дней: если работник не справляется, заменяем</li>
+    </ul>
+    <p>Решение по документам принимают государственные органы, поэтому результат не гарантируется. Компания отвечает за подготовку своих документов и сроки своей работы.</p>
+    <p class="req">[REQ: что считается формальным основанием отказа и условия замены работника — юрист]</p>
+    <h3>Реестр контролируемых лиц</h3>
+    <p class="req">[REQ: формулировка о реестре контролируемых лиц и проверке сотрудника работодателем — юрист]</p>
   </div>
 </section>
-<section class="block" id="blok-11">
+
+<section class="block" id="sami">
   <div class="wrap">
-    <h2>Самостоятельно или с юристом</h2>
+    <h2>Что компания может сделать сама</h2>
     <div class="duo">
-<div><h3>Можно сделать самому</h3><ul><li>Записаться на подачу</li><li>Оплатить пошлину</li><li>Пройти медосмотр и получить справки</li></ul></div>
-<div><h3>Где ошибка стоит дорого</h3><ul><li>Выбор основания</li><li>Заполнение заявления</li><li>Сроки уведомлений работодателя</li></ul></div>
-</div>
+      <div><h3>Своими силами</h3><ul><li>Запись на подачу</li><li>Оплата пошлин</li><li>Сбор справок сотрудником</li></ul></div>
+      <div><h3>Где ошибка стоит дорого</h3><ul><li>Выбор основания</li><li>Квотная заявка и сроки кампании</li><li>Сроки уведомлений в МВД</li><li>Учёт по каждому сотруднику</li></ul></div>
+    </div>
+    <p class="req">[REQ: актуальные суммы штрафов за нарушения при найме иностранцев — юрист]</p>
   </div>
 </section>
-<section class="block" id="blok-12">
+
+<section class="block" id="dokazatelstva">
   <div class="wrap">
-    <h2>Кейсы и отзывы</h2>
-    <p class="req">[REQ] Два кейса — ВКС для компании и легализация уже работающего сотрудника — запрос РОПу: отрасль, срок, результат.</p>
-<div class="reviews-widget">Виджет отзывов организации с Яндекс.Карт</div>
-<p class="req">Слот клиентских отзывов пуст до подтверждения согласий.</p>
+    <h2>Кейс и отзывы</h2>
+    <h3>Статус ВКС для компании</h3>
+    <p><strong>Задача:</strong> оформить статус ВКС ценному специалисту. <strong>Что сделали:</strong> проверили основание, подготовили ходатайство и пакет, подали и провели до решения, поставили сотрудника на учёт. <strong>Результат:</strong> статус оформлен, сотрудник работает легально.</p>
+    <p class="req">[REQ: отрасль компании и срок оформления для кейса ВКС — РОП]</p>
+    <div class="reviews-widget">Виджет отзывов организации с Яндекс.Карт</div>
+    <p>Слот клиентских отзывов остаётся пустым до подтверждения согласий.</p>
   </div>
 </section>
-<section class="block" id="blok-13">
+
+<section class="block" id="faq">
   <div class="wrap">
     <h2>Частые вопросы</h2>
     <div class="faq">
-<details><summary>Чем разрешение на работу отличается от патента</summary><p>Разрешение оформляют иностранцы, приехавшие по визе; патент — приехавшие без визы. Документы, пошлина и порядок продления у них разные.</p></details>
-<details><summary>Нужно ли разрешение гражданину страны ЕАЭС</summary><p>Нет. Гражданам ЕАЭС достаточно трудового договора, отдельное разрешение не требуется.</p></details>
-<details><summary>Сколько действует разрешение на работу</summary><p>[REQ] Срок — после ответов юриста.</p></details>
-<details><summary>Можно ли работать в другом регионе</summary><p>[REQ] Ответ — после ответов юриста.</p></details>
-<details><summary>Что делать при смене работодателя</summary><p>[REQ] Ответ — после ответов юриста.</p></details>
-<details><summary>Нужно ли разрешение при наличии РВП</summary><p>Нет: с РВП и с ВНЖ разрешение на работу не требуется.</p></details>
-</div>
+      <details><summary>Кто оформляет разрешение на работу — компания или сам иностранец</summary><p>Для визового иностранца документы подаёт работодатель: он получает разрешение на привлечение и разрешение на работу. Сам иностранец заявителем не является.</p></details>
+      <details><summary>Нужно ли разрешение гражданам стран ЕАЭС</summary><p class="req">[REQ: нужно ли разрешение на работу гражданам ЕАЭС — юрист]</p></details>
+      <details><summary>Чем ВКС отличается от обычного разрешения на работу</summary><p>Для ВКС действует отдельный порядок: квота не требуется, есть требование к уровню оплаты труда и особые сроки уведомлений.</p></details>
+      <details><summary>Что такое квота и когда она нужна</summary><p>Квота ограничивает число иностранных работников, которых компания может привлечь за год по визовым основаниям. Внеквотные должности оформляются вне этого ограничения.</p></details>
+      <details><summary>Какие уведомления подаёт работодатель</summary><p class="req">[REQ: состав и сроки уведомлений работодателя — юрист]</p></details>
+      <details><summary>Что проверяют при проверке МВД</summary><p class="req">[REQ: перечень проверяемого и суммы штрафов — юрист]</p></details>
+    </div>
   </div>
 </section>
-<section class="block" id="blok-14">
+
+<section class="cta-band" id="final">
   <div class="wrap">
-    <h2>Проверим ваше основание бесплатно</h2>
+    <h2>Разберём вашу ситуацию бесплатно</h2>
+    <p>Назовём основание, состав работ, срок и стоимость. Без обязательств.</p>
     <a class="btn btn--primary" href="#zayavka" data-modal="zayavka">Получить бесплатную консультацию</a>
   </div>
 </section>
-<section class="block" id="blok-15">
+
+<section class="block" id="svyazannoe">
   <div class="wrap">
     <h2>Статьи и услуги по теме</h2>
     <ul class="checklist">
-<li><a href="/blog/rnr/kak-inostrancu-poluchit-razreshenie-na-rabotu">Как иностранцу получить разрешение на работу</a></li>
-<li><a href="/blog/rnr/rnr-dlya-vks">Разрешение на работу для ВКС</a></li>
-<li><a href="/blog/rnr/patent-na-rabotu">Патент на работу: стоимость и правила</a></li>
-<li><a href="/blog/rnr/naym-inostrannogo-rabotnika">Наём иностранного работника: договор и уведомления</a></li>
-<li><a href="/blog/rnr/razreshenie-na-rabotu-dokumenty">Документы для разрешения на работу</a></li>
-<li><a href="/blog/rnr">Все статьи о разрешении на работу</a></li>
-</ul>
+      <li><a href="/blog/rnr/kak-inostrancu-poluchit-razreshenie-na-rabotu">Как иностранцу получить разрешение на работу</a></li>
+      <li><a href="/blog/rnr/rnr-dlya-vks">Разрешение на работу для ВКС</a></li>
+      <li><a href="/blog/rnr/patent-na-rabotu-vs-rnr">Патент или разрешение на работу</a></li>
+      <li><a href="/blog/rnr/naym-inostrannogo-rabotnika">Наём иностранного работника: договор и уведомления</a></li>
+      <li><a href="/blog/rnr/priem-na-rabotu-inostranca-s-rvp">Приём на работу иностранца с РВП</a></li>
+      <li><a href="/blog/rnr">Все статьи о разрешении на работу</a></li>
+    </ul>
   </div>
 </section>
-<section class="block" id="blok-16">
+
+<section class="block" id="pravovoe">
   <div class="wrap">
-    <h2>Правовая информация</h2>
-    <p class="legal">Материал носит справочный характер. Итоговый перечень документов и срок зависят от вашей ситуации и действующих правил на дату подачи.</p>
+    <h2>Реквизиты и правовая информация</h2>
+    <p class="req">[REQ: реквизиты юридического лица для подвала — заказчик]</p>
+    <p class="req">[REQ: адреса политики обработки персональных данных и согласия — заказчик]</p>
+    <p class="legal">Материал носит справочный характер. Перечень документов, срок и стоимость зависят от ситуации компании и правил на дату подачи.</p>
   </div>
 </section>
 </main>

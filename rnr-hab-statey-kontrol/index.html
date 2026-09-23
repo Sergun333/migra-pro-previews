@@ -764,7 +764,238 @@
     body.is-locked { overflow: hidden; }
 
     .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-  
+
+/* Дополнения для /rnr */
+    .nav-link.is-active { color: var(--mp-primary); position: relative; }
+    .nav-link.is-active::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 2px; background: var(--mp-accent); border-radius: 2px; }
+
+    /* H1 в три строки: 24ch держит перенос «Разрешение на работу и / ввоз иностранных / сотрудников для компаний» */
+    .hero h1 { max-width: 24ch; }
+
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.22); }
+    .hero__facts div { display: flex; flex-direction: column; }
+    .hero__facts strong { font-size: 1.15rem; letter-spacing: -0.02em; }
+    .hero__facts span { font-size: 0.85rem; opacity: 0.85; }
+
+    .divert { background: var(--mp-primary-light); border-bottom: 1px solid var(--mp-border); padding: 14px 0; }
+    .divert__inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-size: 0.95rem; color: var(--mp-muted); }
+    .divert__inner strong { color: var(--mp-text); font-weight: 600; }
+    .divert__inner a { font-weight: 700; }
+
+    .panel { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .panel h3 { margin: 0 0 12px; font-size: 1.05rem; }
+    .panel ul { margin: 0; padding-left: 20px; color: var(--mp-muted); }
+    .panel ul li { margin-bottom: 7px; }
+    .panel ul li:last-child { margin-bottom: 0; }
+    .duo { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 800px) { .duo { grid-template-columns: 1fr 1fr; } }
+
+    .facts-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .facts-row div { background: var(--mp-primary-light); border-radius: 10px; padding: 12px 16px; font-size: 0.92rem; }
+    .facts-row strong { display: block; font-size: 1.08rem; color: var(--mp-primary); }
+
+    .block-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; align-items: center; }
+    .block-actions span { color: var(--mp-muted); font-size: 0.9rem; }
+
+    .checklist { display: grid; gap: 10px 24px; grid-template-columns: 1fr; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 760px) { .checklist { grid-template-columns: 1fr 1fr; } }
+    .checklist li { position: relative; padding-left: 28px; color: var(--mp-text); font-size: 0.97rem; }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 20px; height: 20px; border-radius: 50%; background: #e8f6ed; color: #2f9e5b; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    .risk { margin-top: 20px; padding: 18px 20px; border-left: 4px solid var(--mp-accent); background: #fff5f5; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; font-size: 0.95rem; }
+    .risk strong { color: var(--mp-accent); }
+
+    .ptable-wrap { overflow-x: auto; border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); background: var(--mp-white); }
+    .ptable { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 0.95rem; }
+    .ptable th, .ptable td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--mp-border); vertical-align: top; }
+    .ptable thead th { background: var(--mp-primary-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mp-primary); }
+    .ptable tbody tr:last-child td { border-bottom: none; }
+    .ptable td:first-child { font-weight: 600; }
+    .ptable td small { display: block; color: var(--mp-muted); font-weight: 400; font-size: 0.86rem; margin-top: 3px; }
+    .ptable td.price { white-space: nowrap; font-weight: 700; color: var(--mp-primary); }
+
+    .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mp-primary); background: var(--mp-primary-light); border-radius: 999px; padding: 5px 12px; margin-bottom: 12px; }
+    .why { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .why { grid-template-columns: repeat(3, 1fr); } }
+    .why div { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 22px; }
+    .why strong { display: block; margin-bottom: 6px; }
+    .why span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .industries { margin: -12px 0 22px; color: var(--mp-muted); font-size: 0.95rem; line-height: 1.5; }
+    .industries span { color: var(--mp-text); font-weight: 600; }
+
+    .magnet { margin-top: 16px; display: grid; gap: 14px; align-items: center; background: var(--mp-white); border: 1px dashed var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    @media (min-width: 800px) { .magnet { grid-template-columns: 1fr auto; gap: 24px; } }
+    .magnet strong { display: block; margin-bottom: 5px; }
+    .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .calendar { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-top: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .calendar h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .calendar > p { margin: 0 0 16px; color: var(--mp-muted); font-size: 0.95rem; }
+    .calendar .panel { background: var(--mp-primary-light); border-color: transparent; }
+    .calendar__note { margin: 16px 0 0 !important; }
+
+    .quiz { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 28px; box-shadow: var(--mp-shadow); max-width: 44rem; }
+    .quiz__step strong, .quiz__result strong { display: block; margin-bottom: 16px; font-size: 1.05rem; }
+    .quiz__opts { display: grid; gap: 10px; }
+    .quiz__opts button { text-align: left; padding: 16px 18px; border-radius: var(--mp-radius-sm); border: 1px solid var(--mp-border); background: var(--mp-white); font: inherit; font-size: 0.98rem; cursor: pointer; transition: 0.15s ease; }
+    .quiz__opts button:hover { border-color: var(--mp-primary); background: var(--mp-primary-light); }
+    .quiz__result p { margin: 0 0 18px; color: var(--mp-text); }
+    .quiz__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .quiz__note { margin: 16px 0 0 !important; color: var(--mp-muted); font-size: 0.88rem; }
+
+    .case { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .case h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .case p { margin: 0 0 10px; color: var(--mp-muted); font-size: 0.95rem; }
+    .case p strong { color: var(--mp-text); }
+    .case details { border-top: 1px solid var(--mp-border); margin-top: 12px; padding-top: 12px; }
+    .case summary { cursor: pointer; font-weight: 700; font-size: 0.95rem; color: var(--mp-primary); list-style: none; }
+    .case summary::-webkit-details-marker { display: none; }
+    .case details p:last-child { margin-bottom: 0; }
+
+    .estimate { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .estimate h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .estimate .checklist li { padding-left: 30px; margin-bottom: 6px; }
+    .estimate > p { margin: 16px 0 18px; color: var(--mp-muted); font-size: 0.95rem; }
+
+    .guarantee { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid #2f9e5b; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .guarantee h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .guarantee .checklist li { padding-left: 30px; margin-bottom: 4px; }
+    .guarantee .checklist li strong { color: var(--mp-text); }
+    .guarantee > p { margin: 16px 0 0; color: var(--mp-muted); font-size: 0.93rem; }
+
+/* ——— Общее для секций хаба ——— */
+    .section__head { margin: 0 0 24px; }
+    .section__head h2 { font-size: clamp(24px, 2.8vw, 32px); line-height: 1.2; margin: 0 0 10px; }
+    .section__head p { margin: 0; font-size: 17px; color: var(--mp-muted); max-width: 72ch; }
+    .section__head--tight { margin-bottom: 18px; }
+    .crumbs { font-size: 14px; color: var(--mp-muted); margin: 0 0 18px; }
+    .crumbs a { color: var(--mp-muted); text-decoration: none; }
+    .crumbs a:hover { color: var(--mp-primary); }
+    .ico { width: 20px; height: 20px; flex: 0 0 20px; }
+
+    /* ——— Шапка рубрики: заголовок и лид слева, опора доверия справа ——— */
+    .hub-head { padding: 28px 0 8px; }
+    .hub-head__grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 48px; align-items: start; }
+    .hub-kicker { margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: .08em;
+                  text-transform: uppercase; color: var(--mp-primary); }
+    .hub-head h1 { font-size: clamp(30px, 4.4vw, 44px); line-height: 1.15; margin: 0 0 18px;
+                   letter-spacing: -0.02em; }
+    .hub-lead p { font-size: 18px; line-height: 1.65; margin: 0 0 14px; color: var(--mp-text); }
+    .hub-lead p:last-child { margin-bottom: 0; }
+    .hub-lead a { color: var(--mp-primary); font-weight: 600; text-decoration: none;
+                  border-bottom: 1px solid rgba(26, 79, 176, .35); }
+    .hub-lead a:hover { border-bottom-color: var(--mp-primary); }
+    .hub-head__aside { background: var(--mp-bg); border: 1px solid var(--mp-border);
+                       border-radius: var(--mp-radius); padding: 22px 24px; }
+    .hub-stat { display: flex; align-items: baseline; gap: 10px; padding-bottom: 16px;
+                margin-bottom: 16px; border-bottom: 1px solid var(--mp-border); }
+    .hub-stat__num { font-size: 40px; font-weight: 800; line-height: 1; color: var(--mp-primary);
+                     letter-spacing: -0.03em; }
+    .hub-stat__label { font-size: 15px; color: var(--mp-muted); }
+    .hub-facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+    .hub-facts li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px;
+                    line-height: 1.5; color: var(--mp-text); }
+    .hub-facts .ico { color: var(--mp-primary); margin-top: 1px; }
+
+    /* ——— Маршрут «С чего начать»: то, чего листинг карточек не делает ——— */
+    .hub-route { padding: 40px 0 8px; }
+    .route { list-style: none; margin: 0; padding: 0;
+             display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; counter-reset: none; }
+    .route__item { display: flex; gap: 16px; align-items: flex-start;
+                   background: var(--mp-white); border: 1px solid var(--mp-border);
+                   border-radius: var(--mp-radius-sm); padding: 16px 18px;
+                   transition: border-color .15s, box-shadow .15s; }
+    .route__item:hover { border-color: var(--mp-primary); box-shadow: var(--mp-shadow); }
+    .route__num { width: 32px; height: 32px; flex: 0 0 32px; border-radius: 50%;
+                  background: var(--mp-primary-light); color: var(--mp-primary);
+                  display: grid; place-items: center; font-weight: 700; font-size: 15px; }
+    .route__body { min-width: 0; }
+    .route__step { margin: 0 0 4px; font-weight: 700; font-size: 15px; letter-spacing: -0.01em; }
+    .route__text { margin: 0; font-size: 15px; line-height: 1.55; color: var(--mp-muted); }
+    .route__text a { color: var(--mp-primary); font-weight: 600; text-decoration: none;
+                     border-bottom: 1px solid rgba(26, 79, 176, .35); }
+    .route__text a:hover { border-bottom-color: var(--mp-primary); }
+    .route__item:last-child { border-left: 3px solid var(--mp-accent); }
+
+    /* ——— Листинг: переключатель рубрик и сетка карточек ——— */
+    .hub-list { padding: 40px 0 8px; }
+    .hub-toolbar { border-top: 1px solid var(--mp-border); padding-top: 20px; margin-bottom: 28px; }
+    .hub-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .hub-tab { display: inline-flex; align-items: center; padding: 9px 16px;
+               border: 1px solid var(--mp-border); border-radius: 999px;
+               font-size: 15px; font-weight: 600; text-decoration: none;
+               color: var(--mp-text); background: var(--mp-white); }
+    .hub-tab:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+    .hub-tab.is-active { background: var(--mp-primary); border-color: var(--mp-primary); color: #fff; }
+    .hub-tab--all { color: var(--mp-muted); }
+    .hub-toolbar__note { margin: 12px 0 0; font-size: 14px; color: var(--mp-muted); }
+    .hub-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .card { background: var(--mp-white); border: 1px solid var(--mp-border);
+            border-radius: var(--mp-radius); overflow: hidden;
+            transition: border-color .15s, box-shadow .15s, transform .15s; }
+    .card:hover { border-color: var(--mp-primary); box-shadow: var(--mp-shadow); transform: translateY(-2px); }
+    .card__body { padding: 20px 22px 22px; }
+    .card__tag { display: inline-block; margin: 0 0 10px; padding: 4px 10px;
+                 background: var(--mp-accent); color: #fff; border-radius: 999px;
+                 font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .card__title { margin: 0 0 10px; font-size: 18px; line-height: 1.35; letter-spacing: -0.01em; }
+    .card__title a { color: var(--mp-text); text-decoration: none; }
+    .card__title a:hover { color: var(--mp-primary); }
+    .card__excerpt { margin: 0 0 14px; font-size: 15px; line-height: 1.55; color: var(--mp-muted); }
+    .card__meta { margin: 0; font-size: 13px; color: var(--mp-muted);
+                  display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .card__dot { opacity: .5; }
+    /* Первая карточка занимает две колонки: у рубрики есть обзорный материал,
+       с которого читателю выгоднее начинать. */
+    .card--featured { grid-column: span 2; background: var(--mp-primary-light); border-color: #cfe0f2; }
+    .card--featured .card__title { font-size: 24px; line-height: 1.25; }
+    .card--featured .card__excerpt { font-size: 16px; color: var(--mp-text); }
+    .hub-order-note { margin: 20px 0 0; font-size: 14px; color: var(--mp-muted); }
+
+    /* ——— Точка захвата рубрики: одна, в конце листинга ——— */
+    .hub-capture { padding: 44px 0 56px; }
+    .hub-capture__grid { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 40px;
+                         align-items: start; background: var(--mp-bg);
+                         border: 1px solid var(--mp-border); border-radius: var(--mp-radius);
+                         padding: 32px 36px; width: min(100% - 40px, var(--mp-max)); }
+    .hub-capture h2 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.25; margin: 0 0 12px; }
+    .hub-capture__text p { margin: 0 0 16px; font-size: 17px; line-height: 1.6; color: var(--mp-text); }
+    .hub-capture__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .hub-capture__list li { display: flex; gap: 12px; align-items: flex-start;
+                            font-size: 16px; line-height: 1.5; }
+    .hub-capture__list .ico { color: #1e9e57; margin-top: 2px; }
+    .hub-capture__form { background: var(--mp-white); border: 1px solid var(--mp-border);
+                         border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    .hub-capture__note { margin: 10px 0 0; font-size: 13px; color: var(--mp-muted); }
+    .lead-form--inline label { display: block; font-size: 14px; color: var(--mp-muted); }
+    .lead-form__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .lead-form--inline input, .lead-form--inline textarea {
+      width: 100%; margin-top: 4px; padding: 11px 13px; font-family: inherit; font-size: 16px;
+      color: var(--mp-text); background: var(--mp-white);
+      border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); }
+    .lead-form--inline textarea { resize: vertical; }
+    .lead-form--inline input:focus, .lead-form--inline textarea:focus {
+      outline: none; border-color: var(--mp-primary); box-shadow: 0 0 0 3px rgba(26, 79, 176, .12); }
+    .lead-form--inline .btn { width: auto; margin-top: 14px; }
+    .btn--brand { background: var(--mp-primary); color: #fff; }
+    .btn--brand:hover { background: var(--mp-primary-dark); }
+
+    @media (max-width: 1080px) {
+      .hub-head__grid { grid-template-columns: 1fr; gap: 28px; }
+      .hub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .card--featured { grid-column: span 2; }
+      .hub-capture__grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 720px) {
+      .route { grid-template-columns: 1fr; }
+      .hub-grid { grid-template-columns: 1fr; }
+      .card--featured { grid-column: span 1; }
+      .card--featured .card__title { font-size: 21px; }
+      .lead-form__pair { grid-template-columns: 1fr; }
+      .hub-capture__grid { padding: 22px 18px; }
+    }
   </style>
   <style>
     .req{display:inline-block;background:#fff3bf;color:#7a4b00;border:1px solid #f0c000;
@@ -832,66 +1063,163 @@
     </div>
   </header>
 <main>
-<section class="hero">
+<section class="hub-head">
   <div class="wrap">
     <h1>Разрешение на работу в России: разборы и инструкции</h1>
-    <p class="hero__lead">Разрешение оформляют те, кто приехал по визе; при безвизовом въезде действует патент. Ниже — разборы по шагам, документы и обязанности работодателя.</p>
-    <a class="btn btn--primary" href="#zayavka" data-modal="zayavka">Получить бесплатную консультацию</a>
+    <p class="hub-head__lead">Разрешение оформляют тем, кто приехал по визе; при безвизовом въезде действует патент. Ниже — порядок действий, документы и обязанности работодателя.</p>
+    <p>Нужна помощь с оформлением сотрудников? <a href="/rnr">Оформление иностранных сотрудников для компаний</a> — бесплатная консультация и разбор ситуации.</p>
   </div>
 </section>
-<section class="block">
+
+<section class="hub-route">
   <div class="wrap">
     <h2>С чего начать</h2>
-    <p>Если вы ещё не поняли, что именно вам оформлять.</p>
-    <ul class="checklist">
-<li><a href="/blog/rnr/kak-inostrancu-poluchit-razreshenie-na-rabotu">Как иностранцу получить разрешение на работу</a> — вся процедура по шагам</li>
-<li><a href="/blog/rnr/vse-vidy-razreshenij-na-rabotu">Виды разрешений на работу</a> — чем они различаются</li>
-<li><a href="/blog/rnr/patent-na-rabotu-vs-rnr">Патент или разрешение</a> — что выбрать в вашей ситуации</li>
-<li><a href="/blog/rnr/patent-na-rabotu">Патент на работу</a> — стоимость, срок, продление</li>
-    </ul>
+    <div class="cards">
+      <article class="card card--featured">
+        <div class="card__body">
+          <p class="card__tag">Начните отсюда</p>
+          <h3 class="card__title"><a href="/blog/rnr/kak-inostrancu-poluchit-razreshenie-na-rabotu">Как иностранцу получить разрешение на работу в России</a></h3>
+          <p class="card__excerpt">Кто оформляет документ, какие основания бывают, что собирает работодатель и что сам сотрудник. Порядок по шагам.</p>
+          <p class="card__meta">обзорный разбор направления</p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
-<section class="block">
+
+<section class="hub-list">
   <div class="wrap">
-    <h2>Документы и подача</h2>
-    <p>Что собрать и куда подать.</p>
-    <ul class="checklist">
-<li><a href="/blog/rnr/razreshenie-na-rabotu-dokumenty">Документы для разрешения на работу</a></li>
-<li><a href="/blog/rnr/medosmotr-dlya-rnr">Медосмотр и справки</a></li>
-<li><a href="/blog/rnr/kvoty-na-rnr">Квоты на привлечение иностранцев</a></li>
-<li><a href="/blog/rnr/skolko-stoit-razreshenie-na-rabotu">Сколько стоит разрешение на работу</a></li>
-    </ul>
+    <h2>Все разборы рубрики</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Выбор документа</p>
+          <h3 class="card__title"><a href="/blog/rnr/patent-na-rabotu-vs-rnr">Патент или разрешение на работу: что нужно именно вам</a></h3>
+          <p class="card__excerpt">Чем различаются документы, кому какой положен и что будет при ошибке в выборе.</p>
+          <p class="card__meta">сравнение</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Выбор документа</p>
+          <h3 class="card__title"><a href="/blog/rnr/patent-na-rabotu">Патент на работу: стоимость, срок, продление</a></h3>
+          <p class="card__excerpt">Сколько стоит патент, как продлить и что делать при просрочке платежа.</p>
+          <p class="card__meta">новая статья</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Выбор документа</p>
+          <h3 class="card__title"><a href="/blog/rnr/vse-vidy-razreshenij-na-rabotu">Виды разрешений на работу</a></h3>
+          <p class="card__excerpt">Разрешение, патент, статус ВКС и работа без документов для граждан ЕАЭС.</p>
+          <p class="card__meta">справка</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Документы</p>
+          <h3 class="card__title"><a href="/blog/rnr/razreshenie-na-rabotu-dokumenty">Документы для разрешения на работу</a></h3>
+          <p class="card__excerpt">Полный перечень со стороны работодателя и со стороны сотрудника.</p>
+          <p class="card__meta">перечень</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Документы</p>
+          <h3 class="card__title"><a href="/blog/rnr/medosmotr-dlya-rnr">Медосмотр и справки</a></h3>
+          <p class="card__excerpt">Какие обследования нужны, где их проходят и сколько действует заключение.</p>
+          <p class="card__meta">процедура</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Документы</p>
+          <h3 class="card__title"><a href="/blog/rnr/skolko-stoit-razreshenie-na-rabotu">Сколько стоит разрешение на работу</a></h3>
+          <p class="card__excerpt">Пошлина, обязательные расходы и что оплачивает работодатель.</p>
+          <p class="card__meta">стоимость</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Квота</p>
+          <h3 class="card__title"><a href="/blog/rnr/kvoty-na-rnr">Квоты на привлечение иностранных работников</a></h3>
+          <p class="card__excerpt">Как устроена квотная кампания и какие должности оформляются вне квоты.</p>
+          <p class="card__meta">процедура</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Работодателю</p>
+          <h3 class="card__title"><a href="/blog/rnr/naym-inostrannogo-rabotnika">Наём иностранного работника: договор, уведомления, ответственность</a></h3>
+          <p class="card__excerpt">Что подписать, что отправить в МВД и в какие сроки, чтобы не получить штраф.</p>
+          <p class="card__meta">новая статья</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Работодателю</p>
+          <h3 class="card__title"><a href="/blog/rnr/priem-na-rabotu-inostranca-s-rvp">Приём на работу иностранца с РВП</a></h3>
+          <p class="card__excerpt">Когда разрешение не нужно и какие уведомления всё равно обязательны.</p>
+          <p class="card__meta">процедура</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Работодателю</p>
+          <h3 class="card__title"><a href="/blog/rnr/workin-in-russia-the-new-way">Новые правила работы иностранцев в 2026 году</a></h3>
+          <p class="card__excerpt">Что изменилось для работодателя и сотрудника и к чему готовиться.</p>
+          <p class="card__meta">изменения</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">ВКС</p>
+          <h3 class="card__title"><a href="/blog/rnr/rnr-dlya-vks">Разрешение на работу для ВКС</a></h3>
+          <p class="card__excerpt">Требования к специалисту и работодателю, порядок оформления и уведомления.</p>
+          <p class="card__meta">процедура</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Если что-то не так</p>
+          <h3 class="card__title"><a href="/blog/rnr/annulirovali-razreshenie-na-rabotu">Разрешение на работу аннулировали: что делать</a></h3>
+          <p class="card__excerpt">Основания аннулирования, срок обжалования и как работать дальше.</p>
+          <p class="card__meta">проблема</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Если что-то не так</p>
+          <h3 class="card__title"><a href="/blog/rnr/prodlenie-rnr">Продление разрешения на работу</a></h3>
+          <p class="card__excerpt">Когда подавать, какие документы нужны и что будет при просрочке.</p>
+          <p class="card__meta">процедура</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">Хронология</p>
+          <h3 class="card__title"><a href="/blog/rnr/rnr-dlya-inostrancev-2025">Разрешения на работу по годам: что менялось</a></h3>
+          <p class="card__excerpt">Как менялись правила и суммы, чтобы понимать, какая версия действует сейчас.</p>
+          <p class="card__meta">справка</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__body">
+          <p class="card__tag">In English</p>
+          <h3 class="card__title"><a href="/blog/rnr/what-is-a-work-permit">What is a work permit in Russia</a></h3>
+          <p class="card__excerpt">For foreign specialists and non-resident employers: who applies, documents, terms.</p>
+          <p class="card__meta">англоязычная версия</p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
-<section class="block">
+
+<section class="hub-capture">
   <div class="wrap">
-    <h2>Работодателю</h2>
-    <p>Что обязана сделать компания, которая нанимает иностранца.</p>
-    <ul class="checklist">
-<li><a href="/blog/rnr/naym-inostrannogo-rabotnika">Наём иностранного работника</a> — договор, уведомления, ответственность</li>
-<li><a href="/blog/rnr/priem-na-rabotu-inostranca-s-rvp">Приём на работу иностранца с РВП</a></li>
-<li><a href="/blog/rnr/workin-in-russia-the-new-way">Новые правила работы в России в 2026 году</a></li>
-    </ul>
-  </div>
-</section>
-<section class="block">
-  <div class="wrap">
-    <h2>Если что-то пошло не так</h2>
-    <p>Отказ, аннулирование, истекающий срок.</p>
-    <ul class="checklist">
-<li><a href="/blog/rnr/annulirovali-razreshenie-na-rabotu">Разрешение аннулировали: что делать</a></li>
-<li><a href="/blog/rnr/prodlenie-rnr">Продление разрешения на работу</a></li>
-<li><a href="/blog/rnr/rnr-dlya-inostrancev-2025">Разрешения на работу по годам: что менялось</a></li>
-    </ul>
-  </div>
-</section>
-<section class="block">
-  <div class="wrap">
-    <h2>На английском</h2>
-    <p>For foreign specialists and non-resident employers.</p>
-    <ul class="checklist">
-<li><a href="/blog/rnr/what-is-a-work-permit">What is a work permit in Russia</a></li>
-    </ul>
+    <h2>Случай не подходит ни под один разбор</h2>
+    <p>Опишите ситуацию — разберём бесплатно и скажем, что оформлять и в каком порядке.</p>
+    <a class="btn btn--primary" href="#zayavka" data-modal="zayavka">Получить бесплатную консультацию</a>
   </div>
 </section>
 </main>

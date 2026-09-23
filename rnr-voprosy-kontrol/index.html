@@ -764,7 +764,227 @@
     body.is-locked { overflow: hidden; }
 
     .ico { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-  
+
+/* Дополнения для /rnr */
+    .nav-link.is-active { color: var(--mp-primary); position: relative; }
+    .nav-link.is-active::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 2px; background: var(--mp-accent); border-radius: 2px; }
+
+    /* H1 в три строки: 24ch держит перенос «Разрешение на работу и / ввоз иностранных / сотрудников для компаний» */
+    .hero h1 { max-width: 24ch; }
+
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__facts { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.22); }
+    .hero__facts div { display: flex; flex-direction: column; }
+    .hero__facts strong { font-size: 1.15rem; letter-spacing: -0.02em; }
+    .hero__facts span { font-size: 0.85rem; opacity: 0.85; }
+
+    .divert { background: var(--mp-primary-light); border-bottom: 1px solid var(--mp-border); padding: 14px 0; }
+    .divert__inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; font-size: 0.95rem; color: var(--mp-muted); }
+    .divert__inner strong { color: var(--mp-text); font-weight: 600; }
+    .divert__inner a { font-weight: 700; }
+
+    .panel { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .panel h3 { margin: 0 0 12px; font-size: 1.05rem; }
+    .panel ul { margin: 0; padding-left: 20px; color: var(--mp-muted); }
+    .panel ul li { margin-bottom: 7px; }
+    .panel ul li:last-child { margin-bottom: 0; }
+    .duo { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 800px) { .duo { grid-template-columns: 1fr 1fr; } }
+
+    .facts-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .facts-row div { background: var(--mp-primary-light); border-radius: 10px; padding: 12px 16px; font-size: 0.92rem; }
+    .facts-row strong { display: block; font-size: 1.08rem; color: var(--mp-primary); }
+
+    .block-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; align-items: center; }
+    .block-actions span { color: var(--mp-muted); font-size: 0.9rem; }
+
+    .checklist { display: grid; gap: 10px 24px; grid-template-columns: 1fr; margin: 0; padding: 0; list-style: none; }
+    @media (min-width: 760px) { .checklist { grid-template-columns: 1fr 1fr; } }
+    .checklist li { position: relative; padding-left: 28px; color: var(--mp-text); font-size: 0.97rem; }
+    .checklist li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 20px; height: 20px; border-radius: 50%; background: #e8f6ed; color: #2f9e5b; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    .risk { margin-top: 20px; padding: 18px 20px; border-left: 4px solid var(--mp-accent); background: #fff5f5; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; font-size: 0.95rem; }
+    .risk strong { color: var(--mp-accent); }
+
+    .ptable-wrap { overflow-x: auto; border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); background: var(--mp-white); }
+    .ptable { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 0.95rem; }
+    .ptable th, .ptable td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--mp-border); vertical-align: top; }
+    .ptable thead th { background: var(--mp-primary-light); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mp-primary); }
+    .ptable tbody tr:last-child td { border-bottom: none; }
+    .ptable td:first-child { font-weight: 600; }
+    .ptable td small { display: block; color: var(--mp-muted); font-weight: 400; font-size: 0.86rem; margin-top: 3px; }
+    .ptable td.price { white-space: nowrap; font-weight: 700; color: var(--mp-primary); }
+
+    .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--mp-primary); background: var(--mp-primary-light); border-radius: 999px; padding: 5px 12px; margin-bottom: 12px; }
+    .why { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 700px) { .why { grid-template-columns: repeat(3, 1fr); } }
+    .why div { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 22px; }
+    .why strong { display: block; margin-bottom: 6px; }
+    .why span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .industries { margin: -12px 0 22px; color: var(--mp-muted); font-size: 0.95rem; line-height: 1.5; }
+    .industries span { color: var(--mp-text); font-weight: 600; }
+
+    .magnet { margin-top: 16px; display: grid; gap: 14px; align-items: center; background: var(--mp-white); border: 1px dashed var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    @media (min-width: 800px) { .magnet { grid-template-columns: 1fr auto; gap: 24px; } }
+    .magnet strong { display: block; margin-bottom: 5px; }
+    .magnet span { color: var(--mp-muted); font-size: 0.94rem; }
+
+    .calendar { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-top: 4px solid var(--mp-primary); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .calendar h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .calendar > p { margin: 0 0 16px; color: var(--mp-muted); font-size: 0.95rem; }
+    .calendar .panel { background: var(--mp-primary-light); border-color: transparent; }
+    .calendar__note { margin: 16px 0 0 !important; }
+
+    .quiz { background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius); padding: 28px; box-shadow: var(--mp-shadow); max-width: 44rem; }
+    .quiz__step strong, .quiz__result strong { display: block; margin-bottom: 16px; font-size: 1.05rem; }
+    .quiz__opts { display: grid; gap: 10px; }
+    .quiz__opts button { text-align: left; padding: 16px 18px; border-radius: var(--mp-radius-sm); border: 1px solid var(--mp-border); background: var(--mp-white); font: inherit; font-size: 0.98rem; cursor: pointer; transition: 0.15s ease; }
+    .quiz__opts button:hover { border-color: var(--mp-primary); background: var(--mp-primary-light); }
+    .quiz__result p { margin: 0 0 18px; color: var(--mp-text); }
+    .quiz__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .quiz__note { margin: 16px 0 0 !important; color: var(--mp-muted); font-size: 0.88rem; }
+
+    .case { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid var(--mp-primary); border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .case h3 { margin: 0 0 12px; font-size: 1.08rem; }
+    .case p { margin: 0 0 10px; color: var(--mp-muted); font-size: 0.95rem; }
+    .case p strong { color: var(--mp-text); }
+    .case details { border-top: 1px solid var(--mp-border); margin-top: 12px; padding-top: 12px; }
+    .case summary { cursor: pointer; font-weight: 700; font-size: 0.95rem; color: var(--mp-primary); list-style: none; }
+    .case summary::-webkit-details-marker { display: none; }
+    .case details p:last-child { margin-bottom: 0; }
+
+    .estimate { margin-top: 20px; background: var(--mp-white); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); padding: 24px; }
+    .estimate h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .estimate .checklist li { padding-left: 30px; margin-bottom: 6px; }
+    .estimate > p { margin: 16px 0 18px; color: var(--mp-muted); font-size: 0.95rem; }
+
+    .guarantee { margin-top: 18px; background: var(--mp-white); border: 1px solid var(--mp-border); border-left: 4px solid #2f9e5b; border-radius: 0 var(--mp-radius-sm) var(--mp-radius-sm) 0; padding: 24px; }
+    .guarantee h3 { margin: 0 0 14px; font-size: 1.08rem; }
+    .guarantee .checklist li { padding-left: 30px; margin-bottom: 4px; }
+    .guarantee .checklist li strong { color: var(--mp-text); }
+    .guarantee > p { margin: 16px 0 0; color: var(--mp-muted); font-size: 0.93rem; }
+
+.crumbs { font-size: 14px; color: var(--mp-muted); margin: 0 0 18px; }
+    .crumbs a { color: var(--mp-muted); text-decoration: none; }
+    .crumbs a:hover { color: var(--mp-primary); }
+    .ico { width: 20px; height: 20px; flex: 0 0 20px; }
+
+    .qa-head { padding: 28px 0 4px; }
+    .qa-head h1 { font-size: clamp(30px, 4.2vw, 42px); line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.02em; }
+    .qa-lead { max-width: 78ch; }
+    .qa-lead p { font-size: 18px; line-height: 1.65; margin: 0 0 12px; }
+    .qa-lead p:last-child { margin-bottom: 0; }
+
+    /* Переключатель разделов и поиск держатся вместе: это панель управления страницей */
+    .qa-nav { padding: 24px 0 8px; position: sticky; top: 0; z-index: 40; background: var(--mp-white); }
+    .qa-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .qa-tab { display: inline-flex; align-items: center; padding: 9px 16px; border: 1px solid var(--mp-border);
+              border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none;
+              color: var(--mp-text); background: var(--mp-white); }
+    .qa-tab:hover { border-color: var(--mp-primary); color: var(--mp-primary); }
+    .qa-tab.is-active { background: var(--mp-primary); border-color: var(--mp-primary); color: #fff; }
+    .qa-finder { margin-top: 16px; padding: 18px 20px; background: var(--mp-bg);
+                 border: 1px solid var(--mp-border); border-radius: var(--mp-radius); }
+    .qa-search { display: flex; align-items: center; gap: 10px; padding: 12px 16px;
+                 background: var(--mp-white); border: 1px solid var(--mp-border);
+                 border-radius: var(--mp-radius-sm); color: var(--mp-muted); }
+    .qa-search:focus-within { border-color: var(--mp-primary); box-shadow: 0 0 0 3px rgba(26, 79, 176, .12); }
+    .qa-search input { flex: 1; border: 0; outline: none; font-family: inherit; font-size: 16px;
+                       color: var(--mp-text); background: transparent; }
+    .qa-found { margin: 10px 0 0; font-size: 14px; color: var(--mp-primary); font-weight: 600; }
+    .qa-toc { list-style: none; margin: 14px 0 0; padding: 0;
+              display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 20px; }
+    .qa-toc a { display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
+                padding: 6px 0; font-size: 15px; color: var(--mp-text); text-decoration: none;
+                border-bottom: 1px solid transparent; }
+    .qa-toc a:hover { color: var(--mp-primary); border-bottom-color: var(--mp-border); }
+    .qa-toc span { font-size: 13px; color: var(--mp-muted); font-variant-numeric: tabular-nums; }
+
+    .qa-body { padding: 24px 0 0; }
+    .qa-group { margin: 0 0 40px; scroll-margin-top: 180px; }
+    .qa-group h2 { display: flex; align-items: baseline; gap: 12px;
+                   font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; margin: 0 0 14px; }
+    .qa-group__count { font-size: 14px; font-weight: 500; color: var(--mp-muted);
+                       background: var(--mp-bg); border-radius: 999px; padding: 3px 10px; }
+    .qa-item { border-bottom: 1px solid var(--mp-border); }
+    .qa-item:first-of-type { border-top: 1px solid var(--mp-border); }
+    .qa-item summary { list-style: none; cursor: pointer; padding: 16px 44px 16px 0; position: relative;
+                       font-size: 17px; font-weight: 600; line-height: 1.45; }
+    .qa-item summary::-webkit-details-marker { display: none; }
+    .qa-item summary::after { content: ""; position: absolute; right: 12px; top: 22px;
+                              width: 10px; height: 10px; border-right: 2px solid var(--mp-primary);
+                              border-bottom: 2px solid var(--mp-primary); transform: rotate(45deg);
+                              transition: transform .15s; }
+    .qa-item[open] summary::after { transform: rotate(225deg); top: 26px; }
+    .qa-item summary:hover { color: var(--mp-primary); }
+    .qa-answer { padding: 0 44px 18px 0; }
+    .qa-answer p { margin: 0 0 10px; font-size: 16px; line-height: 1.65; color: var(--mp-text); }
+    .qa-answer p:last-child { margin-bottom: 0; }
+    /* Витринный ответ: тема раскрыта в статье, здесь остаётся суть */
+    .qa-item--vitrina .qa-answer { border-left: 3px solid var(--mp-border); padding-left: 16px; }
+    .qa-vitrina-note { font-size: 13px; color: var(--mp-muted); }
+    .qa-answer__list { margin: 0 0 10px; padding-left: 22px; }
+    .qa-answer__list li { font-size: 16px; line-height: 1.65; margin: 0 0 6px; }
+    /* Строка-основание: реквизит нормы под ответом или под разделом (раздел 3 ТЗ) */
+    .osnovanie { font-size: 0.9em; color: var(--mp-muted); font-style: italic; margin: 8px 0 0; }
+    .qa-lead__more { margin: 10px 0 0; }
+    .qa-lead__more a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    .qa-lead__more a:hover { text-decoration: underline; }
+    /* Определительный раздел: понятия статуса, вводится перед тематическими группами */
+    .qa-terms { margin: 0 0 40px; scroll-margin-top: 180px; }
+    .qa-terms h2 { font-size: clamp(22px, 2.5vw, 28px); line-height: 1.25; margin: 0 0 14px; }
+    /* Навигация по разделам вопросов соседних статусов */
+    .qa-sections { margin: 0 0 40px; padding: 20px 24px; background: var(--mp-bg);
+                   border: 1px solid var(--mp-border); border-radius: var(--mp-radius); }
+    .qa-sections h2 { font-size: 20px; line-height: 1.3; margin: 0 0 12px; }
+    .qa-sections__list { list-style: none; margin: 0; padding: 0;
+                         display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; }
+    .qa-sections__list a { color: var(--mp-primary); font-weight: 600; font-size: 16px; text-decoration: none; }
+    .qa-sections__list a:hover { text-decoration: underline; }
+    .qa-group__more { margin: 16px 0 0; padding: 14px 18px; background: var(--mp-primary-light);
+                      border-radius: var(--mp-radius-sm); }
+    .qa-group__more a { color: var(--mp-primary); font-weight: 600; font-size: 16px; text-decoration: none; }
+    .qa-group__more a:hover { text-decoration: underline; }
+
+    .qa-capture { padding: 32px 0 56px; }
+    .qa-capture__grid { display: grid; grid-template-columns: minmax(0, 1fr) 420px; gap: 40px;
+                        align-items: start; background: var(--mp-bg); border: 1px solid var(--mp-border);
+                        border-radius: var(--mp-radius); padding: 32px 36px;
+                        width: min(100% - 40px, var(--mp-max)); }
+    .qa-capture h2 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.25; margin: 0 0 12px; }
+    .qa-capture__text p { margin: 0 0 16px; font-size: 17px; line-height: 1.6; }
+    .qa-capture__links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+                         font-size: 16px; line-height: 1.5; color: var(--mp-muted); }
+    .qa-capture__links a { color: var(--mp-primary); font-weight: 600; text-decoration: none; }
+    .qa-capture__links a:hover { text-decoration: underline; }
+    .qa-capture__form { background: var(--mp-white); border: 1px solid var(--mp-border);
+                        border-radius: var(--mp-radius-sm); padding: 22px 24px; }
+    .qa-capture__note { margin: 10px 0 0; font-size: 13px; color: var(--mp-muted); }
+    .lead-form--inline label { display: block; font-size: 14px; color: var(--mp-muted); }
+    .lead-form__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .lead-form--inline input, .lead-form--inline textarea {
+      width: 100%; margin-top: 4px; padding: 11px 13px; font-family: inherit; font-size: 16px;
+      color: var(--mp-text); background: var(--mp-white);
+      border: 1px solid var(--mp-border); border-radius: var(--mp-radius-sm); }
+    .lead-form--inline textarea { resize: vertical; }
+    .lead-form--inline input:focus, .lead-form--inline textarea:focus {
+      outline: none; border-color: var(--mp-primary); box-shadow: 0 0 0 3px rgba(26, 79, 176, .12); }
+    .lead-form--inline .btn { width: auto; margin-top: 14px; }
+    .btn--brand { background: var(--mp-primary); color: #fff; }
+    .btn--brand:hover { background: var(--mp-primary-dark); }
+
+    @media (max-width: 1080px) {
+      .qa-nav { position: static; }
+      .qa-capture__grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 720px) {
+      .qa-toc { grid-template-columns: 1fr; }
+      .qa-sections__list { grid-template-columns: 1fr; }
+      .lead-form__pair { grid-template-columns: 1fr; }
+      .qa-capture__grid { padding: 22px 18px; }
+      .qa-item summary { font-size: 16px; }
+    }
   </style>
   <style>
     .req{display:inline-block;background:#fff3bf;color:#7a4b00;border:1px solid #f0c000;
@@ -832,65 +1052,150 @@
     </div>
   </header>
 <main>
-<section class="hero">
+<section class="qa-head">
   <div class="wrap">
     <h1>Вопросы о разрешении на работу в России</h1>
-    <p class="hero__lead">Ответы даём полностью, чтобы не пришлось переходить за ними в статью. Вопросы сгруппированы по смыслу.</p>
-    <a class="btn btn--primary" href="#zayavka" data-modal="zayavka">Получить бесплатную консультацию</a>
+    <p class="qa-lead">Отвечаем полностью, чтобы не пришлось переходить за ответом в статью. Сейчас в разделе  вопросов; после переработки статей рубрики состав пополняется их вопросами.</p>
   </div>
 </section>
-<section class="block">
+
+<section class="qa-nav">
   <div class="wrap">
-    <h2>Кому и зачем нужно разрешение</h2>
-    <div class="faq">
-<details><summary>Что такое разрешение на работу</summary><p>Документ, который даёт иностранцу право работать в России по найму. Его оформляют те, кто приехал по визе; при безвизовом въезде вместо него действует патент.</p></details>
-<details><summary>Что значит РНР</summary><p>РНР — сокращение от «разрешение на работу». В официальных документах аббревиатура не используется, но в обиходе и в объявлениях встречается часто.</p></details>
-<details><summary>Кто такой ВКС</summary><p>Высококвалифицированный специалист — иностранец, которого работодатель нанимает на условиях повышенной оплаты труда. Для него действует отдельный порядок оформления разрешения.</p></details>
-    </div>
-    <p>Подробнее: <a href="/blog/rnr/kak-inostrancu-poluchit-razreshenie-na-rabotu">как получить разрешение на работу</a></p>
+    <ul class="qa-sections__list">
+<li><a href="#komu">Кому и зачем нужно разрешение</a></li>
+<li><a href="#vybor">Разрешение или патент</a></li>
+<li><a href="#dokumenty">Документы, сроки, стоимость</a></li>
+<li><a href="#rabotodatelyu">Работодателю: обязанности и ответственность</a></li>
+<li><a href="#problemy">Если отказали или аннулировали</a></li>
+    </ul>
   </div>
 </section>
-<section class="block">
+
+<div class="qa-sections">
   <div class="wrap">
-    <h2>Разрешение или патент</h2>
-    <div class="faq">
-<details><summary>Чем разрешение отличается от патента</summary><p>Разрешение оформляют визовые иностранцы, патент — безвизовые. Различаются документы, платежи и порядок продления.</p></details>
-<details><summary>Нужно ли разрешение гражданину ЕАЭС</summary><p>Нет. Гражданам стран ЕАЭС достаточно трудового договора.</p></details>
-<details><summary>Нужно ли разрешение при наличии РВП или ВНЖ</summary><p>Нет: и с РВП, и с ВНЖ иностранец работает без отдельного разрешения.</p></details>
-    </div>
-    <p>Подробнее: <a href="/blog/rnr/patent-na-rabotu-vs-rnr">сравнение патента и разрешения</a></p>
+    <section class="qa-group" id="komu">
+      <h2>Кому и зачем нужно разрешение<span class="qa-group__count">3</span></h2>
+      <div class="qa-body">
+        <details class="qa-item">
+          <summary>Что такое разрешение на работу</summary>
+          <div class="qa-answer">
+            <p>Документ, который даёт иностранцу право работать в России по найму. Его оформляют тем, кто приехал по визе; при безвизовом въезде вместо него действует патент. Для визового сотрудника документы подаёт работодатель.</p>
+          </div>
+        </details>
+        <details class="qa-item">
+          <summary>Что значит РНР</summary>
+          <div class="qa-answer">
+            <p>РНР — сокращение от «разрешение на работу». В официальных документах аббревиатура не используется, в обиходе и в объявлениях встречается часто.</p>
+          </div>
+        </details>
+        <details class="qa-item">
+          <summary>Кто такой ВКС</summary>
+          <div class="qa-answer">
+            <p>Высококвалифицированный специалист — иностранец, которого работодатель нанимает на условиях повышенной оплаты труда. Для него действует отдельный порядок оформления и уведомлений.</p>
+          </div>
+        </details>
+      </div>
+      <p class="qa-group__more">Подробный разбор: <a href="/blog/rnr/kak-inostrancu-poluchit-razreshenie-na-rabotu">как иностранцу получить разрешение на работу</a></p>
+    </section>
+    <section class="qa-group" id="vybor">
+      <h2>Разрешение или патент<span class="qa-group__count">3</span></h2>
+      <div class="qa-body">
+        <details class="qa-item">
+          <summary>Чем разрешение отличается от патента</summary>
+          <div class="qa-answer">
+            <p>Разрешение оформляют визовые иностранцы, патент — безвизовые. Различаются заявитель, документы, платежи и порядок продления.</p>
+          </div>
+        </details>
+        <details class="qa-item">
+          <summary>Нужно ли разрешение гражданину страны ЕАЭС</summary>
+          <div class="qa-answer">
+            <p>Отдельное разрешение не требуется — достаточно трудового договора, но уведомления работодателя всё равно обязательны.</p>
+          </div>
+        </details>
+        <details class="qa-item">
+          <summary>Нужно ли разрешение при наличии РВП или ВНЖ</summary>
+          <div class="qa-answer">
+            <p>Нет: и с РВП, и с ВНЖ иностранец работает без отдельного разрешения.</p>
+          </div>
+        </details>
+      </div>
+      <p class="qa-group__more">Подробный разбор: <a href="/blog/rnr/patent-na-rabotu-vs-rnr">сравнение патента и разрешения</a></p>
+    </section>
+    <section class="qa-group" id="dokumenty">
+      <h2>Документы, сроки, стоимость<span class="qa-group__count">3</span></h2>
+      <div class="qa-body">
+        <details class="qa-item">
+          <summary>Какие документы нужны</summary>
+          <div class="qa-answer">
+            <p>[REQ: перечень документов по действующему порядку — юрист]</p>
+          </div>
+        </details>
+        <details class="qa-item">
+          <summary>Сколько действует разрешение</summary>
+          <div class="qa-answer">
+            <p>[REQ: срок действия и порядок продления — юрист]</p>
+          </div>
+        </details>
+        <details class="qa-item">
+          <summary>Сколько стоит оформление</summary>
+          <div class="qa-answer">
+            <p>Наша работа — от 54 000 ₽ за статус ВКС и от 74 000 ₽ за внеквотную должность; государственные пошлины оплачиваются отдельно. [REQ: размеры госпошлин 2026 — юрист]</p>
+          </div>
+        </details>
+      </div>
+      <p class="qa-group__more">Подробный разбор: <a href="/blog/rnr/razreshenie-na-rabotu-dokumenty">документы для разрешения на работу</a></p>
+    </section>
+    <section class="qa-group" id="rabotodatelyu">
+      <h2>Работодателю: обязанности и ответственность<span class="qa-group__count">3</span></h2>
+      <div class="qa-body">
+        <details class="qa-item">
+          <summary>Что такое квота на привлечение</summary>
+          <div class="qa-answer">
+            <p>Ограничение числа иностранных работников, которых компания может привлечь за год по визовым основаниям. Часть должностей оформляется вне квоты.</p>
+          </div>
+        </details>
+        <details class="qa-item">
+          <summary>Какие уведомления подаёт работодатель</summary>
+          <div class="qa-answer">
+            <p>[REQ: состав и сроки уведомлений работодателя — юрист]</p>
+          </div>
+        </details>
+        <details class="qa-item">
+          <summary>Что проверяет работодатель перед приёмом</summary>
+          <div class="qa-answer">
+            <p>[REQ: проверка сотрудника, включая реестр контролируемых лиц — юрист]</p>
+          </div>
+        </details>
+      </div>
+      <p class="qa-group__more">Подробный разбор: <a href="/blog/rnr/naym-inostrannogo-rabotnika">наём иностранного работника</a></p>
+    </section>
+    <section class="qa-group" id="problemy">
+      <h2>Если отказали или аннулировали<span class="qa-group__count">2</span></h2>
+      <div class="qa-body">
+        <details class="qa-item">
+          <summary>По каким причинам аннулируют разрешение</summary>
+          <div class="qa-answer">
+            <p>[REQ: перечень оснований аннулирования — юрист]</p>
+          </div>
+        </details>
+        <details class="qa-item">
+          <summary>Можно ли работать в другом регионе</summary>
+          <div class="qa-answer">
+            <p>[REQ: территориальные ограничения разрешения — юрист]</p>
+          </div>
+        </details>
+      </div>
+      <p class="qa-group__more">Подробный разбор: <a href="/blog/rnr/annulirovali-razreshenie-na-rabotu">что делать при аннулировании</a></p>
+    </section>
   </div>
-</section>
-<section class="block">
+</div>
+
+<section class="qa-capture">
   <div class="wrap">
-    <h2>Документы, сроки, стоимость</h2>
-    <div class="faq">
-<details><summary>Какие документы нужны</summary><p>[REQ] Перечень — после ответов юриста; в услугу входит подготовка пакета, справки клиент получает сам.</p></details>
-<details><summary>Сколько действует разрешение</summary><p>[REQ] Срок — после ответов юриста.</p></details>
-<details><summary>Сколько стоит оформление</summary><p>[REQ] Цена услуги — запрос заказчику. Государственная пошлина — по статье 333.28 Налогового кодекса.</p></details>
-    </div>
-    <p>Подробнее: <a href="/blog/rnr/razreshenie-na-rabotu-dokumenty">документы для разрешения на работу</a></p>
-  </div>
-</section>
-<section class="block">
-  <div class="wrap">
-    <h2>Работодателю: обязанности и ответственность</h2>
-    <div class="faq">
-<details><summary>Что такое квота на привлечение</summary><p>Ограничение числа иностранных работников, которых работодатель может привлечь за год по визовым основаниям.</p></details>
-<details><summary>Какие уведомления подаёт работодатель</summary><p>[REQ] Состав и сроки уведомлений — после ответов юриста.</p></details>
-<details><summary>Что проверяет работодатель перед приёмом</summary><p>[REQ] Включая реестр контролируемых лиц — формулировка после ответов юриста.</p></details>
-    </div>
-    <p>Подробнее: <a href="/blog/rnr/naym-inostrannogo-rabotnika">наём иностранного работника</a></p>
-  </div>
-</section>
-<section class="block">
-  <div class="wrap">
-    <h2>Если отказали или аннулировали</h2>
-    <div class="faq">
-<details><summary>По каким причинам аннулируют разрешение</summary><p>[REQ] Перечень оснований — после ответов юриста.</p></details>
-<details><summary>Можно ли работать в другом регионе</summary><p>[REQ] Ответ — после ответов юриста.</p></details>
-    </div>
-    <p>Подробнее: <a href="/blog/rnr/annulirovali-razreshenie-na-rabotu">что делать при аннулировании</a></p>
+    <h2>Вашего вопроса здесь нет</h2>
+    <p class="qa-capture__text">Опишите ситуацию — ответим бесплатно и скажем, что оформлять и в каком порядке.</p>
+    <a class="btn btn--primary" href="#zayavka" data-modal="zayavka">Задать вопрос юристу</a>
+    <p class="qa-capture__links"><a href="/rnr">Оформление иностранных сотрудников</a> · <a href="/blog/rnr">Все статьи рубрики</a></p>
   </div>
 </section>
 </main>
